@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  /* Tailwind use REM unit to define their components size, so 
+   * when the font-size is change on html element, all layout is redimensioned.
+   *
+   * The font size is defined to create a threshold (min size) that the
+   * user can decrease the viewport size, using window resize or zoom, 
+   * in a way that avoid layout broked.
+   *
+   * Explain how vw is used to avoid zoom efect when the viewport is smaller then the threshold
+   * 
+   * The browser default font size was disable, since the user can use
+   * the zoom to achieve the same result. This decision was based in the
+   * follow discusion: https://gist.github.com/aaugustin/d6351f12f4604d3343ee5ecf691b3918
+   * End was considered the follow points:
+   *  - When the user resize the screen or alter the zoom level, the efect produced is the
+   *    the same, that is the viewport is resized. So, since control responsiveness on screen
+   *    resize is a inavitable task, control responsiveness on zoom change, is the same activity.
+   *  - 
+   */
+  --font-size-px: 16;
+  --threshold-px: 320;
+  --threshold-vw: calc(var(--font-size-px) * 100 / var(--threshold-px));
+
+  font-size: clamp(
+    1px,
+    calc(var(--threshold-vw) * 1vw),
+    calc(var(--font-size-px) * 1px)
+  );
+}
