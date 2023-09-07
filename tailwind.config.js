@@ -43,11 +43,11 @@ module.exports = {
             },
           },
           hg: {
-            300: colors.orange[300],
-            400: colors.orange[400],
-            DEFAULT: colors.orange[500],
-            600: colors.orange[600],
-            700: colors.orange[700],
+            300: colors.blue[300],
+            400: colors.blue[400],
+            DEFAULT: colors.blue[500],
+            600: colors.blue[600],
+            700: colors.blue[700],
           },
           text: {
             100: colors.gray[500],
@@ -63,20 +63,21 @@ module.exports = {
         },
         dark: {
           bg: {
-            200: colors.gray[700],
-            300: colors.gray[800],
-            400: colors.gray[900],
-            DEFAULT: colors.gray[950],
+            200: colors.gray[400],
+            300: colors.gray[500],
+            400: colors.gray[600],
+            DEFAULT: colors.gray[700],
             hg: {
-              DEFAULT: colors.gray[800],
+              DEFAULT: colors.teal[600],
+              600: colors.teal[700],
             },
           },
           hg: {
-            300: colors.purple[300],
-            400: colors.purple[400],
-            DEFAULT: colors.purple[500],
-            600: colors.purple[600],
-            700: colors.purple[700],
+            300: colors.red[200],
+            400: colors.red[300],
+            DEFAULT: colors.red[400],
+            600: colors.red[500],
+            700: colors.red[600],
           },
           text: {
             400: colors.gray[50],
@@ -92,7 +93,7 @@ module.exports = {
             },
           },
           border: {
-            DEFAULT: colors.gray[600],
+            DEFAULT: colors.white,
           },
         },
       },

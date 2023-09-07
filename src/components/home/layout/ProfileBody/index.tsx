@@ -20,7 +20,7 @@ export function LayoutProfileBody() {
   const profile = use<Profile>(getGithubProfile(GITHUB_USER));
 
   return (
-    <aside className='w-11/12 sm:w-8/12 md:w-6/12 lg:w-11/12 xl:w-8/12 2xl:w-7/12 py-8 px-5 md:px-7 lg:px-6 xl:px-7 mt-28 lg:mt-4 mb-3 lg:mr-2 bg-light-bg-hg dark:bg-dark-bg-hg border dark:border-dark-border border-light-border rounded-xl'>
+    <aside className='w-11/12 sm:w-8/12 md:w-6/12 lg:w-11/12 xl:w-8/12 2xl:w-7/12 py-8 px-5 md:px-7 lg:px-6 xl:px-7 mt-28 lg:mt-4 mb-3 lg:mr-2 bg-light-bg-hg dark:bg-dark-bg-hg border dark:border-0 border-light-border rounded-xl'>
       <ProfileIntersectionObserver>
         <div className='flex flex-row justify-center'>
           <div className='relative pb-3'>
