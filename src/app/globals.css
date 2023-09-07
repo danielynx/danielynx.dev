@@ -3,23 +3,30 @@
 @tailwind utilities;
 
 html {
-  /* Tailwind use REM unit to define their components size, so 
-   * when the font-size is change on html element, all layout is redimensioned.
+  /* 
+   * Tailwind uses REM unit to define their component's size, so 
+   * when the font size is changed on the HTML element, all layout is redimensioned.
    *
-   * The font size is defined to create a threshold (min size) that the
-   * user can decrease the viewport size, using window resize or zoom, 
-   * in a way that avoid layout broked.
+   * The font size was defined on HTML element to create a threshold (min size) that limit 
+   * how much the user will be able to decrease the viewport size, using the window
+   * resize or zoom. This has the goal of avoiding layout broke in the very small viewport.
    *
-   * Explain how vw is used to avoid zoom efect when the viewport is smaller then the threshold
+   * To create this min size when the user increase the zoom level, it was used VW unit to 
+   * define the font size when the viewport size achieve the threshold. 
+   * As the zoom is increased:
+   *  - the viewport is decreased in pixels
+   *  - so each VW unit result in less pixels
+   *  - but for a small viewport fills the same screen size, each pixel unit result in more centimeters
+   *  - using VW unit to define the font size that is used to calculate the REM unit used in all layout, 
+   *    turn out of keeping everything on the screen with the same size, creating kind of a minimum zoom level
    * 
    * The browser default font size was disable, since the user can use
    * the zoom to achieve the same result. This decision was based in the
    * follow discusion: https://gist.github.com/aaugustin/d6351f12f4604d3343ee5ecf691b3918
-   * End was considered the follow points:
-   *  - When the user resize the screen or alter the zoom level, the efect produced is the
-   *    the same, that is the viewport is resized. So, since control responsiveness on screen
-   *    resize is a inavitable task, control responsiveness on zoom change, is the same activity.
-   *  - 
+   * It was considered that when the user resize the screen or alter the zoom level,
+   * the efect produced is the same, that is the viewport is resized. Since maintain responsive designs
+   * on screen resize is a inavitable task, doing this on zoom change, turn out to be the same activity
+   * and doesn't add more effort to maintain responsive designs like when font resize is enabled.
    */
   --font-size-px: 16;
   --threshold-px: 320;
