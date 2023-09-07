@@ -16,7 +16,7 @@ export function ItemRoot({ Icon, text, tab }: ItemRootProps) {
     <div
       className={
         isActiveTab(tab)
-          ? 'border-t-2 border-light-hg dark:border-dark-hg'
+          ? 'border-b-3 border-light-hg dark:border-dark-hg'
           : ' '
       }
     >

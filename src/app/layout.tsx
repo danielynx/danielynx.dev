@@ -9,8 +9,8 @@ import { SiTailwindcss as SiTailwind } from 'react-icons/si';
 import { SiReact } from 'react-icons/si';
 import { SiTypescript } from 'react-icons/si';
 
-import { LayoutProfileHeader } from '@/components/home/layout/ProfileHeader';
-import { LayoutProfileBody } from '@/components/home/layout/ProfileBody';
+import { LayoutHeader } from '@/components/home/layout/Header';
+import { LayoutProfile } from '@/components/home/layout/Profile';
 import { ProfileIntersectionProvider } from '@/contexts/home/layout/ProfileIntersectionProvider';
 import { ColorSchemeProvider } from '@/contexts/home/layout/ColorSchemeProvider';
 
@@ -40,12 +40,32 @@ export default function RootLayout({ children }: PropsWithChildren) {
     >
       <body className='font-sans'>
         <ColorSchemeProvider>
-          <div className='flex flex-col min-h-screen bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text text-lg'>
+          <div className='flex flex-col min-h-screen bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text'>
             <div className='flex flex-col lg:flex-row justify-center grow'>
-              <div className='flex flex-col items-center lg:items-end w-full lg:w-4/12 '>
+              <div className='flex flex-col items-center lg:items-end w-full lg:w-4/12'>
                 <ProfileIntersectionProvider>
-                  <LayoutProfileHeader />
-                  <LayoutProfileBody />
+                  <LayoutHeader.Root>
+                    <LayoutHeader.Profile.Root>
+                      <LayoutHeader.Profile.Avatar />
+                      <LayoutHeader.Profile.Name />
+                    </LayoutHeader.Profile.Root>
+                    <LayoutHeader.ColorSchema />
+                  </LayoutHeader.Root>
+                  <LayoutProfile.Root>
+                    <LayoutProfile.Avatar.IntersectionObserver>
+                      <LayoutProfile.Avatar.Root />
+                    </LayoutProfile.Avatar.IntersectionObserver>
+                    <LayoutProfile.Name />
+                    <LayoutProfile.Bio />
+                    <LayoutProfile.Company />
+                    <LayoutProfile.Location />
+                    <LayoutProfile.Contacts.Root>
+                      <LayoutProfile.Contacts.ProtonMail />
+                      <LayoutProfile.Contacts.GitHub />
+                      <LayoutProfile.Contacts.StackOverflow />
+                      <LayoutProfile.Contacts.LinkedIn />
+                    </LayoutProfile.Contacts.Root>
+                  </LayoutProfile.Root>
                 </ProfileIntersectionProvider>
               </div>
               <div className='flex flex-col items-center lg:items-start w-full lg:w-8/12'>
@@ -59,20 +79,20 @@ export default function RootLayout({ children }: PropsWithChildren) {
                   Built with
                 </p>
                 <div className='grid grid-cols-2 md:grid-cols-4 gap-4 text-xs sm:text-sm text-light-text dark:text-dark-text'>
-                  <div className='flex flex-row items-center px-2 py-1 border border-light-border dark:border-dark-border rounded-md'>
-                    <SiNextJs className='h-3 w-3 sm:h-4 sm:w-4' />
+                  <div className='flex flex-row items-center px-2 py-1.5 border border-light-border dark:border-dark-border rounded-md'>
+                    <SiNextJs className='h-4 w-4 sm:h-5 sm:w-5' />
                     <div className='ml-2'>NextJS</div>
                   </div>
-                  <div className='flex flex-row items-center px-2 py-1 border border-light-border dark:border-dark-border rounded-md'>
-                    <SiTailwind className='h-3 w-3 sm:h-4 sm:w-4' />
+                  <div className='flex flex-row items-center px-2 py-1.5 border border-light-border dark:border-dark-border rounded-md'>
+                    <SiTailwind className='h-4 w-4 sm:h-5 sm:w-5' />
                     <div className='ml-2'>Tailwind</div>
                   </div>
-                  <div className='flex flex-row items-center px-2 py-1 border border-light-border dark:border-dark-border rounded-md'>
-                    <SiReact className='h-3 w-3 sm:h-4 sm:w-4' />
+                  <div className='flex flex-row items-center px-2 py-1.5 border border-light-border dark:border-dark-border rounded-md'>
+                    <SiReact className='h-4 w-4 sm:h-5 sm:w-5' />
                     <div className='ml-2'>ReactJS</div>
                   </div>
-                  <div className='flex flex-row items-center px-2 py-1 border border-light-border dark:border-dark-border rounded-md'>
-                    <SiTypescript className='h-3 w-3 sm:h-4 sm:w-4' />
+                  <div className='flex flex-row items-center px-2 py-1.5 border border-light-border dark:border-dark-border rounded-md'>
+                    <SiTypescript className='h-4 w-4 sm:h-5 sm:w-5' />
                     <div className='ml-2'>Typescript</div>
                   </div>
                 </div>

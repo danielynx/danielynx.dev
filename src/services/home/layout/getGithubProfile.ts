@@ -1,4 +1,4 @@
-import { Profile } from '@/types/shared/Profile';
+import { Profile } from '@/types/home/layout/Profile';
 
 async function getGithubProfile(user: string): Promise<Profile> {
   const response = await fetch(`https://api.github.com/users/${user}`);

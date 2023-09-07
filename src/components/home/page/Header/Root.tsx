@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 
-import { LayoutContentHeader } from '@/components/home/layout/ContentHeader';
+import { SharedHeaderRight } from '@/components/shared/HeaderRight';
 
 export function HeaderRoot({ children }: PropsWithChildren) {
-  return <LayoutContentHeader>{children}</LayoutContentHeader>;
+  return <SharedHeaderRight>{children}</SharedHeaderRight>;
 }

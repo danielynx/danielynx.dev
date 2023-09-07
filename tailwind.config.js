@@ -14,6 +14,7 @@ module.exports = {
       0: '0',
       1: '0.0625rem',
       2: '0.125rem',
+      3: '0.1875rem',
       4: '0.25rem',
       8: '0.5rem',
     },
@@ -26,6 +27,12 @@ module.exports = {
         serif: ['var(--font-serif)'],
       },
       colors: {
+        brand: {
+          protonmail: '#6D4AFF',
+          github: '#181717',
+          stackoverflow: '#F58025',
+          linkedin: '#0A66C2',
+        },
         light: {
           bg: {
             400: colors.gray[50],
