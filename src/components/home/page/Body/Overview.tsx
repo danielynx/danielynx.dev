@@ -1,9 +1,8 @@
-import { TabEnum } from '@/types/home/page/TabEnum';
-import { BodyItem } from './Item';
+import { Tab } from '@headlessui/react';
 
 export function BodyOverview() {
   return (
-    <BodyItem.Root tab={TabEnum.OVERVIEW}>
+    <Tab.Panel>
       <div className='leading-loose'>
         <p>Hi there, I&apos;m Daniel B.</p>
         <p>👨‍🎓 Computing Scientist</p>
@@ -121,6 +120,6 @@ export function BodyOverview() {
           technologies that will be my next study aim
         </p>
       </div>
-    </BodyItem.Root>
+    </Tab.Panel>
   );
 }

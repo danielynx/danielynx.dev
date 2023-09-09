@@ -1,10 +1,9 @@
-import { TabEnum } from '@/types/home/page/TabEnum';
-import { BodyItem } from './Item';
+import { Tab } from '@headlessui/react';
 
 export function BodySkills() {
   return (
-    <BodyItem.Root tab={TabEnum.SKILLS}>
+    <Tab.Panel>
       <h4>Skills</h4>
-    </BodyItem.Root>
+    </Tab.Panel>
   );
 }

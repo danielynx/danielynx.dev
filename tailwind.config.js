@@ -1,8 +1,10 @@
+const { withTV } = require('tailwind-variants/transformer');
 const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+module.exports = withTV({
   darkMode: 'class',
+  mode: 'jit',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -15,6 +17,23 @@ module.exports = {
       1: '0.0625rem',
       2: '0.125rem',
       3: '0.1875rem',
+      4: '0.25rem',
+      8: '0.5rem',
+    },
+    ringWidth: {
+      DEFAULT: '0.0625rem',
+      0: '0',
+      1: '0.0625rem',
+      3: '0.1875rem',
+      2: '0.125rem',
+      4: '0.25rem',
+      8: '0.5rem',
+    },
+    ringOffsetWidth: {
+      DEFAULT: '0.0625rem',
+      0: '0',
+      1: '0.0625rem',
+      2: '0.125rem',
       4: '0.25rem',
       8: '0.5rem',
     },
@@ -31,7 +50,10 @@ module.exports = {
           protonmail: '#6D4AFF',
           github: '#181717',
           stackoverflow: '#F58025',
-          linkedin: '#0A66C2',
+          linkedin: {
+            400: '#008CC9',
+            DEFAULT: '#0077B5',
+          },
         },
         light: {
           bg: {
@@ -41,6 +63,10 @@ module.exports = {
             700: colors.gray[300],
             hg: {
               DEFAULT: colors.gray[100],
+              600: colors.gray[200],
+            },
+            ct: {
+              DEFAULT: colors.cyan[700],
             },
             courses: {
               rocketseat: '#6C4FBB',
@@ -57,12 +83,15 @@ module.exports = {
             700: colors.blue[700],
           },
           text: {
-            100: colors.gray[500],
-            200: colors.gray[600],
-            300: colors.gray[700],
-            400: colors.gray[800],
-            DEFAULT: colors.gray[900],
-            600: colors.gray[950],
+            100: colors.gray[400],
+            200: colors.gray[500],
+            300: colors.gray[600],
+            400: colors.gray[700],
+            DEFAULT: colors.gray[800],
+            600: colors.gray[900],
+            ct: {
+              DEFAULT: colors.gray[100],
+            },
           },
           border: {
             DEFAULT: colors.slate[300],
@@ -70,13 +99,18 @@ module.exports = {
         },
         dark: {
           bg: {
-            200: colors.gray[400],
-            300: colors.gray[500],
-            400: colors.gray[600],
-            DEFAULT: colors.gray[700],
+            200: colors.slate[400],
+            300: colors.slate[500],
+            400: colors.slate[600],
+            DEFAULT: colors.slate[700],
             hg: {
-              DEFAULT: colors.teal[600],
-              600: colors.teal[700],
+              300: colors.cyan[500],
+              400: colors.cyan[600],
+              DEFAULT: colors.cyan[700],
+              600: colors.cyan[800],
+            },
+            ct: {
+              DEFAULT: colors.gray[100],
             },
           },
           hg: {
@@ -92,6 +126,9 @@ module.exports = {
             600: colors.gray[200],
             700: colors.gray[300],
             800: colors.gray[400],
+            ct: {
+              DEFAULT: colors.gray[800],
+            },
             courses: {
               rocketseat: '#6C4FBB',
               mongodb: '#47A248',
@@ -107,4 +144,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+});

@@ -2,15 +2,13 @@
 
 import { MdPieChart } from 'react-icons/md';
 
-import { TabEnum } from '@/types/home/page/TabEnum';
-import { HeaderItem } from './Item';
+import { HeaderTab } from './Tab';
 
 export function HeaderOverview() {
   return (
-    <HeaderItem.Root
+    <HeaderTab
       Icon={MdPieChart}
-      text={TabEnum.OVERVIEW}
-      tab={TabEnum.OVERVIEW}
+      text='Overview'
     />
   );
 }

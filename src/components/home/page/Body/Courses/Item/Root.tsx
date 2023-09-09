@@ -11,7 +11,7 @@ export function ItemRoot({
   return (
     <div
       className={
-        'flex flex-col justify-center rounded-md overflow-hidden h-40 dark:bg-white ' +
+        'flex flex-col justify-center rounded-md overflow-hidden h-40 dark:bg-dark-bg-ct ' +
         lightBgColor
       }
     >

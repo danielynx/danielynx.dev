@@ -2,15 +2,13 @@
 
 import { MdSchool } from 'react-icons/md';
 
-import { TabEnum } from '@/types/home/page/TabEnum';
-import { HeaderItem } from './Item';
+import { HeaderTab } from './Tab';
 
 export function HeaderCourses() {
   return (
-    <HeaderItem.Root
+    <HeaderTab
       Icon={MdSchool}
-      text={TabEnum.COURSES}
-      tab={TabEnum.COURSES}
+      text='Courses'
     />
   );
 }

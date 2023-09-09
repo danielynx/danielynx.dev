@@ -1,11 +1,13 @@
+'use client';
+
+import { Tab } from '@headlessui/react';
+
 import { PageHeader } from '@/components/home/page/Header';
 import { PageBody } from '@/components/home/page/Body';
-import { ActiveTabProvider } from '@/contexts/home/page/ActiveTabProvider';
-import { TabEnum } from '@/types/home/page/TabEnum';
 
 export default function Page() {
   return (
-    <ActiveTabProvider initialState={TabEnum.COURSES}>
+    <Tab.Group>
       <PageHeader.Root>
         <PageHeader.Overview />
         <PageHeader.Skills />
@@ -21,6 +23,6 @@ export default function Page() {
           <PageBody.Courses.FreeCodeCamp />
         </PageBody.Courses.Root>
       </PageBody.Root>
-    </ActiveTabProvider>
+    </Tab.Group>
   );
 }
