@@ -3,8 +3,8 @@ import { SiMongodb } from 'react-icons/si';
 import { CoursesItem } from './Item';
 
 export function CoursesMongoDb() {
-  const lightBgColor = 'bg-light-bg-courses-mongodb';
-  const darkTextColor = 'dark:text-dark-text-courses-mongodb';
+  const lightBgColor = 'bg-light-bg-brand-mongodb';
+  const darkTextColor = 'dark:text-dark-text-brand-mongodb';
 
   return (
     <CoursesItem.Root lightBgColor={lightBgColor}>

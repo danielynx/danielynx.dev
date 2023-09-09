@@ -3,8 +3,8 @@ import { MdRocketLaunch } from 'react-icons/md';
 import { CoursesItem } from './Item';
 
 export function CoursesRocketseat() {
-  const lightBgColor = 'bg-light-bg-courses-rocketseat';
-  const darkTextColor = 'dark:text-dark-text-courses-rocketseat';
+  const lightBgColor = 'bg-light-bg-brand-rocketseat';
+  const darkTextColor = 'dark:text-dark-text-brand-rocketseat';
 
   return (
     <CoursesItem.Root lightBgColor={lightBgColor}>

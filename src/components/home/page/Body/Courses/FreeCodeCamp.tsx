@@ -3,8 +3,8 @@ import { SiFreecodecamp } from 'react-icons/si';
 import { CoursesItem } from './Item';
 
 export function CoursesFreeCodeCamp() {
-  const lightBgColor = 'bg-light-bg-courses-freecodecamp';
-  const darkTextColor = 'dark:text-dark-text-courses-freecodecamp';
+  const lightBgColor = 'bg-light-bg-brand-freecodecamp';
+  const darkTextColor = 'dark:text-dark-text-brand-freecodecamp';
 
   return (
     <CoursesItem.Root lightBgColor={lightBgColor}>

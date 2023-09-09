@@ -3,8 +3,8 @@ import { SiSymfony } from 'react-icons/si';
 import { CoursesItem } from './Item';
 
 export function CoursesSymfony() {
-  const lightBgColor = 'bg-light-bg-courses-symfony';
-  const darkTextColor = 'dark:text-dark-text-courses-symfony';
+  const lightBgColor = 'bg-light-bg-brand-symfony';
+  const darkTextColor = 'dark:text-dark-text-brand-symfony';
 
   return (
     <CoursesItem.Root lightBgColor={lightBgColor}>

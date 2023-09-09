@@ -68,7 +68,7 @@ module.exports = withTV({
             ct: {
               DEFAULT: colors.cyan[700],
             },
-            courses: {
+            brand: {
               rocketseat: '#6C4FBB',
               mongodb: '#47A248',
               freecodecamp: '#0A0A23',
@@ -91,6 +91,12 @@ module.exports = withTV({
             600: colors.gray[900],
             ct: {
               DEFAULT: colors.gray[100],
+            },
+            brand: {
+              protonmail: '#8a90c7',
+              github: '#181717',
+              stackoverflow: '#F58025',
+              linkedin: '#0077B5',
             },
           },
           border: {
@@ -129,7 +135,11 @@ module.exports = withTV({
             ct: {
               DEFAULT: colors.gray[800],
             },
-            courses: {
+            brand: {
+              protonmail: '#8a90c7',
+              github: '#181717',
+              stackoverflow: '#F58025',
+              linkedin: '#008CC9',
               rocketseat: '#6C4FBB',
               mongodb: '#47A248',
               freecodecamp: '#0A0A23',
