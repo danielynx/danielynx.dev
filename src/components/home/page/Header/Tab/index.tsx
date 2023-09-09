@@ -14,8 +14,8 @@ const tvStyle = tv(
       button: [
         'flex flew-row items-center justify-center py-2 rounded-lg',
         'focus:ring-3 ring-offset-2 focus:outline-none',
-        'ring-light-bg-ct/50 ring-offset-light-hg-400',
-        'dark:ring-dark-bg-ct/50 dark:ring-offset-dark-hg-400',
+        'ring-light-bg-ct/50 dark:ring-dark-bg-ct/50',
+        'ring-offset-light-hg-400 dark:ring-offset-dark-hg-400',
       ],
       icon: '',
       text: 'font-medium',
@@ -25,14 +25,15 @@ const tvStyle = tv(
         true: {
           button: [
             'shadow',
-            'bg-light-bg-ct text-light-text-ct',
-            'dark:bg-dark-bg-ct dark:text-dark-text-ct',
+            'bg-light-bg-ct dark:bg-dark-bg-ct',
+            'text-light-text-ct dark:text-dark-text-ct',
           ],
         },
         false: {
           button: [
-            'text-light-text/70 hover:bg-light-bg-ct/[0.12] hover:text-light-text',
-            'dark:text-dark-text/70 dark:hover:bg-dark-bg-ct/[0.12] dark:hover:text-dark-text',
+            'text-light-text/70 dark:text-dark-text/70',
+            'hover:bg-light-bg-ct/[0.12] dark:hover:bg-dark-bg-ct/[0.12]',
+            'hover:text-light-text dark:hover:text-dark-text',
           ],
         },
       },
