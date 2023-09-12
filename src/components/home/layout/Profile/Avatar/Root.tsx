@@ -1,32 +1,53 @@
 import { use } from 'react';
 import Image from 'next/image';
 import { MdHomeWork } from 'react-icons/md';
+import { tv } from 'tailwind-variants';
 
 import { GITHUB_USER } from '@/constants/home/layout';
 import { Profile } from '@/types/home/layout/Profile';
 import { getGithubProfile } from '@/services/home/layout/getGithubProfile';
 
+const tvStyle = tv({
+  slots: {
+    outerBox: ['flex flex-row justify-center'],
+    innerBox: 'relative pb-3',
+    image: 'rounded-full h-40 w-40',
+    statusBox: [
+      'absolute bottom-0 left-20',
+      'flex flex-row justify-center hover:justify-start items-center',
+      'hover:pl-2 rounded-full w-8 h-8 hover:w-40',
+      'shadow-md bg-light-bg-ct dark:bg-dark-bg-ct',
+      'group hover:cursor-pointer',
+    ],
+    statusIcon: 'text-light-text-ct dark:text-dark-text-ct w-5 h-5',
+    statusText: [
+      'ml-1 hidden group-hover:inline',
+      'text-xs text-light-text-ct dark:text-dark-text-ct',
+    ],
+  },
+});
+
 export function AvatarRoot() {
   const profile = use<Profile>(getGithubProfile(GITHUB_USER));
+
+  const style = tvStyle();
 
   return (
     <>
       {profile && (
-        <div className='flex flex-row justify-center'>
-          <div className='relative pb-3'>
+        <div className={style.outerBox()}>
+          <div className={style.innerBox()}>
             <Image
               id='image'
               src={profile.avatar_url}
               alt='Avatar'
               width='400'
               height='400'
-              className='rounded-full h-40 w-40'
+              className={style.image()}
             />
-            <div className='group absolute flex bottom-0 left-24 flex-row justify-center hover:justify-start hover:pl-2 items-center rounded-full w-8 h-8 hover:w-40 border border-light-hg dark:border-dark-hg-600 shadow-md bg-white hover:cursor-pointer'>
-              <MdHomeWork className='text-light-hg dark:text-dark-hg text- w-5 h-5' />
-              <span className='ml-2 text-xs text-light-hg-600 dark:text-dark-hg-600 font-black hidden group-hover:inline'>
-                Working from home
-              </span>
+            <div className={style.statusBox()}>
+              <MdHomeWork className={style.statusIcon()} />
+              <span className={style.statusText()}>Working from home</span>
             </div>
           </div>
         </div>

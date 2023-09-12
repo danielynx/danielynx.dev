@@ -8,8 +8,7 @@ const tvStyle = tv(
   {
     base: [
       'flex dark:space-x-2 rounded-xl',
-      'bg-light-bg-hg-600/80',
-      'dark:bg-dark-bg-hg-600/80',
+      'bg-light-bg-hg-600/80 dark:bg-dark-bg-hg-600/80',
     ],
     variants: {
       size: {

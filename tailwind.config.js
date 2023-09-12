@@ -61,12 +61,14 @@ module.exports = withTV({
             DEFAULT: colors.gray[100],
             600: colors.gray[200],
             700: colors.gray[300],
+            // highlight
             hg: {
               DEFAULT: colors.gray[100],
               600: colors.gray[200],
             },
+            // contrast
             ct: {
-              DEFAULT: colors.cyan[700],
+              DEFAULT: colors.orange[600],
             },
             brand: {
               rocketseat: '#6C4FBB',
@@ -75,13 +77,6 @@ module.exports = withTV({
               symfony: '#1AB4FC',
             },
           },
-          hg: {
-            300: colors.blue[300],
-            400: colors.blue[400],
-            DEFAULT: colors.blue[500],
-            600: colors.blue[600],
-            700: colors.blue[700],
-          },
           text: {
             100: colors.gray[400],
             200: colors.gray[500],
@@ -89,6 +84,7 @@ module.exports = withTV({
             400: colors.gray[700],
             DEFAULT: colors.gray[800],
             600: colors.gray[900],
+            // contrast
             ct: {
               DEFAULT: colors.gray[100],
             },
@@ -109,22 +105,17 @@ module.exports = withTV({
             300: colors.slate[500],
             400: colors.slate[600],
             DEFAULT: colors.slate[700],
+            // highlight
             hg: {
               300: colors.cyan[500],
               400: colors.cyan[600],
               DEFAULT: colors.cyan[700],
               600: colors.cyan[800],
             },
+            // contrast
             ct: {
               DEFAULT: colors.gray[100],
             },
-          },
-          hg: {
-            300: colors.red[200],
-            400: colors.red[300],
-            DEFAULT: colors.red[400],
-            600: colors.red[500],
-            700: colors.red[600],
           },
           text: {
             400: colors.gray[50],
@@ -132,6 +123,7 @@ module.exports = withTV({
             600: colors.gray[200],
             700: colors.gray[300],
             800: colors.gray[400],
+            // contrast
             ct: {
               DEFAULT: colors.gray[800],
             },

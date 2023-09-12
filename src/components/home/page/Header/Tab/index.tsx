@@ -11,12 +11,7 @@ export interface HeaderTabProps {
 const tvStyle = tv(
   {
     slots: {
-      button: [
-        'flex flew-row items-center justify-center py-2 rounded-lg',
-        'focus:ring-3 ring-offset-2 focus:outline-none',
-        'ring-light-bg-ct/50 dark:ring-dark-bg-ct/50',
-        'ring-offset-light-hg-400 dark:ring-offset-dark-hg-400',
-      ],
+      button: ['flex flew-row items-center justify-center py-2 rounded-lg'],
       icon: '',
       text: 'font-medium',
     },
@@ -32,8 +27,10 @@ const tvStyle = tv(
         false: {
           button: [
             'text-light-text/70 dark:text-dark-text/70',
-            'hover:bg-light-bg-ct/[0.12] dark:hover:bg-dark-bg-ct/[0.12]',
             'hover:text-light-text dark:hover:text-dark-text',
+            'hover:ring-2 ring-inset ring-offset-1',
+            'ring-light-bg-ct/50 dark:ring-dark-bg-ct/50',
+            'ring-offset-light-bg-hg-600/80 dark:ring-offset-dark-bg-hg-600/80',
           ],
         },
       },
