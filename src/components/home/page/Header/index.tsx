@@ -1,11 +1,11 @@
 import { HeaderRoot } from './Root';
 import { HeaderOverview } from './Overview';
-import { HeaderSkills } from './Skills';
+import { HeaderProjects } from './Projects';
 import { HeaderCourses } from './Courses';
 
 export const PageHeader = {
   Root: HeaderRoot,
   Overview: HeaderOverview,
-  Skills: HeaderSkills,
+  Projects: HeaderProjects,
   Courses: HeaderCourses,
 };

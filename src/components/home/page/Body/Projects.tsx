@@ -1,9 +1,9 @@
 import { Tab } from '@headlessui/react';
 
-export function BodySkills() {
+export function BodyProjects() {
   return (
     <Tab.Panel>
-      <h4>Skills</h4>
+      <h4>Projects</h4>
     </Tab.Panel>
   );
 }

@@ -10,12 +10,12 @@ export default function Page() {
     <Tab.Group>
       <PageHeader.Root>
         <PageHeader.Overview />
-        <PageHeader.Skills />
+        <PageHeader.Projects />
         <PageHeader.Courses />
       </PageHeader.Root>
       <PageBody.Root>
         <PageBody.Overview />
-        <PageBody.Skills />
+        <PageBody.Projects />
         <PageBody.Courses.Root>
           <PageBody.Courses.Symfony />
           <PageBody.Courses.Rocketseat />
