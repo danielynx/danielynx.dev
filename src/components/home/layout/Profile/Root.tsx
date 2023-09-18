@@ -1,9 +1,37 @@
 import { PropsWithChildren } from 'react';
+import { tv } from 'tailwind-variants';
+
+import { asideStyle } from '@/components/shared/Aside';
+
+const tvStyle = tv(
+  {
+    base: [
+      'bg-light-bg-hg dark:bg-dark-bg-hg',
+      'border dark:border-0 border-light-border',
+      'rounded-xl',
+    ],
+    variants: {
+      size: {
+        initial: 'py-8 px-5 mt-28 mb-3',
+        md: 'px-7',
+        lg: 'px-6 mt-4 mr-2',
+        xl: 'px-7',
+      },
+    },
+    defaultVariants: {
+      size: 'initial',
+    },
+  },
+  {
+    responsiveVariants: ['md', 'lg', 'xl'],
+  },
+);
 
 export function ProfileRoot({ children }: PropsWithChildren) {
-  return (
-    <aside className='w-11/12 sm:w-8/12 md:w-6/12 lg:w-11/12 xl:w-8/12 2xl:w-7/12 py-8 px-5 md:px-7 lg:px-6 xl:px-7 mt-28 lg:mt-4 mb-3 lg:mr-2 bg-light-bg-hg dark:bg-dark-bg-hg border dark:border-0 border-light-border rounded-xl'>
-      {children}
-    </aside>
-  );
+  const style = tvStyle({
+    className: asideStyle,
+    size: { md: 'md', lg: 'lg', xl: 'xl' },
+  });
+
+  return <aside className={style}>{children}</aside>;
 }

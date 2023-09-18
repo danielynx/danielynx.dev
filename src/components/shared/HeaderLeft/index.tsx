@@ -1,35 +1,31 @@
 import { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
+import { asideStyle } from '@/components/shared/Aside';
+
 import { SharedHeader } from '@/components/shared/Header';
 
 const tvStyle = tv(
   {
     slots: {
-      outer: ['top-0 z-10'],
-      inner: ['flex flex-row items-center justify-end py-2'],
+      container: ['top-0 z-10'],
+      base: ['flex flex-row items-center justify-end py-2'],
     },
     variants: {
       size: {
         initial: {
-          outer: 'fixed',
-          inner: 'w-11/12 px-3',
-        },
-        sm: {
-          inner: 'w-8/12',
+          container: 'fixed',
+          base: 'px-3',
         },
         md: {
-          inner: 'w-6/12 px-5',
+          base: 'px-5',
         },
         lg: {
-          outer: 'justify-end sticky',
-          inner: 'w-11/12 px-4 mr-2',
+          container: 'justify-end sticky',
+          base: 'px-4 mr-2',
         },
         xl: {
-          inner: 'w-8/12 px-5',
-        },
-        '2xl': {
-          inner: 'w-7/12',
+          base: 'px-5',
         },
       },
     },
@@ -38,18 +34,18 @@ const tvStyle = tv(
     },
   },
   {
-    responsiveVariants: ['sm', 'md', 'lg', 'xl', '2xl'],
+    responsiveVariants: ['md', 'lg', 'xl'],
   },
 );
 
 export function SharedHeaderLeft({ children }: PropsWithChildren) {
   const style = tvStyle({
-    size: { sm: 'sm', md: 'md', lg: 'lg', xl: 'xl', '2xl': '2xl' },
+    size: { md: 'md', lg: 'lg', xl: 'xl' },
   });
 
   return (
-    <SharedHeader className={style.outer()}>
-      <nav className={style.inner()}>{children}</nav>
+    <SharedHeader className={style.container()}>
+      <nav className={style.base({ className: asideStyle })}>{children}</nav>
     </SharedHeader>
   );
 }
