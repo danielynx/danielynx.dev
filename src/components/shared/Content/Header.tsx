@@ -31,7 +31,7 @@ const tvStyle = tv(
   },
 );
 
-export function HeaderContent({ children }: PropsWithChildren) {
+export function ContentHeader({ children }: PropsWithChildren) {
   const style = tvStyle({
     size: { lg: 'lg' },
   });

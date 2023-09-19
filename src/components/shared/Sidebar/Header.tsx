@@ -29,7 +29,7 @@ const tvStyle = tv(
   },
 );
 
-export function HeaderSidebar({ children }: PropsWithChildren) {
+export function SidebarHeader({ children }: PropsWithChildren) {
   const style = tvStyle({
     size: { lg: 'lg' },
   });

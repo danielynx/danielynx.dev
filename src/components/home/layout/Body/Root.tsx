@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 
-import { SharedBody } from '@/components/shared/Body';
+import { SharedSidebar } from '@/components/shared/Sidebar';
 
 export function BodyRoot({ children }: PropsWithChildren) {
-  return <SharedBody.Sidebar>{children}</SharedBody.Sidebar>;
+  return <SharedSidebar.Body>{children}</SharedSidebar.Body>;
 }
