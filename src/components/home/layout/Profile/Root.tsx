@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
-import { asideStyle } from '@/components/shared/Aside';
+import { sidebarStyle } from '@/components/shared/Sidebar/style';
 
 const tvStyle = tv(
   {
@@ -29,7 +29,7 @@ const tvStyle = tv(
 
 export function ProfileRoot({ children }: PropsWithChildren) {
   const style = tvStyle({
-    className: asideStyle,
+    className: sidebarStyle,
     size: { md: 'md', lg: 'lg', xl: 'xl' },
   });
 

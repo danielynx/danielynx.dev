@@ -1,6 +1,6 @@
 import { tv } from 'tailwind-variants';
 
-export const asideTvStyle = tv(
+export const sidebarTvStyle = tv(
   {
     variants: {
       size: {
@@ -21,6 +21,6 @@ export const asideTvStyle = tv(
   },
 );
 
-export const asideStyle = asideTvStyle({
+export const sidebarStyle = sidebarTvStyle({
   size: { sm: 'sm', md: 'md', lg: 'lg', xl: 'xl', '2xl': '2xl' },
 });
