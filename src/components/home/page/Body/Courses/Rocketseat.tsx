@@ -1,8 +1,18 @@
 import { MdRocketLaunch } from 'react-icons/md';
+import { tv } from 'tailwind-variants';
 
+import { textStyle } from './style';
 import { CoursesItem } from './Item';
 
+const tvStyle = tv({
+  slots: {
+    text: 'font-bold',
+  },
+});
+
 export function CoursesRocketseat() {
+  const style = tvStyle();
+
   const lightBgColor = 'bg-light-bg-brand-rocketseat';
   const darkTextColor = 'dark:text-dark-text-brand-rocketseat';
   const link = '#';
@@ -16,9 +26,7 @@ export function CoursesRocketseat() {
       <CoursesItem.Header.Root>
         <CoursesItem.Header.Icon Icon={MdRocketLaunch} />
         <CoursesItem.Header.Text>
-          <span className='font-bold text-xl xs:text-2xl md:text-xl 2xl:text-3xl'>
-            Rocketseat
-          </span>
+          <div className={style.text({ className: textStyle })}>Rocketseat</div>
         </CoursesItem.Header.Text>
       </CoursesItem.Header.Root>
       <CoursesItem.Footer />

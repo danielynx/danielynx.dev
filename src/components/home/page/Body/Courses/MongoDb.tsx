@@ -1,8 +1,20 @@
 import { SiMongodb } from 'react-icons/si';
+import { tv } from 'tailwind-variants';
 
+import { textStyle } from './style';
 import { CoursesItem } from './Item';
 
+const tvStyle = tv({
+  slots: {
+    text: 'flex flex-col items-start',
+    mongoDb: 'font-bold',
+    university: 'font-normal',
+  },
+});
+
 export function CoursesMongoDb() {
+  const style = tvStyle();
+
   const lightBgColor = 'bg-light-bg-brand-mongodb';
   const darkTextColor = 'dark:text-dark-text-brand-mongodb';
   const link =
@@ -17,9 +29,9 @@ export function CoursesMongoDb() {
       <CoursesItem.Header.Root>
         <CoursesItem.Header.Icon Icon={SiMongodb} />
         <CoursesItem.Header.Text>
-          <div className='flex flex-col items-start text-xl xs:text-2xl md:text-xl 2xl:text-3xl'>
-            <div className='font-bold'>MongoDB</div>
-            <div className='font-normal'>University</div>
+          <div className={style.text({ className: textStyle })}>
+            <span className={style.mongoDb()}>MongoDB</span>
+            <span className={style.university()}>University</span>
           </div>
         </CoursesItem.Header.Text>
       </CoursesItem.Header.Root>

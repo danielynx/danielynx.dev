@@ -1,8 +1,18 @@
 import { SiFreecodecamp } from 'react-icons/si';
+import { tv } from 'tailwind-variants';
 
+import { textStyle } from './style';
 import { CoursesItem } from './Item';
 
+const tvStyle = tv({
+  slots: {
+    text: 'font-bold',
+  },
+});
+
 export function CoursesFreeCodeCamp() {
+  const style = tvStyle();
+
   const lightBgColor = 'bg-light-bg-brand-freecodecamp';
   const darkTextColor = 'dark:text-dark-text-brand-freecodecamp';
   const link = 'https://www.freecodecamp.org/danielynx';
@@ -16,7 +26,7 @@ export function CoursesFreeCodeCamp() {
       <CoursesItem.Header.Root>
         <CoursesItem.Header.Icon Icon={SiFreecodecamp} />
         <CoursesItem.Header.Text>
-          <div className='font-bold text-xl xs:text-2xl md:text-xl 2xl:text-3xl'>
+          <div className={style.text({ className: textStyle })}>
             freeCodeCamp
           </div>
         </CoursesItem.Header.Text>

@@ -1,8 +1,20 @@
 import { SiSymfony } from 'react-icons/si';
+import { tv } from 'tailwind-variants';
 
+import { textStyle } from './style';
 import { CoursesItem } from './Item';
 
+const tvStyle = tv({
+  slots: {
+    text: '',
+    symfony: 'font-bold',
+    casts: 'font-normal',
+  },
+});
+
 export function CoursesSymfony() {
+  const style = tvStyle();
+
   const lightBgColor = 'bg-light-bg-brand-symfony';
   const darkTextColor = 'dark:text-dark-text-brand-symfony';
   const link = 'https://symfonycasts.com/u/danielynx';
@@ -16,9 +28,9 @@ export function CoursesSymfony() {
       <CoursesItem.Header.Root>
         <CoursesItem.Header.Icon Icon={SiSymfony} />
         <CoursesItem.Header.Text>
-          <div className='text-xl xs:text-2xl md:text-xl 2xl:text-3xl'>
-            <span className='font-bold'>Symfony</span>
-            <span className='font-normal'>Casts</span>
+          <div className={style.text({ className: textStyle })}>
+            <span className={style.symfony()}>Symfony</span>
+            <span className={style.casts()}>Casts</span>
           </div>
         </CoursesItem.Header.Text>
       </CoursesItem.Header.Root>
