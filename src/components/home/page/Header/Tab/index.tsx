@@ -11,7 +11,10 @@ export interface HeaderTabProps {
 const tvStyle = tv(
   {
     slots: {
-      button: ['flex flew-row items-center justify-center py-2 rounded-lg'],
+      button: [
+        'flex flew-row items-center justify-center',
+        'py-2 first:ml-0 ml-2 rounded-lg',
+      ],
       icon: '',
       text: 'font-medium',
     },
