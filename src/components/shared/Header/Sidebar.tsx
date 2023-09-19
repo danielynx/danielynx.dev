@@ -7,24 +7,16 @@ import { sidebarStyle } from '@/components/shared/Sidebar/style';
 const tvStyle = tv(
   {
     slots: {
-      header: 'top-0 z-10',
-      nav: 'flex flex-row items-center justify-end py-2',
+      header: 'flex flex-row items-center top-0 z-10',
+      sidebar: 'flex flex-row items-center justify-end py-2',
     },
     variants: {
       size: {
         initial: {
-          header: 'fixed',
-          nav: 'px-3',
-        },
-        md: {
-          nav: 'px-5',
+          header: 'justify-center fixed',
         },
         lg: {
           header: 'justify-end sticky',
-          nav: 'px-4 mr-2',
-        },
-        xl: {
-          nav: 'px-5',
         },
       },
     },
@@ -33,18 +25,20 @@ const tvStyle = tv(
     },
   },
   {
-    responsiveVariants: ['md', 'lg', 'xl'],
+    responsiveVariants: ['lg'],
   },
 );
 
 export function HeaderSidebar({ children }: PropsWithChildren) {
   const style = tvStyle({
-    size: { md: 'md', lg: 'lg', xl: 'xl' },
+    size: { lg: 'lg' },
   });
 
   return (
     <header className={style.header({ className: headerStyle })}>
-      <nav className={style.nav({ className: sidebarStyle })}>{children}</nav>
+      <nav className={style.sidebar({ className: sidebarStyle })}>
+        {children}
+      </nav>
     </header>
   );
 }

@@ -10,7 +10,7 @@ import { SiReact } from 'react-icons/si';
 import { SiTypescript } from 'react-icons/si';
 
 import { LayoutHeader } from '@/components/home/layout/Header';
-import { LayoutProfile } from '@/components/home/layout/Profile';
+import { LayoutBody } from '@/components/home/layout/Body';
 import { ProfileIntersectionProvider } from '@/contexts/home/layout/ProfileIntersectionProvider';
 import { ColorSchemeProvider } from '@/contexts/home/layout/ColorSchemeProvider';
 
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     >
       <body className='font-sans'>
         <ColorSchemeProvider>
-          <div className='flex flex-col min-h-screen bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text'>
+          <div className='flex flex-col min-h-screen text-light-text dark:text-dark-text'>
             <div className='flex flex-col lg:flex-row justify-center grow'>
               <div className='flex flex-col items-center lg:items-end w-full lg:w-4/12'>
                 <ProfileIntersectionProvider>
@@ -51,21 +51,23 @@ export default function RootLayout({ children }: PropsWithChildren) {
                     </LayoutHeader.Profile.Root>
                     <LayoutHeader.ColorSchema />
                   </LayoutHeader.Root>
-                  <LayoutProfile.Root>
-                    <LayoutProfile.Avatar.IntersectionObserver>
-                      <LayoutProfile.Avatar.Root />
-                    </LayoutProfile.Avatar.IntersectionObserver>
-                    <LayoutProfile.Name />
-                    <LayoutProfile.Bio />
-                    <LayoutProfile.Company />
-                    <LayoutProfile.Location />
-                    <LayoutProfile.Contacts.Root>
-                      <LayoutProfile.Contacts.ProtonMail />
-                      <LayoutProfile.Contacts.GitHub />
-                      <LayoutProfile.Contacts.StackOverflow />
-                      <LayoutProfile.Contacts.LinkedIn />
-                    </LayoutProfile.Contacts.Root>
-                  </LayoutProfile.Root>
+                  <LayoutBody.Root>
+                    <LayoutBody.Profile.Root>
+                      <LayoutBody.Profile.Avatar.IntersectionObserver>
+                        <LayoutBody.Profile.Avatar.Root />
+                      </LayoutBody.Profile.Avatar.IntersectionObserver>
+                      <LayoutBody.Profile.Name />
+                      <LayoutBody.Profile.Bio />
+                      <LayoutBody.Profile.Company />
+                      <LayoutBody.Profile.Location />
+                      <LayoutBody.Profile.Contacts.Root>
+                        <LayoutBody.Profile.Contacts.ProtonMail />
+                        <LayoutBody.Profile.Contacts.GitHub />
+                        <LayoutBody.Profile.Contacts.StackOverflow />
+                        <LayoutBody.Profile.Contacts.LinkedIn />
+                      </LayoutBody.Profile.Contacts.Root>
+                    </LayoutBody.Profile.Root>
+                  </LayoutBody.Root>
                 </ProfileIntersectionProvider>
               </div>
               <div className='flex flex-col items-center lg:items-start w-full lg:w-8/12'>

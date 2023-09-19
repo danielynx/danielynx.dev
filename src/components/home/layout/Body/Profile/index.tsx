@@ -6,7 +6,7 @@ import { ProfileCompany } from './Company';
 import { ProfileLocation } from './Location';
 import { ProfileContacts } from './Contacts';
 
-export const LayoutProfile = {
+export const BodyProfile = {
   Root: ProfileRoot,
   Avatar: ProfileAvatar,
   Name: ProfileName,

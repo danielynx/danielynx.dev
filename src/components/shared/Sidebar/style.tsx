@@ -4,12 +4,12 @@ export const sidebarTvStyle = tv(
   {
     variants: {
       size: {
-        initial: 'w-11/12',
-        sm: 'w-8/12',
-        md: 'w-6/12',
-        lg: 'w-11/12',
-        xl: 'w-8/12',
-        '2xl': 'w-7/12',
+        initial: ['w-11/12', 'px-5', 'mr-0'],
+        sm: ['w-8/12'],
+        md: ['w-6/12', 'px-7'],
+        lg: ['w-11/12', 'px-6', 'mr-2'],
+        xl: ['w-8/12', 'px-7'],
+        '2xl': ['w-7/12'],
       },
     },
     defaultVariants: {

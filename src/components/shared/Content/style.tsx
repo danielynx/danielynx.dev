@@ -4,10 +4,10 @@ export const contentTvStyle = tv(
   {
     variants: {
       size: {
-        initial: 'w-11/12',
-        md: 'w-10/12',
-        lg: 'w-11/12',
-        xl: 'w-9/12',
+        initial: ['w-11/12', 'px-3', 'ml-0'],
+        md: ['w-10/12', 'px-5'],
+        lg: ['w-11/12', 'px-4', 'ml-2'],
+        xl: ['w-9/12', 'px-5'],
       },
     },
     defaultVariants: {
