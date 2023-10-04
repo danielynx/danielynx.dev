@@ -15,7 +15,9 @@ export default function Page() {
       </PageHeader.Root>
       <PageBody.Root>
         <PageBody.Overview />
-        <PageBody.Projects />
+        <PageBody.Projects.Root>
+          <PageBody.Projects.GoBarber />
+        </PageBody.Projects.Root>
         <PageBody.Courses.Root>
           <PageBody.Courses.Symfony />
           <PageBody.Courses.Rocketseat />

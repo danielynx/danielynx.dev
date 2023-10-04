@@ -77,6 +77,9 @@ module.exports = withTV({
               freecodecamp: '#0A0A23',
               symfony: '#1AB4FC',
             },
+            project: {
+              gobarber: '#ff9000',
+            },
           },
           text: {
             100: colors.gray[400],
@@ -137,6 +140,9 @@ module.exports = withTV({
               mongodb: '#47A248',
               freecodecamp: '#0A0A23',
               symfony: '#1AB4FC',
+            },
+            project: {
+              gobarber: '#ff9000',
             },
           },
           border: {
