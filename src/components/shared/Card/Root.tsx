@@ -2,7 +2,7 @@ import { PropsWithChildren } from 'react';
 import Link from 'next/link';
 import { tv } from 'tailwind-variants';
 
-export interface ItemRootProps {
+export interface CardRootProps {
   link: string;
   lightBgColor: string;
   darkTextColor: string;
@@ -19,12 +19,12 @@ const tvStyle = tv({
   ],
 });
 
-export function ItemRoot({
+export function CardRoot({
   children,
   link,
   lightBgColor,
   darkTextColor,
-}: PropsWithChildren<ItemRootProps>) {
+}: PropsWithChildren<CardRootProps>) {
   const style = tvStyle({
     className: [
       lightBgColor,

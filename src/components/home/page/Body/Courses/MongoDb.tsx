@@ -1,8 +1,8 @@
 import { SiMongodb } from 'react-icons/si';
 import { tv } from 'tailwind-variants';
 
+import { SharedCard } from '@/components/shared/Card';
 import { textStyle } from './style';
-import { CoursesItem } from './Item';
 
 const tvStyle = tv({
   slots: {
@@ -21,21 +21,21 @@ export function CoursesMongoDb() {
     'https://university.mongodb.com/course_completion/2afe5b18-37c2-4a62-8a32-e1e27256a5bf?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing';
 
   return (
-    <CoursesItem.Root
+    <SharedCard.Root
       lightBgColor={lightBgColor}
       darkTextColor={darkTextColor}
       link={link}
     >
-      <CoursesItem.Header.Root>
-        <CoursesItem.Header.Icon Icon={SiMongodb} />
-        <CoursesItem.Header.Text>
+      <SharedCard.Header.Root>
+        <SharedCard.Header.Icon Icon={SiMongodb} />
+        <SharedCard.Header.Text>
           <div className={style.text({ className: textStyle })}>
             <span className={style.mongoDb()}>MongoDB</span>
             <span className={style.university()}>University</span>
           </div>
-        </CoursesItem.Header.Text>
-      </CoursesItem.Header.Root>
-      <CoursesItem.Footer />
-    </CoursesItem.Root>
+        </SharedCard.Header.Text>
+      </SharedCard.Header.Root>
+      <SharedCard.Footer />
+    </SharedCard.Root>
   );
 }

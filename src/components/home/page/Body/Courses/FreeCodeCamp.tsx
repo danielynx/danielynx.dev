@@ -1,8 +1,8 @@
 import { SiFreecodecamp } from 'react-icons/si';
 import { tv } from 'tailwind-variants';
 
+import { SharedCard } from '@/components/shared/Card';
 import { textStyle } from './style';
-import { CoursesItem } from './Item';
 
 const tvStyle = tv({
   slots: {
@@ -18,20 +18,20 @@ export function CoursesFreeCodeCamp() {
   const link = 'https://www.freecodecamp.org/danielynx';
 
   return (
-    <CoursesItem.Root
+    <SharedCard.Root
       lightBgColor={lightBgColor}
       darkTextColor={darkTextColor}
       link={link}
     >
-      <CoursesItem.Header.Root>
-        <CoursesItem.Header.Icon Icon={SiFreecodecamp} />
-        <CoursesItem.Header.Text>
+      <SharedCard.Header.Root>
+        <SharedCard.Header.Icon Icon={SiFreecodecamp} />
+        <SharedCard.Header.Text>
           <div className={style.text({ className: textStyle })}>
             freeCodeCamp
           </div>
-        </CoursesItem.Header.Text>
-      </CoursesItem.Header.Root>
-      <CoursesItem.Footer />
-    </CoursesItem.Root>
+        </SharedCard.Header.Text>
+      </SharedCard.Header.Root>
+      <SharedCard.Footer />
+    </SharedCard.Root>
   );
 }

@@ -1,7 +1,6 @@
-import Link from 'next/link';
 import { tv } from 'tailwind-variants';
 
-export interface ItemFooterProps {
+export interface CardFooterProps {
   link: string;
   darkTextColor: string;
 }
@@ -29,7 +28,7 @@ const tvStyle = tv(
   },
 );
 
-export function ItemFooter() {
+export function CardFooter() {
   const style = tvStyle({
     size: { sm: 'sm', md: 'md', xl: 'xl' },
   });

@@ -1,8 +1,8 @@
 import { MdRocketLaunch } from 'react-icons/md';
 import { tv } from 'tailwind-variants';
 
+import { SharedCard } from '@/components/shared/Card';
 import { textStyle } from './style';
-import { CoursesItem } from './Item';
 
 const tvStyle = tv({
   slots: {
@@ -18,18 +18,18 @@ export function CoursesRocketseat() {
   const link = '#';
 
   return (
-    <CoursesItem.Root
+    <SharedCard.Root
       lightBgColor={lightBgColor}
       darkTextColor={darkTextColor}
       link={link}
     >
-      <CoursesItem.Header.Root>
-        <CoursesItem.Header.Icon Icon={MdRocketLaunch} />
-        <CoursesItem.Header.Text>
+      <SharedCard.Header.Root>
+        <SharedCard.Header.Icon Icon={MdRocketLaunch} />
+        <SharedCard.Header.Text>
           <div className={style.text({ className: textStyle })}>Rocketseat</div>
-        </CoursesItem.Header.Text>
-      </CoursesItem.Header.Root>
-      <CoursesItem.Footer />
-    </CoursesItem.Root>
+        </SharedCard.Header.Text>
+      </SharedCard.Header.Root>
+      <SharedCard.Footer />
+    </SharedCard.Root>
   );
 }
