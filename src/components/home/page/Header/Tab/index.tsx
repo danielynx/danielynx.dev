@@ -13,7 +13,7 @@ const tvStyle = tv(
     slots: {
       button: [
         'flex flew-row items-center justify-center',
-        'py-2 first:ml-0 ml-2 rounded-lg',
+        'py-2 px-1 first:ml-0 ml-2 rounded-lg',
       ],
       icon: '',
       text: 'font-medium',
@@ -39,18 +39,18 @@ const tvStyle = tv(
       },
       size: {
         initial: {
-          button: 'w-[5.5rem] xs:w-[6.5rem] px-1',
-          icon: 'h-4 w-4 xs:h-5 xs:w-5',
-          text: 'pl-1 text-xs xs:text-sm',
+          button: 'w-[5.5rem] xs:w-[6.5rem] 2xs:w-[7.5rem]',
+          icon: 'h-4 w-4 xs:h-5 xs:w-5 2xs:h-6 2xs:w-6',
+          text: 'pl-1 text-xs xs:text-sm 2xs:text-base',
         },
         sm: {
-          button: 'w-36 px-2',
-          icon: 'h-6 w-6 ',
-          text: 'pl-1.5 text-base',
+          button: 'w-36',
+          icon: 'h-7 w-7',
+          text: 'pl-1.5 text-lg',
         },
         md: {
-          button: 'w-40 px-2',
-          icon: 'h-7 w-7 ',
+          button: 'w-40',
+          icon: 'h-8 w-8',
           text: 'pl-2',
         },
       },

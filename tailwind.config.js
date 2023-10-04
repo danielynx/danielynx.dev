@@ -40,6 +40,7 @@ module.exports = withTV({
     extend: {
       screens: {
         xs: '360px',
+        '2xs': '500px',
       },
       fontFamily: {
         sans: ['var(--font-sans)'],
