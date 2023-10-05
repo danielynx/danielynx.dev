@@ -1,4 +1,4 @@
-import { MdRocketLaunch } from 'react-icons/md';
+import { BsScissors } from 'react-icons/bs';
 import { tv } from 'tailwind-variants';
 
 import { SharedCard } from '@/components/shared/Card';
@@ -10,11 +10,11 @@ const tvStyle = tv({
   },
 });
 
-export function CoursesRocketseat() {
+export function ProjectGoBarber() {
   const style = tvStyle();
 
-  const lightBgColor = 'bg-light-bg-brand-rocketseat';
-  const darkTextColor = 'dark:text-dark-text-brand-rocketseat';
+  const lightBgColor = 'bg-light-bg-project-gobarber';
+  const darkTextColor = 'dark:text-dark-text-project-gobarber';
   const link = '#';
 
   return (
@@ -24,9 +24,9 @@ export function CoursesRocketseat() {
       link={link}
     >
       <SharedCard.Header.Root>
-        <SharedCard.Header.Icon Icon={MdRocketLaunch} />
+        <SharedCard.Header.Icon Icon={BsScissors} />
         <SharedCard.Header.Text>
-          <div className={style.text({ className: textStyle })}>Rocketseat</div>
+          <div className={style.text({ className: textStyle })}>GoBarber</div>
         </SharedCard.Header.Text>
       </SharedCard.Header.Root>
       <SharedCard.Footer />

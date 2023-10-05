@@ -1,4 +1,4 @@
-import { BsScissors } from 'react-icons/bs';
+import { SiFreecodecamp } from 'react-icons/si';
 import { tv } from 'tailwind-variants';
 
 import { SharedCard } from '@/components/shared/Card';
@@ -10,12 +10,12 @@ const tvStyle = tv({
   },
 });
 
-export function ProjectsGoBarber() {
+export function CourseFreeCodeCamp() {
   const style = tvStyle();
 
-  const lightBgColor = 'bg-light-bg-project-gobarber';
-  const darkTextColor = 'dark:text-dark-text-project-gobarber';
-  const link = '#';
+  const lightBgColor = 'bg-light-bg-brand-freecodecamp';
+  const darkTextColor = 'dark:text-dark-text-brand-freecodecamp';
+  const link = 'https://www.freecodecamp.org/danielynx';
 
   return (
     <SharedCard.Root
@@ -24,9 +24,11 @@ export function ProjectsGoBarber() {
       link={link}
     >
       <SharedCard.Header.Root>
-        <SharedCard.Header.Icon Icon={BsScissors} />
+        <SharedCard.Header.Icon Icon={SiFreecodecamp} />
         <SharedCard.Header.Text>
-          <div className={style.text({ className: textStyle })}>GoBarber</div>
+          <div className={style.text({ className: textStyle })}>
+            freeCodeCamp
+          </div>
         </SharedCard.Header.Text>
       </SharedCard.Header.Root>
       <SharedCard.Footer />

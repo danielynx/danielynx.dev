@@ -1,5 +1,5 @@
 import { ItemRoot } from './Root';
 
-export const ContactsItem = {
+export const ContactItem = {
   Root: ItemRoot,
 };

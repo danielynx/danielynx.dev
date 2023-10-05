@@ -1,4 +1,4 @@
-import { SiFreecodecamp } from 'react-icons/si';
+import { MdRocketLaunch } from 'react-icons/md';
 import { tv } from 'tailwind-variants';
 
 import { SharedCard } from '@/components/shared/Card';
@@ -10,12 +10,12 @@ const tvStyle = tv({
   },
 });
 
-export function CoursesFreeCodeCamp() {
+export function CourseRocketseat() {
   const style = tvStyle();
 
-  const lightBgColor = 'bg-light-bg-brand-freecodecamp';
-  const darkTextColor = 'dark:text-dark-text-brand-freecodecamp';
-  const link = 'https://www.freecodecamp.org/danielynx';
+  const lightBgColor = 'bg-light-bg-brand-rocketseat';
+  const darkTextColor = 'dark:text-dark-text-brand-rocketseat';
+  const link = '#';
 
   return (
     <SharedCard.Root
@@ -24,11 +24,9 @@ export function CoursesFreeCodeCamp() {
       link={link}
     >
       <SharedCard.Header.Root>
-        <SharedCard.Header.Icon Icon={SiFreecodecamp} />
+        <SharedCard.Header.Icon Icon={MdRocketLaunch} />
         <SharedCard.Header.Text>
-          <div className={style.text({ className: textStyle })}>
-            freeCodeCamp
-          </div>
+          <div className={style.text({ className: textStyle })}>Rocketseat</div>
         </SharedCard.Header.Text>
       </SharedCard.Header.Root>
       <SharedCard.Footer />

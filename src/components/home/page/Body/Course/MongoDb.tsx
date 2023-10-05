@@ -12,7 +12,7 @@ const tvStyle = tv({
   },
 });
 
-export function CoursesMongoDb() {
+export function CourseMongoDb() {
   const style = tvStyle();
 
   const lightBgColor = 'bg-light-bg-brand-mongodb';

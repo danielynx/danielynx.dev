@@ -4,7 +4,7 @@ import { MdSchool } from 'react-icons/md';
 
 import { HeaderTab } from './Tab';
 
-export function HeaderCourses() {
+export function HeaderCourse() {
   return (
     <HeaderTab
       Icon={MdSchool}

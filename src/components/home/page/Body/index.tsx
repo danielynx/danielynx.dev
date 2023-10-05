@@ -1,11 +1,11 @@
 import { BodyRoot } from './Root';
 import { BodyOverview } from './Overview';
-import { BodyProjects } from './Projects';
-import { BodyCourses } from './Courses';
+import { BodyProject } from './Project';
+import { BodyCourse } from './Course';
 
 export const PageBody = {
   Root: BodyRoot,
   Overview: BodyOverview,
-  Projects: BodyProjects,
-  Courses: BodyCourses,
+  Project: BodyProject,
+  Course: BodyCourse,
 };

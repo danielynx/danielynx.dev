@@ -60,12 +60,12 @@ export default function RootLayout({ children }: PropsWithChildren) {
                       <LayoutBody.Profile.Bio />
                       <LayoutBody.Profile.Company />
                       <LayoutBody.Profile.Location />
-                      <LayoutBody.Profile.Contacts.Root>
-                        <LayoutBody.Profile.Contacts.ProtonMail />
-                        <LayoutBody.Profile.Contacts.GitHub />
-                        <LayoutBody.Profile.Contacts.StackOverflow />
-                        <LayoutBody.Profile.Contacts.LinkedIn />
-                      </LayoutBody.Profile.Contacts.Root>
+                      <LayoutBody.Profile.Contact.Root>
+                        <LayoutBody.Profile.Contact.ProtonMail />
+                        <LayoutBody.Profile.Contact.GitHub />
+                        <LayoutBody.Profile.Contact.StackOverflow />
+                        <LayoutBody.Profile.Contact.LinkedIn />
+                      </LayoutBody.Profile.Contact.Root>
                     </LayoutBody.Profile.Root>
                   </LayoutBody.Root>
                 </ProfileIntersectionProvider>

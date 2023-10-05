@@ -10,21 +10,21 @@ export default function Page() {
     <Tab.Group>
       <PageHeader.Root>
         <PageHeader.Overview />
-        <PageHeader.Projects />
-        <PageHeader.Courses />
+        <PageHeader.Project />
+        <PageHeader.Course />
       </PageHeader.Root>
       <PageBody.Root>
         <PageBody.Overview />
-        <PageBody.Projects.Root>
-          <PageBody.Projects.MyPortfolio />
-          <PageBody.Projects.GoBarber />
-        </PageBody.Projects.Root>
-        <PageBody.Courses.Root>
-          <PageBody.Courses.Symfony />
-          <PageBody.Courses.Rocketseat />
-          <PageBody.Courses.MongoDb />
-          <PageBody.Courses.FreeCodeCamp />
-        </PageBody.Courses.Root>
+        <PageBody.Project.Root>
+          <PageBody.Project.MyPortfolio />
+          <PageBody.Project.GoBarber />
+        </PageBody.Project.Root>
+        <PageBody.Course.Root>
+          <PageBody.Course.Symfony />
+          <PageBody.Course.Rocketseat />
+          <PageBody.Course.MongoDb />
+          <PageBody.Course.FreeCodeCamp />
+        </PageBody.Course.Root>
       </PageBody.Root>
     </Tab.Group>
   );

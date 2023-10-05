@@ -1,10 +1,10 @@
 import { SiProtonmail } from 'react-icons/si';
 
-import { ContactsItem } from './Item';
+import { ContactItem } from './Item';
 
-export function ContactsProtonMail() {
+export function ContactProtonMail() {
   return (
-    <ContactsItem.Root
+    <ContactItem.Root
       Icon={SiProtonmail}
       iconColor='text-light-text-brand-protonmail dark:text-dark-text-brand-protonmail'
       url='mailto:danielynx@proton.me'

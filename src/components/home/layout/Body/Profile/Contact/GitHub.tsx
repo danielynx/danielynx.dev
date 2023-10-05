@@ -1,10 +1,10 @@
 import { SiGithub } from 'react-icons/si';
 
-import { ContactsItem } from './Item';
+import { ContactItem } from './Item';
 
-export function ContactsGitHub() {
+export function ContactGitHub() {
   return (
-    <ContactsItem.Root
+    <ContactItem.Root
       Icon={SiGithub}
       iconColor='text-light-text-brand-github dark:text-dark-text-brand-github'
       url='https://github.com/danielynx'

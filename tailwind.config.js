@@ -78,6 +78,7 @@ module.exports = withTV({
               symfony: '#1AB4FC',
             },
             project: {
+              myportfolio: colors.blue[500],
               gobarber: '#ff9000',
             },
           },
@@ -142,6 +143,7 @@ module.exports = withTV({
               symfony: '#1AB4FC',
             },
             project: {
+              myportfolio: colors.blue[500],
               gobarber: '#ff9000',
             },
           },

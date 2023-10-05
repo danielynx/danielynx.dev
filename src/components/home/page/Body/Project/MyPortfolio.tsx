@@ -1,4 +1,4 @@
-import { SiSymfony } from 'react-icons/si';
+import { ImProfile } from 'react-icons/im';
 import { tv } from 'tailwind-variants';
 
 import { SharedCard } from '@/components/shared/Card';
@@ -6,18 +6,18 @@ import { textStyle } from './style';
 
 const tvStyle = tv({
   slots: {
-    text: '',
-    symfony: 'font-bold',
-    casts: 'font-normal',
+    text: 'flex flex-col items-start',
+    largerSpan: 'font-bold',
+    smalerSpan: 'font-normal text-base',
   },
 });
 
-export function CoursesSymfony() {
+export function ProjectMyPortfolio() {
   const style = tvStyle();
 
-  const lightBgColor = 'bg-light-bg-brand-symfony';
-  const darkTextColor = 'dark:text-dark-text-brand-symfony';
-  const link = 'https://symfonycasts.com/u/danielynx';
+  const lightBgColor = 'bg-light-bg-project-myportfolio';
+  const darkTextColor = 'dark:text-dark-text-project-myportfolio';
+  const link = '#';
 
   return (
     <SharedCard.Root
@@ -26,11 +26,11 @@ export function CoursesSymfony() {
       link={link}
     >
       <SharedCard.Header.Root>
-        <SharedCard.Header.Icon Icon={SiSymfony} />
+        <SharedCard.Header.Icon Icon={ImProfile} />
         <SharedCard.Header.Text>
           <div className={style.text({ className: textStyle })}>
-            <span className={style.symfony()}>Symfony</span>
-            <span className={style.casts()}>Casts</span>
+            <span className={style.largerSpan()}>Daniel&apos;s Portfolio</span>
+            <span className={style.smalerSpan()}>(This website)</span>
           </div>
         </SharedCard.Header.Text>
       </SharedCard.Header.Root>

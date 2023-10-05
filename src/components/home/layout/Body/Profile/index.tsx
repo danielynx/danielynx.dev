@@ -4,7 +4,7 @@ import { ProfileName } from './Name';
 import { ProfileBio } from './Bio';
 import { ProfileCompany } from './Company';
 import { ProfileLocation } from './Location';
-import { ProfileContacts } from './Contacts';
+import { ProfileContact } from './Contact';
 
 export const BodyProfile = {
   Root: ProfileRoot,
@@ -13,5 +13,5 @@ export const BodyProfile = {
   Bio: ProfileBio,
   Company: ProfileCompany,
   Location: ProfileLocation,
-  Contacts: ProfileContacts,
+  Contact: ProfileContact,
 };
