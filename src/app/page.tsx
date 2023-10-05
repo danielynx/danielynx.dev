@@ -16,6 +16,7 @@ export default function Page() {
       <PageBody.Root>
         <PageBody.Overview />
         <PageBody.Projects.Root>
+          <PageBody.Projects.MyPortfolio />
           <PageBody.Projects.GoBarber />
         </PageBody.Projects.Root>
         <PageBody.Courses.Root>
