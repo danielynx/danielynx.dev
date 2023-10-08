@@ -1,13 +1,13 @@
 'use client';
 
-import { Tab } from '@headlessui/react';
+import { SharedTab } from '@/components/shared/Tab';
 
 import { PageHeader } from '@/components/home/page/Header';
 import { PageBody } from '@/components/home/page/Body';
 
 export default function Page() {
   return (
-    <Tab.Group>
+    <SharedTab.Group>
       <PageHeader.Root>
         <PageHeader.Overview />
         <PageHeader.Project />
@@ -26,6 +26,6 @@ export default function Page() {
           <PageBody.Course.FreeCodeCamp />
         </PageBody.Course.Root>
       </PageBody.Root>
-    </Tab.Group>
+    </SharedTab.Group>
   );
 }

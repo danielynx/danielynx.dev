@@ -2,11 +2,11 @@
 
 import { MdSchool } from 'react-icons/md';
 
-import { HeaderTab } from './Tab';
+import { SharedTab } from '@/components/shared/Tab';
 
 export function HeaderCourse() {
   return (
-    <HeaderTab
+    <SharedTab.Item
       Icon={MdSchool}
       text='Courses'
     />

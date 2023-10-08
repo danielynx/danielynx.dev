@@ -1,8 +1,8 @@
-import { Tab } from '@headlessui/react';
+import { SharedTab } from '@/components/shared/Tab';
 
 export function BodyOverview() {
   return (
-    <Tab.Panel>
+    <SharedTab.Panel>
       <div className='leading-loose'>
         <p>Hi there, I&apos;m Daniel B.</p>
         <p>👨‍🎓 Computing Scientist</p>
@@ -120,6 +120,6 @@ export function BodyOverview() {
           technologies that will be my next study aim
         </p>
       </div>
-    </Tab.Panel>
+    </SharedTab.Panel>
   );
 }

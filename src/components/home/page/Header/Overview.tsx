@@ -2,11 +2,11 @@
 
 import { MdPieChart } from 'react-icons/md';
 
-import { HeaderTab } from './Tab';
+import { SharedTab } from '@/components/shared/Tab';
 
 export function HeaderOverview() {
   return (
-    <HeaderTab
+    <SharedTab.Item
       Icon={MdPieChart}
       text='Overview'
     />

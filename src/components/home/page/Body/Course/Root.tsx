@@ -1,12 +1,12 @@
 import { PropsWithChildren } from 'react';
-import { Tab } from '@headlessui/react';
+import { SharedTab } from '@/components/shared/Tab';
 
 export function CourseRoot({ children }: PropsWithChildren) {
   return (
-    <Tab.Panel>
+    <SharedTab.Panel>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-5 m-2'>
         {children}
       </div>
-    </Tab.Panel>
+    </SharedTab.Panel>
   );
 }

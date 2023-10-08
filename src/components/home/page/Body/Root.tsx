@@ -1,12 +1,12 @@
 import { PropsWithChildren } from 'react';
-import { Tab } from '@headlessui/react';
 
+import { SharedTab } from '@/components/shared/Tab';
 import { SharedContent } from '@/components/shared/Content';
 
 export function BodyRoot({ children }: PropsWithChildren) {
   return (
     <SharedContent.Body>
-      <Tab.Panels className='grow'>{children}</Tab.Panels>
+      <SharedTab.Panels>{children}</SharedTab.Panels>
     </SharedContent.Body>
   );
 }

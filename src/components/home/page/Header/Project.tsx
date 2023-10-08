@@ -2,11 +2,11 @@
 
 import { MdDeveloperBoard } from 'react-icons/md';
 
-import { HeaderTab } from './Tab';
+import { SharedTab } from '@/components/shared/Tab';
 
 export function HeaderProject() {
   return (
-    <HeaderTab
+    <SharedTab.Item
       Icon={MdDeveloperBoard}
       text='Projects'
     />

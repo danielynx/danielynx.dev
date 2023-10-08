@@ -1,9 +1,9 @@
-import { Fragment } from 'react';
-import { Tab } from '@headlessui/react';
-import { IconType } from 'react-icons';
+import { PropsWithChildren, ElementType, Fragment } from 'react';
+import { Tab, TabProps } from '@headlessui/react';
 import { tv } from 'tailwind-variants';
+import { IconType } from 'react-icons';
 
-export interface HeaderTabProps {
+export interface TabItemProps extends TabProps<ElementType> {
   Icon: IconType;
   text: string;
 }
@@ -64,11 +64,19 @@ const tvStyle = tv(
   },
 );
 
-export function HeaderTab({ Icon, text }: HeaderTabProps) {
+export function TabItem({
+  Icon,
+  text,
+  children,
+  ...props
+}: PropsWithChildren<TabItemProps>) {
   const style = tvStyle({ size: { sm: 'sm', md: 'md' } });
 
   return (
-    <Tab as={Fragment}>
+    <Tab
+      as={Fragment}
+      {...props}
+    >
       {({ selected }) => (
         <button className={style.button({ selected })}>
           <Icon className={style.icon({ selected })} />

@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
-import { Tab } from '@headlessui/react';
 import { tv } from 'tailwind-variants';
 
+import { SharedTab } from '@/components/shared/Tab';
 import { SharedContent } from '@/components/shared/Content';
 
 const tvStyle = tv(
@@ -30,7 +30,9 @@ export function HeaderRoot({ children }: PropsWithChildren) {
 
   return (
     <SharedContent.Header>
-      <Tab.List className={style}>{children}</Tab.List>
+      <SharedTab.List>
+        <div className={style}>{children}</div>
+      </SharedTab.List>
     </SharedContent.Header>
   );
 }
