@@ -15,7 +15,7 @@ export function ProjectGoBarber() {
 
   const lightBgColor = 'bg-light-bg-project-gobarber';
   const darkTextColor = 'dark:text-dark-text-project-gobarber';
-  const link = '#';
+  const link = 'project/go-barber';
 
   return (
     <SharedCard.Root

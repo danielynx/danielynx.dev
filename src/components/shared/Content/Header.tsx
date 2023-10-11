@@ -8,7 +8,7 @@ const tvStyle = tv(
   {
     slots: {
       header: 'flex flex-row items-end sticky',
-      content: 'flex flex-row items-end h-full',
+      content: 'flex flex-row items-end justify-start h-full',
     },
     variants: {
       size: {

@@ -22,6 +22,7 @@ export function CourseFreeCodeCamp() {
       lightBgColor={lightBgColor}
       darkTextColor={darkTextColor}
       link={link}
+      target='_blank'
     >
       <SharedCard.Header.Root>
         <SharedCard.Header.Icon Icon={SiFreecodecamp} />
