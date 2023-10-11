@@ -25,6 +25,7 @@ const tvStyle = tv(
             'shadow',
             'bg-light-bg-ct dark:bg-dark-bg-ct',
             'text-light-text-ct dark:text-dark-text-ct',
+            'outline-none ring-0',
           ],
         },
         false: {
