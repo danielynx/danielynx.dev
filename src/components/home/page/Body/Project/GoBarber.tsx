@@ -2,7 +2,6 @@ import { BsScissors } from 'react-icons/bs';
 import { tv } from 'tailwind-variants';
 
 import { SharedCard } from '@/components/shared/Card';
-import { textStyle } from './style';
 
 const tvStyle = tv({
   slots: {
@@ -26,7 +25,7 @@ export function ProjectGoBarber() {
       <SharedCard.Header.Root>
         <SharedCard.Header.Icon Icon={BsScissors} />
         <SharedCard.Header.Text>
-          <div className={style.text({ className: textStyle })}>GoBarber</div>
+          <div className={style.text()}>GoBarber</div>
         </SharedCard.Header.Text>
       </SharedCard.Header.Root>
       <SharedCard.Footer />

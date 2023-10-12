@@ -1,6 +1,6 @@
 import { tv } from 'tailwind-variants';
 
-export const contentTvStyle = tv(
+const tvStyle = tv(
   {
     variants: {
       size: {
@@ -19,6 +19,8 @@ export const contentTvStyle = tv(
   },
 );
 
-export const contentStyle = contentTvStyle({
-  size: { md: 'md', lg: 'lg', xl: 'xl' },
-});
+export function contentStyle() {
+  return tvStyle({
+    size: { md: 'md', lg: 'lg', xl: 'xl' },
+  });
+}

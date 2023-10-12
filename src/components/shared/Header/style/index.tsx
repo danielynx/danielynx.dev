@@ -1,6 +1,6 @@
 import { tv } from 'tailwind-variants';
 
-export const headerTvStyle = tv({
+const tvStyle = tv({
   base: [
     'w-full h-20',
     'border-b border-light-border dark:border-dark-border',
@@ -8,4 +8,6 @@ export const headerTvStyle = tv({
   ],
 });
 
-export const headerStyle = headerTvStyle();
+export function headerStyle() {
+  return tvStyle();
+}

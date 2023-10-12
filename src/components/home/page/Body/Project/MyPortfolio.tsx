@@ -2,7 +2,6 @@ import { ImProfile } from 'react-icons/im';
 import { tv } from 'tailwind-variants';
 
 import { SharedCard } from '@/components/shared/Card';
-import { textStyle } from './style';
 
 const tvStyle = tv({
   slots: {
@@ -28,7 +27,7 @@ export function ProjectMyPortfolio() {
       <SharedCard.Header.Root>
         <SharedCard.Header.Icon Icon={ImProfile} />
         <SharedCard.Header.Text>
-          <div className={style.text({ className: textStyle })}>
+          <div className={style.text()}>
             <span className={style.largerSpan()}>Daniel&apos;s Portfolio</span>
             <span className={style.smalerSpan()}>(This website)</span>
           </div>

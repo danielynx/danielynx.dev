@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
-import { bodyStyle } from '@/components/shared/Body/style';
-import { sidebarStyle } from '@/components/shared/Sidebar/style';
+import { SharedBody } from '@/components/shared/Body';
+import { sidebarStyle } from './style';
 
 const tvStyle = tv(
   {
@@ -42,8 +42,8 @@ export function SidebarBody({ children }: PropsWithChildren) {
   });
 
   return (
-    <aside className={style.aside({ className: bodyStyle })}>
-      <div className={style.sidebar({ className: sidebarStyle })}>
+    <aside className={style.aside({ className: SharedBody.style() })}>
+      <div className={style.sidebar({ className: sidebarStyle() })}>
         {children}
       </div>
     </aside>

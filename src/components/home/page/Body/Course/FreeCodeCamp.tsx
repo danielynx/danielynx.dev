@@ -2,7 +2,6 @@ import { SiFreecodecamp } from 'react-icons/si';
 import { tv } from 'tailwind-variants';
 
 import { SharedCard } from '@/components/shared/Card';
-import { textStyle } from './style';
 
 const tvStyle = tv({
   slots: {
@@ -27,9 +26,7 @@ export function CourseFreeCodeCamp() {
       <SharedCard.Header.Root>
         <SharedCard.Header.Icon Icon={SiFreecodecamp} />
         <SharedCard.Header.Text>
-          <div className={style.text({ className: textStyle })}>
-            freeCodeCamp
-          </div>
+          <div className={style.text()}>freeCodeCamp</div>
         </SharedCard.Header.Text>
       </SharedCard.Header.Root>
       <SharedCard.Footer />

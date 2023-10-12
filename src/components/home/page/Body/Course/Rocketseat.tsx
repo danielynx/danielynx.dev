@@ -2,7 +2,6 @@ import { MdRocketLaunch } from 'react-icons/md';
 import { tv } from 'tailwind-variants';
 
 import { SharedCard } from '@/components/shared/Card';
-import { textStyle } from './style';
 
 const tvStyle = tv({
   slots: {
@@ -26,7 +25,7 @@ export function CourseRocketseat() {
       <SharedCard.Header.Root>
         <SharedCard.Header.Icon Icon={MdRocketLaunch} />
         <SharedCard.Header.Text>
-          <div className={style.text({ className: textStyle })}>Rocketseat</div>
+          <div className={style.text()}>Rocketseat</div>
         </SharedCard.Header.Text>
       </SharedCard.Header.Root>
       <SharedCard.Footer />

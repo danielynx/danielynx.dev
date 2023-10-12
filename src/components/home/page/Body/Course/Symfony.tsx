@@ -2,7 +2,6 @@ import { SiSymfony } from 'react-icons/si';
 import { tv } from 'tailwind-variants';
 
 import { SharedCard } from '@/components/shared/Card';
-import { textStyle } from './style';
 
 const tvStyle = tv({
   slots: {
@@ -29,7 +28,7 @@ export function CourseSymfony() {
       <SharedCard.Header.Root>
         <SharedCard.Header.Icon Icon={SiSymfony} />
         <SharedCard.Header.Text>
-          <div className={style.text({ className: textStyle })}>
+          <div className={style.text()}>
             <span className={style.symfony()}>Symfony</span>
             <span className={style.casts()}>Casts</span>
           </div>

@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
-import { headerStyle } from '@/components/shared/Header/style';
-import { sidebarStyle } from '@/components/shared/Sidebar/style';
+import { SharedHeader } from '@/components/shared/Header';
+import { sidebarStyle } from './style';
 
 const tvStyle = tv(
   {
@@ -35,8 +35,8 @@ export function SidebarHeader({ children }: PropsWithChildren) {
   });
 
   return (
-    <header className={style.header({ className: headerStyle })}>
-      <nav className={style.sidebar({ className: sidebarStyle })}>
+    <header className={style.header({ className: SharedHeader.style() })}>
+      <nav className={style.sidebar({ className: sidebarStyle() })}>
         {children}
       </nav>
     </header>

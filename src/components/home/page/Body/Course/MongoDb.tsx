@@ -2,7 +2,6 @@ import { SiMongodb } from 'react-icons/si';
 import { tv } from 'tailwind-variants';
 
 import { SharedCard } from '@/components/shared/Card';
-import { textStyle } from './style';
 
 const tvStyle = tv({
   slots: {
@@ -30,7 +29,7 @@ export function CourseMongoDb() {
       <SharedCard.Header.Root>
         <SharedCard.Header.Icon Icon={SiMongodb} />
         <SharedCard.Header.Text>
-          <div className={style.text({ className: textStyle })}>
+          <div className={style.text()}>
             <span className={style.mongoDb()}>MongoDB</span>
             <span className={style.university()}>University</span>
           </div>
