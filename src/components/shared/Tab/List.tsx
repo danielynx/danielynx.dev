@@ -2,6 +2,8 @@ import { PropsWithChildren, ElementType } from 'react';
 import { Tab, TabListProps } from '@headlessui/react';
 import { tv } from 'tailwind-variants';
 
+import { SharedNavigator } from '@/components/shared/Navigator';
+
 const tvStyle = tv({
   base: 'flex flex-row',
 });
@@ -11,11 +13,11 @@ export function TabList({
   className,
   ...props
 }: PropsWithChildren<TabListProps<ElementType>>) {
-  const style = tvStyle({ className });
+  const stylePainel = SharedNavigator.style.painel;
 
   return (
     <Tab.List
-      className={style}
+      className={stylePainel()}
       {...props}
     >
       {children}
