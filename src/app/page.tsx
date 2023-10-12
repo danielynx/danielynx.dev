@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import { SharedTab } from '@/components/shared/Tab';
 import { PageHeader } from '@/components/home/page/Header';
 import { PageBody } from '@/components/home/page/Body';
+import { TabEnum } from '@/types/home/page/TabEnum';
 
 export default function Page() {
   const searchParams = useSearchParams();
@@ -13,7 +14,7 @@ export default function Page() {
   const tab = searchParams.get('tab');
 
   const [selectedIndex, setSelectedIndex] = useState(
-    tab === 'projects' ? 1 : tab === 'courses' ? 2 : 0,
+    tab === TabEnum.PROJECTS ? 1 : tab === TabEnum.COURSES ? 2 : 0,
   );
 
   return (

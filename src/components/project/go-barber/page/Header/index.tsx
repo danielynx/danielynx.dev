@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { tv } from 'tailwind-variants';
 
 import { SharedContent } from '@/components/shared/Content';
+import { TabEnum } from '@/types/home/page/TabEnum';
 
 const tvStyle = tv(
   {
@@ -39,7 +40,7 @@ export function PageHeader() {
       <div className={style.container()}>
         <Link
           className={style.button()}
-          href='/?tab=projects'
+          href={`/?tab=${TabEnum.PROJECTS}`}
         >
           Go Back
         </Link>
