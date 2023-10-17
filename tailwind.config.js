@@ -66,6 +66,7 @@ module.exports = withTV({
             hg: {
               DEFAULT: colors.gray[100],
               600: colors.gray[200],
+              700: colors.gray[300],
             },
             // contrast
             ct: {
