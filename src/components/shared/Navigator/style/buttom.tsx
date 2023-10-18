@@ -1,13 +1,5 @@
 import { tv, type VariantProps } from 'tailwind-variants';
 
-const containerColorStyle = {
-  selected: {
-    true: 'text-light-text-ct dark:text-dark-text-ct',
-    false:
-      'text-light-text/70 dark:text-dark-text/70 hover:text-light-text dark:hover:text-dark-text',
-  },
-};
-
 const tvStyle = tv(
   {
     slots: {
@@ -18,7 +10,6 @@ const tvStyle = tv(
       ],
       icon: '',
       text: 'font-medium',
-      containerColor: '',
     },
     variants: {
       selected: {
@@ -26,32 +17,30 @@ const tvStyle = tv(
           container: [
             'shadow',
             'bg-light-bg-ct dark:bg-dark-bg-ct',
-            containerColorStyle.selected.true,
+            'text-light-text-ct dark:text-dark-text-ct',
             'outline-none ring-0',
           ],
-          containerColor: containerColorStyle.selected.true,
         },
         false: {
           container: [
-            containerColorStyle.selected.false,
+            'text-light-text/70 dark:text-dark-text/70 hover:text-light-text dark:hover:text-dark-text',
             'hover:ring-2 ring-offset-1',
             'ring-light-bg-ct/50 dark:ring-dark-bg-ct/50',
             'ring-offset-light-bg-hg-600/80 dark:ring-offset-dark-bg-hg-600/80',
           ],
-          containerColor: containerColorStyle.selected.false,
         },
       },
       size: {
         initial: {
-          icon: 'h-4 w-4 xs:h-5 xs:w-5 2xs:h-6 2xs:w-6',
+          icon: 'h-4 w-4 xs:h-5 xs:w-5',
           text: 'pl-1 text-xs xs:text-sm 2xs:text-base',
         },
         sm: {
-          icon: 'h-7 w-7',
+          icon: 'h-6 w-6',
           text: 'pl-1.5 text-lg',
         },
         md: {
-          icon: 'h-8 w-8',
+          icon: 'h-7 w-7',
           text: 'pl-2',
         },
       },

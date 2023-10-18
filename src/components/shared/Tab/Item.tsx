@@ -43,7 +43,7 @@ export function TabItem({
   children,
   ...props
 }: PropsWithChildren<TabItemProps>) {
-  let styleButtom = SharedNavigator.style.buttom;
+  let buttomStyle = SharedNavigator.style.buttom;
 
   const style = tvStyle({ size: { sm: 'sm', md: 'md' } });
 
@@ -53,16 +53,16 @@ export function TabItem({
       {...props}
     >
       {({ selected }) => {
-        const styleButtomInner = styleButtom({ selected });
+        const innerButtonStyle = buttomStyle({ selected });
 
         return (
           <button
-            className={styleButtomInner.container({
+            className={innerButtonStyle.container({
               className: style.container(),
             })}
           >
-            <Icon className={styleButtomInner.icon()} />
-            <span className={styleButtomInner.text()}>{text}</span>
+            <Icon className={innerButtonStyle.icon()} />
+            <span className={innerButtonStyle.text()}>{text}</span>
           </button>
         );
       }}

@@ -8,11 +8,11 @@ export function TabList({
   className,
   ...props
 }: PropsWithChildren<TabListProps<ElementType>>) {
-  const stylePainel = SharedNavigator.style.painel;
+  const painelStyle = SharedNavigator.style.painel();
 
   return (
     <Tab.List
-      className={stylePainel()}
+      className={painelStyle.container()}
       {...props}
     >
       {children}
