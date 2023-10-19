@@ -1,13 +1,13 @@
 import { MdHome, MdDeveloperBoard } from 'react-icons/md';
 import { BsScissors } from 'react-icons/bs';
 
-import { SharedContent } from '@/components/shared/Content';
+import { LayoutContent } from '@/components/shared/layout/Content';
 import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
 import { TabEnum } from '@/types/home/page/TabEnum';
 
 export function PageHeader() {
   return (
-    <SharedContent.Header>
+    <LayoutContent.Header>
       <SharedBreadcrumb.Root>
         <SharedBreadcrumb.Item
           Icon={MdHome}
@@ -30,6 +30,6 @@ export function PageHeader() {
           link='/project/go-barber'
         />
       </SharedBreadcrumb.Root>
-    </SharedContent.Header>
+    </LayoutContent.Header>
   );
 }

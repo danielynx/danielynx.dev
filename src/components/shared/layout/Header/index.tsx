@@ -1,5 +1,5 @@
 import { headerStyle } from './style';
 
-export const SharedHeader = {
+export const LayoutHeader = {
   style: headerStyle,
 };

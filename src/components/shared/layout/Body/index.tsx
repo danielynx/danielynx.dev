@@ -1,5 +1,5 @@
 import { bodyStyle } from './style';
 
-export const SharedBody = {
+export const LayoutBody = {
   style: bodyStyle,
 };

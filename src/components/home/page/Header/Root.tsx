@@ -1,12 +1,12 @@
 import { PropsWithChildren } from 'react';
 
 import { SharedTab } from '@/components/shared/Tab';
-import { SharedContent } from '@/components/shared/Content';
+import { LayoutContent } from '@/components/shared/layout/Content';
 
 export function HeaderRoot({ children }: PropsWithChildren) {
   return (
-    <SharedContent.Header>
+    <LayoutContent.Header>
       <SharedTab.List>{children}</SharedTab.List>
-    </SharedContent.Header>
+    </LayoutContent.Header>
   );
 }

@@ -1,5 +1,5 @@
-import { SharedContent } from '@/components/shared/Content';
+import { LayoutContent } from '@/components/shared/layout/Content';
 
 export function PageBody() {
-  return <SharedContent.Body>GoBarber</SharedContent.Body>;
+  return <LayoutContent.Body>GoBarber</LayoutContent.Body>;
 }

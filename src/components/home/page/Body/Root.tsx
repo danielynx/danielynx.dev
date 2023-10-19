@@ -1,12 +1,12 @@
 import { PropsWithChildren } from 'react';
 
 import { SharedTab } from '@/components/shared/Tab';
-import { SharedContent } from '@/components/shared/Content';
+import { LayoutContent } from '@/components/shared/layout/Content';
 
 export function BodyRoot({ children }: PropsWithChildren) {
   return (
-    <SharedContent.Body>
+    <LayoutContent.Body>
       <SharedTab.Panels>{children}</SharedTab.Panels>
-    </SharedContent.Body>
+    </LayoutContent.Body>
   );
 }

@@ -1,16 +1,15 @@
 import { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
-import { SharedBody } from '@/components/shared/Body';
-import { contentStyle } from './style';
+import { LayoutBody } from '@/components/shared/layout/Body';
+import { sidebarStyle } from './style';
 
 const tvStyle = tv(
   {
     slots: {
-      main: 'flex flex-col justify-start',
-      content: [
-        'grow',
-        'py-5 my-4',
+      aside: 'flex flex-col justify-start',
+      sidebar: [
+        'py-8 mb-3',
         'bg-light-bg-hg dark:bg-dark-bg-hg',
         'border dark:border-0 border-light-border',
         'rounded-xl',
@@ -19,10 +18,12 @@ const tvStyle = tv(
     variants: {
       size: {
         initial: {
-          main: 'items-center',
+          aside: 'items-center',
+          sidebar: 'mt-28',
         },
         lg: {
-          main: 'items-start',
+          aside: 'items-end',
+          sidebar: 'mt-4',
         },
       },
     },
@@ -35,16 +36,16 @@ const tvStyle = tv(
   },
 );
 
-export function ContentBody({ children }: PropsWithChildren) {
+export function SidebarBody({ children }: PropsWithChildren) {
   const style = tvStyle({
     size: { lg: 'lg' },
   });
 
   return (
-    <main className={style.main({ className: SharedBody.style() })}>
-      <div className={style.content({ className: contentStyle() })}>
+    <aside className={style.aside({ className: LayoutBody.style() })}>
+      <div className={style.sidebar({ className: sidebarStyle() })}>
         {children}
       </div>
-    </main>
+    </aside>
   );
 }
