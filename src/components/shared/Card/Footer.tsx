@@ -1,10 +1,5 @@
 import { tv } from 'tailwind-variants';
 
-export interface CardFooterProps {
-  link: string;
-  darkTextColor: string;
-}
-
 const tvStyle = tv(
   {
     base: [
