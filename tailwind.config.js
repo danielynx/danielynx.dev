@@ -103,6 +103,7 @@ module.exports = withTV({
           },
           border: {
             DEFAULT: colors.slate[300],
+            600: colors.slate[400],
           },
         },
         dark: {

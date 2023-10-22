@@ -12,10 +12,10 @@ const tvStyle = tv(
     variants: {
       size: {
         initial: {
-          container: 'py-1 px-1 h-12',
+          container: 'p-1 h-12',
         },
         sm: {
-          container: 'py-1.5 px-1.5 h-14',
+          container: 'p-2 h-14',
         },
       },
     },

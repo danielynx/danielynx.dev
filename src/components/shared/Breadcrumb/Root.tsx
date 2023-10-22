@@ -10,7 +10,7 @@ const tvStyle = tv(
       size: {
         initial: 'px-2',
         sm: 'px-3',
-        md: 'px-4',
+        md: 'px-6',
       },
     },
     defaultVariants: {
