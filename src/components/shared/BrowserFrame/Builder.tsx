@@ -3,18 +3,18 @@ import { IconType } from 'react-icons';
 
 import { SharedBrowserFrame } from '@/components/shared/BrowserFrame';
 
-export interface BrowserFrameDefaultBuilderPros {
+export interface BrowserFrameBuilderPros {
   Favicon: IconType;
   tabName: string;
   url: string;
 }
 
-export function BrowserFrameDefaultBuilder({
+export function BrowserFrameBuilder({
   Favicon,
   tabName,
   url,
   children,
-}: PropsWithChildren<BrowserFrameDefaultBuilderPros>) {
+}: PropsWithChildren<BrowserFrameBuilderPros>) {
   return (
     <SharedBrowserFrame.Root>
       <SharedBrowserFrame.TitleBar.Root>

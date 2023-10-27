@@ -39,13 +39,13 @@ export function TitleBarCommandButtons() {
 
   return (
     <div className={style.container()}>
-      <div className={style.circle({ className: 'bg-red-500' })}>
+      <div className={style.circle({ className: 'bg-green-500' })}>
         <MdRemove className={style.icon()} />
       </div>
       <div className={style.circle({ className: 'bg-yellow-500' })}>
         <MdCrop54 className={style.icon()} />
       </div>
-      <div className={style.circle({ className: 'bg-green-500' })}>
+      <div className={style.circle({ className: 'bg-red-500' })}>
         <MdClose className={style.icon()} />
       </div>
     </div>
