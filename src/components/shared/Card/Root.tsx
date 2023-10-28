@@ -5,8 +5,8 @@ import { tv } from 'tailwind-variants';
 export interface CardRootProps {
   link: string;
   target?: '_blank' | '_self';
-  lightBgColor: string;
-  darkTextColor: string;
+  lightBgColor?: string;
+  darkTextColor?: string;
 }
 
 const tvStyle = tv({
@@ -24,8 +24,8 @@ export function CardRoot({
   children,
   link,
   target = '_self',
-  lightBgColor,
-  darkTextColor,
+  lightBgColor = 'bg-light-bg-ct',
+  darkTextColor = 'dark:text-dark-text-ct',
 }: PropsWithChildren<CardRootProps>) {
   const style = tvStyle({
     className: [

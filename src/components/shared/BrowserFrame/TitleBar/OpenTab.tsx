@@ -14,7 +14,7 @@ const tvStyle = tv(
         'flex flex-row justify-start items-center',
         'bg-gray-700',
         'rounded-md',
-        'py-2 px-2',
+        'py-1 px-2',
       ],
       circle: [
         'flex flex-row justify-center items-center',
@@ -22,7 +22,7 @@ const tvStyle = tv(
         'rounded-full',
       ],
       icon: '',
-      name: 'font-bold pl-2 pr-8',
+      name: 'pl-2 pr-8',
     },
     variants: {
       size: {

@@ -70,7 +70,7 @@ module.exports = withTV({
             },
             // contrast
             ct: {
-              DEFAULT: colors.orange[600],
+              DEFAULT: colors.orange[500],
             },
             brand: {
               rocketseat: '#6C4FBB',

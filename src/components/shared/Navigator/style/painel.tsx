@@ -5,8 +5,9 @@ const tvStyle = tv(
     slots: {
       container: [
         'flex flex-row justify-center items-center',
-        'rounded-xl',
-        'bg-light-bg-hg-700/70 dark:bg-dark-bg-hg-600/80',
+        'rounded-t-xl',
+        'dark:bg-dark-bg-hg-600/80',
+        'border-x-1 border-t-1 dark:border-0 border-light-border',
       ],
     },
     variants: {

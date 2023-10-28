@@ -8,19 +8,25 @@ export interface HeaderIconProps {
 const tvStyle = tv(
   {
     slots: {
-      container: 'px-3',
+      container: '',
       icon: '',
     },
     variants: {
       size: {
         initial: {
+          container: 'px-1.5',
           icon: 'h-10 w-10',
+        },
+        xs: {
+          container: 'px-2',
+          icon: 'h-12 w-12',
         },
         sm: {
-          icon: 'h-16 w-16',
+          icon: 'h-14 w-14',
         },
         md: {
-          icon: 'h-10 w-10',
+          container: 'px-3',
+          icon: 'h-12 w-12',
         },
         '2xl': {
           icon: 'h-16 w-16',
@@ -32,13 +38,13 @@ const tvStyle = tv(
     },
   },
   {
-    responsiveVariants: ['sm', 'md', '2xl'],
+    responsiveVariants: ['xs', 'sm', 'md', '2xl'],
   },
 );
 
 export function HeaderIcon({ Icon }: HeaderIconProps) {
   const style = tvStyle({
-    size: { sm: 'sm', md: 'md', '2xl': '2xl' },
+    size: { xs: 'xs', sm: 'sm', md: 'md', '2xl': '2xl' },
   });
 
   return (

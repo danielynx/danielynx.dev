@@ -10,12 +10,12 @@ const tvStyle = tv(
     slots: {
       container: [
         'flex flex-row justify-start items-center',
-        'w-full py-1',
+        'w-full py-0.5',
         'bg-black text-gray-300',
         'rounded',
       ],
       icon: '',
-      url: 'w-full font-extrabold',
+      url: 'w-full',
     },
     variants: {
       size: {
