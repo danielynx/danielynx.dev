@@ -28,7 +28,7 @@ export function ProjectMyPortfolio() {
         <SharedCard.Header.Icon Icon={ImProfile} />
         <SharedCard.Header.Text>
           <div className={style.text()}>
-            <span className={style.largerSpan()}>Daniel&apos;s Portfolio</span>
+            <span className={style.largerSpan()}>Daniel{`'`}s Portfolio</span>
             <span className={style.smalerSpan()}>(This website)</span>
           </div>
         </SharedCard.Header.Text>

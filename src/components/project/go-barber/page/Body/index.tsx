@@ -44,7 +44,7 @@ export function PageBody() {
               Rocketseat
             </Link>
           }
-          's GoStack Course, which addressed the stack compound by NodeJS,
+          {`'s`} GoStack Course, which addressed the stack compound by NodeJS,
           ReactJS and React Native technologies.
         </p>
       </div>
