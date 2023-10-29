@@ -3,12 +3,7 @@ import { tv } from 'tailwind-variants';
 const tvStyle = tv(
   {
     slots: {
-      container: [
-        'flex flex-row justify-center items-center',
-        'rounded-t-xl',
-        'dark:bg-dark-bg-hg-600/80',
-        'border-x-1 border-t-1 dark:border-0 border-light-border',
-      ],
+      container: 'flex flex-row justify-center items-center',
     },
     variants: {
       size: {

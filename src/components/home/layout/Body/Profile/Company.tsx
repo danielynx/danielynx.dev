@@ -14,12 +14,7 @@ export function ProfileCompany() {
       {profile && (
         <div className='flex flex-row items-center mt-4 text-base'>
           <PiBuildings className='mr-2 h-5 w-5' />
-          <Link
-            href={'https://www.al.mt.gov.br'}
-            target={'_blank'}
-          >
-            {profile.company}
-          </Link>
+          {profile.company}
         </div>
       )}
     </>

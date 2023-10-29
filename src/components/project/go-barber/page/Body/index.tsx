@@ -44,8 +44,8 @@ export function PageBody() {
               Rocketseat
             </Link>
           }
-          {`'s`} GoStack Course, which addressed the stack compound by NodeJS,
-          ReactJS and React Native technologies.
+          {`'s`} GoStack course, which addressed the stack that is compounded by
+          the NodeJS, ReactJS and React Native technologies.
         </p>
       </div>
       <div className='flex flew-row justify-start items-center mt-10 mb-4'>
@@ -95,6 +95,16 @@ export function PageBody() {
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
         <SharedCard.Root
+          link='https://github.com/danielynx/rocketseat-gobarber-api'
+          target='_blank'
+        >
+          <SharedCard.Header.Root>
+            <SharedCard.Header.Icon Icon={AiOutlineDatabase} />
+            <SharedCard.Header.Text>Headless</SharedCard.Header.Text>
+          </SharedCard.Header.Root>
+          <SharedCard.Footer />
+        </SharedCard.Root>
+        <SharedCard.Root
           lightBgColor='bg-light-bg-ct'
           link='https://github.com/danielynx/rocketseat-gobarber-web'
           target='_blank'
@@ -112,16 +122,6 @@ export function PageBody() {
           <SharedCard.Header.Root>
             <SharedCard.Header.Icon Icon={CiMobile3} />
             <SharedCard.Header.Text>Mobile</SharedCard.Header.Text>
-          </SharedCard.Header.Root>
-          <SharedCard.Footer />
-        </SharedCard.Root>
-        <SharedCard.Root
-          link='https://github.com/danielynx/rocketseat-gobarber-api'
-          target='_blank'
-        >
-          <SharedCard.Header.Root>
-            <SharedCard.Header.Icon Icon={AiOutlineDatabase} />
-            <SharedCard.Header.Text>Headless</SharedCard.Header.Text>
           </SharedCard.Header.Root>
           <SharedCard.Footer />
         </SharedCard.Root>
