@@ -3,7 +3,6 @@ import './globals.css';
 import { PropsWithChildren } from 'react';
 import { Open_Sans as Sans } from 'next/font/google';
 import { Roboto_Serif as Serif } from 'next/font/google';
-import { MdJavascript, MdPhp } from 'react-icons/md';
 
 import { LayoutHeader } from '@/components/home/layout/Header';
 import { LayoutBody } from '@/components/home/layout/Body';
@@ -72,14 +71,17 @@ export default function RootLayout({ children }: PropsWithChildren) {
               </div>
             </div>
             <footer className='flex flex-row justify-center items-center pb-2 pt-3 w-full text-sm border-t dark:border-0 border-light-border bg-light-bg dark:bg-dark-bg-hg-600'>
-              @
-              <span className='underline decoration-teal-500 dark:decoration-pink-500 decoration-2 underline-offset-2'>
-                danielynx
+              <span className='font-bold underline decoration-indigo-500 decoration-2 underline-offset-2'>
+                @danielynx
               </span>
               &nbsp; building software since 2011 using &nbsp;
-              <span className='font-black text-[#777BB4]'>PHP</span>
+              <span className='font-bold underline decoration-purple-500 decoration-2 underline-offset-2'>
+                PHP
+              </span>
               &nbsp; and &nbsp;
-              <span className='font-black text-[#ddcc47]'>JavaScript</span>
+              <span className='font-bold underline decoration-purple-500 decoration-2 underline-offset-2'>
+                JavaScript
+              </span>
             </footer>
           </div>
         </ColorSchemeProvider>

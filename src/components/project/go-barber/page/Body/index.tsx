@@ -37,7 +37,7 @@ export function PageBody() {
           It was built during the{' '}
           {
             <Link
-              className='underline decoration-solid'
+              className='underline decoration-1 hover:decoration-2 underline-offset-2'
               href='https://www.rocketseat.com.br/'
               target='_blank'
             >
