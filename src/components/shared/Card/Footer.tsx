@@ -8,10 +8,9 @@ const tvStyle = tv(
     ],
     variants: {
       size: {
-        initial: 'text-sm',
-        sm: 'text-base',
-        md: 'text-sm',
-        xl: 'text-base',
+        initial: 'text-xs',
+        sm: 'text-sm',
+        md: 'text-base',
       },
     },
     defaultVariants: {
@@ -19,13 +18,13 @@ const tvStyle = tv(
     },
   },
   {
-    responsiveVariants: ['sm', 'md', 'xl'],
+    responsiveVariants: ['sm', 'md'],
   },
 );
 
 export function CardFooter() {
   const style = tvStyle({
-    size: { sm: 'sm', md: 'md', xl: 'xl' },
+    size: { sm: 'sm', md: 'md' },
   });
 
   return <div className={style}>Show Details</div>;

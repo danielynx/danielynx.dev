@@ -6,11 +6,10 @@ const tvStyle = tv(
     base: 'flex flex-row justify-start grow font-serif',
     variants: {
       size: {
-        initial: 'text-xl',
-        xs: 'text-2xl',
-        md: 'text-xl',
-        xl: 'text-2xl',
-        '2xl': 'text-3xl',
+        initial: 'text-base',
+        xs: 'text-lg',
+        sm: 'text-xl',
+        md: 'text-2xl',
       },
     },
     defaultVariants: {
@@ -18,13 +17,13 @@ const tvStyle = tv(
     },
   },
   {
-    responsiveVariants: ['xs', 'md', 'xl', '2xl'],
+    responsiveVariants: ['xs', 'sm', 'md'],
   },
 );
 
 export function HeaderText({ children }: PropsWithChildren) {
   const style = tvStyle({
-    size: { xs: 'xs', md: 'md', xl: 'xl', '2xl': '2xl' },
+    size: { xs: 'xs', sm: 'sm', md: 'md' },
   });
 
   return <div className={style}>{children}</div>;
