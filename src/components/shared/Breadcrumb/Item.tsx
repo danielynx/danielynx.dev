@@ -8,7 +8,7 @@ export interface BreadcrumbItemProps {
   Icon: IconType;
   text: string;
   selected: boolean;
-  link: string;
+  link?: string;
   target?: '_blank' | '_self';
 }
 
@@ -44,7 +44,7 @@ export function BreadcrumbItem({
   Icon,
   text,
   selected,
-  link,
+  link = '/',
   target = '_self',
 }: BreadcrumbItemProps) {
   const navigatorButtomStyle = SharedNavigator.style.buttom({ selected });
