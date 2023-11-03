@@ -18,8 +18,11 @@ export const metadata = {
 const tvStyle = tv(
   {
     slots: {
-      body: ['font-sans', 'text-light-text dark:text-dark-text'],
-      viewport: 'flex flex-col min-h-screen',
+      body: 'font-sans',
+      viewport: [
+        'flex flex-col min-h-screen',
+        'text-light-text dark:text-dark-text',
+      ],
       growth: 'flex justify-center grow',
       sidebar: 'flex flex-col',
       content: 'flex flex-col',

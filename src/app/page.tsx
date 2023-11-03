@@ -30,7 +30,7 @@ export default function Page() {
       <PageBody.Root>
         <PageBody.Overview />
         <PageBody.Project.Root>
-          <PageBody.Project.MyPortfolio />
+          <PageBody.Project.DanielPortfolio />
           <PageBody.Project.GoBarber />
         </PageBody.Project.Root>
         <PageBody.Course.Root>

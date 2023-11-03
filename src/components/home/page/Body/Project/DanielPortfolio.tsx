@@ -11,12 +11,12 @@ const tvStyle = tv({
   },
 });
 
-export function ProjectMyPortfolio() {
+export function ProjectDanielPortfolio() {
   const style = tvStyle();
 
   const lightBgColor = 'bg-light-bg-project-myportfolio';
   const darkTextColor = 'dark:text-dark-text-project-myportfolio';
-  const link = '#';
+  const link = 'project/daniel-portfolio';
 
   return (
     <SharedCard.Root

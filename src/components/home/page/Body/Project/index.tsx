@@ -1,9 +1,9 @@
 import { ProjectRoot } from './Root';
-import { ProjectMyPortfolio } from './MyPortfolio';
+import { ProjectDanielPortfolio } from './DanielPortfolio';
 import { ProjectGoBarber } from './GoBarber';
 
 export const BodyProject = {
   Root: ProjectRoot,
-  MyPortfolio: ProjectMyPortfolio,
+  DanielPortfolio: ProjectDanielPortfolio,
   GoBarber: ProjectGoBarber,
 };

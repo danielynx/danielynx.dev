@@ -1,41 +1,49 @@
+import { tv } from 'tailwind-variants';
 import Link from 'next/link';
-import { MdHome, MdDeveloperBoard } from 'react-icons/md';
 import { BsScissors } from 'react-icons/bs';
 
 import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
-import { TabEnum } from '@/types/home/page/TabEnum';
 import { LayoutContent } from '@/components/shared/layout/Content';
 import { PageBody } from '@/components/project/go-barber/page/Body';
+import { ProjectBreadcrumb } from '@/components/project/Breadcrumb';
+
+const tvStyle = tv(
+  {
+    base: 'space-y-4 leading-relaxed',
+    variants: {
+      size: {
+        initial: 'text-base',
+        lg: 'text-lg',
+      },
+    },
+    defaultVariants: {
+      size: 'initial',
+    },
+  },
+  {
+    responsiveVariants: ['lg'],
+  },
+);
 
 export default function Page() {
+  const style = tvStyle({
+    size: { lg: 'lg' },
+  });
+
   return (
     <>
       <LayoutContent.Header>
-        <SharedBreadcrumb.Root>
-          <SharedBreadcrumb.Item
-            Icon={MdHome}
-            text='Home'
-            selected={false}
-            link='/'
-          />
-          <SharedBreadcrumb.Separator />
-          <SharedBreadcrumb.Item
-            Icon={MdDeveloperBoard}
-            text='Projects'
-            selected={false}
-            link={`/?tab=${TabEnum.PROJECTS}`}
-          />
-          <SharedBreadcrumb.Separator />
+        <ProjectBreadcrumb>
           <SharedBreadcrumb.Item
             Icon={BsScissors}
             text='GoBarber'
             selected={true}
             link='/project/go-barber'
           />
-        </SharedBreadcrumb.Root>
+        </ProjectBreadcrumb>
       </LayoutContent.Header>
       <LayoutContent.Body>
-        <div className='text-base lg:text-lg space-y-4 leading-relaxed'>
+        <div className={style}>
           <p>
             The GoBarber project is a barbershop schedule manager, compound by a
             headless application, a web application and a mobile application.
