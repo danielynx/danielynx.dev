@@ -44,7 +44,7 @@ export function BreadcrumbItem({
   Icon,
   text,
   selected,
-  link = '/',
+  link = '#',
   target = '_self',
 }: BreadcrumbItemProps) {
   const navigatorButtomStyle = SharedNavigator.style.buttom({ selected });

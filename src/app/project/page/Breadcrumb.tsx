@@ -1,19 +1,13 @@
 import { PropsWithChildren } from 'react';
-import { MdHome, MdDeveloperBoard } from 'react-icons/md';
+import { MdDeveloperBoard } from 'react-icons/md';
 
 import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
+import { HomeBreadcrumb } from '@/app/home/page/Breadcrumb';
 import { TabEnum } from '@/types/home/page/TabEnum';
 
 export function ProjectBreadcrumb({ children }: PropsWithChildren) {
   return (
-    <SharedBreadcrumb.Root>
-      <SharedBreadcrumb.Item
-        Icon={MdHome}
-        text='Home'
-        selected={false}
-        link='/'
-      />
-      <SharedBreadcrumb.Separator />
+    <HomeBreadcrumb>
       <SharedBreadcrumb.Item
         Icon={MdDeveloperBoard}
         text='Projects'
@@ -22,6 +16,6 @@ export function ProjectBreadcrumb({ children }: PropsWithChildren) {
       />
       <SharedBreadcrumb.Separator />
       {children}
-    </SharedBreadcrumb.Root>
+    </HomeBreadcrumb>
   );
 }

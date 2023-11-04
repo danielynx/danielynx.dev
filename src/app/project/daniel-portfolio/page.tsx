@@ -2,8 +2,8 @@ import { tv } from 'tailwind-variants';
 import { ImProfile } from 'react-icons/im';
 
 import { LayoutContent } from '@/components/shared/layout/Content';
-import { ProjectBreadcrumb } from '@/components/project/Breadcrumb';
 import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
+import { ProjectBreadcrumb } from '@/app/project/page/Breadcrumb';
 import { PageBody } from '@/components/project/daniel-portfolio/page/Body';
 
 const tvStyle = tv(
@@ -37,14 +37,13 @@ export default function Page() {
             Icon={ImProfile}
             text="Daniel's Portfolio"
             selected={true}
-            link='/project/daniel-portfolio'
           />
         </ProjectBreadcrumb>
       </LayoutContent.Header>
       <LayoutContent.Body>
         <div className={style}>
           <p>
-            The Daniel's Portfolio project is this web application, and its
+            The {`Daniel's`} Portfolio project is this web application, and its
             proposal is show my career as a Software Developer.
           </p>
           <p>
@@ -55,7 +54,7 @@ export default function Page() {
             color scheme chooser.
           </p>
           <p>
-            It's important to mentionate that the layout was inspired in the
+            {`It's`} important to mentionate that the layout was inspired in the
             GitHub page, but the entire application was built by myself. I learn
             a lot by trying many times, until I was able of developing
             everything that I intending to do.

@@ -14,7 +14,7 @@ export function CourseRocketseat() {
 
   const lightBgColor = 'bg-light-bg-brand-rocketseat';
   const darkTextColor = 'dark:text-dark-text-brand-rocketseat';
-  const link = '#';
+  const link = 'course/rocketseat';
 
   return (
     <SharedCard.Root

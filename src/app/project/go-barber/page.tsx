@@ -2,10 +2,10 @@ import { tv } from 'tailwind-variants';
 import Link from 'next/link';
 import { BsScissors } from 'react-icons/bs';
 
-import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
 import { LayoutContent } from '@/components/shared/layout/Content';
+import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
+import { ProjectBreadcrumb } from '@/app/project/page/Breadcrumb';
 import { PageBody } from '@/components/project/go-barber/page/Body';
-import { ProjectBreadcrumb } from '@/components/project/Breadcrumb';
 
 const tvStyle = tv(
   {
@@ -38,7 +38,6 @@ export default function Page() {
             Icon={BsScissors}
             text='GoBarber'
             selected={true}
-            link='/project/go-barber'
           />
         </ProjectBreadcrumb>
       </LayoutContent.Header>
