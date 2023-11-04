@@ -4,7 +4,9 @@ import { MdRocketLaunch } from 'react-icons/md';
 import { LayoutContent } from '@/components/shared/layout/Content';
 import { CourseBreadcrumb } from '@/app/course/page/Breadcrumb';
 import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
-import { PageBody } from '@/components/project/daniel-portfolio/page/Body';
+
+import { RocketseatLink } from './page/Link';
+import { RocketseatGoStack } from './page/GoStack';
 
 const tvStyle = tv(
   {
@@ -42,8 +44,12 @@ export default function Page() {
       </LayoutContent.Header>
       <LayoutContent.Body>
         <div className={style}>
-          <p>Rocketseat</p>
+          <p>
+            {<RocketseatLink />} is a Brasilian Coding School that focus in
+            technologies that are basead in JavaScript.
+          </p>
         </div>
+        <RocketseatGoStack />
       </LayoutContent.Body>
     </>
   );

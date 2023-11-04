@@ -1,11 +1,14 @@
 import { tv } from 'tailwind-variants';
-import Link from 'next/link';
 import { BsScissors } from 'react-icons/bs';
 
 import { LayoutContent } from '@/components/shared/layout/Content';
 import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
 import { ProjectBreadcrumb } from '@/app/project/page/Breadcrumb';
-import { PageBody } from '@/components/project/go-barber/page/Body';
+import { RocketseatLink } from '@/app/course/rocketseat/page/Link';
+
+import { GoBarberRepository } from './page/Repository';
+import { GoBarberScreenshot } from './page/Screenshot';
+import { GoBarberTechnology } from './page/Technology';
 
 const tvStyle = tv(
   {
@@ -48,23 +51,14 @@ export default function Page() {
             headless application, a web application and a mobile application.
           </p>
           <p>
-            It was built during the{' '}
-            {
-              <Link
-                className='underline decoration-1 hover:decoration-2 underline-offset-2'
-                href='https://www.rocketseat.com.br/'
-                target='_blank'
-              >
-                Rocketseat
-              </Link>
-            }
+            It was built during the {<RocketseatLink />}
             {`'s`} GoStack course, which addressed the stack that is compounded
             by the NodeJS, ReactJS and React Native technologies.
           </p>
         </div>
-        <PageBody.Technology />
-        <PageBody.Repository />
-        <PageBody.Screenshot />
+        <GoBarberRepository />
+        <GoBarberScreenshot />
+        <GoBarberTechnology />
       </LayoutContent.Body>
     </>
   );

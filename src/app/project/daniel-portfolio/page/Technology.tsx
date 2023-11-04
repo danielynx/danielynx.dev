@@ -4,11 +4,10 @@ import {
   SiReact,
   SiTypescript,
   SiNodedotjs as SiNodeJs,
-  SiExpress,
-  SiYarn,
-  SiJest,
-  SiStyledcomponents,
-  SiGithubactions,
+  SiNextdotjs as SiNextJs,
+  SiNpm,
+  SiTailwindcss as SiTailwind,
+  SiZod,
 } from 'react-icons/si';
 
 import { SharedSessionHeader } from '@/components/shared/SessionHeader';
@@ -38,7 +37,7 @@ const tvStyle = tv(
   },
 );
 
-export function BodyTechnology() {
+export function DanielPortfolioTechnology() {
   const style = tvStyle({
     size: { md: 'md' },
   });
@@ -51,37 +50,32 @@ export function BodyTechnology() {
       />
       <div className={style.container()}>
         <SharedBadge
-          Icon={SiNodeJs}
-          title='Node JS'
+          Icon={SiNextJs}
+          title='Next JS'
         />
         <SharedBadge
           Icon={SiReact}
-          title='React JS and Native'
-        />
-        <SharedBadge
-          Icon={SiExpress}
-          title='Express'
+          title='React JS'
         />
         <SharedBadge
           Icon={SiTypescript}
           title='TypeScript'
         />
-
         <SharedBadge
-          Icon={SiYarn}
-          title='Yarn'
+          Icon={SiNodeJs}
+          title='Node JS'
         />
         <SharedBadge
-          Icon={SiJest}
-          title='Jest'
+          Icon={SiTailwind}
+          title='Tailwind and Variants'
         />
         <SharedBadge
-          Icon={SiStyledcomponents}
-          title='Styled Components'
+          Icon={SiNpm}
+          title='Npm'
         />
         <SharedBadge
-          Icon={SiGithubactions}
-          title='GitHub Actions'
+          Icon={SiZod}
+          title='Zod'
         />
       </div>
     </>

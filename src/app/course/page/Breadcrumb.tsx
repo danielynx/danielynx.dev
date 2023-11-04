@@ -2,7 +2,7 @@ import { PropsWithChildren } from 'react';
 import { MdSchool } from 'react-icons/md';
 
 import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
-import { HomeBreadcrumb } from '@/app/home/page/Breadcrumb';
+import { HomeBreadcrumb } from '@/app/page/Breadcrumb';
 import { TabEnum } from '@/types/home/page/TabEnum';
 
 export function CourseBreadcrumb({ children }: PropsWithChildren) {

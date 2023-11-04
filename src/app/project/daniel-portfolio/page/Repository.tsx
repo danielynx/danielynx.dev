@@ -35,7 +35,7 @@ const tvStyle = tv(
   },
 );
 
-export function BodyRepository() {
+export function DanielPortfolioRepository() {
   const style = tvStyle({
     size: { md: 'md', xl: 'xl', '2xl': '2xl' },
   });

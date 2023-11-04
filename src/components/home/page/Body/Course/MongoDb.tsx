@@ -5,9 +5,9 @@ import { SharedCard } from '@/components/shared/Card';
 
 const tvStyle = tv({
   slots: {
-    text: 'flex flex-col items-start',
-    mongoDb: 'font-bold',
-    university: 'font-normal',
+    container: 'flex flex-col items-start',
+    title: 'font-bold',
+    subtitle: 'font-normal',
   },
 });
 
@@ -29,9 +29,9 @@ export function CourseMongoDb() {
       <SharedCard.Header.Root>
         <SharedCard.Header.Icon Icon={SiMongodb} />
         <SharedCard.Header.Text>
-          <div className={style.text()}>
-            <span className={style.mongoDb()}>MongoDB</span>
-            <span className={style.university()}>University</span>
+          <div className={style.container()}>
+            <span className={style.title()}>MongoDB</span>
+            <span className={style.subtitle()}>University</span>
           </div>
         </SharedCard.Header.Text>
       </SharedCard.Header.Root>

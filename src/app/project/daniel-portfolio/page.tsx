@@ -4,7 +4,9 @@ import { ImProfile } from 'react-icons/im';
 import { LayoutContent } from '@/components/shared/layout/Content';
 import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
 import { ProjectBreadcrumb } from '@/app/project/page/Breadcrumb';
-import { PageBody } from '@/components/project/daniel-portfolio/page/Body';
+
+import { DanielPortfolioRepository } from './page/Repository';
+import { DanielPortfolioTechnology } from './page/Technology';
 
 const tvStyle = tv(
   {
@@ -60,8 +62,8 @@ export default function Page() {
             everything that I intending to do.
           </p>
         </div>
-        <PageBody.Technology />
-        <PageBody.Repository />
+        <DanielPortfolioRepository />
+        <DanielPortfolioTechnology />
       </LayoutContent.Body>
     </>
   );

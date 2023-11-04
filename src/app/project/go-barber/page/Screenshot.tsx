@@ -34,7 +34,7 @@ const tvStyle = tv(
   },
 );
 
-export function BodyScreenshot() {
+export function GoBarberScreenshot() {
   const style = tvStyle({
     size: { md: 'md' },
   });
