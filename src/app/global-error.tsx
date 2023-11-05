@@ -1,6 +1,6 @@
 'use client';
 
-import { ErrorBody } from '@/components/home/error/Body';
+import { AppError } from './_error/Error';
 
 export interface GlobalErrorParams {
   error: Error & { digest?: string };
@@ -11,7 +11,7 @@ export default function GlobalError({ reset }: GlobalErrorParams) {
   return (
     <html>
       <body>
-        <ErrorBody reset={reset} />
+        <AppError reset={reset} />
       </body>
     </html>
   );
