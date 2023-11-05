@@ -3,7 +3,7 @@
 import { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
-import { useProfileIntersection } from '@/hooks/home/layout/useProfileIntersection';
+import { useProfileIntersection } from '@/hook/home/layout/useProfileIntersection';
 
 const tvStyle = tv({
   base: 'grow flex flex-row items-center justify-start',

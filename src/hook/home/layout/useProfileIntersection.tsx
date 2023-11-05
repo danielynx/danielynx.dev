@@ -5,7 +5,7 @@ import { useContext, useMemo } from 'react';
 import {
   ProfileIntersectionContextType,
   ProfileIntersectionContext,
-} from '@/contexts/home/layout/ProfileIntersectionProvider';
+} from '@/context/home/layout/ProfileIntersectionProvider';
 
 interface UseProfileIntersectionType extends ProfileIntersectionContextType {
   isProfileHidden: boolean;

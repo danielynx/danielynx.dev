@@ -3,9 +3,9 @@ import Image from 'next/image';
 import { MdHomeWork } from 'react-icons/md';
 import { tv } from 'tailwind-variants';
 
-import { GITHUB_USER } from '@/constants/home/layout';
-import { Profile } from '@/types/home/layout/Profile';
-import { getGithubProfile } from '@/services/home/layout/getGithubProfile';
+import { GITHUB_USER } from '@/constant/home/layout';
+import { Profile } from '@/type/home/layout/Profile';
+import { getGithubProfile } from '@/service/home/layout/getGithubProfile';
 
 const tvStyle = tv({
   slots: {

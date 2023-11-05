@@ -2,11 +2,11 @@
 
 import { useCallback, useContext, useMemo } from 'react';
 
-import { ColorSchemeEnum } from '@/types/home/layout/ColorSchemeEnum';
+import { ColorSchemeEnum } from '@/type/home/layout/ColorSchemeEnum';
 import {
   ColorSchemeContext,
   ColorSchemeContextType,
-} from '@/contexts/home/layout/ColorSchemeProvider';
+} from '@/context/home/layout/ColorSchemeProvider';
 
 interface UseColorSchemeType extends ColorSchemeContextType {
   isColorSchemeDark: boolean;

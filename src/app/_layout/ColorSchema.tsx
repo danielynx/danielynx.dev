@@ -4,7 +4,7 @@ import { Switch } from '@headlessui/react';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import { tv } from 'tailwind-variants';
 
-import { useColorScheme } from '@/hooks/home/layout/useColorScheme';
+import { useColorScheme } from '@/hook/home/layout/useColorScheme';
 
 const tvStyle = tv({
   slots: {

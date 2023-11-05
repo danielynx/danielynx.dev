@@ -6,7 +6,7 @@ import { MdDeveloperBoard, MdSchool, MdPieChart } from 'react-icons/md';
 
 import { LayoutContent } from '@/component/shared/layout/Content';
 import { Tab } from '@/component/Tab';
-import { TabEnum } from '@/types/home/page/TabEnum';
+import { TabEnum } from '@/type/home/page/TabEnum';
 
 import { AppOverview } from './_page/Overview';
 import { AppProject } from './_page/Project';

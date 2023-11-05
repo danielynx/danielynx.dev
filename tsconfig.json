@@ -24,16 +24,22 @@
       "@/app/*": ["src/app/*"],
       "@/public/*": ["public/*"],
       "@/component/*": ["src/component/*"],
-      "@/constants/*": ["src/constants/*"],
-      "@/contexts/*": ["src/contexts/*"],
+      "@/constant/*": ["src/constant/*"],
+      "@/context/*": ["src/context/*"],
       "@/data/*": ["src/data/*"],
-      "@/hooks/*": ["src/hooks/*"],
-      "@/libs/*": ["src/libs/*"],
-      "@/services/*": ["src/services/*"],
-      "@/types/*": ["src/types/*"],
-      "@/utils/*": ["src/utils/*"]
+      "@/hook/*": ["src/hook/*"],
+      "@/lib/*": ["src/lib/*"],
+      "@/service/*": ["src/service/*"],
+      "@/type/*": ["src/type/*"],
+      "@/util/*": ["src/util/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/type/**/*.ts",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

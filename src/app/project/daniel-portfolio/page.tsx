@@ -62,8 +62,8 @@ export default function Page() {
             everything that I intending to do.
           </p>
         </div>
-        <DanielPortfolioRepository />
         <DanielPortfolioTechnology />
+        <DanielPortfolioRepository />
       </LayoutContent.Body>
     </>
   );

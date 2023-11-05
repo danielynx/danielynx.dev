@@ -56,9 +56,9 @@ export default function Page() {
             by the NodeJS, ReactJS and React Native technologies.
           </p>
         </div>
+        <GoBarberTechnology />
         <GoBarberRepository />
         <GoBarberScreenshot />
-        <GoBarberTechnology />
       </LayoutContent.Body>
     </>
   );

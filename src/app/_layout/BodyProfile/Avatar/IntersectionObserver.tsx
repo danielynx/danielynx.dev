@@ -2,7 +2,7 @@
 
 import { PropsWithChildren, useLayoutEffect, useRef } from 'react';
 
-import { useProfileIntersection } from '@/hooks/home/layout/useProfileIntersection';
+import { useProfileIntersection } from '@/hook/home/layout/useProfileIntersection';
 
 export function AvatarIntersectionObserver({ children }: PropsWithChildren) {
   const imageRef = useRef<HTMLDivElement>(null);

@@ -11,9 +11,9 @@ import React, {
   useCallback,
 } from 'react';
 
-import { ColorSchemeEnum } from '@/types/home/layout/ColorSchemeEnum';
-import { useBrowserColorScheme } from '@/hooks/home/layout/useBrowserColorScheme';
-import { useLocalStorage } from '@/hooks/shared/useLocalStorage';
+import { ColorSchemeEnum } from '@/type/home/layout/ColorSchemeEnum';
+import { useBrowserColorScheme } from '@/hook/home/layout/useBrowserColorScheme';
+import { useLocalStorage } from '@/hook/shared/useLocalStorage';
 
 type FunctionSetColorScheme = Dispatch<
   SetStateAction<ColorSchemeEnum | undefined>
