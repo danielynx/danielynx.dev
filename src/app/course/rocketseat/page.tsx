@@ -2,11 +2,11 @@ import { tv } from 'tailwind-variants';
 import { MdRocketLaunch } from 'react-icons/md';
 
 import { LayoutContent } from '@/components/shared/layout/Content';
-import { CourseBreadcrumb } from '@/app/course/page/Breadcrumb';
+import { CourseBreadcrumb } from '@/app/course/_page/Breadcrumb';
 import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
 
-import { RocketseatLink } from './page/Link';
-import { RocketseatGoStack } from './page/GoStack';
+import { RocketseatLink } from './_page/Link';
+import { RocketseatGoStack } from './_page/GoStack';
 
 const tvStyle = tv(
   {

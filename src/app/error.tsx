@@ -1,6 +1,6 @@
 'use client';
 
-import { AppError } from './error/Error';
+import { AppError } from './_error/Error';
 
 export interface ErrorParams {
   error: Error & { digest?: string };

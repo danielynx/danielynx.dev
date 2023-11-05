@@ -1,9 +1,8 @@
 import { tv } from 'tailwind-variants';
-import Link from 'next/link';
 import { RiSpaceShipLine } from 'react-icons/ri';
 
 import { SharedSessionHeader } from '@/components/shared/SessionHeader';
-import { GoBarberLink } from '@/app/project/go-barber/page/Link';
+import { GoBarberLink } from '@/app/project/go-barber/_page/Link';
 
 const tvStyle = tv(
   {

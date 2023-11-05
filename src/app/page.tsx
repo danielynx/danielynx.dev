@@ -8,9 +8,9 @@ import { LayoutContent } from '@/components/shared/layout/Content';
 import { SharedTab } from '@/components/shared/Tab';
 import { TabEnum } from '@/types/home/page/TabEnum';
 
-import { AppOverview } from './page/Overview';
-import { AppProject } from './page/Project';
-import { AppCourse } from './page/Course';
+import { AppOverview } from './_page/Overview';
+import { AppProject } from './_page/Project';
+import { AppCourse } from './_page/Course';
 
 export default function Page() {
   const searchParams = useSearchParams();

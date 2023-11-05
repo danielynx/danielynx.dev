@@ -7,11 +7,11 @@ import { ProfileIntersectionProvider } from '@/contexts/home/layout/ProfileInter
 import { ColorSchemeProvider } from '@/contexts/home/layout/ColorSchemeProvider';
 import { LayoutSidebar } from '@/components/shared/layout/Sidebar';
 
-import { AppHeaderProfile } from './layout/HeaderProfile';
-import { AppBodyProfile } from './layout/BodyProfile';
-import { AppColorSchema } from './layout/ColorSchema';
-import { AppFooter } from './layout/Footer';
-import { AppFont } from './layout/Font';
+import { AppHeaderProfile } from './_layout/HeaderProfile';
+import { AppBodyProfile } from './_layout/BodyProfile';
+import { AppColorSchema } from './_layout/ColorSchema';
+import { AppFooter } from './_layout/Footer';
+import { AppFont } from './_layout/Font';
 
 export const metadata = {
   title: "Daniel's Portfolio",

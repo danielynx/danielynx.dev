@@ -3,10 +3,10 @@ import { ImProfile } from 'react-icons/im';
 
 import { LayoutContent } from '@/components/shared/layout/Content';
 import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
-import { ProjectBreadcrumb } from '@/app/project/page/Breadcrumb';
+import { ProjectBreadcrumb } from '@/app/project/_page/Breadcrumb';
 
-import { DanielPortfolioRepository } from './page/Repository';
-import { DanielPortfolioTechnology } from './page/Technology';
+import { DanielPortfolioRepository } from './_page/Repository';
+import { DanielPortfolioTechnology } from './_page/Technology';
 
 const tvStyle = tv(
   {

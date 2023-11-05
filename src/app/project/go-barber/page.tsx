@@ -3,12 +3,12 @@ import { BsScissors } from 'react-icons/bs';
 
 import { LayoutContent } from '@/components/shared/layout/Content';
 import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
-import { ProjectBreadcrumb } from '@/app/project/page/Breadcrumb';
-import { RocketseatLink } from '@/app/course/rocketseat/page/Link';
+import { ProjectBreadcrumb } from '@/app/project/_page/Breadcrumb';
+import { RocketseatLink } from '@/app/course/rocketseat/_page/Link';
 
-import { GoBarberRepository } from './page/Repository';
-import { GoBarberScreenshot } from './page/Screenshot';
-import { GoBarberTechnology } from './page/Technology';
+import { GoBarberRepository } from './_page/Repository';
+import { GoBarberScreenshot } from './_page/Screenshot';
+import { GoBarberTechnology } from './_page/Technology';
 
 const tvStyle = tv(
   {

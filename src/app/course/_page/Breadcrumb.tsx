@@ -1,18 +1,18 @@
 import { PropsWithChildren } from 'react';
-import { MdDeveloperBoard } from 'react-icons/md';
+import { MdSchool } from 'react-icons/md';
 
 import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
-import { HomeBreadcrumb } from '@/app/page/Breadcrumb';
+import { HomeBreadcrumb } from '@/app/_page/Breadcrumb';
 import { TabEnum } from '@/types/home/page/TabEnum';
 
-export function ProjectBreadcrumb({ children }: PropsWithChildren) {
+export function CourseBreadcrumb({ children }: PropsWithChildren) {
   return (
     <HomeBreadcrumb>
       <SharedBreadcrumb.Item
-        Icon={MdDeveloperBoard}
-        text='Projects'
+        Icon={MdSchool}
+        text='Courses'
         selected={false}
-        link={`/?tab=${TabEnum.PROJECTS}`}
+        link={`/?tab=${TabEnum.COURSES}`}
       />
       <SharedBreadcrumb.Separator />
       {children}
