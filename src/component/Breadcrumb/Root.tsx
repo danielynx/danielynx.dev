@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
-import { SharedNavigator } from '@/components/shared/Navigator';
+import { Navigator } from '@/component/Navigator';
 
 const tvStyle = tv(
   {
@@ -23,7 +23,7 @@ const tvStyle = tv(
 );
 
 export function BreadcrumbRoot({ children }: PropsWithChildren) {
-  const navigatorPainelStyle = SharedNavigator.style.painel();
+  const navigatorPainelStyle = Navigator.style.painel();
 
   const style = tvStyle({ size: { sm: 'sm', md: 'md' } });
 

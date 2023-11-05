@@ -23,7 +23,7 @@
     "paths": {
       "@/app/*": ["src/app/*"],
       "@/public/*": ["public/*"],
-      "@/components/*": ["src/components/*"],
+      "@/component/*": ["src/component/*"],
       "@/constants/*": ["src/constants/*"],
       "@/contexts/*": ["src/contexts/*"],
       "@/data/*": ["src/data/*"],

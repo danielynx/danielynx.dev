@@ -1,5 +1,5 @@
 import { navigatorStyle } from './style';
 
-export const SharedNavigator = {
+export const Navigator = {
   style: navigatorStyle,
 };

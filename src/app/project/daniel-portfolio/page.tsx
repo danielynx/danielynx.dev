@@ -1,8 +1,8 @@
 import { tv } from 'tailwind-variants';
 import { ImProfile } from 'react-icons/im';
 
-import { LayoutContent } from '@/components/shared/layout/Content';
-import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
+import { LayoutContent } from '@/component/shared/layout/Content';
+import { Breadcrumb } from '@/component/Breadcrumb';
 import { ProjectBreadcrumb } from '@/app/project/_page/Breadcrumb';
 
 import { DanielPortfolioRepository } from './_page/Repository';
@@ -35,7 +35,7 @@ export default function Page() {
     <>
       <LayoutContent.Header>
         <ProjectBreadcrumb>
-          <SharedBreadcrumb.Item
+          <Breadcrumb.Item
             Icon={ImProfile}
             text="Daniel's Portfolio"
             selected={true}

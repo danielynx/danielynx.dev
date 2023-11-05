@@ -3,7 +3,7 @@ import { BrowserFrameNavigationBar } from './NavigationBar';
 import { BrowserFrameTitleBar } from './TitleBar';
 import { BrowserFrameBuilder } from './Builder';
 
-export const SharedBrowserFrame = {
+export const BrowserFrame = {
   Root: BrowserFrameRoot,
   NavigationBar: BrowserFrameNavigationBar,
   TitleBar: BrowserFrameTitleBar,

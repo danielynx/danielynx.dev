@@ -2,8 +2,8 @@ import { tv } from 'tailwind-variants';
 import { PiDesktopTowerLight } from 'react-icons/pi';
 import { SiGithub } from 'react-icons/si';
 
-import { SharedCard } from '@/components/shared/Card';
-import { SharedSessionHeader } from '@/components/shared/SessionHeader';
+import { Card } from '@/component/Card';
+import { SessionHeader } from '@/component/SessionHeader';
 
 const tvStyle = tv(
   {
@@ -42,22 +42,22 @@ export function DanielPortfolioRepository() {
 
   return (
     <>
-      <SharedSessionHeader
+      <SessionHeader
         Icon={SiGithub}
         title='GitHub Repository'
       />
       <div className={style.container()}>
-        <SharedCard.Root
+        <Card.Root
           lightBgColor='bg-light-bg-ct'
           link='https://github.com/danielynx/danielynx.dev'
           target='_blank'
         >
-          <SharedCard.Header.Root>
-            <SharedCard.Header.Icon Icon={PiDesktopTowerLight} />
-            <SharedCard.Header.Text>Web</SharedCard.Header.Text>
-          </SharedCard.Header.Root>
-          <SharedCard.Footer />
-        </SharedCard.Root>
+          <Card.Header.Root>
+            <Card.Header.Icon Icon={PiDesktopTowerLight} />
+            <Card.Header.Text>Web</Card.Header.Text>
+          </Card.Header.Root>
+          <Card.Footer />
+        </Card.Root>
       </div>
     </>
   );

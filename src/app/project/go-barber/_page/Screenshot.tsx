@@ -3,9 +3,9 @@ import Image from 'next/image';
 import { CgScreenShot } from 'react-icons/cg';
 import { BsScissors } from 'react-icons/bs';
 
-import { SharedBrowserFrame } from '@/components/shared/BrowserFrame';
-import { SharedAppFrame } from '@/components/shared/AppFrame';
-import { SharedSessionHeader } from '@/components/shared/SessionHeader';
+import { BrowserFrame } from '@/component/BrowserFrame';
+import { AppFrame } from '@/component/AppFrame';
+import { SessionHeader } from '@/component/SessionHeader';
 
 const tvStyle = tv(
   {
@@ -41,12 +41,12 @@ export function GoBarberScreenshot() {
 
   return (
     <>
-      <SharedSessionHeader
+      <SessionHeader
         Icon={CgScreenShot}
         title='Screenshots'
       />
       <div className={style.browser()}>
-        <SharedBrowserFrame.Builder
+        <BrowserFrame.Builder
           Favicon={BsScissors}
           tabName='GoBarber'
           url='https://gobarber.dev/login'
@@ -57,8 +57,8 @@ export function GoBarberScreenshot() {
             height={400}
             alt="GoBarber's web login page"
           />
-        </SharedBrowserFrame.Builder>
-        <SharedBrowserFrame.Builder
+        </BrowserFrame.Builder>
+        <BrowserFrame.Builder
           Favicon={BsScissors}
           tabName='GoBarber'
           url='https://gobarber.dev/signup'
@@ -69,8 +69,8 @@ export function GoBarberScreenshot() {
             height={400}
             alt="GoBarber's web signup page"
           />
-        </SharedBrowserFrame.Builder>
-        <SharedBrowserFrame.Builder
+        </BrowserFrame.Builder>
+        <BrowserFrame.Builder
           Favicon={BsScissors}
           tabName='GoBarber'
           url='https://gobarber.dev/admin/appointments'
@@ -81,33 +81,33 @@ export function GoBarberScreenshot() {
             height={400}
             alt="GoBarber's web appointments page"
           />
-        </SharedBrowserFrame.Builder>
+        </BrowserFrame.Builder>
       </div>
       <div className={style.app()}>
-        <SharedAppFrame>
+        <AppFrame>
           <Image
             src='/project/go-barber/app/login.png'
             width={200}
             height={403}
             alt="GoBarber's app login screen"
           />
-        </SharedAppFrame>
-        <SharedAppFrame>
+        </AppFrame>
+        <AppFrame>
           <Image
             src='/project/go-barber/app/hairdressers.png'
             width={200}
             height={403}
             alt="GoBarber's app hairdressers screen"
           />
-        </SharedAppFrame>
-        <SharedAppFrame>
+        </AppFrame>
+        <AppFrame>
           <Image
             src='/project/go-barber/app/appointments.png'
             width={200}
             height={403}
             alt="GoBarber's app appointments screen"
           />
-        </SharedAppFrame>
+        </AppFrame>
       </div>
     </>
   );

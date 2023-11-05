@@ -1,7 +1,7 @@
 import { tv } from 'tailwind-variants';
 import { IconType } from 'react-icons';
 
-export interface BodySessionHeaderProps {
+export interface BadgeProps {
   Icon: IconType;
   title: string;
 }
@@ -9,21 +9,21 @@ export interface BodySessionHeaderProps {
 const tvStyle = tv(
   {
     slots: {
-      container: 'flex flex-row justify-start items-center',
+      container: 'flex flex-row items-center rounded-md',
       icon: '',
-      title: 'font-extrabold',
+      title: 'text-light-text dark:text-dark-text',
     },
     variants: {
       size: {
         initial: {
-          container: 'mt-8 mb-3',
-          icon: 'h-5 w-5',
-          title: 'text-xl ml-2',
+          container: 'px-1.5 py-1',
+          icon: 'h-4 w-4',
+          title: 'text-sm ml-1',
         },
         sm: {
-          container: 'mt-10 mb-4',
-          icon: 'h-7 w-7',
-          title: 'text-2xl ml-3',
+          container: 'px-2 py-1.5',
+          icon: 'h-5 w-5',
+          title: 'text-base ml-2',
         },
       },
     },
@@ -36,14 +36,17 @@ const tvStyle = tv(
   },
 );
 
-export function SharedSessionHeader({ Icon, title }: BodySessionHeaderProps) {
+export function Badge({ Icon, title }: BadgeProps) {
   const style = tvStyle({
     size: { sm: 'sm' },
   });
 
   return (
     <div className={style.container()}>
-      <Icon className={style.icon()} />
+      <Icon
+        className={style.icon()}
+        title={title}
+      />
       <h1 className={style.title()}>{title}</h1>
     </div>
   );

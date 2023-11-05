@@ -1,19 +1,19 @@
 import { PropsWithChildren } from 'react';
 import { MdHome } from 'react-icons/md';
 
-import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
+import { Breadcrumb } from '@/component/Breadcrumb';
 
 export function HomeBreadcrumb({ children }: PropsWithChildren) {
   return (
-    <SharedBreadcrumb.Root>
-      <SharedBreadcrumb.Item
+    <Breadcrumb.Root>
+      <Breadcrumb.Item
         Icon={MdHome}
         text='Home'
         selected={false}
         link='/'
       />
-      <SharedBreadcrumb.Separator />
+      <Breadcrumb.Separator />
       {children}
-    </SharedBreadcrumb.Root>
+    </Breadcrumb.Root>
   );
 }

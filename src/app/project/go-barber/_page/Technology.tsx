@@ -11,8 +11,8 @@ import {
   SiGithubactions,
 } from 'react-icons/si';
 
-import { SharedSessionHeader } from '@/components/shared/SessionHeader';
-import { SharedBadge } from '@/components/shared/Badge';
+import { SessionHeader } from '@/component/SessionHeader';
+import { Badge } from '@/component/Badge';
 
 const tvStyle = tv(
   {
@@ -45,41 +45,41 @@ export function GoBarberTechnology() {
 
   return (
     <>
-      <SharedSessionHeader
+      <SessionHeader
         Icon={GiCircuitry}
         title='Technologies'
       />
       <div className={style.container()}>
-        <SharedBadge
+        <Badge
           Icon={SiNodeJs}
           title='Node JS'
         />
-        <SharedBadge
+        <Badge
           Icon={SiReact}
           title='React JS and Native'
         />
-        <SharedBadge
+        <Badge
           Icon={SiExpress}
           title='Express'
         />
-        <SharedBadge
+        <Badge
           Icon={SiTypescript}
           title='TypeScript'
         />
 
-        <SharedBadge
+        <Badge
           Icon={SiYarn}
           title='Yarn'
         />
-        <SharedBadge
+        <Badge
           Icon={SiJest}
           title='Jest'
         />
-        <SharedBadge
+        <Badge
           Icon={SiStyledcomponents}
           title='Styled Components'
         />
-        <SharedBadge
+        <Badge
           Icon={SiGithubactions}
           title='GitHub Actions'
         />

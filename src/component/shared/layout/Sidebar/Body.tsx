@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
-import { LayoutBody } from '@/components/shared/layout/Body';
+import { LayoutBody } from '@/component/shared/layout/Body';
 import { sidebarStyle } from './style';
 
 const tvStyle = tv(

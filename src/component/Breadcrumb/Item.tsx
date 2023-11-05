@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { tv } from 'tailwind-variants';
 import { IconType } from 'react-icons';
 
-import { SharedNavigator } from '@/components/shared/Navigator';
+import { Navigator } from '@/component/Navigator';
 
 export interface BreadcrumbItemProps {
   Icon: IconType;
@@ -47,7 +47,7 @@ export function BreadcrumbItem({
   link = '#',
   target = '_self',
 }: BreadcrumbItemProps) {
-  const navigatorButtomStyle = SharedNavigator.style.buttom({ selected });
+  const navigatorButtomStyle = Navigator.style.buttom({ selected });
 
   const style = tvStyle({ size: { sm: 'sm', md: 'md' } });
 

@@ -1,8 +1,8 @@
 import { tv } from 'tailwind-variants';
 import { BsScissors } from 'react-icons/bs';
 
-import { LayoutContent } from '@/components/shared/layout/Content';
-import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
+import { LayoutContent } from '@/component/shared/layout/Content';
+import { Breadcrumb } from '@/component/Breadcrumb';
 import { ProjectBreadcrumb } from '@/app/project/_page/Breadcrumb';
 import { RocketseatLink } from '@/app/course/rocketseat/_page/Link';
 
@@ -37,7 +37,7 @@ export default function Page() {
     <>
       <LayoutContent.Header>
         <ProjectBreadcrumb>
-          <SharedBreadcrumb.Item
+          <Breadcrumb.Item
             Icon={BsScissors}
             text='GoBarber'
             selected={true}

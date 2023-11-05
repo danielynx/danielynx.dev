@@ -5,7 +5,7 @@ const tvStyle = tv({
   base: ['border-4 border-light-border-600 dark:border-dark-border', 'rounded'],
 });
 
-export function SharedAppFrame({ children }: PropsWithChildren) {
+export function AppFrame({ children }: PropsWithChildren) {
   const style = tvStyle();
 
   return <div className={style}>{children}</div>;

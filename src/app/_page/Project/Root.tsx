@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
-import { SharedTab } from '@/components/shared/Tab';
+import { Tab } from '@/component/Tab';
 
 const tvStyle = tv(
   {
@@ -28,8 +28,8 @@ export function ProjectRoot({ children }: PropsWithChildren) {
   });
 
   return (
-    <SharedTab.Panel>
+    <Tab.Panel>
       <div className={style}>{children}</div>
-    </SharedTab.Panel>
+    </Tab.Panel>
   );
 }

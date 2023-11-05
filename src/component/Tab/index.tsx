@@ -4,7 +4,7 @@ import { TabItem } from './Item';
 import { TabPanels } from './Panels';
 import { TabPanel } from './Panel';
 
-export const SharedTab = {
+export const Tab = {
   Group: TabGroup,
   List: TabList,
   Item: TabItem,

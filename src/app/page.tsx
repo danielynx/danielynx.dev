@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { MdDeveloperBoard, MdSchool, MdPieChart } from 'react-icons/md';
 
-import { LayoutContent } from '@/components/shared/layout/Content';
-import { SharedTab } from '@/components/shared/Tab';
+import { LayoutContent } from '@/component/shared/layout/Content';
+import { Tab } from '@/component/Tab';
 import { TabEnum } from '@/types/home/page/TabEnum';
 
 import { AppOverview } from './_page/Overview';
@@ -22,28 +22,28 @@ export default function Page() {
   );
 
   return (
-    <SharedTab.Group
+    <Tab.Group
       selectedIndex={selectedIndex}
       onChange={setSelectedIndex}
     >
       <LayoutContent.Header>
-        <SharedTab.List>
-          <SharedTab.Item
+        <Tab.List>
+          <Tab.Item
             Icon={MdPieChart}
             text='Overview'
           />
-          <SharedTab.Item
+          <Tab.Item
             Icon={MdDeveloperBoard}
             text='Projects'
           />
-          <SharedTab.Item
+          <Tab.Item
             Icon={MdSchool}
             text='Courses'
           />
-        </SharedTab.List>
+        </Tab.List>
       </LayoutContent.Header>
       <LayoutContent.Body>
-        <SharedTab.Panels>
+        <Tab.Panels>
           <AppOverview />
           <AppProject.Root>
             <AppProject.DanielPortfolio />
@@ -55,8 +55,8 @@ export default function Page() {
             <AppCourse.MongoDb />
             <AppCourse.FreeCodeCamp />
           </AppCourse.Root>
-        </SharedTab.Panels>
+        </Tab.Panels>
       </LayoutContent.Body>
-    </SharedTab.Group>
+    </Tab.Group>
   );
 }

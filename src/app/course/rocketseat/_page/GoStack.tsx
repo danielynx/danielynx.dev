@@ -1,7 +1,7 @@
 import { tv } from 'tailwind-variants';
 import { RiSpaceShipLine } from 'react-icons/ri';
 
-import { SharedSessionHeader } from '@/components/shared/SessionHeader';
+import { SessionHeader } from '@/component/SessionHeader';
 import { GoBarberLink } from '@/app/project/go-barber/_page/Link';
 
 const tvStyle = tv(
@@ -29,7 +29,7 @@ export function RocketseatGoStack() {
 
   return (
     <>
-      <SharedSessionHeader
+      <SessionHeader
         Icon={RiSpaceShipLine}
         title='GoStack'
       />

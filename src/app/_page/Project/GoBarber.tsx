@@ -1,7 +1,7 @@
 import { BsScissors } from 'react-icons/bs';
 import { tv } from 'tailwind-variants';
 
-import { SharedCard } from '@/components/shared/Card';
+import { Card } from '@/component/Card';
 
 const tvStyle = tv({
   slots: {
@@ -17,18 +17,18 @@ export function ProjectGoBarber() {
   const link = 'project/go-barber';
 
   return (
-    <SharedCard.Root
+    <Card.Root
       lightBgColor={lightBgColor}
       darkTextColor={darkTextColor}
       link={link}
     >
-      <SharedCard.Header.Root>
-        <SharedCard.Header.Icon Icon={BsScissors} />
-        <SharedCard.Header.Text>
+      <Card.Header.Root>
+        <Card.Header.Icon Icon={BsScissors} />
+        <Card.Header.Text>
           <div className={style.text()}>GoBarber</div>
-        </SharedCard.Header.Text>
-      </SharedCard.Header.Root>
-      <SharedCard.Footer />
-    </SharedCard.Root>
+        </Card.Header.Text>
+      </Card.Header.Root>
+      <Card.Footer />
+    </Card.Root>
   );
 }

@@ -1,7 +1,7 @@
 import { tv } from 'tailwind-variants';
 import { IconType } from 'react-icons';
 
-export interface SharedBadgeProps {
+export interface SessionHeaderProps {
   Icon: IconType;
   title: string;
 }
@@ -9,21 +9,21 @@ export interface SharedBadgeProps {
 const tvStyle = tv(
   {
     slots: {
-      container: 'flex flex-row items-center rounded-md',
+      container: 'flex flex-row justify-start items-center',
       icon: '',
-      title: 'text-light-text dark:text-dark-text',
+      title: 'font-extrabold',
     },
     variants: {
       size: {
         initial: {
-          container: 'px-1.5 py-1',
-          icon: 'h-4 w-4',
-          title: 'text-sm ml-1',
+          container: 'mt-8 mb-3',
+          icon: 'h-5 w-5',
+          title: 'text-xl ml-2',
         },
         sm: {
-          container: 'px-2 py-1.5',
-          icon: 'h-5 w-5',
-          title: 'text-base ml-2',
+          container: 'mt-10 mb-4',
+          icon: 'h-7 w-7',
+          title: 'text-2xl ml-3',
         },
       },
     },
@@ -36,17 +36,14 @@ const tvStyle = tv(
   },
 );
 
-export function SharedBadge({ Icon, title }: SharedBadgeProps) {
+export function SessionHeader({ Icon, title }: SessionHeaderProps) {
   const style = tvStyle({
     size: { sm: 'sm' },
   });
 
   return (
     <div className={style.container()}>
-      <Icon
-        className={style.icon()}
-        title={title}
-      />
+      <Icon className={style.icon()} />
       <h1 className={style.title()}>{title}</h1>
     </div>
   );

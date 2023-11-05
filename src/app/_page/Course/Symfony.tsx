@@ -1,7 +1,7 @@
 import { SiSymfony } from 'react-icons/si';
 import { tv } from 'tailwind-variants';
 
-import { SharedCard } from '@/components/shared/Card';
+import { Card } from '@/component/Card';
 
 const tvStyle = tv({
   slots: {
@@ -19,22 +19,22 @@ export function CourseSymfony() {
   const link = 'https://symfonycasts.com/u/danielynx';
 
   return (
-    <SharedCard.Root
+    <Card.Root
       lightBgColor={lightBgColor}
       darkTextColor={darkTextColor}
       link={link}
       target='_blank'
     >
-      <SharedCard.Header.Root>
-        <SharedCard.Header.Icon Icon={SiSymfony} />
-        <SharedCard.Header.Text>
+      <Card.Header.Root>
+        <Card.Header.Icon Icon={SiSymfony} />
+        <Card.Header.Text>
           <div className={style.text()}>
             <span className={style.symfony()}>Symfony</span>
             <span className={style.casts()}>Casts</span>
           </div>
-        </SharedCard.Header.Text>
-      </SharedCard.Header.Root>
-      <SharedCard.Footer />
-    </SharedCard.Root>
+        </Card.Header.Text>
+      </Card.Header.Root>
+      <Card.Footer />
+    </Card.Root>
   );
 }

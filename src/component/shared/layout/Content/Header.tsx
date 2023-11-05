@@ -1,22 +1,24 @@
 import { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
-import { LayoutHeader } from '@/components/shared/layout/Header';
-import { sidebarStyle } from './style';
+import { LayoutHeader } from '@/component/shared/layout/Header';
+import { contentStyle } from './style';
 
 const tvStyle = tv(
   {
     slots: {
-      header: 'flex flex-row items-center top-0 z-10',
-      sidebar: 'flex flex-row items-center justify-end py-2',
+      header: 'flex flex-row items-end sticky',
+      content: 'flex flex-row items-end justify-start h-full',
     },
     variants: {
       size: {
         initial: {
-          header: 'justify-center fixed',
+          header: 'justify-center top-16',
+          content: 'justify-center',
         },
         lg: {
-          header: 'justify-end sticky',
+          header: 'justify-start top-0',
+          content: 'justify-start',
         },
       },
     },
@@ -29,14 +31,14 @@ const tvStyle = tv(
   },
 );
 
-export function SidebarHeader({ children }: PropsWithChildren) {
+export function ContentHeader({ children }: PropsWithChildren) {
   const style = tvStyle({
     size: { lg: 'lg' },
   });
 
   return (
     <header className={style.header({ className: LayoutHeader.style() })}>
-      <nav className={style.sidebar({ className: sidebarStyle() })}>
+      <nav className={style.content({ className: contentStyle() })}>
         {children}
       </nav>
     </header>

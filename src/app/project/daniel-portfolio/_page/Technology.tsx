@@ -10,8 +10,8 @@ import {
   SiZod,
 } from 'react-icons/si';
 
-import { SharedSessionHeader } from '@/components/shared/SessionHeader';
-import { SharedBadge } from '@/components/shared/Badge';
+import { SessionHeader } from '@/component/SessionHeader';
+import { Badge } from '@/component/Badge';
 
 const tvStyle = tv(
   {
@@ -44,36 +44,36 @@ export function DanielPortfolioTechnology() {
 
   return (
     <>
-      <SharedSessionHeader
+      <SessionHeader
         Icon={GiCircuitry}
         title='Technologies'
       />
       <div className={style.container()}>
-        <SharedBadge
+        <Badge
           Icon={SiNextJs}
           title='Next JS'
         />
-        <SharedBadge
+        <Badge
           Icon={SiReact}
           title='React JS'
         />
-        <SharedBadge
+        <Badge
           Icon={SiTypescript}
           title='TypeScript'
         />
-        <SharedBadge
+        <Badge
           Icon={SiNodeJs}
           title='Node JS'
         />
-        <SharedBadge
+        <Badge
           Icon={SiTailwind}
           title='Tailwind and Variants'
         />
-        <SharedBadge
+        <Badge
           Icon={SiNpm}
           title='Npm'
         />
-        <SharedBadge
+        <Badge
           Icon={SiZod}
           title='Zod'
         />

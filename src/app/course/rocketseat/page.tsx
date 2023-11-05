@@ -1,9 +1,9 @@
 import { tv } from 'tailwind-variants';
 import { MdRocketLaunch } from 'react-icons/md';
 
-import { LayoutContent } from '@/components/shared/layout/Content';
+import { LayoutContent } from '@/component/shared/layout/Content';
 import { CourseBreadcrumb } from '@/app/course/_page/Breadcrumb';
-import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
+import { Breadcrumb } from '@/component/Breadcrumb';
 
 import { RocketseatLink } from './_page/Link';
 import { RocketseatGoStack } from './_page/GoStack';
@@ -35,7 +35,7 @@ export default function Page() {
     <>
       <LayoutContent.Header>
         <CourseBreadcrumb>
-          <SharedBreadcrumb.Item
+          <Breadcrumb.Item
             Icon={MdRocketLaunch}
             text='Rocketseat'
             selected={true}

@@ -1,7 +1,7 @@
 import { ImProfile } from 'react-icons/im';
 import { tv } from 'tailwind-variants';
 
-import { SharedCard } from '@/components/shared/Card';
+import { Card } from '@/component/Card';
 
 const tvStyle = tv({
   slots: {
@@ -19,21 +19,21 @@ export function ProjectDanielPortfolio() {
   const link = 'project/daniel-portfolio';
 
   return (
-    <SharedCard.Root
+    <Card.Root
       lightBgColor={lightBgColor}
       darkTextColor={darkTextColor}
       link={link}
     >
-      <SharedCard.Header.Root>
-        <SharedCard.Header.Icon Icon={ImProfile} />
-        <SharedCard.Header.Text>
+      <Card.Header.Root>
+        <Card.Header.Icon Icon={ImProfile} />
+        <Card.Header.Text>
           <div className={style.text()}>
             <span className={style.largerSpan()}>Daniel{`'`}s Portfolio</span>
             <span className={style.smalerSpan()}>(This website)</span>
           </div>
-        </SharedCard.Header.Text>
-      </SharedCard.Header.Root>
-      <SharedCard.Footer />
-    </SharedCard.Root>
+        </Card.Header.Text>
+      </Card.Header.Root>
+      <Card.Footer />
+    </Card.Root>
   );
 }

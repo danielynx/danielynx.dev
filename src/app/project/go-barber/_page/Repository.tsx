@@ -4,8 +4,8 @@ import { CiMobile3 } from 'react-icons/ci';
 import { PiDesktopTowerLight } from 'react-icons/pi';
 import { SiGithub } from 'react-icons/si';
 
-import { SharedCard } from '@/components/shared/Card';
-import { SharedSessionHeader } from '@/components/shared/SessionHeader';
+import { Card } from '@/component/Card';
+import { SessionHeader } from '@/component/SessionHeader';
 
 const tvStyle = tv(
   {
@@ -44,42 +44,42 @@ export function GoBarberRepository() {
 
   return (
     <>
-      <SharedSessionHeader
+      <SessionHeader
         Icon={SiGithub}
         title='GitHub Repositories'
       />
       <div className={style.container()}>
-        <SharedCard.Root
+        <Card.Root
           link='https://github.com/danielynx/rocketseat-gobarber-api'
           target='_blank'
         >
-          <SharedCard.Header.Root>
-            <SharedCard.Header.Icon Icon={AiOutlineDatabase} />
-            <SharedCard.Header.Text>Headless</SharedCard.Header.Text>
-          </SharedCard.Header.Root>
-          <SharedCard.Footer />
-        </SharedCard.Root>
-        <SharedCard.Root
+          <Card.Header.Root>
+            <Card.Header.Icon Icon={AiOutlineDatabase} />
+            <Card.Header.Text>Headless</Card.Header.Text>
+          </Card.Header.Root>
+          <Card.Footer />
+        </Card.Root>
+        <Card.Root
           lightBgColor='bg-light-bg-ct'
           link='https://github.com/danielynx/rocketseat-gobarber-web'
           target='_blank'
         >
-          <SharedCard.Header.Root>
-            <SharedCard.Header.Icon Icon={PiDesktopTowerLight} />
-            <SharedCard.Header.Text>Web</SharedCard.Header.Text>
-          </SharedCard.Header.Root>
-          <SharedCard.Footer />
-        </SharedCard.Root>
-        <SharedCard.Root
+          <Card.Header.Root>
+            <Card.Header.Icon Icon={PiDesktopTowerLight} />
+            <Card.Header.Text>Web</Card.Header.Text>
+          </Card.Header.Root>
+          <Card.Footer />
+        </Card.Root>
+        <Card.Root
           link='https://github.com/danielynx/rocketseat-gobarber-mobile'
           target='_blank'
         >
-          <SharedCard.Header.Root>
-            <SharedCard.Header.Icon Icon={CiMobile3} />
-            <SharedCard.Header.Text>Mobile</SharedCard.Header.Text>
-          </SharedCard.Header.Root>
-          <SharedCard.Footer />
-        </SharedCard.Root>
+          <Card.Header.Root>
+            <Card.Header.Icon Icon={CiMobile3} />
+            <Card.Header.Text>Mobile</Card.Header.Text>
+          </Card.Header.Root>
+          <Card.Footer />
+        </Card.Root>
       </div>
     </>
   );

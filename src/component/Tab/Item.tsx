@@ -3,7 +3,7 @@ import { Tab, TabProps } from '@headlessui/react';
 import { IconType } from 'react-icons';
 import { tv } from 'tailwind-variants';
 
-import { SharedNavigator } from '@/components/shared/Navigator';
+import { Navigator } from '@/component/Navigator';
 
 export interface TabItemProps extends TabProps<ElementType> {
   Icon: IconType;
@@ -43,7 +43,7 @@ export function TabItem({
   children,
   ...props
 }: PropsWithChildren<TabItemProps>) {
-  let buttomStyle = SharedNavigator.style.buttom;
+  let buttomStyle = Navigator.style.buttom;
 
   const style = tvStyle({ size: { sm: 'sm', md: 'md' } });
 

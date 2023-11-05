@@ -1,14 +1,14 @@
 import { PropsWithChildren, ElementType } from 'react';
 import { Tab, TabListProps } from '@headlessui/react';
 
-import { SharedNavigator } from '@/components/shared/Navigator';
+import { Navigator } from '@/component/Navigator';
 
 export function TabList({
   children,
   className,
   ...props
 }: PropsWithChildren<TabListProps<ElementType>>) {
-  const painelStyle = SharedNavigator.style.painel();
+  const painelStyle = Navigator.style.painel();
 
   return (
     <Tab.List

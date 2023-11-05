@@ -2,8 +2,8 @@ import { TbError404, TbHandStop } from 'react-icons/tb';
 import { MdHome } from 'react-icons/md';
 import { tv } from 'tailwind-variants';
 
-import { SharedBreadcrumb } from '@/components/shared/Breadcrumb';
-import { LayoutContent } from '@/components/shared/layout/Content';
+import { Breadcrumb } from '@/component/Breadcrumb';
+import { LayoutContent } from '@/component/shared/layout/Content';
 
 const tvStyle = tv(
   {
@@ -52,20 +52,20 @@ export default function NotFound() {
   return (
     <>
       <LayoutContent.Header>
-        <SharedBreadcrumb.Root>
-          <SharedBreadcrumb.Item
+        <Breadcrumb.Root>
+          <Breadcrumb.Item
             Icon={MdHome}
             text='Home'
             selected={false}
             link='/'
           />
-          <SharedBreadcrumb.Separator />
-          <SharedBreadcrumb.Item
+          <Breadcrumb.Separator />
+          <Breadcrumb.Item
             Icon={TbError404}
             text='PageNotFound'
             selected={true}
           />
-        </SharedBreadcrumb.Root>
+        </Breadcrumb.Root>
       </LayoutContent.Header>
       <LayoutContent.Body>
         <div className={style.container()}>

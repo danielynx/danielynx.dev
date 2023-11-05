@@ -1,8 +1,8 @@
-import { SharedTab } from '@/components/shared/Tab';
+import { Tab } from '@/component/Tab';
 
 export function AppOverview() {
   return (
-    <SharedTab.Panel>
+    <Tab.Panel>
       <div className='leading-loose'>
         <p>Hi there, I{`'`}m Daniel B.</p>
         <p>👨‍🎓 Computing Scientist</p>
@@ -120,6 +120,6 @@ export function AppOverview() {
           technologies that will be my next study aim
         </p>
       </div>
-    </SharedTab.Panel>
+    </Tab.Panel>
   );
 }
