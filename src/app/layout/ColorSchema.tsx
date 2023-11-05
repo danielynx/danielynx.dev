@@ -33,7 +33,7 @@ const tvStyle = tv({
   ],
 });
 
-export function HeaderColorSchema() {
+export function AppColorSchema() {
   const { isColorSchemeDark, toggleColorScheme } = useColorScheme();
   const style = tvStyle();
 

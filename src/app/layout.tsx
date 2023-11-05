@@ -3,12 +3,15 @@ import './globals.css';
 import { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
-import { LayoutHeader } from '@/components/home/layout/Header';
-import { LayoutBody } from '@/components/home/layout/Body';
-import { LayoutFooter } from '@/components/home/layout/Footer';
 import { ProfileIntersectionProvider } from '@/contexts/home/layout/ProfileIntersectionProvider';
 import { ColorSchemeProvider } from '@/contexts/home/layout/ColorSchemeProvider';
-import { fontVariable } from './font';
+import { LayoutSidebar } from '@/components/shared/layout/Sidebar';
+
+import { AppHeaderProfile } from './layout/HeaderProfile';
+import { AppBodyProfile } from './layout/BodyProfile';
+import { AppColorSchema } from './layout/ColorSchema';
+import { AppFooter } from './layout/Footer';
+import { AppFont } from './layout/Font';
 
 export const metadata = {
   title: "Daniel's Portfolio",
@@ -58,7 +61,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html
       lang='en'
-      className={fontVariable}
+      className={AppFont.variable}
     >
       <body className={style.body()}>
         <ColorSchemeProvider>
@@ -66,35 +69,35 @@ export default function RootLayout({ children }: PropsWithChildren) {
             <div className={style.growth()}>
               <div className={style.sidebar()}>
                 <ProfileIntersectionProvider>
-                  <LayoutHeader.Root>
-                    <LayoutHeader.Profile.Root>
-                      <LayoutHeader.Profile.Avatar />
-                      <LayoutHeader.Profile.Name />
-                    </LayoutHeader.Profile.Root>
-                    <LayoutHeader.ColorSchema />
-                  </LayoutHeader.Root>
-                  <LayoutBody.Root>
-                    <LayoutBody.Profile.Root>
-                      <LayoutBody.Profile.Avatar.IntersectionObserver>
-                        <LayoutBody.Profile.Avatar.Root />
-                      </LayoutBody.Profile.Avatar.IntersectionObserver>
-                      <LayoutBody.Profile.Name />
-                      <LayoutBody.Profile.Bio />
-                      <LayoutBody.Profile.Company />
-                      <LayoutBody.Profile.Location />
-                      <LayoutBody.Profile.Contact.Root>
-                        <LayoutBody.Profile.Contact.ProtonMail />
-                        <LayoutBody.Profile.Contact.GitHub />
-                        <LayoutBody.Profile.Contact.StackOverflow />
-                        <LayoutBody.Profile.Contact.LinkedIn />
-                      </LayoutBody.Profile.Contact.Root>
-                    </LayoutBody.Profile.Root>
-                  </LayoutBody.Root>
+                  <LayoutSidebar.Header>
+                    <AppHeaderProfile.Root>
+                      <AppHeaderProfile.Avatar />
+                      <AppHeaderProfile.Name />
+                    </AppHeaderProfile.Root>
+                    <AppColorSchema />
+                  </LayoutSidebar.Header>
+                  <LayoutSidebar.Body>
+                    <AppBodyProfile.Root>
+                      <AppBodyProfile.Avatar.IntersectionObserver>
+                        <AppBodyProfile.Avatar.Root />
+                      </AppBodyProfile.Avatar.IntersectionObserver>
+                      <AppBodyProfile.Name />
+                      <AppBodyProfile.Bio />
+                      <AppBodyProfile.Company />
+                      <AppBodyProfile.Location />
+                      <AppBodyProfile.Contact.Root>
+                        <AppBodyProfile.Contact.ProtonMail />
+                        <AppBodyProfile.Contact.GitHub />
+                        <AppBodyProfile.Contact.StackOverflow />
+                        <AppBodyProfile.Contact.LinkedIn />
+                      </AppBodyProfile.Contact.Root>
+                    </AppBodyProfile.Root>
+                  </LayoutSidebar.Body>
                 </ProfileIntersectionProvider>
               </div>
               <div className={style.content()}>{children}</div>
             </div>
-            <LayoutFooter />
+            <AppFooter />
           </div>
         </ColorSchemeProvider>
       </body>

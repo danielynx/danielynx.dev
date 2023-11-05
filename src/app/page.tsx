@@ -2,11 +2,15 @@
 
 import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { MdDeveloperBoard, MdSchool, MdPieChart } from 'react-icons/md';
 
+import { LayoutContent } from '@/components/shared/layout/Content';
 import { SharedTab } from '@/components/shared/Tab';
-import { PageHeader } from '@/components/home/page/Header';
-import { PageBody } from '@/components/home/page/Body';
 import { TabEnum } from '@/types/home/page/TabEnum';
+
+import { AppOverview } from './page/Overview';
+import { AppProject } from './page/Project';
+import { AppCourse } from './page/Course';
 
 export default function Page() {
   const searchParams = useSearchParams();
@@ -22,24 +26,37 @@ export default function Page() {
       selectedIndex={selectedIndex}
       onChange={setSelectedIndex}
     >
-      <PageHeader.Root>
-        <PageHeader.Overview />
-        <PageHeader.Project />
-        <PageHeader.Course />
-      </PageHeader.Root>
-      <PageBody.Root>
-        <PageBody.Overview />
-        <PageBody.Project.Root>
-          <PageBody.Project.DanielPortfolio />
-          <PageBody.Project.GoBarber />
-        </PageBody.Project.Root>
-        <PageBody.Course.Root>
-          <PageBody.Course.Symfony />
-          <PageBody.Course.Rocketseat />
-          <PageBody.Course.MongoDb />
-          <PageBody.Course.FreeCodeCamp />
-        </PageBody.Course.Root>
-      </PageBody.Root>
+      <LayoutContent.Header>
+        <SharedTab.List>
+          <SharedTab.Item
+            Icon={MdPieChart}
+            text='Overview'
+          />
+          <SharedTab.Item
+            Icon={MdDeveloperBoard}
+            text='Projects'
+          />
+          <SharedTab.Item
+            Icon={MdSchool}
+            text='Courses'
+          />
+        </SharedTab.List>
+      </LayoutContent.Header>
+      <LayoutContent.Body>
+        <SharedTab.Panels>
+          <AppOverview />
+          <AppProject.Root>
+            <AppProject.DanielPortfolio />
+            <AppProject.GoBarber />
+          </AppProject.Root>
+          <AppCourse.Root>
+            <AppCourse.Symfony />
+            <AppCourse.Rocketseat />
+            <AppCourse.MongoDb />
+            <AppCourse.FreeCodeCamp />
+          </AppCourse.Root>
+        </SharedTab.Panels>
+      </LayoutContent.Body>
     </SharedTab.Group>
   );
 }

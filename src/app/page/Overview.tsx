@@ -1,6 +1,6 @@
 import { SharedTab } from '@/components/shared/Tab';
 
-export function BodyOverview() {
+export function AppOverview() {
   return (
     <SharedTab.Panel>
       <div className='leading-loose'>

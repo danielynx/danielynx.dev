@@ -5,7 +5,6 @@ export function GoBarberLink() {
     <Link
       className='underline decoration-1 hover:decoration-2 underline-offset-2'
       href='/project/go-barber'
-      target='_blank'
     >
       GoBarber
     </Link>

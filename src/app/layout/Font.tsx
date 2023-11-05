@@ -17,4 +17,6 @@ const serif = Serif({
   variable: '--font-serif',
 });
 
-export const fontVariable = `${sans.variable} ${serif.variable}`;
+export const AppFont = {
+  variable: `${sans.variable} ${serif.variable}`,
+};

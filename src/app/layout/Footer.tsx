@@ -32,7 +32,7 @@ const tvStyle = tv(
   },
 );
 
-export function LayoutFooter() {
+export function AppFooter() {
   const style = tvStyle({
     size: { sm: 'sm' },
   });

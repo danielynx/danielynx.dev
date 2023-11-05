@@ -4,7 +4,7 @@ import { CourseRocketseat } from './Rocketseat';
 import { CourseMongoDb } from './MongoDb';
 import { CourseFreeCodeCamp } from './FreeCodeCamp';
 
-export const BodyCourse = {
+export const AppCourse = {
   Root: CourseRoot,
   Symfony: CourseSymfony,
   Rocketseat: CourseRocketseat,
