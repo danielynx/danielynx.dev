@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
-import { LayoutBody } from '@/component/shared/layout/Body';
+import { AppContainerBody } from '@/app/_layout/container/Body';
 import { sidebarStyle } from './style';
 
 const tvStyle = tv(
@@ -42,7 +42,7 @@ export function SidebarBody({ children }: PropsWithChildren) {
   });
 
   return (
-    <aside className={style.aside({ className: LayoutBody.style() })}>
+    <aside className={style.aside({ className: AppContainerBody.style() })}>
       <div className={style.sidebar({ className: sidebarStyle() })}>
         {children}
       </div>

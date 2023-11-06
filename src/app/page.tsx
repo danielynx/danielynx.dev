@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { MdDeveloperBoard, MdSchool, MdPieChart } from 'react-icons/md';
 
-import { LayoutContent } from '@/component/shared/layout/Content';
 import { Tab } from '@/component/Tab';
 import { TabEnum } from '@/type/home/page/TabEnum';
 
+import { AppContainerContent } from '@/app/_layout/container/Content';
 import { AppOverview } from './_page/Overview';
 import { AppProject } from './_page/Project';
 import { AppCourse } from './_page/Course';
@@ -26,7 +26,7 @@ export default function Page() {
       selectedIndex={selectedIndex}
       onChange={setSelectedIndex}
     >
-      <LayoutContent.Header>
+      <AppContainerContent.Header>
         <Tab.List>
           <Tab.Item
             Icon={MdPieChart}
@@ -41,8 +41,8 @@ export default function Page() {
             text='Courses'
           />
         </Tab.List>
-      </LayoutContent.Header>
-      <LayoutContent.Body>
+      </AppContainerContent.Header>
+      <AppContainerContent.Body>
         <Tab.Panels>
           <AppOverview />
           <AppProject.Root>
@@ -56,7 +56,7 @@ export default function Page() {
             <AppCourse.FreeCodeCamp />
           </AppCourse.Root>
         </Tab.Panels>
-      </LayoutContent.Body>
+      </AppContainerContent.Body>
     </Tab.Group>
   );
 }

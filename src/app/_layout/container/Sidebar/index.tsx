@@ -1,7 +1,7 @@
 import { SidebarHeader } from './Header';
 import { SidebarBody } from './Body';
 
-export const LayoutSidebar = {
+export const AppContainerSidebar = {
   Header: SidebarHeader,
   Body: SidebarBody,
 };

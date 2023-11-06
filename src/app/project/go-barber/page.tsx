@@ -1,11 +1,11 @@
 import { tv } from 'tailwind-variants';
 import { BsScissors } from 'react-icons/bs';
 
-import { LayoutContent } from '@/component/shared/layout/Content';
 import { Breadcrumb } from '@/component/Breadcrumb';
 import { ProjectBreadcrumb } from '@/app/project/_page/Breadcrumb';
 import { RocketseatLink } from '@/app/course/rocketseat/_page/Link';
 
+import { AppContainerContent } from '@/app/_layout/container/Content';
 import { GoBarberRepository } from './_page/Repository';
 import { GoBarberScreenshot } from './_page/Screenshot';
 import { GoBarberTechnology } from './_page/Technology';
@@ -35,7 +35,7 @@ export default function Page() {
 
   return (
     <>
-      <LayoutContent.Header>
+      <AppContainerContent.Header>
         <ProjectBreadcrumb>
           <Breadcrumb.Item
             Icon={BsScissors}
@@ -43,8 +43,8 @@ export default function Page() {
             selected={true}
           />
         </ProjectBreadcrumb>
-      </LayoutContent.Header>
-      <LayoutContent.Body>
+      </AppContainerContent.Header>
+      <AppContainerContent.Body>
         <div className={style}>
           <p>
             The GoBarber project is a barbershop schedule manager, compound by a
@@ -59,7 +59,7 @@ export default function Page() {
         <GoBarberTechnology />
         <GoBarberRepository />
         <GoBarberScreenshot />
-      </LayoutContent.Body>
+      </AppContainerContent.Body>
     </>
   );
 }

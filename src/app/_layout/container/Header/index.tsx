@@ -1,5 +1,5 @@
 import { headerStyle } from './style';
 
-export const LayoutHeader = {
+export const AppContainerHeader = {
   style: headerStyle,
 };

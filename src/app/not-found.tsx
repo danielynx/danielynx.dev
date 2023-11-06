@@ -3,7 +3,8 @@ import { MdHome } from 'react-icons/md';
 import { tv } from 'tailwind-variants';
 
 import { Breadcrumb } from '@/component/Breadcrumb';
-import { LayoutContent } from '@/component/shared/layout/Content';
+
+import { AppContainerContent } from '@/app/_layout/container/Content';
 
 const tvStyle = tv(
   {
@@ -51,7 +52,7 @@ export default function NotFound() {
 
   return (
     <>
-      <LayoutContent.Header>
+      <AppContainerContent.Header>
         <Breadcrumb.Root>
           <Breadcrumb.Item
             Icon={MdHome}
@@ -66,14 +67,14 @@ export default function NotFound() {
             selected={true}
           />
         </Breadcrumb.Root>
-      </LayoutContent.Header>
-      <LayoutContent.Body>
+      </AppContainerContent.Header>
+      <AppContainerContent.Body>
         <div className={style.container()}>
           <TbHandStop className={style.icon()} />
           <p className={style.ask()}>Where did you want to go? 🤔</p>
           <p className={style.message()}>There {`isn't`} this page.</p>
         </div>
-      </LayoutContent.Body>
+      </AppContainerContent.Body>
     </>
   );
 }

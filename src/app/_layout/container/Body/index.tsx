@@ -1,5 +1,5 @@
 import { bodyStyle } from './style';
 
-export const LayoutBody = {
+export const AppContainerBody = {
   style: bodyStyle,
 };

@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
-import { LayoutHeader } from '@/component/shared/layout/Header';
+import { AppContainerHeader } from '@/app/_layout/container/Header';
 import { contentStyle } from './style';
 
 const tvStyle = tv(
@@ -37,7 +37,7 @@ export function ContentHeader({ children }: PropsWithChildren) {
   });
 
   return (
-    <header className={style.header({ className: LayoutHeader.style() })}>
+    <header className={style.header({ className: AppContainerHeader.style() })}>
       <nav className={style.content({ className: contentStyle() })}>
         {children}
       </nav>

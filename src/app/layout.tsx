@@ -5,8 +5,8 @@ import { tv } from 'tailwind-variants';
 
 import { ProfileIntersectionProvider } from '@/context/home/layout/ProfileIntersectionProvider';
 import { ColorSchemeProvider } from '@/context/home/layout/ColorSchemeProvider';
-import { LayoutSidebar } from '@/component/shared/layout/Sidebar';
 
+import { AppContainerSidebar } from './_layout/container/Sidebar';
 import { AppHeaderProfile } from './_layout/HeaderProfile';
 import { AppBodyProfile } from './_layout/BodyProfile';
 import { AppColorSchema } from './_layout/ColorSchema';
@@ -69,14 +69,14 @@ export default function RootLayout({ children }: PropsWithChildren) {
             <div className={style.growth()}>
               <div className={style.sidebar()}>
                 <ProfileIntersectionProvider>
-                  <LayoutSidebar.Header>
+                  <AppContainerSidebar.Header>
                     <AppHeaderProfile.Root>
                       <AppHeaderProfile.Avatar />
                       <AppHeaderProfile.Name />
                     </AppHeaderProfile.Root>
                     <AppColorSchema />
-                  </LayoutSidebar.Header>
-                  <LayoutSidebar.Body>
+                  </AppContainerSidebar.Header>
+                  <AppContainerSidebar.Body>
                     <AppBodyProfile.Root>
                       <AppBodyProfile.Avatar.IntersectionObserver>
                         <AppBodyProfile.Avatar.Root />
@@ -92,7 +92,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
                         <AppBodyProfile.Contact.LinkedIn />
                       </AppBodyProfile.Contact.Root>
                     </AppBodyProfile.Root>
-                  </LayoutSidebar.Body>
+                  </AppContainerSidebar.Body>
                 </ProfileIntersectionProvider>
               </div>
               <div className={style.content()}>{children}</div>

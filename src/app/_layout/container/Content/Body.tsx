@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
-import { LayoutBody } from '@/component/shared/layout/Body';
+import { AppContainerBody } from '@/app/_layout/container/Body';
 import { contentStyle } from './style';
 
 const tvStyle = tv(
@@ -41,7 +41,7 @@ export function ContentBody({ children }: PropsWithChildren) {
   });
 
   return (
-    <main className={style.main({ className: LayoutBody.style() })}>
+    <main className={style.main({ className: AppContainerBody.style() })}>
       <div className={style.content({ className: contentStyle() })}>
         {children}
       </div>

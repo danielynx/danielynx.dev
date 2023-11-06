@@ -1,10 +1,10 @@
 import { tv } from 'tailwind-variants';
 import { ImProfile } from 'react-icons/im';
 
-import { LayoutContent } from '@/component/shared/layout/Content';
 import { Breadcrumb } from '@/component/Breadcrumb';
 import { ProjectBreadcrumb } from '@/app/project/_page/Breadcrumb';
 
+import { AppContainerContent } from '@/app/_layout/container/Content';
 import { DanielPortfolioRepository } from './_page/Repository';
 import { DanielPortfolioTechnology } from './_page/Technology';
 
@@ -33,7 +33,7 @@ export default function Page() {
 
   return (
     <>
-      <LayoutContent.Header>
+      <AppContainerContent.Header>
         <ProjectBreadcrumb>
           <Breadcrumb.Item
             Icon={ImProfile}
@@ -41,8 +41,8 @@ export default function Page() {
             selected={true}
           />
         </ProjectBreadcrumb>
-      </LayoutContent.Header>
-      <LayoutContent.Body>
+      </AppContainerContent.Header>
+      <AppContainerContent.Body>
         <div className={style}>
           <p>
             The {`Daniel's`} Portfolio project is this web application, and its
@@ -64,7 +64,7 @@ export default function Page() {
         </div>
         <DanielPortfolioTechnology />
         <DanielPortfolioRepository />
-      </LayoutContent.Body>
+      </AppContainerContent.Body>
     </>
   );
 }
