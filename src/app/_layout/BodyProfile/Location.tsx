@@ -2,9 +2,9 @@ import { use } from 'react';
 import Link from 'next/link';
 import { MdLocationPin } from 'react-icons/md';
 
-import { GITHUB_USER } from '@/constant/home/layout';
-import { Profile } from '@/type/home/layout/Profile';
-import { getGithubProfile } from '@/service/home/layout/getGithubProfile';
+import { GITHUB_USER } from '@/constant/_layout';
+import { Profile } from '@/type/_layout/Profile';
+import { getGithubProfile } from '@/service/_layout/getGithubProfile';
 
 export function ProfileLocation() {
   const profile = use<Profile>(getGithubProfile(GITHUB_USER));

@@ -3,8 +3,8 @@ import './globals.css';
 import { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
-import { ProfileIntersectionProvider } from '@/context/home/layout/ProfileIntersectionProvider';
-import { ColorSchemeProvider } from '@/context/home/layout/ColorSchemeProvider';
+import { ProfileIntersectionProvider } from '@/context/_layout/ProfileIntersectionProvider';
+import { ColorSchemeProvider } from '@/context/_layout/ColorSchemeProvider';
 
 import { AppContainerSidebar } from './_layout/container/Sidebar';
 import { AppHeaderProfile } from './_layout/HeaderProfile';

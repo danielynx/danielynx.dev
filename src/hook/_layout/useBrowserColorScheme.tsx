@@ -2,7 +2,7 @@
 
 import { useRef, useSyncExternalStore } from 'react';
 
-import { ColorSchemeEnum } from '@/type/home/layout/ColorSchemeEnum';
+import { ColorSchemeEnum } from '@/type/_layout/ColorSchemeEnum';
 
 interface UseBrowserColorSchemeType {
   colorScheme: ColorSchemeEnum;

@@ -3,7 +3,7 @@ import { MdDeveloperBoard } from 'react-icons/md';
 
 import { Breadcrumb } from '@/component/Breadcrumb';
 import { HomeBreadcrumb } from '@/app/_page/Breadcrumb';
-import { TabEnum } from '@/type/home/page/TabEnum';
+import { TabEnum } from '@/type/_page/TabEnum';
 
 export function ProjectBreadcrumb({ children }: PropsWithChildren) {
   return (

@@ -5,9 +5,9 @@ import { useSearchParams } from 'next/navigation';
 import { MdDeveloperBoard, MdSchool, MdPieChart } from 'react-icons/md';
 
 import { Tab } from '@/component/Tab';
-import { TabEnum } from '@/type/home/page/TabEnum';
-
+import { TabEnum } from '@/type/_page/TabEnum';
 import { AppContainerContent } from '@/app/_layout/container/Content';
+
 import { AppOverview } from './_page/Overview';
 import { AppProject } from './_page/Project';
 import { AppCourse } from './_page/Course';
