@@ -4,6 +4,7 @@ import { IconType } from 'react-icons';
 export interface SessionHeaderProps {
   Icon: IconType;
   title: string;
+  className?: string;
 }
 
 const tvStyle = tv(
@@ -36,13 +37,13 @@ const tvStyle = tv(
   },
 );
 
-export function SessionHeader({ Icon, title }: SessionHeaderProps) {
+export function SessionHeader({ Icon, title, className }: SessionHeaderProps) {
   const style = tvStyle({
     size: { sm: 'sm' },
   });
 
   return (
-    <div className={style.container()}>
+    <div className={style.container({ className: className })}>
       <Icon className={style.icon()} />
       <h1 className={style.title()}>{title}</h1>
     </div>

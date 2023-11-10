@@ -41,7 +41,7 @@ export function AppFooter() {
     <footer className={style.footer()}>
       <div>
         <span className={style.username()}>@danielynx</span>
-        &nbsp; building software since 2011,
+        &nbsp; building software since 2010,
       </div>
       <div>
         using &nbsp;
