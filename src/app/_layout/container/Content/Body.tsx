@@ -13,7 +13,7 @@ const tvStyle = tv(
         'py-5 my-4',
         'bg-light-bg-hg dark:bg-dark-bg-hg',
         'border dark:border-0 border-light-border',
-        'rounded-xl',
+        'rounded-xl shadow-xl',
       ],
     },
     variants: {

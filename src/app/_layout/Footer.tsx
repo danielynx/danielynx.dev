@@ -7,7 +7,7 @@ const tvStyle = tv(
         'flex justify-center items-center',
         'w-full',
         'border-t dark:border-0 border-light-border',
-        'bg-light-bg dark:bg-dark-bg-hg-600',
+        'bg-light-bg dark:bg-dark-bg-hg',
       ],
       username:
         'font-bold underline decoration-indigo-500 decoration-2 underline-offset-2',

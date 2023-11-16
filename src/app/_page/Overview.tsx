@@ -34,7 +34,7 @@ export function AppOverview() {
       <div className='flex flex-row w-full mb-6'>
         <div className='flex flex-col items-end justify-start w-30'>
           <div className='flex flex-row items-center justify-start'>
-            <div className='flex flex-row items-center justify-start pl-2 font-bold text-sm bg-light-bg-ct dark:bg-dark-bg-ct text-light-text-ct dark:text-dark-text-ct h-6 w-20 rounded-md mr-3'>
+            <div className='flex flex-row items-center justify-start pl-2 font-bold text-sm bg-light-bg-ct dark:bg-dark-bg-ct text-light-text-ct dark:text-dark-text-ct h-6 w-20 rounded-md mr-3 font-mono'>
               <MdToday className='h-4 w-4 mr-2' />
               Today
             </div>
@@ -43,9 +43,11 @@ export function AppOverview() {
           <div className='bg-light-bg-ct dark:bg-dark-bg-ct grow w-3 rounded-full mt-2' />
         </div>
         <div className='flex flex-col items-start pl-4 w-full'>
-          <div className='text-xl font-bold'>PHP Developer</div>
-          <div className='text-lg font-semibold'>Mato Grosso Parliament</div>
-          <div className='text-base'>
+          <div className='text-xl font-bold font-serif'>PHP Developer</div>
+          <div className='text-lg font-semibold font-serif'>
+            Mato Grosso Parliament
+          </div>
+          <div className='text-base font-extralight'>
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -63,7 +65,7 @@ export function AppOverview() {
       <div className='flex flex-row w-full mb-6'>
         <div className='flex flex-col items-end justify-start w-30'>
           <div className='flex flex-row items-center justify-start'>
-            <div className='flex flex-row items-center justify-start pl-2 font-bold text-sm bg-light-bg-ct dark:bg-dark-bg-ct text-light-text-ct dark:text-dark-text-ct h-6 w-20 rounded-md mr-3'>
+            <div className='flex flex-row items-center justify-start pl-2 font-bold text-sm bg-light-bg-ct dark:bg-dark-bg-ct text-light-text-ct dark:text-dark-text-ct h-6 w-20 rounded-md mr-3 font-mono'>
               <MdToday className='h-4 w-4 mr-2' />
               2014
             </div>
@@ -72,9 +74,11 @@ export function AppOverview() {
           <div className='bg-light-bg-ct dark:bg-dark-bg-ct grow w-3 rounded-full mt-2' />
         </div>
         <div className='flex flex-col items-start pl-4 w-full'>
-          <div className='text-xl font-bold'>PHP Developer</div>
-          <div className='text-lg font-semibold'>Mato Grosso Government</div>
-          <div className='text-base'>
+          <div className='text-xl font-bold font-serif'>PHP Developer</div>
+          <div className='text-lg font-semibold font-serif'>
+            Mato Grosso Government
+          </div>
+          <div className='text-base font-extralight'>
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -92,7 +96,7 @@ export function AppOverview() {
       <div className='flex flex-row w-full mb-6'>
         <div className='flex flex-col items-end justify-start w-30'>
           <div className='flex flex-row items-center justify-start'>
-            <div className='flex flex-row items-center justify-start pl-2 font-bold text-sm bg-light-bg-ct dark:bg-dark-bg-ct text-light-text-ct dark:text-dark-text-ct h-6 w-20 rounded-md mr-3'>
+            <div className='flex flex-row items-center justify-start pl-2 font-bold text-sm bg-light-bg-ct dark:bg-dark-bg-ct text-light-text-ct dark:text-dark-text-ct h-6 w-20 rounded-md mr-3 font-mono'>
               <MdToday className='h-4 w-4 mr-2' />
               2013
             </div>
@@ -101,9 +105,9 @@ export function AppOverview() {
           <div className='bg-light-bg-ct dark:bg-dark-bg-ct grow w-3 rounded-full mt-2' />
         </div>
         <div className='flex flex-col items-start pl-4 w-full'>
-          <div className='text-xl font-bold'>Java Developer</div>
-          <div className='text-lg font-semibold'>Ábaco Company</div>
-          <div className='text-base'>
+          <div className='text-xl font-bold font-serif'>Java Developer</div>
+          <div className='text-lg font-semibold font-serif'>Ábaco Company</div>
+          <div className='text-base font-extralight'>
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -121,7 +125,7 @@ export function AppOverview() {
       <div className='flex flex-row w-full mb-6'>
         <div className='flex flex-col items-end justify-start w-30'>
           <div className='flex flex-row items-center justify-start'>
-            <div className='flex flex-row items-center justify-start pl-2 font-bold text-sm bg-light-bg-ct dark:bg-dark-bg-ct text-light-text-ct dark:text-dark-text-ct h-6 w-20 rounded-md mr-3'>
+            <div className='flex flex-row items-center justify-start pl-2 font-bold text-sm bg-light-bg-ct dark:bg-dark-bg-ct text-light-text-ct dark:text-dark-text-ct h-6 w-20 rounded-md mr-3 font-mono'>
               <MdToday className='h-4 w-4 mr-2' />
               2012
             </div>
@@ -130,9 +134,11 @@ export function AppOverview() {
           <div className='bg-light-bg-ct dark:bg-dark-bg-ct grow w-3 rounded-full mt-2' />
         </div>
         <div className='flex flex-col items-start pl-4 w-full'>
-          <div className='text-xl font-bold'>Java Developer</div>
-          <div className='text-lg font-semibold'>Tractors Parts Company</div>
-          <div className='text-base'>
+          <div className='text-xl font-bold font-serif'>Java Developer</div>
+          <div className='text-lg font-semibold font-serif'>
+            Tractors Parts Company
+          </div>
+          <div className='text-base font-extralight'>
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -150,7 +156,7 @@ export function AppOverview() {
       <div className='flex flex-row w-full mb-6'>
         <div className='flex flex-col items-end justify-start w-30'>
           <div className='flex flex-row items-center justify-start'>
-            <div className='flex flex-row items-center justify-start pl-2 font-bold text-sm bg-light-bg-ct dark:bg-dark-bg-ct text-light-text-ct dark:text-dark-text-ct h-6 w-20 rounded-md mr-3'>
+            <div className='flex flex-row items-center justify-start pl-2 font-bold text-sm bg-light-bg-ct dark:bg-dark-bg-ct text-light-text-ct dark:text-dark-text-ct h-6 w-20 rounded-md mr-3 font-mono'>
               <MdToday className='h-4 w-4 mr-2' />
               2009
             </div>
@@ -159,11 +165,13 @@ export function AppOverview() {
           <div className='bg-light-bg-ct dark:bg-dark-bg-ct grow w-3 rounded-full mt-2' />
         </div>
         <div className='flex flex-col items-start pl-4 w-full'>
-          <div className='text-xl font-bold'>Computing Scientist</div>
-          <div className='text-lg font-semibold'>
+          <div className='text-xl font-bold font-serif'>
+            Computing Scientist
+          </div>
+          <div className='text-lg font-semibold font-serif'>
             Mato Grosso State University
           </div>
-          <div className='text-base'>
+          <div className='text-base font-extralight'>
             <p>
               My get go in IT area was in 2005 when I started my Computing
               Scientist graduation.

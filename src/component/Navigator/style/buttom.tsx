@@ -9,7 +9,7 @@ const tvStyle = tv(
         'first:ml-0 ml-1 last:mr-0 mr-1',
       ],
       icon: '',
-      text: 'font-medium',
+      text: 'font-semibold font-mono',
     },
     variants: {
       selected: {

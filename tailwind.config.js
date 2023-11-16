@@ -45,6 +45,7 @@ module.exports = withTV({
       fontFamily: {
         sans: ['var(--font-sans)'],
         serif: ['var(--font-serif)'],
+        mono: ['var(--font-mono)'],
       },
       colors: {
         brand: {
@@ -58,15 +59,10 @@ module.exports = withTV({
         },
         light: {
           bg: {
-            400: colors.gray[50],
             DEFAULT: colors.gray[100],
-            600: colors.gray[200],
-            700: colors.gray[300],
             // highlight
             hg: {
               DEFAULT: colors.gray[100],
-              600: colors.gray[200],
-              700: colors.gray[300],
             },
             // contrast
             ct: {
@@ -84,12 +80,7 @@ module.exports = withTV({
             },
           },
           text: {
-            100: colors.gray[400],
-            200: colors.gray[500],
-            300: colors.gray[600],
-            400: colors.gray[700],
             DEFAULT: colors.gray[800],
-            600: colors.gray[900],
             // contrast
             ct: {
               DEFAULT: colors.gray[100],
@@ -108,16 +99,11 @@ module.exports = withTV({
         },
         dark: {
           bg: {
-            200: colors.slate[400],
-            300: colors.slate[500],
-            400: colors.slate[600],
-            DEFAULT: colors.slate[700],
+            DEFAULT: colors.cyan[800],
+            // DEFAULT: '#116D6E',
             // highlight
             hg: {
-              300: colors.cyan[500],
-              400: colors.cyan[600],
-              DEFAULT: colors.cyan[700],
-              600: colors.cyan[800],
+              DEFAULT: colors.cyan[900],
             },
             // contrast
             ct: {
@@ -125,11 +111,7 @@ module.exports = withTV({
             },
           },
           text: {
-            400: colors.gray[50],
-            DEFAULT: colors.gray[100],
-            600: colors.gray[200],
-            700: colors.gray[300],
-            800: colors.gray[400],
+            DEFAULT: colors.gray[200],
             // contrast
             ct: {
               DEFAULT: colors.gray[800],

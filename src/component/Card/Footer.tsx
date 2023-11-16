@@ -4,7 +4,7 @@ const tvStyle = tv(
   {
     base: [
       'flex flex-row justify-center items-center w-full h-10',
-      'font-light border-t',
+      'font-extralight border-t',
     ],
     variants: {
       size: {

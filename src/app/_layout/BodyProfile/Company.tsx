@@ -12,7 +12,7 @@ export function ProfileCompany() {
   return (
     <>
       {profile && (
-        <div className='flex flex-row items-center mt-4 text-base'>
+        <div className='flex flex-row items-center mt-4 text-base font-light'>
           <PiBuildings className='mr-2 h-5 w-5' />
           {profile.company}
         </div>

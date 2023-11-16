@@ -12,7 +12,7 @@ const tvStyle = tv(
     slots: {
       container: 'flex flex-row justify-start items-center',
       icon: '',
-      title: 'font-extrabold',
+      title: 'font-extrabold font-serif',
     },
     variants: {
       size: {

@@ -7,5 +7,11 @@ import { getGithubProfile } from '@/service/_layout/getGithubProfile';
 export function ProfileBio() {
   const profile = use<Profile>(getGithubProfile(GITHUB_USER));
 
-  return <>{profile && <div className='mt-5 text-sm'>{profile.bio}</div>}</>;
+  return (
+    <>
+      {profile && (
+        <div className='mt-5 text-sm font-extralight'>{profile.bio}</div>
+      )}
+    </>
+  );
 }
