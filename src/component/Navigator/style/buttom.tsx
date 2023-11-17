@@ -26,7 +26,7 @@ const tvStyle = tv(
             'text-light-text/70 dark:text-dark-text/70 hover:text-light-text dark:hover:text-dark-text',
             'hover:ring-2 ring-offset-1',
             'ring-light-bg-ct/50 dark:ring-dark-bg-ct/50',
-            'ring-offset-light-bg-hg-600/80 dark:ring-offset-dark-bg-hg-600/80',
+            'ring-offset-light-bg-hg/80 dark:ring-offset-dark-bg-hg/80',
           ],
         },
       },
