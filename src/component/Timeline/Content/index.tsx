@@ -12,7 +12,7 @@ const tvStyle = tv(
       container: 'flex flex-col items-start w-full',
       title: 'font-bold font-serif',
       subtitle: 'font-semibold font-serif',
-      children: 'font-extralight',
+      children: 'font-extralight pt-2',
     },
     variants: {
       size: {
