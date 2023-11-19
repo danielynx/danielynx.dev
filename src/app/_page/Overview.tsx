@@ -55,23 +55,23 @@ export function AppOverview() {
           <p className={style.paragraph()}>
             My team is responsible for maintaining the house website and also
             many systems that support all sectors of the house, mainly the
-            parliament
-            {"'"} activities.
+            parliament{"'"}s activities.
           </p>
           <p className={style.paragraph()}>
             The majority of the system that we maintain are web applications,
             but we also have an API and a Storage application. All of them are
-            built in PHP language with Symfony framework and MariaDB database,
-            and those who have frontend we use also JavaScript language.
+            built in PHP language with Symfony framework and MariaDB database.
+            In those applications that have a Web layer, we also use the
+            JavaScript language.
           </p>
           <p className={style.paragraph()}>
-            In the couple few years we started to use Docker to standardize our
+            Over the past few years, we started to use Docker to standardize our
             development environment, but also to allow the PHP upgrade of our
             newest applications.
           </p>
           <p className={style.paragraph()}>
             We use GitLab as code repository and also to run pipelines that
-            deploy our applications in the Docker Swarm cluster in each
+            deploy our applications in a Docker Swarm cluster for each
             environment.
           </p>
           <p className={style.paragraph()}>
