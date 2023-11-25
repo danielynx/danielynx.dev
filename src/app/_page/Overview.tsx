@@ -1,44 +1,98 @@
-import { GiClockwork } from 'react-icons/gi';
 import { tv } from 'tailwind-variants';
+import { GiClockwork } from 'react-icons/gi';
+import { TfiThought } from 'react-icons/tfi';
 
 import { Tab } from '@/component/Tab';
 import { Timeline } from '@/component/Timeline';
 import { SessionHeader } from '@/component/SessionHeader';
 
-const tvStyle = tv({
-  slots: {
-    paragraph: 'tracking-wide mb-2',
+const tvStyle = tv(
+  {
+    slots: {
+      greetings: 'font-extralight',
+      name: 'text-purple-700 dark:text-orange-300 font-extrabold',
+      author: 'font-normal not-italic',
+      citations: 'flex flex-col items-center',
+      citation: 'font-extralight italic',
+      paragraph: '',
+    },
+    variants: {
+      size: {
+        initial: {
+          greetings: 'text-sm leading-relaxed',
+          name: 'text-2xl',
+          author: 'text-xs',
+          citations: 'gap-5',
+          citation: 'w-10/12 text-sm',
+          paragraph: 'mb-1',
+        },
+        lg: {
+          greetings: 'text-base leading-loose',
+          name: 'text-3xl',
+          author: 'text-sm',
+          citations: 'gap-6',
+          citation: 'w-8/12 text-base',
+          paragraph: 'mb-2',
+        },
+      },
+    },
+    defaultVariants: {
+      size: 'initial',
+    },
   },
-});
+  {
+    responsiveVariants: ['lg'],
+  },
+);
 
 export function AppOverview() {
-  const style = tvStyle();
+  const style = tvStyle({
+    size: { lg: 'lg' },
+  });
 
   return (
     <Tab.Panel>
-      <div className='leading-loose'>
+      <div className={style.greetings()}>
         <p>
-          Hi there, I{`'`}m{' '}
-          <span className='text-purple-700 dark:text-orange-300 text-3xl font-extrabold'>
-            Daniel
-          </span>
+          Hi there, I{`'`}m <span className={style.name()}>Daniel,</span> a
+          Computing Scientist and a Full Stack Developer.
         </p>
-        <p>👨‍🎓 Computing Scientist</p>
         <p>
-          💻 Developing with PHP (Symfony Framework) and Javascript for many
-          years
+          I have been working with PHP (Symfony) and Javascript for many years.
         </p>
-        <p>📜 Currently studying NodeJS, React JS and React Native</p>
-        <p>
-          🔥 I{`'`}m also a Blockchain and Decentralized System enthusiast,
-          technologies that will be my next study aim
-        </p>
+        <p>Currently I{`'`}m studying NodeJS, React and NextJS.</p>
+      </div>
+
+      <SessionHeader
+        Icon={TfiThought}
+        title='Thoughts that I agree'
+      />
+
+      <div className={style.citations()}>
+        <div className={style.citation()}>
+          “I would rather have questions that can{`'`}t be answered than answers
+          that can{`'`}t be questioned.”&nbsp;-&nbsp;
+          <span className={style.author()}>Richard Feynman</span>
+        </div>
+        <div className={style.citation()}>
+          “We believe extrinsic motivations – wealth, fame, revenge – are fine
+          as far as they go. But we believe intrinsic motivations – the
+          satisfaction of building something new, the camaraderie of being on a
+          team, the achievement of becoming a better version of oneself – are
+          more fulfilling and more lasting.“&nbsp;-&nbsp;
+          <span className={style.author()}>Techno-Optimist Manifesto</span>
+        </div>
+        <div className={style.citation()}>
+          “We believe in local knowledge, the people with actual information
+          making decisions, not in playing God.“&nbsp;-&nbsp;
+          <span className={style.author()}>Techno-Optimist Manifesto</span>
+        </div>
       </div>
 
       <SessionHeader
         Icon={GiClockwork}
         title='Experiences'
-        className='pb-6'
+        className='pb-4'
       />
 
       <Timeline.Root>

@@ -82,7 +82,6 @@ export default function RootLayout({ children }: PropsWithChildren) {
                         <AppBodyProfile.Avatar.Root />
                       </AppBodyProfile.Avatar.IntersectionObserver>
                       <AppBodyProfile.Name />
-                      <AppBodyProfile.Bio />
                       <AppBodyProfile.Company />
                       <AppBodyProfile.Location />
                       <AppBodyProfile.Contact.Root>
