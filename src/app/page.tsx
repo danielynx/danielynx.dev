@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { MdDeveloperBoard, MdSchool, MdPieChart } from 'react-icons/md';
 
@@ -13,6 +13,14 @@ import { AppProject } from './_page/Project';
 import { AppCourse } from './_page/Course';
 
 export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PageContent />
+    </Suspense>
+  );
+}
+
+function PageContent() {
   const searchParams = useSearchParams();
 
   const tab = searchParams.get('tab');

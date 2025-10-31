@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -12,7 +16,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -21,17 +25,39 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/app/*": ["src/app/*"],
-      "@/public/*": ["public/*"],
-      "@/component/*": ["src/component/*"],
-      "@/constant/*": ["src/constant/*"],
-      "@/context/*": ["src/context/*"],
-      "@/data/*": ["src/data/*"],
-      "@/hook/*": ["src/hook/*"],
-      "@/lib/*": ["src/lib/*"],
-      "@/service/*": ["src/service/*"],
-      "@/type/*": ["src/type/*"],
-      "@/util/*": ["src/util/*"]
+      "@/app/*": [
+        "src/app/*"
+      ],
+      "@/public/*": [
+        "public/*"
+      ],
+      "@/component/*": [
+        "src/component/*"
+      ],
+      "@/constant/*": [
+        "src/constant/*"
+      ],
+      "@/context/*": [
+        "src/context/*"
+      ],
+      "@/data/*": [
+        "src/data/*"
+      ],
+      "@/hook/*": [
+        "src/hook/*"
+      ],
+      "@/lib/*": [
+        "src/lib/*"
+      ],
+      "@/service/*": [
+        "src/service/*"
+      ],
+      "@/type/*": [
+        "src/type/*"
+      ],
+      "@/util/*": [
+        "src/util/*"
+      ]
     }
   },
   "include": [
@@ -39,7 +65,10 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/type/**/*.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
