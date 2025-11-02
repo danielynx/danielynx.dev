@@ -28,12 +28,10 @@ function useColorScheme(): UseColorSchemeType {
   );
 
   const toggleColorScheme = useCallback(() => {
-    setColorScheme(colorScheme =>
-      colorScheme === ColorSchemeEnum.DARK
-        ? ColorSchemeEnum.LIGHT
-        : ColorSchemeEnum.DARK,
+    setColorScheme(
+      isColorSchemeDark ? ColorSchemeEnum.LIGHT : ColorSchemeEnum.DARK,
     );
-  }, [setColorScheme]);
+  }, [isColorSchemeDark, setColorScheme]);
 
   return {
     ...context,
