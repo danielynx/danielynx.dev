@@ -1,9 +1,9 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
-import { ColorSchemeEnum } from '@/type/_layout/ColorSchemeEnum';
+import type { ColorSchemeEnum } from '@/type/_layout/ColorSchemeEnum';
 
 // Disable SSR for this provider to avoid "flash of incorrect color scheme".
 // The problem occurs when the color scheme is saved only in the client and the server cannot determine the user's

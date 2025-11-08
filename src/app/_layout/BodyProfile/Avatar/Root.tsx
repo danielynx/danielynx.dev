@@ -4,7 +4,7 @@ import { MdHomeWork } from 'react-icons/md';
 import { tv } from 'tailwind-variants';
 
 import { GITHUB_USER } from '@/constant/_layout';
-import { Profile } from '@/type/_layout/Profile';
+import type { Profile } from '@/type/_layout/Profile';
 import { getGithubProfile } from '@/service/_layout/getGithubProfile';
 
 const tvStyle = tv({

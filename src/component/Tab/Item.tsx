@@ -1,6 +1,6 @@
-import { PropsWithChildren, ElementType, Fragment } from 'react';
-import { Tab, TabProps } from '@headlessui/react';
-import { IconType } from 'react-icons';
+import { type PropsWithChildren, type ElementType, Fragment } from 'react';
+import { Tab, type TabProps } from '@headlessui/react';
+import type { IconType } from 'react-icons';
 import { tv } from 'tailwind-variants';
 
 import { Navigator } from '@/component/Navigator';
@@ -43,7 +43,7 @@ export function TabItem({
   children,
   ...props
 }: PropsWithChildren<TabItemProps>) {
-  let buttomStyle = Navigator.style.buttom;
+  const buttomStyle = Navigator.style.buttom;
 
   const style = tvStyle({ size: { sm: 'sm', md: 'md' } });
 
@@ -57,6 +57,7 @@ export function TabItem({
 
         return (
           <button
+            type='button'
             className={innerButtonStyle.container({
               className: style.container(),
             })}

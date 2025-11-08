@@ -1,6 +1,6 @@
 import './globals.css';
 
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
 import { ProfileIntersectionProvider } from '@/context/_layout/ProfileIntersectionProvider';

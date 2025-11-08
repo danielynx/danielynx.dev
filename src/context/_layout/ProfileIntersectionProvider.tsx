@@ -1,12 +1,12 @@
 'use client';
 
-import React, {
+import {
   createContext,
-  PropsWithChildren,
+  type PropsWithChildren,
   useState,
   useMemo,
-  SetStateAction,
-  Dispatch,
+  type SetStateAction,
+  type Dispatch,
 } from 'react';
 
 interface ProfileIntersectionContextType {
@@ -23,7 +23,7 @@ function ProfileIntersectionProvider({ children }: PropsWithChildren) {
 
   const value = useMemo<ProfileIntersectionContextType>(
     () => ({ profileIntersection, setProfileIntersection }),
-    [profileIntersection, setProfileIntersection],
+    [profileIntersection],
   );
 
   return (

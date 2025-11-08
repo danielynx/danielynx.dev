@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
 import { AppContainerHeader } from '@/app/_layout/container/Header';

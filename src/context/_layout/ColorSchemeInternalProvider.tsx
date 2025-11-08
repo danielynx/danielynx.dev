@@ -2,11 +2,10 @@
 
 import {
   createContext,
-  PropsWithChildren,
+  type PropsWithChildren,
   useMemo,
-  SetStateAction,
-  Dispatch,
-  useEffect,
+  type SetStateAction,
+  type Dispatch,
 } from 'react';
 
 import { ColorSchemeEnum } from '@/type/_layout/ColorSchemeEnum';

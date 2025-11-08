@@ -1,5 +1,5 @@
-import { PropsWithChildren, ElementType } from 'react';
-import { Tab, TabListProps } from '@headlessui/react';
+import type { PropsWithChildren, ElementType } from 'react';
+import { Tab, type TabListProps } from '@headlessui/react';
 
 import { Navigator } from '@/component/Navigator';
 

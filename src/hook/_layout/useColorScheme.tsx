@@ -5,7 +5,7 @@ import { useCallback, useContext, useMemo } from 'react';
 import { ColorSchemeEnum } from '@/type/_layout/ColorSchemeEnum';
 import {
   ColorSchemeContext,
-  ColorSchemeContextType,
+  type ColorSchemeContextType,
 } from '@/context/_layout/ColorSchemeProvider';
 
 interface UseColorSchemeType extends ColorSchemeContextType {

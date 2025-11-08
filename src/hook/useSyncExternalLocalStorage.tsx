@@ -5,8 +5,8 @@ import {
   useEffect,
   useState,
   useCallback,
-  SetStateAction,
-  Dispatch,
+  type SetStateAction,
+  type Dispatch,
 } from 'react';
 
 interface UseSyncExternalLocalStorageType<T> {

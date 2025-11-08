@@ -9,7 +9,7 @@ export interface ErrorParams {
 
 export default function GlobalError({ reset }: ErrorParams) {
   return (
-    <html>
+    <html lang='en'>
       <body>
         <AppError reset={reset} />
       </body>

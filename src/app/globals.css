@@ -1,6 +1,8 @@
+/* biome-ignore-start lint/suspicious/noUnknownAtRules: tailwind require */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* biome-ignore-end lint/suspicious/noUnknownAtRules: tailwind require */
 
 html {
   /* 

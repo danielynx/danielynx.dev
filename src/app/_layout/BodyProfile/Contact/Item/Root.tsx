@@ -1,4 +1,4 @@
-import { IconType } from 'react-icons';
+import type { IconType } from 'react-icons';
 
 import Link from 'next/link';
 import { tv } from 'tailwind-variants';

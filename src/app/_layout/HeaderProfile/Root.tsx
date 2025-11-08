@@ -1,6 +1,6 @@
 'use client';
 
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import { tv } from 'tailwind-variants';
 
 import { useProfileIntersection } from '@/hook/_layout/useProfileIntersection';

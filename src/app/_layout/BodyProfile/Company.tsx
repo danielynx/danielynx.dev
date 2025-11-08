@@ -1,9 +1,8 @@
 import { use } from 'react';
-import Link from 'next/link';
 import { PiBuildings } from 'react-icons/pi';
 
 import { GITHUB_USER } from '@/constant/_layout';
-import { Profile } from '@/type/_layout/Profile';
+import type { Profile } from '@/type/_layout/Profile';
 import { getGithubProfile } from '@/service/_layout/getGithubProfile';
 
 export function ProfileCompany() {

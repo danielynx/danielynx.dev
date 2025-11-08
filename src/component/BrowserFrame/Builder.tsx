@@ -1,5 +1,5 @@
-import { PropsWithChildren } from 'react';
-import { IconType } from 'react-icons';
+import type { PropsWithChildren } from 'react';
+import type { IconType } from 'react-icons';
 
 import { BrowserFrame } from '@/component/BrowserFrame';
 

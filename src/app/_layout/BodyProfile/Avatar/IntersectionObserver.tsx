@@ -1,6 +1,6 @@
 'use client';
 
-import { PropsWithChildren, useLayoutEffect, useRef } from 'react';
+import { type PropsWithChildren, useLayoutEffect, useRef } from 'react';
 
 import { useProfileIntersection } from '@/hook/_layout/useProfileIntersection';
 
@@ -10,7 +10,7 @@ export function AvatarIntersectionObserver({ children }: PropsWithChildren) {
 
   useLayoutEffect(() => {
     const createScrollObserver = () => {
-      let observer = new IntersectionObserver(
+      const observer = new IntersectionObserver(
         ([{ intersectionRatio }]) => setProfileIntersection(intersectionRatio),
         {
           rootMargin: '-10px 0px 0px 0px',
@@ -31,7 +31,7 @@ export function AvatarIntersectionObserver({ children }: PropsWithChildren) {
       // Remove the event listener when component unmounts
       return () => window.removeEventListener('load', createScrollObserver);
     }
-  }, [imageRef, setProfileIntersection]);
+  }, [setProfileIntersection]);
 
   return <div ref={imageRef}>{children}</div>;
 }
