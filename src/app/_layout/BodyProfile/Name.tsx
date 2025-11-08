@@ -1,8 +1,8 @@
 import { use } from "react";
 
 import { GITHUB_USER } from "@/constant/_layout";
-import type { Profile } from "@/type/_layout/Profile";
 import { getGithubProfile } from "@/service/_layout/getGithubProfile";
+import type { Profile } from "@/type/_layout/Profile";
 
 export function ProfileName() {
 	const profile = use<Profile>(getGithubProfile(GITHUB_USER));

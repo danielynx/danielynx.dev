@@ -1,5 +1,5 @@
-import type { PropsWithChildren, ElementType } from "react";
 import { Tab, type TabPanelsProps } from "@headlessui/react";
+import type { ElementType, PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
 
 const tvStyle = tv({

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { tv } from "tailwind-variants";
 import type { IconType } from "react-icons";
+import { tv } from "tailwind-variants";
 
 import { Navigator } from "@/component/Navigator";
 

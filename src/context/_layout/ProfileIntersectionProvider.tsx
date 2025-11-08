@@ -2,11 +2,11 @@
 
 import {
 	createContext,
-	type PropsWithChildren,
-	useState,
-	useMemo,
-	type SetStateAction,
 	type Dispatch,
+	type PropsWithChildren,
+	type SetStateAction,
+	useMemo,
+	useState,
 } from "react";
 
 interface ProfileIntersectionContextType {

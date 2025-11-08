@@ -1,6 +1,6 @@
-import { ProjectRoot } from "./Root";
 import { ProjectDanielPortfolio } from "./DanielPortfolio";
 import { ProjectGoBarber } from "./GoBarber";
+import { ProjectRoot } from "./Root";
 
 export const AppProject = {
 	Root: ProjectRoot,

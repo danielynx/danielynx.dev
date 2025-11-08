@@ -1,17 +1,16 @@
-import { tv } from "tailwind-variants";
 import { GiCircuitry } from "react-icons/gi";
 import {
-	SiReact,
-	SiTypescript,
-	SiNodedotjs as SiNodeJs,
 	SiNextdotjs as SiNextJs,
+	SiNodedotjs as SiNodeJs,
 	SiNpm,
+	SiReact,
 	SiTailwindcss as SiTailwind,
+	SiTypescript,
 	SiZod,
 } from "react-icons/si";
-
-import { SessionHeader } from "@/component/SessionHeader";
+import { tv } from "tailwind-variants";
 import { Badge } from "@/component/Badge";
+import { SessionHeader } from "@/component/SessionHeader";
 
 const tvStyle = tv(
 	{

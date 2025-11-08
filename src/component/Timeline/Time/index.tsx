@@ -1,5 +1,5 @@
-import { tv } from "tailwind-variants";
 import { MdToday } from "react-icons/md";
+import { tv } from "tailwind-variants";
 
 export interface TimeProps {
 	date: string;

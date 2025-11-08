@@ -2,16 +2,14 @@ import "./globals.css";
 
 import type { PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
-
-import { ProfileIntersectionProvider } from "@/context/_layout/ProfileIntersectionProvider";
 import { ColorSchemeProvider } from "@/context/_layout/ColorSchemeProvider";
-
-import { AppContainerSidebar } from "./_layout/container/Sidebar";
-import { AppHeaderProfile } from "./_layout/HeaderProfile";
+import { ProfileIntersectionProvider } from "@/context/_layout/ProfileIntersectionProvider";
 import { AppBodyProfile } from "./_layout/BodyProfile";
 import { AppColorSchema } from "./_layout/ColorSchema";
-import { AppFooter } from "./_layout/Footer";
+import { AppContainerSidebar } from "./_layout/container/Sidebar";
 import { AppFont } from "./_layout/Font";
+import { AppFooter } from "./_layout/Footer";
+import { AppHeaderProfile } from "./_layout/HeaderProfile";
 
 export const metadata = {
 	title: "Daniel's Portfolio",

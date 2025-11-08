@@ -1,10 +1,8 @@
-import { tv } from "tailwind-variants";
 import { ImProfile } from "react-icons/im";
-
-import { Breadcrumb } from "@/component/Breadcrumb";
-import { ProjectBreadcrumb } from "@/app/project/_page/Breadcrumb";
-
+import { tv } from "tailwind-variants";
 import { AppContainerContent } from "@/app/_layout/container/Content";
+import { ProjectBreadcrumb } from "@/app/project/_page/Breadcrumb";
+import { Breadcrumb } from "@/component/Breadcrumb";
 import { DanielPortfolioRepository } from "./_page/Repository";
 import { DanielPortfolioTechnology } from "./_page/Technology";
 

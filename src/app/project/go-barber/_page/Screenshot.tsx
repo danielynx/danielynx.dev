@@ -1,10 +1,9 @@
-import { tv } from "tailwind-variants";
 import Image from "next/image";
-import { CgScreenShot } from "react-icons/cg";
 import { BsScissors } from "react-icons/bs";
-
-import { BrowserFrame } from "@/component/BrowserFrame";
+import { CgScreenShot } from "react-icons/cg";
+import { tv } from "tailwind-variants";
 import { AppFrame } from "@/component/AppFrame";
+import { BrowserFrame } from "@/component/BrowserFrame";
 import { SessionHeader } from "@/component/SessionHeader";
 
 const tvStyle = tv(

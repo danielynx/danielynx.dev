@@ -1,6 +1,6 @@
-import { ProfileRoot } from "./Root";
-import { ProfileName } from "./Name";
 import { ProfileAvatar } from "./Avatar";
+import { ProfileName } from "./Name";
+import { ProfileRoot } from "./Root";
 
 export const AppHeaderProfile = {
 	Root: ProfileRoot,

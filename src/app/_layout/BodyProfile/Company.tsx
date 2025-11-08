@@ -2,8 +2,8 @@ import { use } from "react";
 import { PiBuildings } from "react-icons/pi";
 
 import { GITHUB_USER } from "@/constant/_layout";
-import type { Profile } from "@/type/_layout/Profile";
 import { getGithubProfile } from "@/service/_layout/getGithubProfile";
+import type { Profile } from "@/type/_layout/Profile";
 
 export function ProfileCompany() {
 	const profile = use<Profile>(getGithubProfile(GITHUB_USER));

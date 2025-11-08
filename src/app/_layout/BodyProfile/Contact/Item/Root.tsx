@@ -1,6 +1,5 @@
-import type { IconType } from "react-icons";
-
 import Link from "next/link";
+import type { IconType } from "react-icons";
 import { tv } from "tailwind-variants";
 
 export interface ItemRootProps {

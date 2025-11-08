@@ -1,5 +1,5 @@
-import { tv } from "tailwind-variants";
 import { MdOutlineLock, MdStarOutline } from "react-icons/md";
+import { tv } from "tailwind-variants";
 
 export interface NavigationBarAddressProps {
 	url: string;

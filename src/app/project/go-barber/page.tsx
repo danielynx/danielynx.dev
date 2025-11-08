@@ -1,11 +1,9 @@
-import { tv } from "tailwind-variants";
 import { BsScissors } from "react-icons/bs";
-
-import { Breadcrumb } from "@/component/Breadcrumb";
-import { ProjectBreadcrumb } from "@/app/project/_page/Breadcrumb";
-import { RocketseatLink } from "@/app/course/rocketseat/_page/Link";
-
+import { tv } from "tailwind-variants";
 import { AppContainerContent } from "@/app/_layout/container/Content";
+import { RocketseatLink } from "@/app/course/rocketseat/_page/Link";
+import { ProjectBreadcrumb } from "@/app/project/_page/Breadcrumb";
+import { Breadcrumb } from "@/component/Breadcrumb";
 import { GoBarberRepository } from "./_page/Repository";
 import { GoBarberScreenshot } from "./_page/Screenshot";
 import { GoBarberTechnology } from "./_page/Technology";

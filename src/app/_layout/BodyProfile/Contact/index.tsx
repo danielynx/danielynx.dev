@@ -1,7 +1,7 @@
-import { ContactRoot } from "./Root";
 import { ContactGitHub } from "./GitHub";
 import { ContactLinkedIn } from "./LinkedIn";
 import { ContactProtonMail } from "./ProtonMail";
+import { ContactRoot } from "./Root";
 import { ContactStackOverflow } from "./StackOverflow";
 
 export const ProfileContact = {

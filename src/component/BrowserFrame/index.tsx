@@ -1,7 +1,7 @@
-import { BrowserFrameRoot } from "./Root";
-import { BrowserFrameNavigationBar } from "./NavigationBar";
-import { BrowserFrameTitleBar } from "./TitleBar";
 import { BrowserFrameBuilder } from "./Builder";
+import { BrowserFrameNavigationBar } from "./NavigationBar";
+import { BrowserFrameRoot } from "./Root";
+import { BrowserFrameTitleBar } from "./TitleBar";
 
 export const BrowserFrame = {
 	Root: BrowserFrameRoot,

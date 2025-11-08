@@ -1,5 +1,5 @@
-import { tv } from "tailwind-variants";
 import { MdClose, MdCrop54, MdRemove } from "react-icons/md";
+import { tv } from "tailwind-variants";
 
 const tvStyle = tv(
 	{

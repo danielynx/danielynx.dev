@@ -1,16 +1,14 @@
 "use client";
 
-import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { MdDeveloperBoard, MdSchool, MdPieChart } from "react-icons/md";
-
+import { Suspense, useState } from "react";
+import { MdDeveloperBoard, MdPieChart, MdSchool } from "react-icons/md";
+import { AppContainerContent } from "@/app/_layout/container/Content";
 import { Tab } from "@/component/Tab";
 import { TabEnum } from "@/type/_page/TabEnum";
-import { AppContainerContent } from "@/app/_layout/container/Content";
-
+import { AppCourse } from "./_page/Course";
 import { AppOverview } from "./_page/Overview";
 import { AppProject } from "./_page/Project";
-import { AppCourse } from "./_page/Course";
 
 export default function Page() {
 	return (

@@ -1,6 +1,6 @@
-import { tv } from "tailwind-variants";
 import { PiDesktopTowerLight } from "react-icons/pi";
 import { SiGithub } from "react-icons/si";
+import { tv } from "tailwind-variants";
 
 import { Card } from "@/component/Card";
 import { SessionHeader } from "@/component/SessionHeader";

@@ -1,10 +1,8 @@
-import { TbError404, TbHandStop } from "react-icons/tb";
 import { MdHome } from "react-icons/md";
+import { TbError404, TbHandStop } from "react-icons/tb";
 import { tv } from "tailwind-variants";
-
-import { Breadcrumb } from "@/component/Breadcrumb";
-
 import { AppContainerContent } from "@/app/_layout/container/Content";
+import { Breadcrumb } from "@/component/Breadcrumb";
 
 const tvStyle = tv(
 	{

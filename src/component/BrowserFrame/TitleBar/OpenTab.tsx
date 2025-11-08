@@ -1,6 +1,6 @@
-import { tv } from "tailwind-variants";
 import type { IconType } from "react-icons";
 import { MdClose } from "react-icons/md";
+import { tv } from "tailwind-variants";
 
 export interface TitleBarOpenTabProps {
 	Favicon: IconType;

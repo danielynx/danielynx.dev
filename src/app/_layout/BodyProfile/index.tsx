@@ -1,9 +1,9 @@
-import { ProfileRoot } from "./Root";
 import { ProfileAvatar } from "./Avatar";
-import { ProfileName } from "./Name";
 import { ProfileCompany } from "./Company";
-import { ProfileLocation } from "./Location";
 import { ProfileContact } from "./Contact";
+import { ProfileLocation } from "./Location";
+import { ProfileName } from "./Name";
+import { ProfileRoot } from "./Root";
 
 export const AppBodyProfile = {
 	Root: ProfileRoot,

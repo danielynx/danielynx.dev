@@ -1,12 +1,11 @@
 "use client";
 
 import { useCallback, useContext, useMemo } from "react";
-
-import { ColorSchemeEnum } from "@/type/_layout/ColorSchemeEnum";
 import {
 	ColorSchemeContext,
 	type ColorSchemeContextType,
 } from "@/context/_layout/ColorSchemeProvider";
+import { ColorSchemeEnum } from "@/type/_layout/ColorSchemeEnum";
 
 interface UseColorSchemeType extends ColorSchemeContextType {
 	isColorSchemeDark: boolean;

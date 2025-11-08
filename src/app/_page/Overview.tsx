@@ -1,10 +1,9 @@
-import { tv } from "tailwind-variants";
 import { GiClockwork } from "react-icons/gi";
 import { TfiThought } from "react-icons/tfi";
-
+import { tv } from "tailwind-variants";
+import { SessionHeader } from "@/component/SessionHeader";
 import { Tab } from "@/component/Tab";
 import { Timeline } from "@/component/Timeline";
-import { SessionHeader } from "@/component/SessionHeader";
 
 const tvStyle = tv(
 	{

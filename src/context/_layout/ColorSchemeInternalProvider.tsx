@@ -2,15 +2,14 @@
 
 import {
 	createContext,
-	type PropsWithChildren,
-	useMemo,
-	type SetStateAction,
 	type Dispatch,
+	type PropsWithChildren,
+	type SetStateAction,
+	useMemo,
 } from "react";
-
-import { ColorSchemeEnum } from "@/type/_layout/ColorSchemeEnum";
 import { useBrowserColorScheme } from "@/hook/_layout/useBrowserColorScheme";
 import { useSyncExternalLocalStorage } from "@/hook/useSyncExternalLocalStorage";
+import { ColorSchemeEnum } from "@/type/_layout/ColorSchemeEnum";
 
 type FunctionSetColorScheme = Dispatch<
 	SetStateAction<ColorSchemeEnum | undefined>

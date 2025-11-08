@@ -1,5 +1,5 @@
-import type { PropsWithChildren, ElementType } from "react";
 import { Tab, type TabGroupProps } from "@headlessui/react";
+import type { ElementType, PropsWithChildren } from "react";
 
 export function TabGroup({
 	children,

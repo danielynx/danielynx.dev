@@ -1,5 +1,5 @@
-import { tv } from "tailwind-variants";
 import { MdArrowBack, MdArrowForward, MdRefresh } from "react-icons/md";
+import { tv } from "tailwind-variants";
 
 const tvStyle = tv(
 	{

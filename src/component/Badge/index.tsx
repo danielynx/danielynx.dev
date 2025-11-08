@@ -1,5 +1,5 @@
-import { tv } from "tailwind-variants";
 import type { IconType } from "react-icons";
+import { tv } from "tailwind-variants";
 
 export interface BadgeProps {
 	Icon: IconType;

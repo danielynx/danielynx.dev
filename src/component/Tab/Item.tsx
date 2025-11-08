@@ -1,5 +1,5 @@
-import { type PropsWithChildren, type ElementType, Fragment } from "react";
 import { Tab, type TabProps } from "@headlessui/react";
+import { type ElementType, Fragment, type PropsWithChildren } from "react";
 import type { IconType } from "react-icons";
 import { tv } from "tailwind-variants";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useSyncExternalStore, useState, useEffect } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 
 import { ColorSchemeEnum } from "@/type/_layout/ColorSchemeEnum";
 

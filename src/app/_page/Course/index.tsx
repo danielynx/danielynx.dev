@@ -1,8 +1,8 @@
+import { CourseFreeCodeCamp } from "./FreeCodeCamp";
+import { CourseMongoDb } from "./MongoDb";
+import { CourseRocketseat } from "./Rocketseat";
 import { CourseRoot } from "./Root";
 import { CourseSymfony } from "./Symfony";
-import { CourseRocketseat } from "./Rocketseat";
-import { CourseMongoDb } from "./MongoDb";
-import { CourseFreeCodeCamp } from "./FreeCodeCamp";
 
 export const AppCourse = {
 	Root: CourseRoot,

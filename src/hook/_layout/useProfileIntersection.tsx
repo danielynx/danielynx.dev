@@ -3,8 +3,8 @@
 import { useContext, useMemo } from "react";
 
 import {
-	type ProfileIntersectionContextType,
 	ProfileIntersectionContext,
+	type ProfileIntersectionContextType,
 } from "@/context/_layout/ProfileIntersectionProvider";
 
 interface UseProfileIntersectionType extends ProfileIntersectionContextType {

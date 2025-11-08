@@ -1,12 +1,10 @@
-import { tv } from "tailwind-variants";
 import { MdRocketLaunch } from "react-icons/md";
-
+import { tv } from "tailwind-variants";
+import { AppContainerContent } from "@/app/_layout/container/Content";
 import { CourseBreadcrumb } from "@/app/course/_page/Breadcrumb";
 import { Breadcrumb } from "@/component/Breadcrumb";
-
-import { AppContainerContent } from "@/app/_layout/container/Content";
-import { RocketseatLink } from "./_page/Link";
 import { RocketseatGoStack } from "./_page/GoStack";
+import { RocketseatLink } from "./_page/Link";
 
 const tvStyle = tv(
 	{
