@@ -1,65 +1,65 @@
-'use client';
+"use client";
 
 import {
-  createContext,
-  type PropsWithChildren,
-  useMemo,
-  type SetStateAction,
-  type Dispatch,
-} from 'react';
+	createContext,
+	type PropsWithChildren,
+	useMemo,
+	type SetStateAction,
+	type Dispatch,
+} from "react";
 
-import { ColorSchemeEnum } from '@/type/_layout/ColorSchemeEnum';
-import { useBrowserColorScheme } from '@/hook/_layout/useBrowserColorScheme';
-import { useSyncExternalLocalStorage } from '@/hook/useSyncExternalLocalStorage';
+import { ColorSchemeEnum } from "@/type/_layout/ColorSchemeEnum";
+import { useBrowserColorScheme } from "@/hook/_layout/useBrowserColorScheme";
+import { useSyncExternalLocalStorage } from "@/hook/useSyncExternalLocalStorage";
 
 type FunctionSetColorScheme = Dispatch<
-  SetStateAction<ColorSchemeEnum | undefined>
+	SetStateAction<ColorSchemeEnum | undefined>
 >;
 
 interface ColorSchemeContextType {
-  colorScheme: ColorSchemeEnum | undefined;
-  setColorScheme: FunctionSetColorScheme;
+	colorScheme: ColorSchemeEnum | undefined;
+	setColorScheme: FunctionSetColorScheme;
 }
 
 const ColorSchemeContext = createContext<ColorSchemeContextType | undefined>(
-  undefined,
+	undefined,
 );
 
 function ColorSchemeInternalProvider({
-  children,
-  initialValue,
+	children,
+	initialValue,
 }: PropsWithChildren<{ initialValue?: ColorSchemeEnum }>) {
-  const {
-    storageValue: storageColorScheme,
-    setStorageValue: setStorageColorScheme,
-  } = useSyncExternalLocalStorage<ColorSchemeEnum>('color-scheme');
+	const {
+		storageValue: storageColorScheme,
+		setStorageValue: setStorageColorScheme,
+	} = useSyncExternalLocalStorage<ColorSchemeEnum>("color-scheme");
 
-  const browserColorScheme = useBrowserColorScheme();
+	const browserColorScheme = useBrowserColorScheme();
 
-  const colorScheme = useMemo<ColorSchemeEnum>(
-    () => initialValue ?? storageColorScheme ?? browserColorScheme,
-    [initialValue, storageColorScheme, browserColorScheme],
-  );
+	const colorScheme = useMemo<ColorSchemeEnum>(
+		() => initialValue ?? storageColorScheme ?? browserColorScheme,
+		[initialValue, storageColorScheme, browserColorScheme],
+	);
 
-  const value = useMemo<ColorSchemeContextType>(
-    () => ({
-      colorScheme,
-      setColorScheme: setStorageColorScheme,
-    }),
-    [colorScheme, setStorageColorScheme],
-  );
+	const value = useMemo<ColorSchemeContextType>(
+		() => ({
+			colorScheme,
+			setColorScheme: setStorageColorScheme,
+		}),
+		[colorScheme, setStorageColorScheme],
+	);
 
-  return (
-    <ColorSchemeContext.Provider value={value}>
-      <div className={colorScheme === ColorSchemeEnum.DARK ? 'dark' : ''}>
-        {children}
-      </div>
-    </ColorSchemeContext.Provider>
-  );
+	return (
+		<ColorSchemeContext.Provider value={value}>
+			<div className={colorScheme === ColorSchemeEnum.DARK ? "dark" : ""}>
+				{children}
+			</div>
+		</ColorSchemeContext.Provider>
+	);
 }
 
 export {
-  ColorSchemeContext,
-  ColorSchemeInternalProvider,
-  type ColorSchemeContextType,
+	ColorSchemeContext,
+	ColorSchemeInternalProvider,
+	type ColorSchemeContextType,
 };

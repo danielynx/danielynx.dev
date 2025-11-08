@@ -1,11 +1,11 @@
 {
-  "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "bradlc.vscode-tailwindcss",
-    "mhutchie.git-graph",
-    "waderyan.gitblame",
-    "vivaxy.vscode-conventional-commits",
-    "Rajeshwaran.developer-theme-dark"
-  ]
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"bradlc.vscode-tailwindcss",
+		"mhutchie.git-graph",
+		"waderyan.gitblame",
+		"vivaxy.vscode-conventional-commits",
+		"Rajeshwaran.developer-theme-dark"
+	]
 }

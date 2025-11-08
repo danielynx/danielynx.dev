@@ -1,9 +1,9 @@
-import type { PropsWithChildren, ElementType } from 'react';
-import { Tab, type TabPanelProps } from '@headlessui/react';
+import type { PropsWithChildren, ElementType } from "react";
+import { Tab, type TabPanelProps } from "@headlessui/react";
 
 export function TabPanel({
-  children,
-  ...props
+	children,
+	...props
 }: PropsWithChildren<TabPanelProps<ElementType>>) {
-  return <Tab.Panel {...props}>{children}</Tab.Panel>;
+	return <Tab.Panel {...props}>{children}</Tab.Panel>;
 }

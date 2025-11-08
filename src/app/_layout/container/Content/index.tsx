@@ -1,7 +1,7 @@
-import { ContentHeader } from './Header';
-import { ContentBody } from './Body';
+import { ContentHeader } from "./Header";
+import { ContentBody } from "./Body";
 
 export const AppContainerContent = {
-  Header: ContentHeader,
-  Body: ContentBody,
+	Header: ContentHeader,
+	Body: ContentBody,
 };

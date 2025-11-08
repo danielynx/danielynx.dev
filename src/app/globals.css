@@ -5,7 +5,7 @@
 /* biome-ignore-end lint/suspicious/noUnknownAtRules: tailwind require */
 
 html {
-  /* 
+	/* 
    * Tailwind uses REM unit to define their component's size, so 
    * when the font size is changed on the HTML element, all layout is redimensioned.
    *
@@ -30,13 +30,13 @@ html {
    * on screen resize is a inavitable task, doing this on zoom change, turn out to be the same activity
    * and doesn't add more effort to maintain responsive layout like when font resize is enabled.
    */
-  --font-size-px: 16;
-  --threshold-px: 320;
-  --threshold-vw: calc(var(--font-size-px) * 100 / var(--threshold-px));
+	--font-size-px: 16;
+	--threshold-px: 320;
+	--threshold-vw: calc(var(--font-size-px) * 100 / var(--threshold-px));
 
-  font-size: clamp(
-    1px,
-    calc(var(--threshold-vw) * 1vw),
-    calc(var(--font-size-px) * 1px)
-  );
+	font-size: clamp(
+		1px,
+		calc(var(--threshold-vw) * 1vw),
+		calc(var(--font-size-px) * 1px)
+	);
 }

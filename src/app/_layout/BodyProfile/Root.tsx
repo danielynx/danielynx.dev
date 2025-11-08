@@ -1,5 +1,5 @@
-import type { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from "react";
 
 export function ProfileRoot({ children }: PropsWithChildren) {
-  return <div>{children}</div>;
+	return <div>{children}</div>;
 }

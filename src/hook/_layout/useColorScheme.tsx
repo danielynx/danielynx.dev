@@ -1,43 +1,43 @@
-'use client';
+"use client";
 
-import { useCallback, useContext, useMemo } from 'react';
+import { useCallback, useContext, useMemo } from "react";
 
-import { ColorSchemeEnum } from '@/type/_layout/ColorSchemeEnum';
+import { ColorSchemeEnum } from "@/type/_layout/ColorSchemeEnum";
 import {
-  ColorSchemeContext,
-  type ColorSchemeContextType,
-} from '@/context/_layout/ColorSchemeProvider';
+	ColorSchemeContext,
+	type ColorSchemeContextType,
+} from "@/context/_layout/ColorSchemeProvider";
 
 interface UseColorSchemeType extends ColorSchemeContextType {
-  isColorSchemeDark: boolean;
-  toggleColorScheme: () => void;
+	isColorSchemeDark: boolean;
+	toggleColorScheme: () => void;
 }
 
 function useColorScheme(): UseColorSchemeType {
-  const context = useContext(ColorSchemeContext);
+	const context = useContext(ColorSchemeContext);
 
-  if (!context) {
-    throw new Error('useColorScheme must be used within a ColorSchemeProvider');
-  }
+	if (!context) {
+		throw new Error("useColorScheme must be used within a ColorSchemeProvider");
+	}
 
-  const { colorScheme, setColorScheme } = context;
+	const { colorScheme, setColorScheme } = context;
 
-  const isColorSchemeDark = useMemo(
-    () => colorScheme === ColorSchemeEnum.DARK,
-    [colorScheme],
-  );
+	const isColorSchemeDark = useMemo(
+		() => colorScheme === ColorSchemeEnum.DARK,
+		[colorScheme],
+	);
 
-  const toggleColorScheme = useCallback(() => {
-    setColorScheme(
-      isColorSchemeDark ? ColorSchemeEnum.LIGHT : ColorSchemeEnum.DARK,
-    );
-  }, [isColorSchemeDark, setColorScheme]);
+	const toggleColorScheme = useCallback(() => {
+		setColorScheme(
+			isColorSchemeDark ? ColorSchemeEnum.LIGHT : ColorSchemeEnum.DARK,
+		);
+	}, [isColorSchemeDark, setColorScheme]);
 
-  return {
-    ...context,
-    isColorSchemeDark,
-    toggleColorScheme,
-  };
+	return {
+		...context,
+		isColorSchemeDark,
+		toggleColorScheme,
+	};
 }
 
 export { useColorScheme, type UseColorSchemeType };
