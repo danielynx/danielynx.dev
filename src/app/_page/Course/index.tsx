@@ -5,9 +5,9 @@ import { CourseRoot } from "./Root";
 import { CourseSymfony } from "./Symfony";
 
 export const AppCourse = {
-	Root: CourseRoot,
-	Symfony: CourseSymfony,
-	Rocketseat: CourseRocketseat,
-	MongoDb: CourseMongoDb,
-	FreeCodeCamp: CourseFreeCodeCamp,
+    Root: CourseRoot,
+    Symfony: CourseSymfony,
+    Rocketseat: CourseRocketseat,
+    MongoDb: CourseMongoDb,
+    FreeCodeCamp: CourseFreeCodeCamp,
 };

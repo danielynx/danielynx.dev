@@ -11,29 +11,29 @@ import type { ColorSchemeEnum } from "@/type/_layout/ColorSchemeEnum";
 // applied, causing a flash effect. By disabling SSR, we ensure that the provider only renders on the client side,
 // where it can correctly apply the user's preferred color scheme from the start.
 const NoSSR = dynamic(
-	() =>
-		import("@/context/_layout/ColorSchemeInternalProvider").then(
-			(mod) => mod.ColorSchemeInternalProvider,
-		),
-	{
-		ssr: false,
-	},
+    () =>
+        import("@/context/_layout/ColorSchemeInternalProvider").then(
+            (mod) => mod.ColorSchemeInternalProvider,
+        ),
+    {
+        ssr: false,
+    },
 );
 
 export {
-	ColorSchemeContext,
-	type ColorSchemeContextType,
+    ColorSchemeContext,
+    type ColorSchemeContextType,
 } from "@/context/_layout/ColorSchemeInternalProvider";
 
 function ColorSchemeProvider({
-	children,
-	initialValue,
+    children,
+    initialValue,
 }: PropsWithChildren<{ initialValue?: ColorSchemeEnum }>) {
-	return (
-		<div>
-			<NoSSR initialValue={initialValue}>{children}</NoSSR>
-		</div>
-	);
+    return (
+        <div>
+            <NoSSR initialValue={initialValue}>{children}</NoSSR>
+        </div>
+    );
 }
 
 export { ColorSchemeProvider };

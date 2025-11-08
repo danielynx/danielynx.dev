@@ -7,21 +7,21 @@ import { getGithubProfile } from "@/service/_layout/getGithubProfile";
 import type { Profile } from "@/type/_layout/Profile";
 
 export function ProfileLocation() {
-	const profile = use<Profile>(getGithubProfile(GITHUB_USER));
+    const profile = use<Profile>(getGithubProfile(GITHUB_USER));
 
-	return (
-		<>
-			{profile && (
-				<div className="flex flex-row items-center mt-2 text-base font-light">
-					<MdLocationPin className="mr-2 h-5 w-5 " />
-					<Link
-						href={"https://goo.gl/maps/dQ5rWzKNCeYxj6fm8"}
-						target={"_blank"}
-					>
-						{profile.location}
-					</Link>
-				</div>
-			)}
-		</>
-	);
+    return (
+        <>
+            {profile && (
+                <div className="flex flex-row items-center mt-2 text-base font-light">
+                    <MdLocationPin className="mr-2 h-5 w-5 " />
+                    <Link
+                        href={"https://goo.gl/maps/dQ5rWzKNCeYxj6fm8"}
+                        target={"_blank"}
+                    >
+                        {profile.location}
+                    </Link>
+                </div>
+            )}
+        </>
+    );
 }

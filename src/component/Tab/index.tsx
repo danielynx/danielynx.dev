@@ -5,9 +5,9 @@ import { TabPanel } from "./Panel";
 import { TabPanels } from "./Panels";
 
 export const Tab = {
-	Group: TabGroup,
-	List: TabList,
-	Item: TabItem,
-	Panels: TabPanels,
-	Panel: TabPanel,
+    Group: TabGroup,
+    List: TabList,
+    Item: TabItem,
+    Panels: TabPanels,
+    Panel: TabPanel,
 };

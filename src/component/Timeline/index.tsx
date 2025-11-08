@@ -3,7 +3,7 @@ import { Root } from "./Root";
 import { Time } from "./Time";
 
 export const Timeline = {
-	Root: Root,
-	Content: Content,
-	Time: Time,
+    Root: Root,
+    Content: Content,
+    Time: Time,
 };

@@ -3,7 +3,7 @@ import { BreadcrumbRoot } from "./Root";
 import { BreadcrumbSeparator } from "./Separator";
 
 export const Breadcrumb = {
-	Root: BreadcrumbRoot,
-	Item: BreadcrumbItem,
-	Separator: BreadcrumbSeparator,
+    Root: BreadcrumbRoot,
+    Item: BreadcrumbItem,
+    Separator: BreadcrumbSeparator,
 };

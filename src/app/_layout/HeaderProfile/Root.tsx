@@ -6,18 +6,18 @@ import { tv } from "tailwind-variants";
 import { useProfileIntersection } from "@/hook/_layout/useProfileIntersection";
 
 const tvStyle = tv({
-	base: "grow flex flex-row items-center justify-start",
-	variants: {
-		isProfileHidden: {
-			false: "hidden",
-		},
-	},
+    base: "grow flex flex-row items-center justify-start",
+    variants: {
+        isProfileHidden: {
+            false: "hidden",
+        },
+    },
 });
 
 export function ProfileRoot({ children }: PropsWithChildren) {
-	const { isProfileHidden } = useProfileIntersection();
+    const { isProfileHidden } = useProfileIntersection();
 
-	const style = tvStyle({ isProfileHidden });
+    const style = tvStyle({ isProfileHidden });
 
-	return <div className={style}>{children}</div>;
+    return <div className={style}>{children}</div>;
 }

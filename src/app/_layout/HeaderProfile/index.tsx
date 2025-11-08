@@ -3,7 +3,7 @@ import { ProfileName } from "./Name";
 import { ProfileRoot } from "./Root";
 
 export const AppHeaderProfile = {
-	Root: ProfileRoot,
-	Name: ProfileName,
-	Avatar: ProfileAvatar,
+    Root: ProfileRoot,
+    Name: ProfileName,
+    Avatar: ProfileAvatar,
 };

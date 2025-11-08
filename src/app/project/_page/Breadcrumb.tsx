@@ -5,16 +5,16 @@ import { Breadcrumb } from "@/component/Breadcrumb";
 import { TabEnum } from "@/type/_page/TabEnum";
 
 export function ProjectBreadcrumb({ children }: PropsWithChildren) {
-	return (
-		<HomeBreadcrumb>
-			<Breadcrumb.Item
-				Icon={MdDeveloperBoard}
-				text="Projects"
-				selected={false}
-				link={`/?tab=${TabEnum.PROJECTS}`}
-			/>
-			<Breadcrumb.Separator />
-			{children}
-		</HomeBreadcrumb>
-	);
+    return (
+        <HomeBreadcrumb>
+            <Breadcrumb.Item
+                Icon={MdDeveloperBoard}
+                text="Projects"
+                selected={false}
+                link={`/?tab=${TabEnum.PROJECTS}`}
+            />
+            <Breadcrumb.Separator />
+            {children}
+        </HomeBreadcrumb>
+    );
 }

@@ -5,9 +5,9 @@ import { ContactRoot } from "./Root";
 import { ContactStackOverflow } from "./StackOverflow";
 
 export const ProfileContact = {
-	Root: ContactRoot,
-	GitHub: ContactGitHub,
-	LinkedIn: ContactLinkedIn,
-	ProtonMail: ContactProtonMail,
-	StackOverflow: ContactStackOverflow,
+    Root: ContactRoot,
+    GitHub: ContactGitHub,
+    LinkedIn: ContactLinkedIn,
+    ProtonMail: ContactProtonMail,
+    StackOverflow: ContactStackOverflow,
 };
