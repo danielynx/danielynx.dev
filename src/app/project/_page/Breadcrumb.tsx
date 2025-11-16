@@ -1,19 +1,19 @@
 import type { PropsWithChildren } from "react";
 import { MdDeveloperBoard } from "react-icons/md";
-import { HomeBreadcrumb } from "@/app/_page/Breadcrumb";
-import { Breadcrumb } from "@/component/Breadcrumb";
+import { Breadcrumb as HomeBreadcrumb } from "@/app/_page/Breadcrumb";
+import { Breadcrumb as ComponentBreadcrumb } from "@/component/Breadcrumb";
 import { TabEnum } from "@/type/_page/TabEnum";
 
-export function ProjectBreadcrumb({ children }: PropsWithChildren) {
+export function Breadcrumb({ children }: PropsWithChildren) {
     return (
         <HomeBreadcrumb>
-            <Breadcrumb.Item
+            <ComponentBreadcrumb.Item
                 Icon={MdDeveloperBoard}
                 text="Projects"
                 selected={false}
                 link={`/?tab=${TabEnum.PROJECTS}`}
             />
-            <Breadcrumb.Separator />
+            <ComponentBreadcrumb.Separator />
             {children}
         </HomeBreadcrumb>
     );

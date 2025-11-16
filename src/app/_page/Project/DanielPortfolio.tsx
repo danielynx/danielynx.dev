@@ -11,7 +11,7 @@ const tvStyle = tv({
     },
 });
 
-export function ProjectDanielPortfolio() {
+export function DanielPortfolio() {
     const style = tvStyle();
 
     const lightBgColor = "bg-light-bg-project-myportfolio";

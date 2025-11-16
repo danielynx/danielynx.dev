@@ -1,8 +1,8 @@
 import { ImProfile } from "react-icons/im";
 import { tv } from "tailwind-variants";
 import { AppContainerContent } from "@/app/_layout/container/Content";
-import { ProjectBreadcrumb } from "@/app/project/_page/Breadcrumb";
-import { Breadcrumb } from "@/component/Breadcrumb";
+import { Breadcrumb as ProjectBreadcrumb } from "@/app/project/_page/Breadcrumb";
+import { Breadcrumb as ComponentBreadcrumb } from "@/component/Breadcrumb";
 import { DanielPortfolioRepository } from "./_page/Repository";
 import { DanielPortfolioTechnology } from "./_page/Technology";
 
@@ -33,7 +33,7 @@ export default function Page() {
         <>
             <AppContainerContent.Header>
                 <ProjectBreadcrumb>
-                    <Breadcrumb.Item
+                    <ComponentBreadcrumb.Item
                         Icon={ImProfile}
                         text="Daniel's Portfolio"
                         selected={true}

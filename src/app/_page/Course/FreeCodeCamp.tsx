@@ -9,7 +9,7 @@ const tvStyle = tv({
     },
 });
 
-export function CourseFreeCodeCamp() {
+export function FreeCodeCamp() {
     const style = tvStyle();
 
     const lightBgColor = "bg-light-bg-brand-freecodecamp";

@@ -9,7 +9,7 @@ const tvStyle = tv({
     },
 });
 
-export function CourseRocketseat() {
+export function Rocketseat() {
     const style = tvStyle();
 
     const lightBgColor = "bg-light-bg-brand-rocketseat";

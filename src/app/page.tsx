@@ -6,9 +6,9 @@ import { MdDeveloperBoard, MdPieChart, MdSchool } from "react-icons/md";
 import { AppContainerContent } from "@/app/_layout/container/Content";
 import { Tab } from "@/component/Tab";
 import { TabEnum } from "@/type/_page/TabEnum";
-import { AppCourse } from "./_page/Course";
-import { AppOverview } from "./_page/Overview";
-import { AppProject } from "./_page/Project";
+import { Course } from "./_page/Course";
+import { Overview } from "./_page/Overview";
+import { Project } from "./_page/Project";
 
 export default function Page() {
     return (
@@ -38,17 +38,23 @@ function PageContent() {
             </AppContainerContent.Header>
             <AppContainerContent.Body>
                 <Tab.Panels>
-                    <AppOverview />
-                    <AppProject.Root>
-                        <AppProject.DanielPortfolio />
-                        <AppProject.GoBarber />
-                    </AppProject.Root>
-                    <AppCourse.Root>
-                        <AppCourse.Symfony />
-                        <AppCourse.Rocketseat />
-                        <AppCourse.MongoDb />
-                        <AppCourse.FreeCodeCamp />
-                    </AppCourse.Root>
+                    <Tab.Panel>
+                        <Overview />
+                    </Tab.Panel>
+                    <Tab.Panel>
+                        <Project>
+                            <Project.DanielPortfolio />
+                            <Project.GoBarber />
+                        </Project>
+                    </Tab.Panel>
+                    <Tab.Panel>
+                        <Course>
+                            <Course.Symfony />
+                            <Course.Rocketseat />
+                            <Course.MongoDb />
+                            <Course.FreeCodeCamp />
+                        </Course>
+                    </Tab.Panel>
                 </Tab.Panels>
             </AppContainerContent.Body>
         </Tab.Group>

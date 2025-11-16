@@ -11,7 +11,7 @@ const tvStyle = tv({
     },
 });
 
-export function CourseMongoDb() {
+export function MongoDb() {
     const style = tvStyle();
 
     const lightBgColor = "bg-light-bg-brand-mongodb";

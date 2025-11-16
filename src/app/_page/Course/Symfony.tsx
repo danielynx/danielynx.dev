@@ -11,7 +11,7 @@ const tvStyle = tv({
     },
 });
 
-export function CourseSymfony() {
+export function Symfony() {
     const style = tvStyle();
 
     const lightBgColor = "bg-light-bg-brand-symfony";

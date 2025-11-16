@@ -9,7 +9,7 @@ const tvStyle = tv({
     },
 });
 
-export function ProjectGoBarber() {
+export function GoBarber() {
     const style = tvStyle();
 
     const lightBgColor = "bg-light-bg-project-gobarber";
