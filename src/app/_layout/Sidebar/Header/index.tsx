@@ -1,7 +1,9 @@
-import type { PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
-
 import { AppContainerHeader } from "@/app/_layout/container/Header";
+import { Avatar } from "@/app/_layout/Sidebar/Header/Avatar";
+import { AppColorSchema } from "@/app/_layout/Sidebar/Header/ColorSchema";
+import { Content } from "@/app/_layout/Sidebar/Header/Content";
+import { Name } from "@/app/_layout/Sidebar/Header/Name";
 import { sidebarStyle } from "@/app/_layout/Sidebar/style";
 
 const tvStyle = tv(
@@ -29,7 +31,7 @@ const tvStyle = tv(
     },
 );
 
-export function SidebarHeader({ children }: PropsWithChildren) {
+export function SidebarHeader() {
     const style = tvStyle({
         size: { lg: "lg" },
     });
@@ -39,7 +41,11 @@ export function SidebarHeader({ children }: PropsWithChildren) {
             className={style.header({ className: AppContainerHeader.style() })}
         >
             <nav className={style.sidebar({ className: sidebarStyle() })}>
-                {children}
+                <Content>
+                    <Avatar />
+                    <Name />
+                </Content>
+                <AppColorSchema />
             </nav>
         </header>
     );

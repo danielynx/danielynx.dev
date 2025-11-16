@@ -14,7 +14,7 @@ const tvStyle = tv({
     },
 });
 
-export function ProfileRoot({ children }: PropsWithChildren) {
+export function Content({ children }: PropsWithChildren) {
     const { isProfileHidden } = useProfileIntersection();
 
     const style = tvStyle({ isProfileHidden });

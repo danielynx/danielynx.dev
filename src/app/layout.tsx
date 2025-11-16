@@ -3,10 +3,8 @@ import "@/app/globals.css";
 import type { PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
 import { AppBodyProfile } from "@/app/_layout/BodyProfile";
-import { AppColorSchema } from "@/app/_layout/ColorSchema";
 import { AppFont } from "@/app/_layout/Font";
 import { Footer } from "@/app/_layout/Footer";
-import { AppHeaderProfile } from "@/app/_layout/HeaderProfile";
 import { AppContainerSidebar } from "@/app/_layout/Sidebar";
 import { ColorSchemeProvider } from "@/context/_layout/ColorSchemeProvider";
 import { ProfileIntersectionProvider } from "@/context/_layout/ProfileIntersectionProvider";
@@ -64,13 +62,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
                         <div className={style.growth()}>
                             <div className={style.sidebar()}>
                                 <ProfileIntersectionProvider>
-                                    <AppContainerSidebar.Header>
-                                        <AppHeaderProfile.Root>
-                                            <AppHeaderProfile.Avatar />
-                                            <AppHeaderProfile.Name />
-                                        </AppHeaderProfile.Root>
-                                        <AppColorSchema />
-                                    </AppContainerSidebar.Header>
+                                    <AppContainerSidebar.Header />
                                     <AppContainerSidebar.Body>
                                         <AppBodyProfile.Root>
                                             <AppBodyProfile.Avatar.IntersectionObserver>
