@@ -1,8 +1,8 @@
-import { ContactGitHub } from "./GitHub";
-import { ContactLinkedIn } from "./LinkedIn";
-import { ContactProtonMail } from "./ProtonMail";
-import { ContactRoot } from "./Root";
-import { ContactStackOverflow } from "./StackOverflow";
+import { ContactGitHub } from "@/app/_layout/BodyProfile/Contact/GitHub";
+import { ContactLinkedIn } from "@/app/_layout/BodyProfile/Contact/LinkedIn";
+import { ContactProtonMail } from "@/app/_layout/BodyProfile/Contact/ProtonMail";
+import { ContactRoot } from "@/app/_layout/BodyProfile/Contact/Root";
+import { ContactStackOverflow } from "@/app/_layout/BodyProfile/Contact/StackOverflow";
 
 export const ProfileContact = {
     Root: ContactRoot,

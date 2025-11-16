@@ -37,7 +37,7 @@ const tvStyle = tv(
     },
 );
 
-export function GoBarberTechnology() {
+export function Technology() {
     const style = tvStyle({
         size: { md: "md" },
     });

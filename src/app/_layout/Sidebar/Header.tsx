@@ -2,7 +2,7 @@ import type { PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
 
 import { AppContainerHeader } from "@/app/_layout/container/Header";
-import { sidebarStyle } from "./style";
+import { sidebarStyle } from "@/app/_layout/Sidebar/style";
 
 const tvStyle = tv(
     {

@@ -2,9 +2,9 @@ import { ImProfile } from "react-icons/im";
 import { tv } from "tailwind-variants";
 import { AppContainerContent } from "@/app/_layout/container/Content";
 import { Breadcrumb as ProjectBreadcrumb } from "@/app/project/_page/Breadcrumb";
+import { Repository } from "@/app/project/daniel-portfolio/_page/Repository";
+import { Technology } from "@/app/project/daniel-portfolio/_page/Technology";
 import { Breadcrumb as ComponentBreadcrumb } from "@/component/Breadcrumb";
-import { DanielPortfolioRepository } from "./_page/Repository";
-import { DanielPortfolioTechnology } from "./_page/Technology";
 
 const tvStyle = tv(
     {
@@ -63,8 +63,8 @@ export default function Page() {
                         intending to do.
                     </p>
                 </div>
-                <DanielPortfolioTechnology />
-                <DanielPortfolioRepository />
+                <Technology />
+                <Repository />
             </AppContainerContent.Body>
         </>
     );

@@ -37,7 +37,7 @@ const tvStyle = tv(
     },
 );
 
-export function GoBarberRepository() {
+export function Repository() {
     const style = tvStyle({
         size: { md: "md", xl: "xl", "2xl": "2xl" },
     });

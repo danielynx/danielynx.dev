@@ -1,5 +1,5 @@
-import { ContentBody } from "./Body";
-import { ContentHeader } from "./Header";
+import { ContentBody } from "@/app/_layout/container/Content/Body";
+import { ContentHeader } from "@/app/_layout/container/Content/Header";
 
 export const AppContainerContent = {
     Header: ContentHeader,

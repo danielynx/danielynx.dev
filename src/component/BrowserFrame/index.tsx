@@ -1,7 +1,7 @@
-import { BrowserFrameBuilder } from "./Builder";
-import { BrowserFrameNavigationBar } from "./NavigationBar";
-import { BrowserFrameRoot } from "./Root";
-import { BrowserFrameTitleBar } from "./TitleBar";
+import { BrowserFrameBuilder } from "@/component/BrowserFrame/Builder";
+import { BrowserFrameNavigationBar } from "@/component/BrowserFrame/NavigationBar";
+import { BrowserFrameRoot } from "@/component/BrowserFrame/Root";
+import { BrowserFrameTitleBar } from "@/component/BrowserFrame/TitleBar";
 
 export const BrowserFrame = {
     Root: BrowserFrameRoot,

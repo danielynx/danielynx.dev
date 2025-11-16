@@ -2,7 +2,7 @@ import type { PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
 
 import { AppContainerBody } from "@/app/_layout/container/Body";
-import { contentStyle } from "./style";
+import { contentStyle } from "@/app/_layout/container/Content/style";
 
 const tvStyle = tv(
     {

@@ -1,15 +1,15 @@
-import "./globals.css";
+import "@/app/globals.css";
 
 import type { PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
+import { AppBodyProfile } from "@/app/_layout/BodyProfile";
+import { AppColorSchema } from "@/app/_layout/ColorSchema";
+import { AppFont } from "@/app/_layout/Font";
+import { Footer } from "@/app/_layout/Footer";
+import { AppHeaderProfile } from "@/app/_layout/HeaderProfile";
+import { AppContainerSidebar } from "@/app/_layout/Sidebar";
 import { ColorSchemeProvider } from "@/context/_layout/ColorSchemeProvider";
 import { ProfileIntersectionProvider } from "@/context/_layout/ProfileIntersectionProvider";
-import { AppBodyProfile } from "./_layout/BodyProfile";
-import { AppColorSchema } from "./_layout/ColorSchema";
-import { AppContainerSidebar } from "./_layout/container/Sidebar";
-import { AppFont } from "./_layout/Font";
-import { AppFooter } from "./_layout/Footer";
-import { AppHeaderProfile } from "./_layout/HeaderProfile";
 
 export const metadata = {
     title: "Daniel's Portfolio",
@@ -91,7 +91,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
                             </div>
                             <div className={style.content()}>{children}</div>
                         </div>
-                        <AppFooter />
+                        <Footer />
                     </div>
                 </ColorSchemeProvider>
             </body>

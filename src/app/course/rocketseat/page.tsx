@@ -2,9 +2,9 @@ import { MdRocketLaunch } from "react-icons/md";
 import { tv } from "tailwind-variants";
 import { AppContainerContent } from "@/app/_layout/container/Content";
 import { Breadcrumb as CourseBreadcrumb } from "@/app/course/_page/Breadcrumb";
+import { GoStack } from "@/app/course/rocketseat/_page/GoStack";
+import { Link } from "@/app/course/rocketseat/_page/Link";
 import { Breadcrumb as ComponentBreadcrumb } from "@/component/Breadcrumb";
-import { RocketseatGoStack } from "./_page/GoStack";
-import { RocketseatLink } from "./_page/Link";
 
 const tvStyle = tv(
     {
@@ -43,11 +43,11 @@ export default function Page() {
             <AppContainerContent.Body>
                 <div className={style}>
                     <p>
-                        {<RocketseatLink />} is a Brasilian Coding School that
-                        focus in technologies that are basead in JavaScript.
+                        {<Link />} is a Brazilian coding school that focuses on
+                        JavaScript Technologies.
                     </p>
                 </div>
-                <RocketseatGoStack />
+                <GoStack />
             </AppContainerContent.Body>
         </>
     );

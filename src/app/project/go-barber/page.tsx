@@ -1,12 +1,12 @@
 import { BsScissors } from "react-icons/bs";
 import { tv } from "tailwind-variants";
 import { AppContainerContent } from "@/app/_layout/container/Content";
-import { RocketseatLink } from "@/app/course/rocketseat/_page/Link";
+import { Link as RocketseatLink } from "@/app/course/rocketseat/_page/Link";
 import { Breadcrumb as ProjectBreadcrumb } from "@/app/project/_page/Breadcrumb";
+import { Repository } from "@/app/project/go-barber/_page/Repository";
+import { Screenshot } from "@/app/project/go-barber/_page/Screenshot";
+import { Technology } from "@/app/project/go-barber/_page/Technology";
 import { Breadcrumb as ComponentBreadcrumb } from "@/component/Breadcrumb";
-import { GoBarberRepository } from "./_page/Repository";
-import { GoBarberScreenshot } from "./_page/Screenshot";
-import { GoBarberTechnology } from "./_page/Technology";
 
 const tvStyle = tv(
     {
@@ -56,9 +56,9 @@ export default function Page() {
                         technologies.
                     </p>
                 </div>
-                <GoBarberTechnology />
-                <GoBarberRepository />
-                <GoBarberScreenshot />
+                <Technology />
+                <Repository />
+                <Screenshot />
             </AppContainerContent.Body>
         </>
     );

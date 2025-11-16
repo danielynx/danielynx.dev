@@ -1,6 +1,6 @@
 import { RiSpaceShipLine } from "react-icons/ri";
 import { tv } from "tailwind-variants";
-import { GoBarberLink } from "@/app/project/go-barber/_page/Link";
+import { Link as GoBarberLink } from "@/app/project/go-barber/_page/Link";
 import { SessionHeader } from "@/component/SessionHeader";
 
 const tvStyle = tv(
@@ -21,7 +21,7 @@ const tvStyle = tv(
     },
 );
 
-export function RocketseatGoStack() {
+export function GoStack() {
     const style = tvStyle({
         size: { lg: "lg" },
     });

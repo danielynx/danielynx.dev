@@ -1,6 +1,6 @@
 import { SiLinkedin } from "react-icons/si";
 
-import { ContactItem } from "./Item";
+import { ContactItem } from "@/app/_layout/BodyProfile/Contact/Item";
 
 export function ContactLinkedIn() {
     return (

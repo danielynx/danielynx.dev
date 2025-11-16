@@ -4,11 +4,11 @@ import { useSearchParams } from "next/navigation";
 import { Suspense, useState } from "react";
 import { MdDeveloperBoard, MdPieChart, MdSchool } from "react-icons/md";
 import { AppContainerContent } from "@/app/_layout/container/Content";
+import { Courses } from "@/app/_page/Courses";
+import { Overview } from "@/app/_page/Overview";
+import { Projects } from "@/app/_page/Projects";
 import { Tab } from "@/component/Tab";
 import { TabEnum } from "@/type/_page/TabEnum";
-import { Course } from "./_page/Course";
-import { Overview } from "./_page/Overview";
-import { Project } from "./_page/Project";
 
 export default function Page() {
     return (
@@ -42,18 +42,10 @@ function PageContent() {
                         <Overview />
                     </Tab.Panel>
                     <Tab.Panel>
-                        <Project>
-                            <Project.DanielPortfolio />
-                            <Project.GoBarber />
-                        </Project>
+                        <Projects />
                     </Tab.Panel>
                     <Tab.Panel>
-                        <Course>
-                            <Course.Symfony />
-                            <Course.Rocketseat />
-                            <Course.MongoDb />
-                            <Course.FreeCodeCamp />
-                        </Course>
+                        <Courses />
                     </Tab.Panel>
                 </Tab.Panels>
             </AppContainerContent.Body>

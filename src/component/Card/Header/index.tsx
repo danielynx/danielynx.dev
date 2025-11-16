@@ -1,6 +1,6 @@
-import { HeaderIcon } from "./Icon";
-import { HeaderRoot } from "./Root";
-import { HeaderText } from "./Text";
+import { HeaderIcon } from "@/component/Card/Header/Icon";
+import { HeaderRoot } from "@/component/Card/Header/Root";
+import { HeaderText } from "@/component/Card/Header/Text";
 
 export const CardHeader = {
     Root: HeaderRoot,

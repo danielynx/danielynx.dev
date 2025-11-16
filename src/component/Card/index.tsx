@@ -1,6 +1,6 @@
-import { CardFooter } from "./Footer";
-import { CardHeader } from "./Header";
-import { CardRoot } from "./Root";
+import { CardFooter } from "@/component/Card/Footer";
+import { CardHeader } from "@/component/Card/Header";
+import { CardRoot } from "@/component/Card/Root";
 
 export const Card = {
     Root: CardRoot,

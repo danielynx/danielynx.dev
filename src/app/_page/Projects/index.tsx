@@ -1,10 +1,6 @@
-import type { PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
-
-import { FreeCodeCamp } from "./FreeCodeCamp";
-import { MongoDb } from "./MongoDb";
-import { Rocketseat } from "./Rocketseat";
-import { Symfony } from "./Symfony";
+import { DanielPortfolio } from "@/app/_page/Projects/DanielPortfolio";
+import { GoBarber } from "@/app/_page/Projects/GoBarber";
 
 const tvStyle = tv(
     {
@@ -25,17 +21,15 @@ const tvStyle = tv(
     },
 );
 
-export function index({ children }: PropsWithChildren) {
+export function Projects() {
     const style = tvStyle({
         size: { sm: "sm", xl: "xl" },
     });
 
-    return <div className={style}>{children}</div>;
+    return (
+        <div className={style}>
+            <DanielPortfolio />
+            <GoBarber />
+        </div>
+    );
 }
-
-export const Course = Object.assign(index, {
-    Symfony,
-    Rocketseat,
-    MongoDb,
-    FreeCodeCamp,
-});

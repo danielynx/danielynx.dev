@@ -36,7 +36,7 @@ const tvStyle = tv(
     },
 );
 
-export function DanielPortfolioTechnology() {
+export function Technology() {
     const style = tvStyle({
         size: { md: "md" },
     });

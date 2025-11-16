@@ -1,8 +1,7 @@
 import type { PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
-
+import { contentStyle } from "@/app/_layout/container/Content/style";
 import { AppContainerHeader } from "@/app/_layout/container/Header";
-import { contentStyle } from "./style";
 
 const tvStyle = tv(
     {

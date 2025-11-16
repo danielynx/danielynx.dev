@@ -1,7 +1,7 @@
-import { TitleBarAddTabButtom } from "./AddTabButtom";
-import { TitleBarCommandButtons } from "./CommandButtons";
-import { TitleBarOpenTab } from "./OpenTab";
-import { TitleBarRoot } from "./Root";
+import { TitleBarAddTabButtom } from "@/component/BrowserFrame/TitleBar/AddTabButtom";
+import { TitleBarCommandButtons } from "@/component/BrowserFrame/TitleBar/CommandButtons";
+import { TitleBarOpenTab } from "@/component/BrowserFrame/TitleBar/OpenTab";
+import { TitleBarRoot } from "@/component/BrowserFrame/TitleBar/Root";
 
 export const BrowserFrameTitleBar = {
     Root: TitleBarRoot,
