@@ -1,4 +1,7 @@
-import { Tab, type TabListProps } from "@headlessui/react";
+import {
+    TabList as HeadlessTabList,
+    type TabListProps,
+} from "@headlessui/react";
 import type { ElementType, PropsWithChildren } from "react";
 
 import { Navigator } from "@/component/Navigator";
@@ -11,8 +14,8 @@ export function TabList({
     const painelStyle = Navigator.style.painel();
 
     return (
-        <Tab.List className={painelStyle.container()} {...props}>
+        <HeadlessTabList className={painelStyle.container()} {...props}>
             {children}
-        </Tab.List>
+        </HeadlessTabList>
     );
 }

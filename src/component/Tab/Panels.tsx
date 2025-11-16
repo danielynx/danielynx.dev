@@ -1,4 +1,7 @@
-import { Tab, type TabPanelsProps } from "@headlessui/react";
+import {
+    TabPanels as HeadlessTabPanels,
+    type TabPanelsProps,
+} from "@headlessui/react";
 import type { ElementType, PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
 
@@ -14,8 +17,8 @@ export function TabPanels({
     const style = tvStyle({ className });
 
     return (
-        <Tab.Panels className={style} {...props}>
+        <HeadlessTabPanels className={style} {...props}>
             {children}
-        </Tab.Panels>
+        </HeadlessTabPanels>
     );
 }
