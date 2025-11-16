@@ -6,7 +6,7 @@ import { GITHUB_USER } from "@/constant/_layout";
 import { getGithubProfile } from "@/service/_layout/getGithubProfile";
 import type { Profile } from "@/type/_layout/Profile";
 
-export function ProfileLocation() {
+export function Location() {
     const profile = use<Profile>(getGithubProfile(GITHUB_USER));
 
     return (

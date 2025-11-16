@@ -2,6 +2,7 @@ import Image from "next/image";
 import { use } from "react";
 import { MdHomeWork } from "react-icons/md";
 import { tv } from "tailwind-variants";
+import { HidingObserver } from "@/app/_layout/Sidebar/Body/Avatar/HidingObserver";
 
 import { GITHUB_USER } from "@/constant/_layout";
 import { getGithubProfile } from "@/service/_layout/getGithubProfile";
@@ -27,13 +28,13 @@ const tvStyle = tv({
     },
 });
 
-export function AvatarRoot() {
+export function Avatar() {
     const profile = use<Profile>(getGithubProfile(GITHUB_USER));
 
     const style = tvStyle();
 
     return (
-        <>
+        <HidingObserver>
             {profile && (
                 <div className={style.outerBox()}>
                     <div className={style.innerBox()}>
@@ -54,6 +55,6 @@ export function AvatarRoot() {
                     </div>
                 </div>
             )}
-        </>
+        </HidingObserver>
     );
 }

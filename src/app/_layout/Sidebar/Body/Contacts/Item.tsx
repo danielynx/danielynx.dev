@@ -16,7 +16,7 @@ const tvStyle = tv({
     },
 });
 
-export function ItemRoot({ Icon, iconColor, url, text }: ItemRootProps) {
+export function Item({ Icon, iconColor, url, text }: ItemRootProps) {
     const style = tvStyle();
 
     return (

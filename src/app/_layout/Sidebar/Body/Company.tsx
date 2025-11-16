@@ -5,7 +5,7 @@ import { GITHUB_USER } from "@/constant/_layout";
 import { getGithubProfile } from "@/service/_layout/getGithubProfile";
 import type { Profile } from "@/type/_layout/Profile";
 
-export function ProfileCompany() {
+export function Company() {
     const profile = use<Profile>(getGithubProfile(GITHUB_USER));
 
     return (

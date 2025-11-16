@@ -2,12 +2,10 @@ import "@/app/globals.css";
 
 import type { PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
-import { AppBodyProfile } from "@/app/_layout/BodyProfile";
 import { AppFont } from "@/app/_layout/Font";
 import { Footer } from "@/app/_layout/Footer";
-import { AppContainerSidebar } from "@/app/_layout/Sidebar";
+import { Sidebar } from "@/app/_layout/Sidebar";
 import { ColorSchemeProvider } from "@/context/_layout/ColorSchemeProvider";
-import { ProfileIntersectionProvider } from "@/context/_layout/ProfileIntersectionProvider";
 
 export const metadata = {
     title: "Daniel's Portfolio",
@@ -61,25 +59,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
                     <div className={style.viewport()}>
                         <div className={style.growth()}>
                             <div className={style.sidebar()}>
-                                <ProfileIntersectionProvider>
-                                    <AppContainerSidebar.Header />
-                                    <AppContainerSidebar.Body>
-                                        <AppBodyProfile.Root>
-                                            <AppBodyProfile.Avatar.IntersectionObserver>
-                                                <AppBodyProfile.Avatar.Root />
-                                            </AppBodyProfile.Avatar.IntersectionObserver>
-                                            <AppBodyProfile.Name />
-                                            <AppBodyProfile.Company />
-                                            <AppBodyProfile.Location />
-                                            <AppBodyProfile.Contact.Root>
-                                                <AppBodyProfile.Contact.ProtonMail />
-                                                <AppBodyProfile.Contact.GitHub />
-                                                <AppBodyProfile.Contact.StackOverflow />
-                                                <AppBodyProfile.Contact.LinkedIn />
-                                            </AppBodyProfile.Contact.Root>
-                                        </AppBodyProfile.Root>
-                                    </AppContainerSidebar.Body>
-                                </ProfileIntersectionProvider>
+                                <Sidebar />
                             </div>
                             <div className={style.content()}>{children}</div>
                         </div>

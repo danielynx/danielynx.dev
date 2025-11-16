@@ -4,7 +4,7 @@ import { type PropsWithChildren, useLayoutEffect, useRef } from "react";
 
 import { useProfileIntersection } from "@/hook/_layout/useProfileIntersection";
 
-export function AvatarIntersectionObserver({ children }: PropsWithChildren) {
+export function HidingObserver({ children }: PropsWithChildren) {
     const imageRef = useRef<HTMLDivElement>(null);
     const { setProfileIntersection } = useProfileIntersection();
 

@@ -31,7 +31,7 @@ const tvStyle = tv(
     },
 );
 
-export function SidebarHeader() {
+export function Header() {
     const style = tvStyle({
         size: { lg: "lg" },
     });

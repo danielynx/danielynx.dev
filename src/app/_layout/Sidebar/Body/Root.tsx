@@ -36,7 +36,7 @@ const tvStyle = tv(
     },
 );
 
-export function SidebarBody({ children }: PropsWithChildren) {
+export function ProfileRoot({ children }: PropsWithChildren) {
     const style = tvStyle({
         size: { lg: "lg" },
     });
