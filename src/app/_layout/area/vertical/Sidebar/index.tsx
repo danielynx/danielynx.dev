@@ -21,8 +21,9 @@ const tvStyle = tv(
     },
 );
 
-export function sidebarStyle() {
-    return tvStyle({
-        size: { sm: "sm", md: "md", lg: "lg", xl: "xl", "2xl": "2xl" },
-    });
-}
+export const Sidebar = {
+    style: () =>
+        tvStyle({
+            size: { sm: "sm", md: "md", lg: "lg", xl: "xl", "2xl": "2xl" },
+        }),
+};

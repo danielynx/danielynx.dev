@@ -1,12 +1,12 @@
-import { Body } from "@/app/_layout/Sidebar/Body";
-import { Header } from "@/app/_layout/Sidebar/Header";
+import { ExpandedProfile } from "@/app/_layout/ExpandedProfile";
+import { StickyProfile } from "@/app/_layout/StickyProfile";
 import { ProfileIntersectionProvider } from "@/context/_layout/ProfileIntersectionProvider";
 
 export function Sidebar() {
     return (
         <ProfileIntersectionProvider>
-            <Header />
-            <Body />
+            <StickyProfile />
+            <ExpandedProfile />
         </ProfileIntersectionProvider>
     );
 }

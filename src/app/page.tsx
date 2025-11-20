@@ -3,7 +3,8 @@
 import { useSearchParams } from "next/navigation";
 import { Suspense, useState } from "react";
 import { MdDeveloperBoard, MdPieChart, MdSchool } from "react-icons/md";
-import { AppContainerContent } from "@/app/_layout/container/Content";
+import { MainContent } from "@/app/_layout/MainContent";
+import { Navigation } from "@/app/_layout/Navigation";
 import { Courses } from "@/app/_page/Courses";
 import { Overview } from "@/app/_page/Overview";
 import { Projects } from "@/app/_page/Projects";
@@ -29,14 +30,14 @@ function PageContent() {
 
     return (
         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
-            <AppContainerContent.Header>
+            <Navigation>
                 <Tab.List>
                     <Tab.Item Icon={MdPieChart} text="Overview" />
                     <Tab.Item Icon={MdDeveloperBoard} text="Projects" />
                     <Tab.Item Icon={MdSchool} text="Courses" />
                 </Tab.List>
-            </AppContainerContent.Header>
-            <AppContainerContent.Body>
+            </Navigation>
+            <MainContent>
                 <Tab.Panels>
                     <Tab.Panel>
                         <Overview />
@@ -48,7 +49,7 @@ function PageContent() {
                         <Courses />
                     </Tab.Panel>
                 </Tab.Panels>
-            </AppContainerContent.Body>
+            </MainContent>
         </Tab.Group>
     );
 }

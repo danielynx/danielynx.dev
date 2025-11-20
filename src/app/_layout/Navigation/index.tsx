@@ -1,23 +1,23 @@
 import type { PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
-import { contentStyle } from "@/app/_layout/container/Content/style";
-import { AppContainerHeader } from "@/app/_layout/container/Header";
+import { Header as HeaderArea } from "@/app/_layout/area/horizontal/Header";
+import { Main as MainArea } from "@/app/_layout/area/vertical/Main";
 
 const tvStyle = tv(
     {
         slots: {
             header: "flex flex-row items-end sticky",
-            content: "flex flex-row items-end justify-start h-full",
+            main: "flex flex-row items-end justify-start h-full",
         },
         variants: {
             size: {
                 initial: {
                     header: "justify-center top-16",
-                    content: "justify-center",
+                    main: "justify-center",
                 },
                 lg: {
                     header: "justify-start top-0",
-                    content: "justify-start",
+                    main: "justify-start",
                 },
             },
         },
@@ -30,16 +30,14 @@ const tvStyle = tv(
     },
 );
 
-export function ContentHeader({ children }: PropsWithChildren) {
+export function Navigation({ children }: PropsWithChildren) {
     const style = tvStyle({
         size: { lg: "lg" },
     });
 
     return (
-        <header
-            className={style.header({ className: AppContainerHeader.style() })}
-        >
-            <nav className={style.content({ className: contentStyle() })}>
+        <header className={style.header({ className: HeaderArea.style() })}>
+            <nav className={style.main({ className: MainArea.style() })}>
                 {children}
             </nav>
         </header>

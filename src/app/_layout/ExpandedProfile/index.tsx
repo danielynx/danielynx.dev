@@ -1,16 +1,16 @@
 import { tv } from "tailwind-variants";
-import { AppContainerBody } from "@/app/_layout/container/Body";
-import { Avatar } from "@/app/_layout/Sidebar/Body/Avatar";
-import { Company } from "@/app/_layout/Sidebar/Body/Company";
-import { Contacts } from "@/app/_layout/Sidebar/Body/Contacts";
-import { Location } from "@/app/_layout/Sidebar/Body/Location";
-import { Name } from "@/app/_layout/Sidebar/Body/Name";
-import { sidebarStyle } from "@/app/_layout/Sidebar/style";
+import { Content as ContentArea } from "@/app/_layout/area/horizontal/Content";
+import { Sidebar as SidebarArea } from "@/app/_layout/area/vertical/Sidebar";
+import { Avatar } from "@/app/_layout/ExpandedProfile/Avatar";
+import { Company } from "@/app/_layout/ExpandedProfile/Company";
+import { Contacts } from "@/app/_layout/ExpandedProfile/Contacts";
+import { Location } from "@/app/_layout/ExpandedProfile/Location";
+import { Name } from "@/app/_layout/ExpandedProfile/Name";
 
 const tvStyle = tv(
     {
         slots: {
-            aside: "flex flex-col justify-start",
+            content: "flex flex-col justify-start",
             sidebar: [
                 "py-8 mb-3",
                 "bg-light-bg-hg dark:bg-dark-bg-hg",
@@ -21,11 +21,11 @@ const tvStyle = tv(
         variants: {
             size: {
                 initial: {
-                    aside: "items-center",
+                    content: "items-center",
                     sidebar: "mt-28",
                 },
                 lg: {
-                    aside: "items-end",
+                    content: "items-end",
                     sidebar: "mt-4",
                 },
             },
@@ -39,20 +39,22 @@ const tvStyle = tv(
     },
 );
 
-export function Body() {
+export function ExpandedProfile() {
     const style = tvStyle({
         size: { lg: "lg" },
     });
 
     return (
-        <aside className={style.aside({ className: AppContainerBody.style() })}>
-            <div className={style.sidebar({ className: sidebarStyle() })}>
+        <div className={style.content({ className: ContentArea.style() })}>
+            <aside
+                className={style.sidebar({ className: SidebarArea.style() })}
+            >
                 <Avatar />
                 <Name />
                 <Company />
                 <Location />
                 <Contacts />
-            </div>
-        </aside>
+            </aside>
+        </div>
     );
 }

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { use } from "react";
 import { MdHomeWork } from "react-icons/md";
 import { tv } from "tailwind-variants";
-import { HidingObserver } from "@/app/_layout/Sidebar/Body/Avatar/HidingObserver";
+import { HidingObserver } from "@/app/_layout/ExpandedProfile/Avatar/HidingObserver";
 
 import { GITHUB_USER } from "@/constant/_layout";
 import { getGithubProfile } from "@/service/_layout/getGithubProfile";

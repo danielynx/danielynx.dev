@@ -1,7 +1,8 @@
 import { MdHome } from "react-icons/md";
 import { TbError404, TbHandStop } from "react-icons/tb";
 import { tv } from "tailwind-variants";
-import { AppContainerContent } from "@/app/_layout/container/Content";
+import { MainContent } from "@/app/_layout/MainContent";
+import { Navigation } from "@/app/_layout/Navigation";
 import { Breadcrumb } from "@/component/Breadcrumb";
 
 const tvStyle = tv(
@@ -50,7 +51,7 @@ export default function NotFound() {
 
     return (
         <>
-            <AppContainerContent.Header>
+            <Navigation>
                 <Breadcrumb.Root>
                     <Breadcrumb.Item
                         Icon={MdHome}
@@ -65,8 +66,8 @@ export default function NotFound() {
                         selected={true}
                     />
                 </Breadcrumb.Root>
-            </AppContainerContent.Header>
-            <AppContainerContent.Body>
+            </Navigation>
+            <MainContent>
                 <div className={style.container()}>
                     <TbHandStop className={style.icon()} />
                     <p className={style.ask()}>Where did you want to go? 🤔</p>
@@ -74,7 +75,7 @@ export default function NotFound() {
                         There {`isn't`} this page.
                     </p>
                 </div>
-            </AppContainerContent.Body>
+            </MainContent>
         </>
     );
 }

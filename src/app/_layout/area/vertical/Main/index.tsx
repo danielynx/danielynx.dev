@@ -19,8 +19,9 @@ const tvStyle = tv(
     },
 );
 
-export function contentStyle() {
-    return tvStyle({
-        size: { md: "md", lg: "lg", xl: "xl" },
-    });
-}
+export const Main = {
+    style: () =>
+        tvStyle({
+            size: { md: "md", lg: "lg", xl: "xl" },
+        }),
+};

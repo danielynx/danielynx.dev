@@ -5,7 +5,7 @@ import {
     SiStackoverflow,
 } from "react-icons/si";
 
-import { Item } from "@/app/_layout/Sidebar/Body/Contacts/Item";
+import { Item } from "@/app/_layout/ExpandedProfile/Contacts/Item";
 
 export function Contacts() {
     return (

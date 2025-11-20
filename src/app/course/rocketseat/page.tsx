@@ -1,6 +1,7 @@
 import { MdRocketLaunch } from "react-icons/md";
 import { tv } from "tailwind-variants";
-import { AppContainerContent } from "@/app/_layout/container/Content";
+import { MainContent } from "@/app/_layout/MainContent";
+import { Navigation } from "@/app/_layout/Navigation";
 import { Breadcrumb as CourseBreadcrumb } from "@/app/course/_page/Breadcrumb";
 import { GoStack } from "@/app/course/rocketseat/_page/GoStack";
 import { Link } from "@/app/course/rocketseat/_page/Link";
@@ -31,7 +32,7 @@ export default function Page() {
 
     return (
         <>
-            <AppContainerContent.Header>
+            <Navigation>
                 <CourseBreadcrumb>
                     <ComponentBreadcrumb.Item
                         Icon={MdRocketLaunch}
@@ -39,8 +40,8 @@ export default function Page() {
                         selected={true}
                     />
                 </CourseBreadcrumb>
-            </AppContainerContent.Header>
-            <AppContainerContent.Body>
+            </Navigation>
+            <MainContent>
                 <div className={style}>
                     <p>
                         {<Link />} is a Brazilian coding school that focuses on
@@ -48,7 +49,7 @@ export default function Page() {
                     </p>
                 </div>
                 <GoStack />
-            </AppContainerContent.Body>
+            </MainContent>
         </>
     );
 }

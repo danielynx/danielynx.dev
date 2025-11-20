@@ -1,6 +1,7 @@
 import { BsScissors } from "react-icons/bs";
 import { tv } from "tailwind-variants";
-import { AppContainerContent } from "@/app/_layout/container/Content";
+import { MainContent } from "@/app/_layout/MainContent";
+import { Navigation } from "@/app/_layout/Navigation";
 import { Link as RocketseatLink } from "@/app/course/rocketseat/_page/Link";
 import { Breadcrumb as ProjectBreadcrumb } from "@/app/project/_page/Breadcrumb";
 import { Repository } from "@/app/project/go-barber/_page/Repository";
@@ -33,7 +34,7 @@ export default function Page() {
 
     return (
         <>
-            <AppContainerContent.Header>
+            <Navigation>
                 <ProjectBreadcrumb>
                     <ComponentBreadcrumb.Item
                         Icon={BsScissors}
@@ -41,8 +42,8 @@ export default function Page() {
                         selected={true}
                     />
                 </ProjectBreadcrumb>
-            </AppContainerContent.Header>
-            <AppContainerContent.Body>
+            </Navigation>
+            <MainContent>
                 <div className={style}>
                     <p>
                         The GoBarber project is a barbershop schedule manager,
@@ -59,7 +60,7 @@ export default function Page() {
                 <Technology />
                 <Repository />
                 <Screenshot />
-            </AppContainerContent.Body>
+            </MainContent>
         </>
     );
 }

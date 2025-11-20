@@ -1,15 +1,16 @@
 import type { PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
 
-import { AppContainerBody } from "@/app/_layout/container/Body";
-import { sidebarStyle } from "@/app/_layout/Sidebar/style";
+import { Content as ContentArea } from "@/app/_layout/area/horizontal/Content";
+import { Main as MainArea } from "@/app/_layout/area/vertical/Main";
 
 const tvStyle = tv(
     {
         slots: {
-            aside: "flex flex-col justify-start",
-            sidebar: [
-                "py-8 mb-3",
+            content: "flex flex-col justify-start",
+            main: [
+                "grow",
+                "py-5 my-4",
                 "bg-light-bg-hg dark:bg-dark-bg-hg",
                 "border dark:border-0 border-light-border",
                 "rounded-xl shadow-xl",
@@ -18,12 +19,10 @@ const tvStyle = tv(
         variants: {
             size: {
                 initial: {
-                    aside: "items-center",
-                    sidebar: "mt-28",
+                    content: "items-center",
                 },
                 lg: {
-                    aside: "items-end",
-                    sidebar: "mt-4",
+                    content: "items-start",
                 },
             },
         },
@@ -36,16 +35,16 @@ const tvStyle = tv(
     },
 );
 
-export function ProfileRoot({ children }: PropsWithChildren) {
+export function MainContent({ children }: PropsWithChildren) {
     const style = tvStyle({
         size: { lg: "lg" },
     });
 
     return (
-        <aside className={style.aside({ className: AppContainerBody.style() })}>
-            <div className={style.sidebar({ className: sidebarStyle() })}>
+        <div className={style.content({ className: ContentArea.style() })}>
+            <main className={style.main({ className: MainArea.style() })}>
                 {children}
-            </div>
-        </aside>
+            </main>
+        </div>
     );
 }

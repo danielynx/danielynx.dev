@@ -1,6 +1,7 @@
 import { ImProfile } from "react-icons/im";
 import { tv } from "tailwind-variants";
-import { AppContainerContent } from "@/app/_layout/container/Content";
+import { MainContent } from "@/app/_layout/MainContent";
+import { Navigation } from "@/app/_layout/Navigation";
 import { Breadcrumb as ProjectBreadcrumb } from "@/app/project/_page/Breadcrumb";
 import { Repository } from "@/app/project/daniel-portfolio/_page/Repository";
 import { Technology } from "@/app/project/daniel-portfolio/_page/Technology";
@@ -31,7 +32,7 @@ export default function Page() {
 
     return (
         <>
-            <AppContainerContent.Header>
+            <Navigation>
                 <ProjectBreadcrumb>
                     <ComponentBreadcrumb.Item
                         Icon={ImProfile}
@@ -39,8 +40,8 @@ export default function Page() {
                         selected={true}
                     />
                 </ProjectBreadcrumb>
-            </AppContainerContent.Header>
-            <AppContainerContent.Body>
+            </Navigation>
+            <MainContent>
                 <div className={style}>
                     <p>
                         The {`Daniel's`} Portfolio project is this web
@@ -65,7 +66,7 @@ export default function Page() {
                 </div>
                 <Technology />
                 <Repository />
-            </AppContainerContent.Body>
+            </MainContent>
         </>
     );
 }

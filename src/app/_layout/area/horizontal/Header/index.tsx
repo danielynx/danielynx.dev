@@ -8,6 +8,6 @@ const tvStyle = tv({
     ],
 });
 
-export function headerStyle() {
-    return tvStyle();
-}
+export const Header = {
+    style: tvStyle,
+};
