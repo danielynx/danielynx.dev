@@ -5,7 +5,7 @@ const tvStyle = tv({
     base: [
         "flex flex-col",
         "border-4 border-light-border dark:border-dark-border",
-        "rounded",
+        "rounded-sm",
     ],
 });
 

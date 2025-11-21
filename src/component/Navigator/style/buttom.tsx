@@ -15,10 +15,10 @@ const tvStyle = tv(
             selected: {
                 true: {
                     container: [
-                        "shadow",
+                        "shadow-sm",
                         "bg-light-bg-ct dark:bg-dark-bg-ct",
                         "text-light-text-ct dark:text-dark-text-ct",
-                        "outline-none ring-0",
+                        "outline-hidden ring-0",
                     ],
                 },
                 false: {

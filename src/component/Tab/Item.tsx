@@ -19,7 +19,7 @@ const tvStyle = tv(
             size: {
                 initial: {
                     container: [
-                        "w-[5.5rem] xs:w-[6.5rem] 2xs:w-[7.5rem]",
+                        "w-22 xs:w-26 2xs:w-30",
                         "py-1.5",
                     ],
                 },

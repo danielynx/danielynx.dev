@@ -12,7 +12,7 @@ const tvStyle = tv(
                 "flex flex-row justify-start items-center",
                 "w-full py-0.5",
                 "bg-black text-gray-300",
-                "rounded",
+                "rounded-sm",
             ],
             icon: "",
             url: "w-full",
