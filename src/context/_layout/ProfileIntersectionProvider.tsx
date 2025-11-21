@@ -1,40 +1,40 @@
-'use client';
+"use client";
 
-import React, {
-  createContext,
-  PropsWithChildren,
-  useState,
-  useMemo,
-  SetStateAction,
-  Dispatch,
-} from 'react';
+import {
+    createContext,
+    type Dispatch,
+    type PropsWithChildren,
+    type SetStateAction,
+    useMemo,
+    useState,
+} from "react";
 
 interface ProfileIntersectionContextType {
-  profileIntersection: number;
-  setProfileIntersection: Dispatch<SetStateAction<number>>;
+    profileIntersection: number;
+    setProfileIntersection: Dispatch<SetStateAction<number>>;
 }
 
 const ProfileIntersectionContext = createContext<
-  ProfileIntersectionContextType | undefined
+    ProfileIntersectionContextType | undefined
 >(undefined);
 
 function ProfileIntersectionProvider({ children }: PropsWithChildren) {
-  const [profileIntersection, setProfileIntersection] = useState<number>(1);
+    const [profileIntersection, setProfileIntersection] = useState<number>(1);
 
-  const value = useMemo<ProfileIntersectionContextType>(
-    () => ({ profileIntersection, setProfileIntersection }),
-    [profileIntersection, setProfileIntersection],
-  );
+    const value = useMemo<ProfileIntersectionContextType>(
+        () => ({ profileIntersection, setProfileIntersection }),
+        [profileIntersection],
+    );
 
-  return (
-    <ProfileIntersectionContext.Provider value={value}>
-      {children}
-    </ProfileIntersectionContext.Provider>
-  );
+    return (
+        <ProfileIntersectionContext.Provider value={value}>
+            {children}
+        </ProfileIntersectionContext.Provider>
+    );
 }
 
 export {
-  ProfileIntersectionContext,
-  ProfileIntersectionProvider,
-  type ProfileIntersectionContextType,
+    ProfileIntersectionContext,
+    ProfileIntersectionProvider,
+    type ProfileIntersectionContextType,
 };

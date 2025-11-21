@@ -1,90 +1,39 @@
-'use client';
+"use client";
 
-import React, {
-  createContext,
-  PropsWithChildren,
-  useState,
-  useMemo,
-  SetStateAction,
-  Dispatch,
-  useEffect,
-  useCallback,
-} from 'react';
+import dynamic from "next/dynamic";
+import type { PropsWithChildren } from "react";
 
-import { ColorSchemeEnum } from '@/type/_layout/ColorSchemeEnum';
-import { useBrowserColorScheme } from '@/hook/_layout/useBrowserColorScheme';
-import { useLocalStorage } from '@/hook/useLocalStorage';
+import type { ColorSchemeEnum } from "@/type/_layout/ColorSchemeEnum";
 
-type FunctionSetColorScheme = Dispatch<
-  SetStateAction<ColorSchemeEnum | undefined>
->;
-
-interface ColorSchemeContextType {
-  colorScheme: ColorSchemeEnum | undefined;
-  setColorScheme: FunctionSetColorScheme;
-}
-
-const ColorSchemeContext = createContext<ColorSchemeContextType | undefined>(
-  undefined,
+// Disable SSR for this provider to avoid "flash of incorrect color scheme".
+// The problem occurs when the color scheme is saved only in the client and the server cannot determine the user's
+// preferred color scheme and prints the default (usually light) scheme, then in the client, the correct scheme is
+// applied, causing a flash effect. By disabling SSR, we ensure that the provider only renders on the client side,
+// where it can correctly apply the user's preferred color scheme from the start.
+const NoSSR = dynamic(
+    () =>
+        import("@/context/_layout/ColorSchemeInternalProvider").then(
+            (mod) => mod.ColorSchemeInternalProvider,
+        ),
+    {
+        ssr: false,
+    },
 );
 
-function ColorSchemeProvider({ children }: PropsWithChildren) {
-  const [mounted, setMounted] = useState<boolean>(false);
+export {
+    ColorSchemeContext,
+    type ColorSchemeContextType,
+} from "@/context/_layout/ColorSchemeInternalProvider";
 
-  const { storageValue, setStorageValue } =
-    useLocalStorage<ColorSchemeEnum>('color-scheme');
-
-  const [colorScheme, setColorSchemeInternal] = useState<
-    ColorSchemeEnum | undefined
-  >(storageValue);
-
-  const {
-    colorScheme: browserColorScheme,
-    skipState: browserSkipState,
-    triggeredEvent: browserTriggeredEvent,
-  } = useBrowserColorScheme();
-
-  const setColorScheme = useCallback<FunctionSetColorScheme>(
-    value => {
-      let newState = value;
-
-      if (typeof value === 'function') {
-        const fn = value;
-        const prevState = colorScheme;
-
-        newState = fn(prevState);
-      }
-
-      setColorSchemeInternal(newState);
-      setStorageValue(newState);
-    },
-    [colorScheme, setStorageValue, setColorSchemeInternal],
-  );
-
-  if ((!colorScheme && !browserSkipState) || browserTriggeredEvent) {
-    setColorScheme(browserColorScheme);
-  }
-
-  const value = useMemo<ColorSchemeContextType>(
-    () => ({ colorScheme, setColorScheme }),
-    [colorScheme, setColorScheme],
-  );
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  return (
-    <ColorSchemeContext.Provider value={value}>
-      {mounted ? (
-        <div className={colorScheme === ColorSchemeEnum.DARK ? 'dark' : ''}>
-          {children}
+function ColorSchemeProvider({
+    children,
+    initialValue,
+}: PropsWithChildren<{ initialValue?: ColorSchemeEnum }>) {
+    return (
+        <div>
+            <NoSSR initialValue={initialValue}>{children}</NoSSR>
         </div>
-      ) : (
-        <>{children}</>
-      )}
-    </ColorSchemeContext.Provider>
-  );
+    );
 }
 
-export { ColorSchemeContext, ColorSchemeProvider, type ColorSchemeContextType };
+export { ColorSchemeProvider };

@@ -1,13 +1,13 @@
-import { TabGroup } from './Group';
-import { TabList } from './List';
-import { TabItem } from './Item';
-import { TabPanels } from './Panels';
-import { TabPanel } from './Panel';
+import { TabGroup } from "@/component/Tab/Group";
+import { TabItem } from "@/component/Tab/Item";
+import { TabList } from "@/component/Tab/List";
+import { TabPanel } from "@/component/Tab/Panel";
+import { TabPanels } from "@/component/Tab/Panels";
 
 export const Tab = {
-  Group: TabGroup,
-  List: TabList,
-  Item: TabItem,
-  Panels: TabPanels,
-  Panel: TabPanel,
+    Group: TabGroup,
+    List: TabList,
+    Item: TabItem,
+    Panels: TabPanels,
+    Panel: TabPanel,
 };

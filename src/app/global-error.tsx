@@ -1,18 +1,20 @@
-'use client';
-
-import { AppError } from './_error/Error';
+"use client"; // Error boundaries must be Client Components
 
 export interface GlobalErrorParams {
-  error: Error & { digest?: string };
-  reset: () => void;
+    error: Error & { digest?: string };
+    reset: () => void;
 }
 
 export default function GlobalError({ reset }: GlobalErrorParams) {
-  return (
-    <html>
-      <body>
-        <AppError reset={reset} />
-      </body>
-    </html>
-  );
+    return (
+        // global-error must include html and body tags
+        <html lang="en">
+            <body>
+                <h2>Something went wrong! Error</h2>
+                <button type="button" onClick={() => reset()}>
+                    Try again
+                </button>
+            </body>
+        </html>
+    );
 }

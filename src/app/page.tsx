@@ -1,62 +1,55 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { MdDeveloperBoard, MdSchool, MdPieChart } from 'react-icons/md';
-
-import { Tab } from '@/component/Tab';
-import { TabEnum } from '@/type/_page/TabEnum';
-import { AppContainerContent } from '@/app/_layout/container/Content';
-
-import { AppOverview } from './_page/Overview';
-import { AppProject } from './_page/Project';
-import { AppCourse } from './_page/Course';
+import { useSearchParams } from "next/navigation";
+import { Suspense, useState } from "react";
+import { MdDeveloperBoard, MdPieChart, MdSchool } from "react-icons/md";
+import { MainContent } from "@/app/_layout/MainContent";
+import { Navigation } from "@/app/_layout/Navigation";
+import { Courses } from "@/app/_page/Courses";
+import { Overview } from "@/app/_page/Overview";
+import { Projects } from "@/app/_page/Projects";
+import { Tab } from "@/component/Tab";
+import { TabEnum } from "@/type/_page/TabEnum";
 
 export default function Page() {
-  const searchParams = useSearchParams();
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <PageContent />
+        </Suspense>
+    );
+}
 
-  const tab = searchParams.get('tab');
+function PageContent() {
+    const searchParams = useSearchParams();
 
-  const [selectedIndex, setSelectedIndex] = useState(
-    tab === TabEnum.PROJECTS ? 1 : tab === TabEnum.COURSES ? 2 : 0,
-  );
+    const tab = searchParams.get("tab");
 
-  return (
-    <Tab.Group
-      selectedIndex={selectedIndex}
-      onChange={setSelectedIndex}
-    >
-      <AppContainerContent.Header>
-        <Tab.List>
-          <Tab.Item
-            Icon={MdPieChart}
-            text='Overview'
-          />
-          <Tab.Item
-            Icon={MdDeveloperBoard}
-            text='Projects'
-          />
-          <Tab.Item
-            Icon={MdSchool}
-            text='Courses'
-          />
-        </Tab.List>
-      </AppContainerContent.Header>
-      <AppContainerContent.Body>
-        <Tab.Panels>
-          <AppOverview />
-          <AppProject.Root>
-            <AppProject.DanielPortfolio />
-            <AppProject.GoBarber />
-          </AppProject.Root>
-          <AppCourse.Root>
-            <AppCourse.Symfony />
-            <AppCourse.Rocketseat />
-            <AppCourse.MongoDb />
-            <AppCourse.FreeCodeCamp />
-          </AppCourse.Root>
-        </Tab.Panels>
-      </AppContainerContent.Body>
-    </Tab.Group>
-  );
+    const [selectedIndex, setSelectedIndex] = useState(
+        tab === TabEnum.PROJECTS ? 1 : tab === TabEnum.COURSES ? 2 : 0,
+    );
+
+    return (
+        <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
+            <Navigation>
+                <Tab.List>
+                    <Tab.Item Icon={MdPieChart} text="Overview" />
+                    <Tab.Item Icon={MdDeveloperBoard} text="Projects" />
+                    <Tab.Item Icon={MdSchool} text="Courses" />
+                </Tab.List>
+            </Navigation>
+            <MainContent>
+                <Tab.Panels>
+                    <Tab.Panel>
+                        <Overview />
+                    </Tab.Panel>
+                    <Tab.Panel>
+                        <Projects />
+                    </Tab.Panel>
+                    <Tab.Panel>
+                        <Courses />
+                    </Tab.Panel>
+                </Tab.Panels>
+            </MainContent>
+        </Tab.Group>
+    );
 }

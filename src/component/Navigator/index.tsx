@@ -1,5 +1,5 @@
-import { navigatorStyle } from './style';
+import { navigatorStyle } from "@/component/Navigator/style";
 
 export const Navigator = {
-  style: navigatorStyle,
+    style: navigatorStyle,
 };

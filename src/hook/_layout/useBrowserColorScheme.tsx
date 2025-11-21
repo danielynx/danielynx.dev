@@ -1,60 +1,62 @@
-'use client';
+"use client";
 
-import { useRef, useSyncExternalStore } from 'react';
+import { useEffect, useState, useSyncExternalStore } from "react";
 
-import { ColorSchemeEnum } from '@/type/_layout/ColorSchemeEnum';
+import { ColorSchemeEnum } from "@/type/_layout/ColorSchemeEnum";
 
-interface UseBrowserColorSchemeType {
-  colorScheme: ColorSchemeEnum;
-  skipState: boolean;
-  triggeredEvent: boolean;
+const COLOR_QUERY = "(prefers-color-scheme: dark)";
+
+function hasMatchMedia(): boolean {
+    return (
+        typeof globalThis !== "undefined" && globalThis.matchMedia !== undefined
+    );
 }
 
-function subscribe(onStoreChange: { (): void }) {
-  window
-    .matchMedia('(prefers-color-scheme: dark)')
-    .addEventListener('change', onStoreChange);
+// The subscription setup
+function subscribe(onPrefersColorSchemeChange: () => void) {
+    if (!hasMatchMedia()) {
+        return () => {};
+    }
 
-  return () => {
-    window
-      .matchMedia('(prefers-color-scheme: dark)')
-      .removeEventListener('change', onStoreChange);
-  };
+    const mediaQueryList = globalThis.matchMedia(COLOR_QUERY);
+
+    // Add listener for color scheme changes
+    mediaQueryList.addEventListener("change", onPrefersColorSchemeChange);
+
+    // Return cleanup function
+    return () =>
+        mediaQueryList.removeEventListener(
+            "change",
+            onPrefersColorSchemeChange,
+        );
 }
 
+// Get current value (client-side)
 function getSnapshot(): ColorSchemeEnum {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches
-    ? ColorSchemeEnum.DARK
-    : ColorSchemeEnum.LIGHT;
+    if (!hasMatchMedia()) return ColorSchemeEnum.LIGHT;
+
+    return globalThis.matchMedia(COLOR_QUERY).matches
+        ? ColorSchemeEnum.DARK
+        : ColorSchemeEnum.LIGHT;
 }
 
-function getServerSnapshot(): ColorSchemeEnum {
-  return ColorSchemeEnum.LIGHT;
+const getServerSnapshot = () => ColorSchemeEnum.LIGHT;
+
+function useBrowserColorScheme(): ColorSchemeEnum {
+    const [client, setClient] = useState(false);
+
+    const colorScheme = useSyncExternalStore<ColorSchemeEnum>(
+        subscribe,
+        client ? getSnapshot : getServerSnapshot,
+        getServerSnapshot,
+    );
+
+    useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setClient(true);
+    }, []);
+
+    return colorScheme;
 }
 
-function useBrowserColorScheme(): UseBrowserColorSchemeType {
-  const currentState =
-    typeof window !== 'undefined' ? getSnapshot() : undefined;
-
-  const previousState = useRef<ColorSchemeEnum | undefined>(undefined);
-
-  const time = useRef(0);
-  time.current++;
-
-  const colorScheme = useSyncExternalStore<ColorSchemeEnum>(
-    subscribe,
-    getSnapshot,
-    getServerSnapshot,
-  );
-
-  const skipState = currentState !== colorScheme;
-
-  const triggeredEvent =
-    time.current > 1 && currentState !== previousState.current;
-
-  previousState.current = currentState;
-
-  return { colorScheme, skipState, triggeredEvent };
-}
-
-export { useBrowserColorScheme, type UseBrowserColorSchemeType };
+export { useBrowserColorScheme };

@@ -1,9 +1,9 @@
-import { CardRoot } from './Root';
-import { CardHeader } from './Header';
-import { CardFooter } from './Footer';
+import { CardFooter } from "@/component/Card/Footer";
+import { CardHeader } from "@/component/Card/Header";
+import { CardRoot } from "@/component/Card/Root";
 
 export const Card = {
-  Root: CardRoot,
-  Header: CardHeader,
-  Footer: CardFooter,
+    Root: CardRoot,
+    Header: CardHeader,
+    Footer: CardFooter,
 };

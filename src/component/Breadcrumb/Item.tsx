@@ -1,66 +1,66 @@
-import Link from 'next/link';
-import { tv } from 'tailwind-variants';
-import { IconType } from 'react-icons';
+import Link from "next/link";
+import type { IconType } from "react-icons";
+import { tv } from "tailwind-variants";
 
-import { Navigator } from '@/component/Navigator';
+import { Navigator } from "@/component/Navigator";
 
 export interface BreadcrumbItemProps {
-  Icon: IconType;
-  text: string;
-  selected: boolean;
-  link?: string;
-  target?: '_blank' | '_self';
+    Icon: IconType;
+    text: string;
+    selected: boolean;
+    link?: string;
+    target?: "_blank" | "_self";
 }
 
 const tvStyle = tv(
-  {
-    slots: {
-      container: 'py-1',
-      separator: 'text-light-text/70 dark:text-dark-text/70',
-    },
-    variants: {
-      size: {
-        initial: {
-          separator: 'h-4 w-4 xs:h-5 xs:w-5 2xs:h-6 2xs:w-6',
+    {
+        slots: {
+            container: "py-1",
+            separator: "text-light-text/70 dark:text-dark-text/70",
         },
-        sm: {
-          separator: 'h-7 w-7',
+        variants: {
+            size: {
+                initial: {
+                    separator: "h-4 w-4 xs:h-5 xs:w-5 2xs:h-6 2xs:w-6",
+                },
+                sm: {
+                    separator: "h-7 w-7",
+                },
+                md: {
+                    separator: "h-8 w-8",
+                },
+            },
         },
-        md: {
-          separator: 'h-8 w-8',
+        defaultVariants: {
+            size: "initial",
         },
-      },
     },
-    defaultVariants: {
-      size: 'initial',
+    {
+        responsiveVariants: ["sm", "md"],
     },
-  },
-  {
-    responsiveVariants: ['sm', 'md'],
-  },
 );
 
 export function BreadcrumbItem({
-  Icon,
-  text,
-  selected,
-  link = '#',
-  target = '_self',
+    Icon,
+    text,
+    selected,
+    link = "#",
+    target = "_self",
 }: BreadcrumbItemProps) {
-  const navigatorButtomStyle = Navigator.style.buttom({ selected });
+    const navigatorButtomStyle = Navigator.style.buttom({ selected });
 
-  const style = tvStyle({ size: { sm: 'sm', md: 'md' } });
+    const style = tvStyle({ size: { sm: "sm", md: "md" } });
 
-  return (
-    <Link
-      className={navigatorButtomStyle.container({
-        className: style.container(),
-      })}
-      href={link}
-      target={target}
-    >
-      <Icon className={navigatorButtomStyle.icon()} />
-      <span className={navigatorButtomStyle.text()}>{text}</span>
-    </Link>
-  );
+    return (
+        <Link
+            className={navigatorButtomStyle.container({
+                className: style.container(),
+            })}
+            href={link}
+            target={target}
+        >
+            <Icon className={navigatorButtomStyle.icon()} />
+            <span className={navigatorButtomStyle.text()}>{text}</span>
+        </Link>
+    );
 }
