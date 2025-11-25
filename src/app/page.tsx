@@ -30,13 +30,6 @@ function PageContent() {
 
     return (
         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
-            <Navigation>
-                <Tab.List>
-                    <Tab.Item Icon={MdPieChart} text="Overview" />
-                    <Tab.Item Icon={MdDeveloperBoard} text="Projects" />
-                    <Tab.Item Icon={MdSchool} text="Courses" />
-                </Tab.List>
-            </Navigation>
             <MainContent>
                 <Tab.Panels>
                     <Tab.Panel>

@@ -7,17 +7,6 @@ import { tv } from "tailwind-variants";
 import { useColorScheme } from "@/hook/_layout/useColorScheme";
 
 const tvStyle = tv({
-    slots: {
-        switch: [
-            "bg-light-bg-ct dark:bg-dark-bg-ct",
-            "hover:ring-3 ring-offset-2",
-            "ring-light-bg-ct/50 dark:ring-dark-bg-ct/50",
-            "ring-offset-light-bg-hg dark:ring-offset-dark-bg-hg",
-            "relative inline-flex h-7 w-14 items-center rounded-full transition-colors",
-        ],
-        darkIcon: ["translate-x-7", "bg-dark-bg-ct", "text-dark-text-ct"],
-        lightIcon: ["translate-x-1", "bg-light-bg-ct", "text-light-text-ct"],
-    },
     compoundSlots: [
         {
             slots: ["darkIcon", "lightIcon"],
@@ -31,6 +20,17 @@ const tvStyle = tv({
             ],
         },
     ],
+    slots: {
+        switch: [
+            "bg-light-bg-ct dark:bg-dark-bg-ct",
+            "hover:ring-3 ring-offset-2",
+            "ring-light-bg-ct/50 dark:ring-dark-bg-ct/50",
+            "ring-offset-light-bg-hg dark:ring-offset-dark-bg-hg",
+            "relative inline-flex h-7 w-14 items-center rounded-full transition-colors",
+        ],
+        darkIcon: ["translate-x-7", "bg-dark-bg-ct", "text-dark-text-ct"],
+        lightIcon: ["translate-x-1", "bg-light-bg-ct", "text-light-text-ct"],
+    },
 });
 
 export function AppColorSchema() {
