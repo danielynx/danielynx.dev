@@ -12,34 +12,14 @@ import { tv } from "tailwind-variants";
 import { Badge } from "@/component/Badge";
 import { SessionHeader } from "@/component/SessionHeader";
 
-const tvStyle = tv(
-    {
-        slots: {
-            container: "grid",
-        },
-        variants: {
-            size: {
-                initial: {
-                    container: "grid-cols-2 gap-2",
-                },
-                md: {
-                    container: "grid-cols-4 gap-4",
-                },
-            },
-        },
-        defaultVariants: {
-            size: "initial",
-        },
+const tvStyle = tv({
+    slots: {
+        container: ["grid grid-cols-2 md:grid-cols-4", "gap-2 md:gap-4"],
     },
-    {
-        responsiveVariants: ["md"],
-    },
-);
+});
 
-export function Technology() {
-    const style = tvStyle({
-        size: { md: "md" },
-    });
+export function Technologies() {
+    const style = tvStyle();
 
     return (
         <>

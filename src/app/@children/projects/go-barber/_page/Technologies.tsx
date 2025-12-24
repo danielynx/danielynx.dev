@@ -9,43 +9,14 @@ import {
     SiTypescript,
     SiYarn,
 } from "react-icons/si";
-import { tv } from "tailwind-variants";
 import { Badge } from "@/component/Badge";
 import { SessionHeader } from "@/component/SessionHeader";
 
-const tvStyle = tv(
-    {
-        slots: {
-            container: "grid",
-        },
-        variants: {
-            size: {
-                initial: {
-                    container: "grid-cols-2 gap-2",
-                },
-                md: {
-                    container: "grid-cols-4 gap-4",
-                },
-            },
-        },
-        defaultVariants: {
-            size: "initial",
-        },
-    },
-    {
-        responsiveVariants: ["md"],
-    },
-);
-
-export function Technology() {
-    const style = tvStyle({
-        size: { md: "md" },
-    });
-
+export function Technologies() {
     return (
         <>
             <SessionHeader Icon={GiCircuitry} title="Technologies" />
-            <div className={style.container()}>
+            <div className="grid gap-2 md:gap-4 grid-cols-2 md:grid-cols-4">
                 <Badge Icon={SiNodeJs} title="Node JS" />
                 <Badge Icon={SiReact} title="React JS and Native" />
                 <Badge Icon={SiExpress} title="Express" />

@@ -89,7 +89,7 @@ const tvStyle = tv({
             "rounded-xl shadow-xl",
         ],
         content: [
-            "flex flex-row justify-center items-center",
+            "flex flex-row justify-start items-start",
             "grow w-full h-full",
             "ml-0 lg:ml-2",
             "py-2 lg:py-6 px-4 lg:px-10",

@@ -14,15 +14,11 @@ const tvStyle = tv({
 export function DanielPortfolio() {
     const style = tvStyle();
 
-    const lightBgColor = "bg-light-bg-project-myportfolio";
-    const darkTextColor = "dark:text-dark-text-project-myportfolio";
-    const link = "project/daniel-portfolio";
-
     return (
         <Card.Root
-            lightBgColor={lightBgColor}
-            darkTextColor={darkTextColor}
-            link={link}
+            lightBgColor="bg-light-bg-project-myportfolio"
+            darkTextColor="dark:text-dark-text-project-myportfolio"
+            link="projects/daniel-portfolio"
         >
             <Card.Header.Root>
                 <Card.Header.Icon Icon={ImProfile} />

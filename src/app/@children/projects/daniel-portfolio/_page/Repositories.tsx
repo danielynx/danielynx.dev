@@ -5,40 +5,17 @@ import { tv } from "tailwind-variants";
 import { Card } from "@/component/Card";
 import { SessionHeader } from "@/component/SessionHeader";
 
-const tvStyle = tv(
-    {
-        slots: {
-            container: "grid",
-        },
-        variants: {
-            size: {
-                initial: {
-                    container: "grid-cols-1 gap-3",
-                },
-                md: {
-                    container: "grid-cols-2 gap-4",
-                },
-                xl: {
-                    container: "grid-cols-3",
-                },
-                "2xl": {
-                    container: "gap-5",
-                },
-            },
-        },
-        defaultVariants: {
-            size: "initial",
-        },
+const tvStyle = tv({
+    slots: {
+        container: [
+            "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3",
+            "gap-3 md:gap-4 2xl:gap-5",
+        ],
     },
-    {
-        responsiveVariants: ["md", "xl", "2xl"],
-    },
-);
+});
 
-export function Repository() {
-    const style = tvStyle({
-        size: { md: "md", xl: "xl", "2xl": "2xl" },
-    });
+export function Repositories() {
+    const style = tvStyle();
 
     return (
         <>

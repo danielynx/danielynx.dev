@@ -2,50 +2,15 @@ import { AiOutlineDatabase } from "react-icons/ai";
 import { CiMobile3 } from "react-icons/ci";
 import { PiDesktopTowerLight } from "react-icons/pi";
 import { SiGithub } from "react-icons/si";
-import { tv } from "tailwind-variants";
 
 import { Card } from "@/component/Card";
 import { SessionHeader } from "@/component/SessionHeader";
 
-const tvStyle = tv(
-    {
-        slots: {
-            container: "grid",
-        },
-        variants: {
-            size: {
-                initial: {
-                    container: "grid-cols-1 gap-3",
-                },
-                md: {
-                    container: "grid-cols-2 gap-4",
-                },
-                xl: {
-                    container: "grid-cols-3",
-                },
-                "2xl": {
-                    container: "gap-5",
-                },
-            },
-        },
-        defaultVariants: {
-            size: "initial",
-        },
-    },
-    {
-        responsiveVariants: ["md", "xl", "2xl"],
-    },
-);
-
-export function Repository() {
-    const style = tvStyle({
-        size: { md: "md", xl: "xl", "2xl": "2xl" },
-    });
-
+export function Repositories() {
     return (
         <>
             <SessionHeader Icon={SiGithub} title="GitHub Repositories" />
-            <div className={style.container()}>
+            <div className="grid grid-cols-1 gap-3 md:gap-4 2xl:gap-5 md:grid-cols-2 lg:grid-cols-3">
                 <Card.Root
                     link="https://github.com/danielynx/rocketseat-gobarber-api"
                     target="_blank"

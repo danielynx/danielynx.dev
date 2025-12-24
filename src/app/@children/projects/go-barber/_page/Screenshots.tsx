@@ -6,37 +6,19 @@ import { AppFrame } from "@/component/AppFrame";
 import { BrowserFrame } from "@/component/BrowserFrame";
 import { SessionHeader } from "@/component/SessionHeader";
 
-const tvStyle = tv(
-    {
-        slots: {
-            browser: "flex flex-col items-center",
-            app: "flex items-center justify-center",
-        },
-        variants: {
-            size: {
-                initial: {
-                    browser: "gap-y-2",
-                    app: "flex-col mt-6 gap-y-2",
-                },
-                md: {
-                    browser: "gap-y-3",
-                    app: "flex-row mt-8 gap-x-3",
-                },
-            },
-        },
-        defaultVariants: {
-            size: "initial",
-        },
+const tvStyle = tv({
+    slots: {
+        browser: ["flex flex-col items-center", "gap-y-2 md:gap-y-3"],
+        app: [
+            "flex flex-col md:flex-row items-center justify-center",
+            "mt-6 md:mt-8",
+            "gap-y-2 md:gap-x-3",
+        ],
     },
-    {
-        responsiveVariants: ["md"],
-    },
-);
+});
 
-export function Screenshot() {
-    const style = tvStyle({
-        size: { md: "md" },
-    });
+export function Screenshots() {
+    const style = tvStyle();
 
     return (
         <>

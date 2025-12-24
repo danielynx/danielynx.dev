@@ -1,6 +1,5 @@
 import { SiMongodb } from "react-icons/si";
 import { tv } from "tailwind-variants";
-
 import { Card } from "@/component/Card";
 
 const tvStyle = tv({
@@ -14,16 +13,11 @@ const tvStyle = tv({
 export function MongoDb() {
     const style = tvStyle();
 
-    const lightBgColor = "bg-light-bg-brand-mongodb";
-    const darkTextColor = "dark:text-dark-text-brand-mongodb";
-    const link =
-        "https://university.mongodb.com/course_completion/2afe5b18-37c2-4a62-8a32-e1e27256a5bf?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing";
-
     return (
         <Card.Root
-            lightBgColor={lightBgColor}
-            darkTextColor={darkTextColor}
-            link={link}
+            lightBgColor="bg-light-bg-brand-mongodb"
+            darkTextColor="dark:text-dark-text-brand-mongodb"
+            link="https://university.mongodb.com/course_completion/2afe5b18-37c2-4a62-8a32-e1e27256a5bf?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
             target="_blank"
         >
             <Card.Header.Root>

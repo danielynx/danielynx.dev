@@ -1,35 +1,23 @@
 import { RiSpaceShipLine } from "react-icons/ri";
 import { tv } from "tailwind-variants";
-import { Link as GoBarberLink } from "@/app/project/go-barber/_page/Link";
+import { Link as GoBarberLink } from "@/app/@children/projects/go-barber/_page/Link";
 import { SessionHeader } from "@/component/SessionHeader";
 
-const tvStyle = tv(
-    {
-        base: "space-y-4 leading-relaxed",
-        variants: {
-            size: {
-                initial: "text-base",
-                lg: "text-lg",
-            },
-        },
-        defaultVariants: {
-            size: "initial",
-        },
+const tvStyle = tv({
+    slots: {
+        container: "space-y-4 leading-relaxed text-base lg:text-lg",
+        listOne: "list-decimal list-inside pl-3",
+        listTwo: "list-disc list-inside pl-5",
     },
-    {
-        responsiveVariants: ["lg"],
-    },
-);
+});
 
 export function GoStack() {
-    const style = tvStyle({
-        size: { lg: "lg" },
-    });
+    const style = tvStyle();
 
     return (
         <>
             <SessionHeader Icon={RiSpaceShipLine} title="GoStack" />
-            <div className={style}>
+            <div className={style.container()}>
                 <p>
                     This course covered NodeJS, ReactJS and React Native
                     technologies.
@@ -41,11 +29,11 @@ export function GoStack() {
                     <GoBarberLink />.
                 </p>
                 <p>It teach:</p>
-                <ul className="list-decimal list-inside pl-3">
+                <ul className={style.listOne()}>
                     <li>
                         how use <b>NodeJS</b> to build <b>Headless</b>{" "}
                         applications:
-                        <ul className="list-disc list-inside pl-5">
+                        <ul className={style.listTwo()}>
                             <li>that provide an API</li>
                             <li>
                                 that save the data in a Postgress database using
@@ -70,7 +58,7 @@ export function GoStack() {
                     </li>
                     <li className="mt-3">
                         how use <b>ReactJS</b> to build <b>Web</b> applications:
-                        <ul className="list-disc list-inside pl-5">
+                        <ul className={style.listTwo()}>
                             <li>
                                 that the user can navigate to see the
                                 information provided by the API
@@ -94,7 +82,7 @@ export function GoStack() {
                     <li className="mt-3">
                         how use <b>React Native</b> to build{" "}
                         <b>Android Mobile</b> applications:
-                        <ul className="list-disc list-inside pl-5">
+                        <ul className={style.listTwo()}>
                             <li>
                                 that the user can navigate to see the
                                 information provided by the API
