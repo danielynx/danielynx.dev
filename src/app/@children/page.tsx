@@ -4,52 +4,33 @@ import { tv } from "tailwind-variants";
 import { SessionHeader } from "@/component/SessionHeader";
 import { Timeline } from "@/component/Timeline";
 
-const tvStyle = tv(
-    {
-        slots: {
-            greetings: "font-extralight",
-            name: "text-purple-700 dark:text-orange-300 font-extrabold",
-            author: "font-normal not-italic",
-            citations: "flex flex-col items-center",
-            citation: "font-extralight italic",
-            paragraph: "",
-        },
-        variants: {
-            size: {
-                initial: {
-                    greetings: "text-sm leading-relaxed",
-                    name: "text-2xl",
-                    author: "text-xs",
-                    citations: "gap-5",
-                    citation: "w-10/12 text-sm",
-                    paragraph: "mb-1",
-                },
-                lg: {
-                    greetings: "text-base leading-loose",
-                    name: "text-3xl",
-                    author: "text-sm",
-                    citations: "gap-6",
-                    citation: "w-8/12 text-base",
-                    paragraph: "mb-2",
-                },
-            },
-        },
-        defaultVariants: {
-            size: "initial",
-        },
+const tvStyle = tv({
+    slots: {
+        greetings: [
+            "font-extralight",
+            "text-sm lg:text-base",
+            "leading-relaxed lg:leading-loose",
+        ],
+        name: [
+            "text-purple-700 dark:text-orange-300 font-extrabold",
+            "text-2xl lg:text-3xl",
+        ],
+        author: ["font-normal not-italic", "text-xs lg:text-sm"],
+        citations: ["flex flex-col items-center", "gap-5 lg:gap-6"],
+        citation: [
+            "font-extralight italic",
+            "w-10/12 lg:w-8/12",
+            "text-sm lg:text-base",
+        ],
+        paragraph: ["mb-1 lg:mb-2"],
     },
-    {
-        responsiveVariants: ["lg"],
-    },
-);
+});
 
-export function Overview() {
-    const style = tvStyle({
-        size: { lg: "lg" },
-    });
+export default function Page() {
+    const style = tvStyle();
 
     return (
-        <>
+        <div>
             <div className={style.greetings()}>
                 <p>
                     Hi there, I{`'`}m{" "}
@@ -222,6 +203,6 @@ export function Overview() {
                     </p>
                 </Timeline.Content>
             </Timeline.Root>
-        </>
+        </div>
     );
 }

@@ -1,6 +1,6 @@
 import "@/app/globals.css";
 
-import type { PropsWithChildren } from "react";
+import type { ReactNode } from "react";
 import { tv } from "tailwind-variants";
 import { ExpandedProfile } from "@/app/_layout/ExpandedProfile";
 import { Font } from "@/app/_layout/Font";
@@ -17,7 +17,7 @@ export const metadata = {
 const tvStyle = tv({
     compoundSlots: [
         {
-            slots: ["headerContainer", "container"],
+            slots: ["headerContainer", "middleContainer"],
             class: [
                 "w-96/100 flex-col",
                 "sm:w-94/100",
@@ -30,17 +30,12 @@ const tvStyle = tv({
         {
             slots: ["profile", "sidebar"],
             class: [
-                "w-full lg:w-32/100 xl:w-28/100 2xl:w-26/100",
-                "pr-0 lg:pr-2",
+                "w-full sm:w-50/100 md:w-40/100 lg:w-32/100 xl:w-28/100 2xl:w-26/100",
             ],
         },
         {
             slots: ["navigation", "content"],
-            class: ["pl-0 lg:pl-2"],
-        },
-        {
-            slots: ["sidebar", "content"],
-            class: ["py-4"],
+            class: ["w-full lg:w-68/100 xl:w-72/100 2xl:w-74/100"],
         },
     ],
     slots: {
@@ -49,43 +44,69 @@ const tvStyle = tv({
             "flex flex-col items-center",
             "min-h-screen",
             "text-light-text dark:text-dark-text",
-            "bg-blue-300",
+            // "bg-blue-300",
         ],
         header: [
             "flex flex-row justify-center",
             "sticky top-0 z-1",
-            "w-full h-20",
+            "w-full h-30 lg:h-18",
             "border-b border-light-border dark:border-dark-border",
             "bg-light-bg-hg dark:bg-dark-bg-hg",
         ],
-        headerContainer: ["flex flex-row", "h-full", "bg-cyan-300"],
-        profile: [
-            "flex flex-row items-center justify-center lg:justify-end",
-            "h-full",
-            "bg-cyan-600",
-        ],
-        navigation: ["flex", "grow", "bg-cyan-800"],
-        container: [
-            "flex flex-row",
-            "grow",
-            "bg-green-100 sm:bg-green-200 md:bg-green-300 lg:bg-green-500 xl:bg-green-700 2xl:bg-green-900",
-        ],
-        sidebar: [
-            "flex flex-col justify-start items-center lg:items-end",
-            "h-grow",
-            "bg-cyan-600",
-        ],
-        content: ["flex flex-col", "grow", "bg-cyan-800"],
+        middle: ["flex flex-row justify-center", "w-full grow", "py-4"],
         footer: [
             "flex flex-row justify-center items-center",
             "w-full",
             "border-t dark:border-0 border-light-border",
             "bg-light-bg dark:bg-dark-bg-hg",
         ],
+        headerContainer: [
+            "flex flex-col items-center lg:flex-row lg:items-end",
+            "h-full",
+            // "bg-cyan-300",
+        ],
+        middleContainer: [
+            "flex flex-col items-center lg:flex-row lg:items-start",
+            // "bg-cyan-300",
+        ],
+        profile: [
+            "flex flex-row items-center justify-center lg:justify-end",
+            "h-full",
+            // "bg-cyan-600",
+        ],
+        navigation: [
+            "flex flex-row items-end justify-center lg:justify-start",
+            "h-full",
+            // "bg-cyan-800",
+        ],
+        sidebar: [
+            "flex flex-col justify-start items-center",
+            "sm:w-50/100 md:w-40/100",
+            "mr-0 lg:mr-2 mb-4 lg:mb-0",
+            "bg-light-bg-hg dark:bg-dark-bg-hg",
+            // "bg-cyan-800",
+            "border dark:border-0 border-light-border",
+            "rounded-xl shadow-xl",
+        ],
+        content: [
+            "flex flex-row justify-center items-center",
+            "grow w-full h-full",
+            "ml-0 lg:ml-2",
+            "py-2 lg:py-6 px-4 lg:px-10",
+            "bg-light-bg-hg dark:bg-dark-bg-hg",
+            "border dark:border-0 border-light-border",
+            "rounded-xl shadow-xl",
+        ],
     },
 });
 
-export default function RootLayout({ children }: PropsWithChildren) {
+export default function RootLayout({
+    navigation,
+    children,
+}: {
+    navigation: ReactNode;
+    children: ReactNode;
+}) {
     const style = tvStyle();
 
     return (
@@ -100,107 +121,19 @@ export default function RootLayout({ children }: PropsWithChildren) {
                                         <StickyProfile />
                                     </div>
                                     <div className={style.navigation()}>
-                                        <p>Navigation</p>
+                                        {navigation}
                                     </div>
                                 </div>
                             </header>
-                            <div className={style.container()}>
-                                <div className={style.sidebar()}>
-                                    <ExpandedProfile />
+                            <div className={style.middle()}>
+                                <div className={style.middleContainer()}>
+                                    <aside className={style.sidebar()}>
+                                        <ExpandedProfile />
+                                    </aside>
+                                    <main className={style.content()}>
+                                        {children}
+                                    </main>
                                 </div>
-                                <main className={style.content()}>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p> <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p> <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p> <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p> <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p> <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                    <p>Content</p>
-                                </main>
                             </div>
                             <footer className={style.footer()}>
                                 <Footer />

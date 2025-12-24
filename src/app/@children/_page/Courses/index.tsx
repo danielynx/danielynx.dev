@@ -1,9 +1,9 @@
 import { tv } from "tailwind-variants";
 
-import { FreeCodeCamp } from "@/app/_page/Courses/FreeCodeCamp";
-import { MongoDb } from "@/app/_page/Courses/MongoDb";
-import { Rocketseat } from "@/app/_page/Courses/Rocketseat";
-import { Symfony } from "@/app/_page/Courses/Symfony";
+import { FreeCodeCamp } from "@/app/@children/_page/Courses/FreeCodeCamp";
+import { MongoDb } from "@/app/@children/_page/Courses/MongoDb";
+import { Rocketseat } from "@/app/@children/_page/Courses/Rocketseat";
+import { Symfony } from "@/app/@children/_page/Courses/Symfony";
 
 const tvStyle = tv(
     {

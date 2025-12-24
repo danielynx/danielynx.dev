@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from "react";
 import { MdDeveloperBoard } from "react-icons/md";
-import { Breadcrumb as HomeBreadcrumb } from "@/app/_page/Breadcrumb";
+import { Breadcrumb as HomeBreadcrumb } from "@/app/@children/_page/Breadcrumb";
 import { Breadcrumb as ComponentBreadcrumb } from "@/component/Breadcrumb";
 import { TabEnum } from "@/type/_page/TabEnum";
 

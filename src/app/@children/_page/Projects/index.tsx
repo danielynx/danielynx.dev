@@ -1,6 +1,6 @@
 import { tv } from "tailwind-variants";
-import { DanielPortfolio } from "@/app/_page/Projects/DanielPortfolio";
-import { GoBarber } from "@/app/_page/Projects/GoBarber";
+import { DanielPortfolio } from "@/app/@children/_page/Projects/DanielPortfolio";
+import { GoBarber } from "@/app/@children/_page/Projects/GoBarber";
 
 const tvStyle = tv(
     {

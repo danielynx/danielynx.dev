@@ -1,12 +1,12 @@
 import { BsScissors } from "react-icons/bs";
 import { tv } from "tailwind-variants";
+import { Link as RocketseatLink } from "@/app/@children/courses/rocketseat/_page/Link";
+import { Breadcrumb as ProjectBreadcrumb } from "@/app/@children/projects/_page/Breadcrumb";
+import { Repository } from "@/app/@children/projects/go-barber/_page/Repository";
+import { Screenshot } from "@/app/@children/projects/go-barber/_page/Screenshot";
+import { Technology } from "@/app/@children/projects/go-barber/_page/Technology";
 import { MainContent } from "@/app/_layout/MainContent";
 import { Navigation } from "@/app/_layout/Navigation";
-import { Link as RocketseatLink } from "@/app/course/rocketseat/_page/Link";
-import { Breadcrumb as ProjectBreadcrumb } from "@/app/project/_page/Breadcrumb";
-import { Repository } from "@/app/project/go-barber/_page/Repository";
-import { Screenshot } from "@/app/project/go-barber/_page/Screenshot";
-import { Technology } from "@/app/project/go-barber/_page/Technology";
 import { Breadcrumb as ComponentBreadcrumb } from "@/component/Breadcrumb";
 
 const tvStyle = tv(

@@ -7,8 +7,6 @@ const tvStyle = tv({
             "w-full",
             "gap-1 py-3 sm:py-4",
             "text-xs sm:text-sm",
-            "border-t dark:border-0 border-light-border",
-            "bg-light-bg dark:bg-dark-bg-hg",
         ],
         username:
             "font-bold underline decoration-indigo-500 decoration-2 underline-offset-2",
