@@ -6,13 +6,13 @@ import { TabNav } from "@/component/TabNav";
 export default function Page() {
     return (
         <TabNav>
-            <TabNav.Item Icon={MdPieChart} text="Overview" href="/" />
+            <TabNav.Item text="Overview" Icon={MdPieChart} href="/" />
             <TabNav.Item
                 Icon={MdDeveloperBoard}
                 text="Projects"
                 href="/projects"
             />
-            <TabNav.Item Icon={MdSchool} text="Courses" href="/courses" />
+            <TabNav.Item text="Courses" Icon={MdSchool} href="/courses" />
         </TabNav>
     );
 }

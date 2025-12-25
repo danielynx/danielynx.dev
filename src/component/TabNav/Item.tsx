@@ -4,8 +4,8 @@ import type { IconType } from "react-icons";
 import { tv } from "tailwind-variants";
 
 export interface ItemProps {
-    Icon: IconType;
     text: string;
+    Icon: IconType;
     href?: string;
     target?: "_blank" | "_self";
 }
@@ -47,7 +47,7 @@ const tvStyle = tv({
     },
 });
 
-export function Item({ Icon, text, href = "#", target = "_self" }: ItemProps) {
+export function Item({ text, Icon, href = "#", target = "_self" }: ItemProps) {
     const pathname = usePathname();
     const active = pathname === href;
 
