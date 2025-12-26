@@ -3,7 +3,8 @@ import { tv } from "tailwind-variants";
 const tvStyle = tv({
     slots: {
         footer: [
-            "flex flex-col sm:flex-row justify-center items-center",
+            "flex flex-col sm:flex-row",
+            "justify-center items-center",
             "w-full",
             "gap-1 py-3 sm:py-4",
             "text-xs sm:text-sm",

@@ -10,12 +10,12 @@ import type { Profile } from "@/type/_layout/Profile";
 
 const tvStyle = tv({
     slots: {
-        outerBox: ["flex flex-row justify-center"],
+        outerBox: ["flex flex-row", "justify-center"],
         innerBox: "relative pb-3",
         image: "rounded-full h-40 w-40",
         statusBox: [
-            "flex flex-row justify-center hover:justify-start",
-            "items-center absolute",
+            "flex flex-row",
+            "justify-center hover:justify-start items-center absolute",
             "bottom-0 left-20",
             "hover:pl-2 rounded-full w-8 h-8 hover:w-40",
             "shadow-md bg-light-bg-ct dark:bg-dark-bg-ct",

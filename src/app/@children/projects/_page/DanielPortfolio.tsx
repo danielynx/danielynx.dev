@@ -4,7 +4,7 @@ import { Card } from "@/component/Card";
 
 const tvStyle = tv({
     slots: {
-        text: "flex flex-col items-start",
+        text: ["flex flex-col", "items-start"],
         largerSpan: "font-bold",
         smalerSpan: "font-normal text-base",
     },

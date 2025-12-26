@@ -11,7 +11,7 @@ export interface ItemRootProps {
 
 const tvStyle = tv({
     slots: {
-        container: ["flex flex-row items-center", "mt-2 text-sm font-light"],
+        container: ["flex flex-row", "items-center", "mt-2 text-sm font-light"],
         icon: "mr-2 h-5 w-5",
     },
 });

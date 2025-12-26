@@ -16,7 +16,7 @@ const tvStyle = tv({
             "text-2xl lg:text-3xl",
         ],
         author: ["font-normal not-italic", "text-xs lg:text-sm"],
-        citations: ["flex flex-col items-center", "gap-5 lg:gap-6"],
+        citations: ["flex flex-col", "items-center", "gap-5 lg:gap-6"],
         citation: [
             "font-extralight italic",
             "w-10/12 lg:w-8/12",

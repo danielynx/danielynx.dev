@@ -6,7 +6,7 @@ import { Name } from "@/app/_layout/StickyProfile/Name";
 
 const tvStyle = tv({
     slots: {
-        profile: ["flex flex-row items-center justify-end", "grow px-6"],
+        profile: ["flex flex-row", "items-center justify-end", "grow px-6"],
     },
 });
 

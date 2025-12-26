@@ -4,7 +4,8 @@ import { tv } from "tailwind-variants";
 const tvStyle = tv({
     slots: {
         container: [
-            "flex flex-col items-center justify-center",
+            "flex flex-col",
+            "items-center justify-center",
             "text-dark-text-ct dark:text-light-text-ct",
         ],
         icon: [
