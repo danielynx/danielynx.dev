@@ -3,13 +3,13 @@ import { Card } from "@/component/Card";
 
 export function Symfony() {
     return (
-        <Card.Root
+        <Card
             lightBgColor="bg-light-bg-brand-symfony"
             darkTextColor="dark:text-dark-text-brand-symfony"
             link="https://symfonycasts.com/u/danielynx"
             target="_blank"
         >
-            <Card.Header.Root>
+            <Card.Header>
                 <Card.Header.Icon Icon={SiSymfony} />
                 <Card.Header.Text>
                     <div>
@@ -17,8 +17,8 @@ export function Symfony() {
                         <span className="font-normal">Casts</span>
                     </div>
                 </Card.Header.Text>
-            </Card.Header.Root>
+            </Card.Header>
             <Card.Footer />
-        </Card.Root>
+        </Card>
     );
 }

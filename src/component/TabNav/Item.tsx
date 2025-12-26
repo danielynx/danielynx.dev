@@ -13,7 +13,8 @@ export interface ItemProps {
 const tvStyle = tv({
     slots: {
         container: [
-            "flex flew-row items-center justify-center",
+            "flex flew-row",
+            "items-center justify-center",
             "py-1",
             "px-2 rounded-lg",
             "first:ml-0 ml-1 last:mr-0 mr-1",

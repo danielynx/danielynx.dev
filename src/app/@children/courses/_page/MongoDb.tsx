@@ -14,13 +14,13 @@ export function MongoDb() {
     const style = tvStyle();
 
     return (
-        <Card.Root
+        <Card
             lightBgColor="bg-light-bg-brand-mongodb"
             darkTextColor="dark:text-dark-text-brand-mongodb"
             link="https://university.mongodb.com/course_completion/2afe5b18-37c2-4a62-8a32-e1e27256a5bf?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
             target="_blank"
         >
-            <Card.Header.Root>
+            <Card.Header>
                 <Card.Header.Icon Icon={SiMongodb} />
                 <Card.Header.Text>
                     <div className={style.container()}>
@@ -28,8 +28,8 @@ export function MongoDb() {
                         <span className={style.subtitle()}>University</span>
                     </div>
                 </Card.Header.Text>
-            </Card.Header.Root>
+            </Card.Header>
             <Card.Footer />
-        </Card.Root>
+        </Card>
     );
 }

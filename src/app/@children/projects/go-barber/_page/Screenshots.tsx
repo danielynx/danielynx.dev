@@ -3,14 +3,15 @@ import { BsScissors } from "react-icons/bs";
 import { CgScreenShot } from "react-icons/cg";
 import { tv } from "tailwind-variants";
 import { AppFrame } from "@/component/AppFrame";
-import { BrowserFrame } from "@/component/BrowserFrame";
+import { Builder as BrowserFrameBuilder } from "@/component/BrowserFrame/Builder";
 import { SessionHeader } from "@/component/SessionHeader";
 
 const tvStyle = tv({
     slots: {
-        browser: ["flex flex-col items-center", "gap-y-2 md:gap-y-3"],
+        browser: ["flex flex-col", "items-center", "gap-y-2 md:gap-y-3"],
         app: [
-            "flex flex-col md:flex-row items-center justify-center",
+            "flex flex-col md:flex-row",
+            "items-center justify-center",
             "mt-6 md:mt-8",
             "gap-y-2 md:gap-x-3",
         ],
@@ -24,7 +25,7 @@ export function Screenshots() {
         <>
             <SessionHeader Icon={CgScreenShot} title="Screenshots" />
             <div className={style.browser()}>
-                <BrowserFrame.Builder
+                <BrowserFrameBuilder
                     Favicon={BsScissors}
                     tabName="GoBarber"
                     url="https://gobarber.dev/login"
@@ -35,8 +36,8 @@ export function Screenshots() {
                         height={400}
                         alt="GoBarber's web login page"
                     />
-                </BrowserFrame.Builder>
-                <BrowserFrame.Builder
+                </BrowserFrameBuilder>
+                <BrowserFrameBuilder
                     Favicon={BsScissors}
                     tabName="GoBarber"
                     url="https://gobarber.dev/signup"
@@ -47,8 +48,8 @@ export function Screenshots() {
                         height={400}
                         alt="GoBarber's web signup page"
                     />
-                </BrowserFrame.Builder>
-                <BrowserFrame.Builder
+                </BrowserFrameBuilder>
+                <BrowserFrameBuilder
                     Favicon={BsScissors}
                     tabName="GoBarber"
                     url="https://gobarber.dev/admin/appointments"
@@ -59,7 +60,7 @@ export function Screenshots() {
                         height={400}
                         alt="GoBarber's web appointments page"
                     />
-                </BrowserFrame.Builder>
+                </BrowserFrameBuilder>
             </div>
             <div className={style.app()}>
                 <AppFrame>

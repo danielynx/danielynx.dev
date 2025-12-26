@@ -6,47 +6,25 @@ export interface ContentProps {
     subtitle: string;
 }
 
-const tvStyle = tv(
-    {
-        slots: {
-            container: "flex flex-col items-start w-full",
-            title: "font-bold font-serif",
-            subtitle: "font-semibold font-serif",
-            children: "font-extralight tracking-wide pt-2",
-        },
-        variants: {
-            size: {
-                initial: {
-                    container: "pl-3",
-                    title: "text-lg",
-                    subtitle: "text-base",
-                    children: "text-sm",
-                },
-                lg: {
-                    container: "pl-4",
-                    title: "text-xl",
-                    subtitle: "text-lg",
-                    children: "text-base",
-                },
-            },
-        },
-        defaultVariants: {
-            size: "initial",
-        },
+const tvStyle = tv({
+    slots: {
+        container: ["flex flex-col", "items-start", "w-full", "pl-3 lg:pl-4"],
+        title: ["font-bold font-serif", "text-lg lg:text-xl"],
+        subtitle: ["font-semibold font-serif", "text-base lg:text-lg"],
+        children: [
+            "font-extralight tracking-wide",
+            "pt-2",
+            "text-sm lg:text-base",
+        ],
     },
-    {
-        responsiveVariants: ["lg"],
-    },
-);
+});
 
 export function Content({
     title,
     subtitle,
     children,
 }: PropsWithChildren<ContentProps>) {
-    const style = tvStyle({
-        size: { lg: "lg" },
-    });
+    const style = tvStyle();
 
     return (
         <div className={style.container()}>

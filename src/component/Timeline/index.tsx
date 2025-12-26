@@ -1,9 +1,12 @@
+import type { PropsWithChildren } from "react";
 import { Content } from "@/component/Timeline/Content";
-import { Root } from "@/component/Timeline/Root";
 import { Time } from "@/component/Timeline/Time";
 
-export const Timeline = {
-    Root: Root,
-    Content: Content,
-    Time: Time,
-};
+function Timeline({ children }: PropsWithChildren) {
+    return <div className="flex flex-row w-full mb-6">{children}</div>;
+}
+
+Timeline.Content = Content;
+Timeline.Time = Time;
+
+export { Timeline };

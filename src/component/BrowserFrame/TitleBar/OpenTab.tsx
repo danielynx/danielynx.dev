@@ -2,58 +2,35 @@ import type { IconType } from "react-icons";
 import { MdClose } from "react-icons/md";
 import { tv } from "tailwind-variants";
 
-export interface TitleBarOpenTabProps {
+export interface OpenTabProps {
     Favicon: IconType;
     name: string;
 }
 
-const tvStyle = tv(
-    {
-        slots: {
-            container: [
-                "flex flex-row justify-start items-center",
-                "bg-gray-700",
-                "rounded-md",
-                "py-1 px-2",
-            ],
-            circle: [
-                "flex flex-row justify-center items-center",
-                "bg-teal-600",
-                "rounded-full",
-            ],
-            icon: "",
-            name: "pl-2 pr-8",
-        },
-        variants: {
-            size: {
-                initial: {
-                    circle: "w-4 h-4",
-                    icon: "w-2 h-2",
-                    name: "text-xs",
-                },
-                xs: {
-                    icon: "w-3 h-3",
-                },
-                sm: {
-                    name: "text-sm",
-                    circle: "w-5 h-5",
-                    icon: "w-4 h-4",
-                },
-            },
-        },
-        defaultVariants: {
-            size: "initial",
-        },
+const tvStyle = tv({
+    slots: {
+        container: [
+            "flex flex-row",
+            "justify-start items-center",
+            "rounded-md",
+            "py-1 px-2",
+            "bg-gray-700",
+        ],
+        circle: [
+            "flex flex-row",
+            "justify-center items-center",
+            "w-4 sm:w-5",
+            "h-4 sm:h-5",
+            "rounded-full",
+            "bg-teal-600",
+        ],
+        icon: ["w-2 xs:w-3 sm:w-4", "h-2 xs:h-3 sm:h-4"],
+        name: ["pl-2 pr-8", "text-xs sm:text-sm"],
     },
-    {
-        responsiveVariants: ["xs", "sm"],
-    },
-);
+});
 
-export function TitleBarOpenTab({ Favicon, name }: TitleBarOpenTabProps) {
-    const style = tvStyle({
-        size: { xs: "xs", sm: "sm" },
-    });
+export function OpenTab({ Favicon, name }: OpenTabProps) {
+    const style = tvStyle();
 
     return (
         <div className={style.container()}>

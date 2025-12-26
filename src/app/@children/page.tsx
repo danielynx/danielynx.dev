@@ -79,7 +79,7 @@ export default function Page() {
                 className="pb-4"
             />
 
-            <Timeline.Root>
+            <Timeline>
                 <Timeline.Time date="Today" />
                 <Timeline.Content
                     title="PHP Developer"
@@ -119,9 +119,9 @@ export default function Page() {
                         its work process.
                     </p>
                 </Timeline.Content>
-            </Timeline.Root>
+            </Timeline>
 
-            <Timeline.Root>
+            <Timeline>
                 <Timeline.Time date="2014" />
                 <Timeline.Content
                     title="PHP Developer"
@@ -137,9 +137,9 @@ export default function Page() {
                         MySQL database.
                     </p>
                 </Timeline.Content>
-            </Timeline.Root>
+            </Timeline>
 
-            <Timeline.Root>
+            <Timeline>
                 <Timeline.Time date="2013" />
                 <Timeline.Content
                     title="Java Developer"
@@ -160,9 +160,9 @@ export default function Page() {
                         quality assurance and stage environments.
                     </p>
                 </Timeline.Content>
-            </Timeline.Root>
+            </Timeline>
 
-            <Timeline.Root>
+            <Timeline>
                 <Timeline.Time date="2012" />
                 <Timeline.Content
                     title="Java Developer"
@@ -183,9 +183,9 @@ export default function Page() {
                         manage its work process.
                     </p>
                 </Timeline.Content>
-            </Timeline.Root>
+            </Timeline>
 
-            <Timeline.Root>
+            <Timeline>
                 <Timeline.Time date="2009" />
                 <Timeline.Content
                     title="Computing Scientist"
@@ -202,7 +202,7 @@ export default function Page() {
                         digital products.
                     </p>
                 </Timeline.Content>
-            </Timeline.Root>
+            </Timeline>
         </div>
     );
 }

@@ -1,11 +1,23 @@
-import { BrowserFrameBuilder } from "@/component/BrowserFrame/Builder";
-import { BrowserFrameNavigationBar } from "@/component/BrowserFrame/NavigationBar";
-import { BrowserFrameRoot } from "@/component/BrowserFrame/Root";
-import { BrowserFrameTitleBar } from "@/component/BrowserFrame/TitleBar";
+import type { PropsWithChildren } from "react";
+import { tv } from "tailwind-variants";
+import { NavigationBar } from "@/component/BrowserFrame/NavigationBar";
+import { TitleBar } from "@/component/BrowserFrame/TitleBar";
 
-export const BrowserFrame = {
-    Root: BrowserFrameRoot,
-    NavigationBar: BrowserFrameNavigationBar,
-    TitleBar: BrowserFrameTitleBar,
-    Builder: BrowserFrameBuilder,
-};
+const tvStyle = tv({
+    base: [
+        "flex flex-col",
+        "border-4 border-light-border dark:border-dark-border",
+        "rounded-sm",
+    ],
+});
+
+function BrowserFrame({ children }: PropsWithChildren) {
+    const style = tvStyle();
+
+    return <div className={style}>{children}</div>;
+}
+
+BrowserFrame.NavigationBar = NavigationBar;
+BrowserFrame.TitleBar = TitleBar;
+
+export { BrowserFrame };

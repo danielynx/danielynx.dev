@@ -1,6 +1,5 @@
 import { ImProfile } from "react-icons/im";
 import { tv } from "tailwind-variants";
-
 import { Card } from "@/component/Card";
 
 const tvStyle = tv({
@@ -15,12 +14,12 @@ export function DanielPortfolio() {
     const style = tvStyle();
 
     return (
-        <Card.Root
+        <Card
             lightBgColor="bg-light-bg-project-myportfolio"
             darkTextColor="dark:text-dark-text-project-myportfolio"
             link="projects/daniel-portfolio"
         >
-            <Card.Header.Root>
+            <Card.Header>
                 <Card.Header.Icon Icon={ImProfile} />
                 <Card.Header.Text>
                     <div className={style.text()}>
@@ -32,8 +31,8 @@ export function DanielPortfolio() {
                         </span>
                     </div>
                 </Card.Header.Text>
-            </Card.Header.Root>
+            </Card.Header>
             <Card.Footer />
-        </Card.Root>
+        </Card>
     );
 }
