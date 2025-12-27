@@ -21,6 +21,6 @@ const mono = Source_Code_Pro({
     variable: "--font-mono",
 });
 
-export const AppFont = {
+export const Font = {
     variable: `${sans.variable} ${serif.variable} ${mono.variable}`,
 };

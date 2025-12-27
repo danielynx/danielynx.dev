@@ -3,33 +3,33 @@ import type { IconType } from "react-icons";
 
 import { BrowserFrame } from "@/component/BrowserFrame";
 
-export interface BrowserFrameBuilderPros {
+export interface BuilderPros {
     Favicon: IconType;
     tabName: string;
     url: string;
 }
 
-export function BrowserFrameBuilder({
+export function Builder({
     Favicon,
     tabName,
     url,
     children,
-}: PropsWithChildren<BrowserFrameBuilderPros>) {
+}: PropsWithChildren<BuilderPros>) {
     return (
-        <BrowserFrame.Root>
-            <BrowserFrame.TitleBar.Root>
+        <BrowserFrame>
+            <BrowserFrame.TitleBar>
                 <BrowserFrame.TitleBar.OpenTab
                     Favicon={Favicon}
                     name={tabName}
                 />
                 <BrowserFrame.TitleBar.AddTabButtom />
                 <BrowserFrame.TitleBar.CommandButtons />
-            </BrowserFrame.TitleBar.Root>
-            <BrowserFrame.NavigationBar.Root>
+            </BrowserFrame.TitleBar>
+            <BrowserFrame.NavigationBar>
                 <BrowserFrame.NavigationBar.Buttons />
                 <BrowserFrame.NavigationBar.Address url={url} />
-            </BrowserFrame.NavigationBar.Root>
+            </BrowserFrame.NavigationBar>
             {children}
-        </BrowserFrame.Root>
+        </BrowserFrame>
     );
 }

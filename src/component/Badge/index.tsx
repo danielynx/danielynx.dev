@@ -6,40 +6,26 @@ export interface BadgeProps {
     title: string;
 }
 
-const tvStyle = tv(
-    {
-        slots: {
-            container: "flex flex-row items-center rounded-md",
-            icon: "",
-            title: "text-light-text dark:text-dark-text",
-        },
-        variants: {
-            size: {
-                initial: {
-                    container: "px-1.5 py-1",
-                    icon: "h-4 w-4",
-                    title: "text-sm ml-1",
-                },
-                sm: {
-                    container: "px-2 py-1.5",
-                    icon: "h-5 w-5",
-                    title: "text-base ml-2",
-                },
-            },
-        },
-        defaultVariants: {
-            size: "initial",
-        },
+const tvStyle = tv({
+    slots: {
+        container: [
+            "flex flex-row",
+            "items-center",
+            "rounded-md",
+            "px-1.5 sm:px-2",
+            "py-1 sm:py-1.5",
+        ],
+        icon: ["h-4 sm:h-5", "w-4 sm:w-5"],
+        title: [
+            "text-light-text dark:text-dark-text",
+            "text-sm sm:text-base",
+            "ml-1 sm:ml-2",
+        ],
     },
-    {
-        responsiveVariants: ["sm"],
-    },
-);
+});
 
 export function Badge({ Icon, title }: BadgeProps) {
-    const style = tvStyle({
-        size: { sm: "sm" },
-    });
+    const style = tvStyle();
 
     return (
         <div className={style.container()}>
