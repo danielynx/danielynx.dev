@@ -41,11 +41,10 @@ const tvStyle = tv({
     slots: {
         body: "font-sans",
         viewport: [
-            "flex flex-co",
+            "flex flex-col",
             "items-center",
             "min-h-screen",
             "text-light-text dark:text-dark-text",
-            // "bg-blue-300",
         ],
         header: [
             "flex flex-row",
@@ -67,24 +66,20 @@ const tvStyle = tv({
             "flex flex-col lg:flex-row",
             "items-center lg:items-end",
             "h-full",
-            // "bg-cyan-300",
         ],
         middleContainer: [
             "flex flex-col lg:flex-row",
             "items-center lg:items-start",
-            // "bg-cyan-300",
         ],
         profile: [
             "flex flex-row justify-center",
             "items-center lg:justify-end",
             "h-full",
-            // "bg-cyan-600",
         ],
         navigation: [
             "flex flex-row",
             "justify-center items-end lg:justify-start",
             "h-full",
-            // "bg-cyan-800",
         ],
         sidebar: [
             "flex flex-col",
@@ -92,7 +87,6 @@ const tvStyle = tv({
             "sm:w-50/100 md:w-40/100",
             "mr-0 lg:mr-2 mb-4 lg:mb-0",
             "bg-light-bg-hg dark:bg-dark-bg-hg",
-            // "bg-cyan-800",
             "border dark:border-0 border-light-border",
             "rounded-xl shadow-xl",
         ],
