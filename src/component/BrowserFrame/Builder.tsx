@@ -1,35 +1,35 @@
-import { PropsWithChildren } from 'react';
-import { IconType } from 'react-icons';
+import type { PropsWithChildren } from "react";
+import type { IconType } from "react-icons";
 
-import { BrowserFrame } from '@/component/BrowserFrame';
+import { BrowserFrame } from "@/component/BrowserFrame";
 
-export interface BrowserFrameBuilderPros {
-  Favicon: IconType;
-  tabName: string;
-  url: string;
+export interface BuilderPros {
+    Favicon: IconType;
+    tabName: string;
+    url: string;
 }
 
-export function BrowserFrameBuilder({
-  Favicon,
-  tabName,
-  url,
-  children,
-}: PropsWithChildren<BrowserFrameBuilderPros>) {
-  return (
-    <BrowserFrame.Root>
-      <BrowserFrame.TitleBar.Root>
-        <BrowserFrame.TitleBar.OpenTab
-          Favicon={Favicon}
-          name={tabName}
-        />
-        <BrowserFrame.TitleBar.AddTabButtom />
-        <BrowserFrame.TitleBar.CommandButtons />
-      </BrowserFrame.TitleBar.Root>
-      <BrowserFrame.NavigationBar.Root>
-        <BrowserFrame.NavigationBar.Buttons />
-        <BrowserFrame.NavigationBar.Address url={url} />
-      </BrowserFrame.NavigationBar.Root>
-      {children}
-    </BrowserFrame.Root>
-  );
+export function Builder({
+    Favicon,
+    tabName,
+    url,
+    children,
+}: PropsWithChildren<BuilderPros>) {
+    return (
+        <BrowserFrame>
+            <BrowserFrame.TitleBar>
+                <BrowserFrame.TitleBar.OpenTab
+                    Favicon={Favicon}
+                    name={tabName}
+                />
+                <BrowserFrame.TitleBar.AddTabButtom />
+                <BrowserFrame.TitleBar.CommandButtons />
+            </BrowserFrame.TitleBar>
+            <BrowserFrame.NavigationBar>
+                <BrowserFrame.NavigationBar.Buttons />
+                <BrowserFrame.NavigationBar.Address url={url} />
+            </BrowserFrame.NavigationBar>
+            {children}
+        </BrowserFrame>
+    );
 }

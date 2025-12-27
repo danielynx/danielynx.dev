@@ -1,30 +1,18 @@
-import { PropsWithChildren } from 'react';
-import { tv } from 'tailwind-variants';
+import type { PropsWithChildren } from "react";
+import { tv } from "tailwind-variants";
 
-const tvStyle = tv(
-  {
-    base: 'flex flex-row justify-start grow font-serif',
-    variants: {
-      size: {
-        initial: 'text-base',
-        xs: 'text-lg',
-        sm: 'text-xl',
-        md: 'text-2xl',
-      },
-    },
-    defaultVariants: {
-      size: 'initial',
-    },
-  },
-  {
-    responsiveVariants: ['xs', 'sm', 'md'],
-  },
-);
+const tvStyle = tv({
+    base: [
+        "flex flex-row",
+        "justify-start",
+        "grow",
+        "text-base xs:text-lg sm:text-xl md:text-2xl",
+        "font-serif",
+    ],
+});
 
-export function HeaderText({ children }: PropsWithChildren) {
-  const style = tvStyle({
-    size: { xs: 'xs', sm: 'sm', md: 'md' },
-  });
+export function Text({ children }: PropsWithChildren) {
+    const style = tvStyle();
 
-  return <div className={style}>{children}</div>;
+    return <div className={style}>{children}</div>;
 }

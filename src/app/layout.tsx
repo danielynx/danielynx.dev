@@ -1,105 +1,150 @@
-import './globals.css';
+import "@/app/globals.css";
 
-import { PropsWithChildren } from 'react';
-import { tv } from 'tailwind-variants';
-
-import { ProfileIntersectionProvider } from '@/context/_layout/ProfileIntersectionProvider';
-import { ColorSchemeProvider } from '@/context/_layout/ColorSchemeProvider';
-
-import { AppContainerSidebar } from './_layout/container/Sidebar';
-import { AppHeaderProfile } from './_layout/HeaderProfile';
-import { AppBodyProfile } from './_layout/BodyProfile';
-import { AppColorSchema } from './_layout/ColorSchema';
-import { AppFooter } from './_layout/Footer';
-import { AppFont } from './_layout/Font';
+import type { ReactNode } from "react";
+import { tv } from "tailwind-variants";
+import { ExpandedProfile } from "@/app/_layout/ExpandedProfile";
+import { Font } from "@/app/_layout/Font";
+import { Footer } from "@/app/_layout/Footer";
+import { StickyProfile } from "@/app/_layout/StickyProfile";
+import { ColorSchemeProvider } from "@/context/_layout/ColorSchemeProvider";
+import { ProfileIntersectionProvider } from "@/context/_layout/ProfileIntersectionProvider";
 
 export const metadata = {
-  title: "Daniel's Portfolio",
-  description: "Daniel's Portfolio",
+    title: "Daniel's Portfolio",
+    description: "Daniel's Portfolio",
 };
 
-const tvStyle = tv(
-  {
+const tvStyle = tv({
+    compoundSlots: [
+        {
+            slots: ["headerContainer", "middleContainer"],
+            class: [
+                "w-96/100 flex-col",
+                "sm:w-94/100",
+                "md:w-92/100",
+                "lg:w-88/100 lg:flex-row",
+                "xl:w-80/100",
+                "2xl:w-72/100",
+            ],
+        },
+        {
+            slots: ["profile", "sidebar"],
+            class: [
+                "w-full sm:w-50/100 md:w-40/100 lg:w-32/100 xl:w-28/100 2xl:w-26/100",
+            ],
+        },
+        {
+            slots: ["navigation", "content"],
+            class: ["w-full lg:w-68/100 xl:w-72/100 2xl:w-74/100"],
+        },
+    ],
     slots: {
-      body: 'font-sans',
-      viewport: [
-        'flex flex-col min-h-screen',
-        'text-light-text dark:text-dark-text',
-      ],
-      growth: 'flex justify-center grow',
-      sidebar: 'flex flex-col',
-      content: 'flex flex-col',
+        body: "font-sans",
+        viewport: [
+            "flex flex-col",
+            "items-center",
+            "min-h-screen",
+            "text-light-text dark:text-dark-text",
+        ],
+        header: [
+            "flex flex-row",
+            "justify-center",
+            "sticky top-0 z-1",
+            "w-full h-30 lg:h-18",
+            "border-b border-light-border dark:border-dark-border",
+            "bg-light-bg-hg dark:bg-dark-bg-hg",
+        ],
+        middle: ["flex flex-row", "justify-center", "w-full grow", "py-4"],
+        footer: [
+            "flex flex-row",
+            "justify-center items-center",
+            "w-full",
+            "border-t dark:border-0 border-light-border",
+            "bg-light-bg dark:bg-dark-bg-hg",
+        ],
+        headerContainer: [
+            "flex flex-col lg:flex-row",
+            "items-center lg:items-end",
+            "h-full",
+        ],
+        middleContainer: [
+            "flex flex-col lg:flex-row",
+            "items-center lg:items-start",
+        ],
+        profile: [
+            "flex flex-row justify-center",
+            "items-center lg:justify-end",
+            "h-full",
+        ],
+        navigation: [
+            "flex flex-row",
+            "justify-center items-end lg:justify-start",
+            "h-full",
+        ],
+        sidebar: [
+            "flex flex-col",
+            "justify-start items-center",
+            "sm:w-50/100 md:w-40/100",
+            "mr-0 lg:mr-2 mb-4 lg:mb-0",
+            "bg-light-bg-hg dark:bg-dark-bg-hg",
+            "border dark:border-0 border-light-border",
+            "rounded-xl shadow-xl",
+        ],
+        content: [
+            "flex flex-row",
+            "justify-start items-start",
+            "grow w-full h-full",
+            "ml-0 lg:ml-2",
+            "py-2 lg:py-6 px-4 lg:px-10",
+            "bg-light-bg-hg dark:bg-dark-bg-hg",
+            "border dark:border-0 border-light-border",
+            "rounded-xl shadow-xl",
+        ],
     },
-    variants: {
-      size: {
-        initial: {
-          growth: 'flex-col',
-          sidebar: 'items-center w-full',
-          content: 'items-center w-full',
-        },
-        lg: {
-          growth: 'flex-row',
-          sidebar: 'items-end w-4/12',
-          content: 'items-start w-8/12',
-        },
-      },
-    },
-    defaultVariants: {
-      size: 'initial',
-    },
-  },
-  {
-    responsiveVariants: ['lg'],
-  },
-);
+});
 
-export default function RootLayout({ children }: PropsWithChildren) {
-  const style = tvStyle({
-    size: { lg: 'lg' },
-  });
+export default function RootLayout({
+    navigation,
+    children,
+}: {
+    navigation: ReactNode;
+    children: ReactNode;
+}) {
+    const style = tvStyle();
 
-  return (
-    <html
-      lang='en'
-      className={AppFont.variable}
-    >
-      <body className={style.body()}>
-        <ColorSchemeProvider>
-          <div className={style.viewport()}>
-            <div className={style.growth()}>
-              <div className={style.sidebar()}>
-                <ProfileIntersectionProvider>
-                  <AppContainerSidebar.Header>
-                    <AppHeaderProfile.Root>
-                      <AppHeaderProfile.Avatar />
-                      <AppHeaderProfile.Name />
-                    </AppHeaderProfile.Root>
-                    <AppColorSchema />
-                  </AppContainerSidebar.Header>
-                  <AppContainerSidebar.Body>
-                    <AppBodyProfile.Root>
-                      <AppBodyProfile.Avatar.IntersectionObserver>
-                        <AppBodyProfile.Avatar.Root />
-                      </AppBodyProfile.Avatar.IntersectionObserver>
-                      <AppBodyProfile.Name />
-                      <AppBodyProfile.Company />
-                      <AppBodyProfile.Location />
-                      <AppBodyProfile.Contact.Root>
-                        <AppBodyProfile.Contact.ProtonMail />
-                        <AppBodyProfile.Contact.GitHub />
-                        <AppBodyProfile.Contact.StackOverflow />
-                        <AppBodyProfile.Contact.LinkedIn />
-                      </AppBodyProfile.Contact.Root>
-                    </AppBodyProfile.Root>
-                  </AppContainerSidebar.Body>
-                </ProfileIntersectionProvider>
-              </div>
-              <div className={style.content()}>{children}</div>
-            </div>
-            <AppFooter />
-          </div>
-        </ColorSchemeProvider>
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en" className={Font.variable}>
+            <body className={style.body()}>
+                <ColorSchemeProvider>
+                    <ProfileIntersectionProvider>
+                        <div className={style.viewport()}>
+                            <header className={style.header()}>
+                                <div className={style.headerContainer()}>
+                                    <div className={style.profile()}>
+                                        <StickyProfile />
+                                    </div>
+                                    <div className={style.navigation()}>
+                                        {navigation}
+                                    </div>
+                                </div>
+                            </header>
+                            <div className={style.middle()}>
+                                <div className={style.middleContainer()}>
+                                    <aside className={style.sidebar()}>
+                                        <ExpandedProfile />
+                                    </aside>
+                                    <main className={style.content()}>
+                                        {children}
+                                    </main>
+                                </div>
+                            </div>
+                            <footer className={style.footer()}>
+                                <Footer />
+                            </footer>
+                        </div>
+                    </ProfileIntersectionProvider>
+                </ColorSchemeProvider>
+            </body>
+        </html>
+    );
 }

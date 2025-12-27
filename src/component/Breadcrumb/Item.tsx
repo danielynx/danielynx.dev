@@ -1,66 +1,62 @@
-import Link from 'next/link';
-import { tv } from 'tailwind-variants';
-import { IconType } from 'react-icons';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import type { IconType } from "react-icons";
+import { tv } from "tailwind-variants";
 
-import { Navigator } from '@/component/Navigator';
-
-export interface BreadcrumbItemProps {
-  Icon: IconType;
-  text: string;
-  selected: boolean;
-  link?: string;
-  target?: '_blank' | '_self';
+export interface ItemProps {
+    text: string;
+    Icon: IconType;
+    href?: string;
+    target?: "_blank" | "_self";
 }
 
-const tvStyle = tv(
-  {
+const tvStyle = tv({
     slots: {
-      container: 'py-1',
-      separator: 'text-light-text/70 dark:text-dark-text/70',
+        container: [
+            "flex flew-row items-center justify-center",
+            "py-1",
+            "px-2 rounded-lg",
+            "first:ml-0 ml-1 last:mr-0 mr-1",
+        ],
+        icon: ["h-4 xs:h-5 sm:h-6 md:h-7", "w-4 xs:w-5 sm:w-6 md:w-7"],
+        text: [
+            "font-semibold font-mono",
+            "pl-1 sm:pl-1.5 md:pl-2",
+            "text-xs xs:text-sm 2xs:text-base sm:text-lg",
+        ],
     },
     variants: {
-      size: {
-        initial: {
-          separator: 'h-4 w-4 xs:h-5 xs:w-5 2xs:h-6 2xs:w-6',
+        active: {
+            true: {
+                container: [
+                    "shadow-sm",
+                    "bg-light-bg-ct dark:bg-dark-bg-ct",
+                    "text-light-text-ct dark:text-dark-text-ct",
+                    "outline-hidden ring-0",
+                ],
+            },
+            false: {
+                container: [
+                    "text-light-text/70 dark:text-dark-text/70 hover:text-light-text dark:hover:text-dark-text",
+                    "hover:ring-2 ring-offset-1",
+                    "ring-light-bg-ct/50 dark:ring-dark-bg-ct/50",
+                    "ring-offset-light-bg-hg/80 dark:ring-offset-dark-bg-hg/80",
+                ],
+            },
         },
-        sm: {
-          separator: 'h-7 w-7',
-        },
-        md: {
-          separator: 'h-8 w-8',
-        },
-      },
     },
-    defaultVariants: {
-      size: 'initial',
-    },
-  },
-  {
-    responsiveVariants: ['sm', 'md'],
-  },
-);
+});
 
-export function BreadcrumbItem({
-  Icon,
-  text,
-  selected,
-  link = '#',
-  target = '_self',
-}: BreadcrumbItemProps) {
-  const navigatorButtomStyle = Navigator.style.buttom({ selected });
+export function Item({ text, Icon, href = "#", target = "_self" }: ItemProps) {
+    const pathname = usePathname();
+    const active = pathname === href;
 
-  const style = tvStyle({ size: { sm: 'sm', md: 'md' } });
+    const style = tvStyle({ active });
 
-  return (
-    <Link
-      className={navigatorButtomStyle.container({
-        className: style.container(),
-      })}
-      href={link}
-      target={target}
-    >
-      <Icon className={navigatorButtomStyle.icon()} />
-      <span className={navigatorButtomStyle.text()}>{text}</span>
-    </Link>
-  );
+    return (
+        <Link className={style.container()} href={href} target={target}>
+            <Icon className={style.icon()} />
+            <span className={style.text()}>{text}</span>
+        </Link>
+    );
 }

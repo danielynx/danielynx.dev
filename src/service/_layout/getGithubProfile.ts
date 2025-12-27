@@ -1,13 +1,13 @@
-import { Profile } from '@/type/_layout/Profile';
+import type { Profile } from "@/type/_layout/Profile";
 
 async function getGithubProfile(user: string): Promise<Profile> {
-  const response = await fetch(`https://api.github.com/users/${user}`);
+    const response = await fetch(`https://api.github.com/users/${user}`);
 
-  if (!response.ok) {
-    throw new Error('User not found in Github');
-  }
+    if (!response.ok) {
+        throw new Error("User not found in Github");
+    }
 
-  return response.json();
+    return response.json();
 }
 
 export { getGithubProfile };

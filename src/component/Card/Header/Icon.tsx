@@ -1,52 +1,23 @@
-import { IconType } from 'react-icons';
-import { tv } from 'tailwind-variants';
+import type { IconType } from "react-icons";
+import { tv } from "tailwind-variants";
 
-export interface HeaderIconProps {
-  Icon: IconType;
+export interface IconProps {
+    Icon: IconType;
 }
 
-const tvStyle = tv(
-  {
+const tvStyle = tv({
     slots: {
-      container: '',
-      icon: '',
+        container: ["px-1.5 xs:px-2 md:px-3"],
+        icon: ["h-8 xs:h-10 sm:h-12 md:h-14", "w-8 xs:w-10 sm:w-12 md:w-14"],
     },
-    variants: {
-      size: {
-        initial: {
-          container: 'px-1.5',
-          icon: 'h-8 w-8',
-        },
-        xs: {
-          container: 'px-2',
-          icon: 'h-10 w-10',
-        },
-        sm: {
-          icon: 'h-12 w-12',
-        },
-        md: {
-          container: 'px-3',
-          icon: 'h-14 w-14',
-        },
-      },
-    },
-    defaultVariants: {
-      size: 'initial',
-    },
-  },
-  {
-    responsiveVariants: ['xs', 'sm', 'md'],
-  },
-);
+});
 
-export function HeaderIcon({ Icon }: HeaderIconProps) {
-  const style = tvStyle({
-    size: { xs: 'xs', sm: 'sm', md: 'md' },
-  });
+export function Icon({ Icon }: IconProps) {
+    const style = tvStyle();
 
-  return (
-    <div className={style.container()}>
-      <Icon className={style.icon()} />
-    </div>
-  );
+    return (
+        <div className={style.container()}>
+            <Icon className={style.icon()} />
+        </div>
+    );
 }
