@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { IconType } from "react-icons";
 import { tv } from "tailwind-variants";
 
-export interface ItemRootProps {
+export interface ContactProps {
     Icon: IconType;
     iconColor: string;
     url: string;
@@ -16,7 +16,7 @@ const tvStyle = tv({
     },
 });
 
-export function Item({ Icon, iconColor, url, text }: ItemRootProps) {
+export function Contact({ Icon, iconColor, url, text }: ContactProps) {
     const style = tvStyle();
 
     return (

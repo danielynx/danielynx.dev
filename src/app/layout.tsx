@@ -2,10 +2,10 @@ import "@/app/globals.css";
 
 import type { ReactNode } from "react";
 import { tv } from "tailwind-variants";
-import { ExpandedProfile } from "@/app/_layout/ExpandedProfile";
 import { Font } from "@/app/_layout/Font";
 import { Footer } from "@/app/_layout/Footer";
-import { StickyProfile } from "@/app/_layout/StickyProfile";
+import { Sidebar } from "@/app/_layout/Sidebar";
+import { StickyHeader } from "@/app/_layout/StickyHeader";
 import { ColorSchemeProvider } from "@/context/_layout/ColorSchemeProvider";
 import { ProfileIntersectionProvider } from "@/context/_layout/ProfileIntersectionProvider";
 
@@ -28,10 +28,8 @@ const tvStyle = tv({
             ],
         },
         {
-            slots: ["profile", "sidebar"],
-            class: [
-                "w-full sm:w-50/100 md:w-40/100 lg:w-32/100 xl:w-28/100 2xl:w-26/100",
-            ],
+            slots: ["stickyHeader", "sidebar"],
+            class: ["w-full lg:w-32/100 xl:w-28/100 2xl:w-26/100"],
         },
         {
             slots: ["navigation", "content"],
@@ -71,7 +69,7 @@ const tvStyle = tv({
             "flex flex-col lg:flex-row",
             "items-center lg:items-start",
         ],
-        profile: [
+        stickyHeader: [
             "flex flex-row justify-center",
             "items-center lg:justify-end",
             "h-full",
@@ -80,12 +78,15 @@ const tvStyle = tv({
             "flex flex-row",
             "justify-center items-end lg:justify-start",
             "h-full",
+            "border-t lg:border-0 border-light-border dark:border-dark-border",
         ],
         sidebar: [
             "flex flex-col",
             "justify-start items-center",
-            "sm:w-50/100 md:w-40/100",
-            "mr-0 lg:mr-2 mb-4 lg:mb-0",
+            "hidden lg:block",
+            "p-8",
+            "mr-2",
+            "mb-0",
             "bg-light-bg-hg dark:bg-dark-bg-hg",
             "border dark:border-0 border-light-border",
             "rounded-xl shadow-xl",
@@ -120,8 +121,8 @@ export default function RootLayout({
                         <div className={style.viewport()}>
                             <header className={style.header()}>
                                 <div className={style.headerContainer()}>
-                                    <div className={style.profile()}>
-                                        <StickyProfile />
+                                    <div className={style.stickyHeader()}>
+                                        <StickyHeader />
                                     </div>
                                     <div className={style.navigation()}>
                                         {navigation}
@@ -131,7 +132,7 @@ export default function RootLayout({
                             <div className={style.middle()}>
                                 <div className={style.middleContainer()}>
                                     <aside className={style.sidebar()}>
-                                        <ExpandedProfile />
+                                        <Sidebar />
                                     </aside>
                                     <main className={style.content()}>
                                         {children}
