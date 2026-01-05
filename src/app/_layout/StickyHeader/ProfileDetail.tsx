@@ -3,6 +3,7 @@ import { IoMdMore } from "react-icons/io";
 import { tv } from "tailwind-variants";
 import { Company } from "@/app/_layout/Profile/Company";
 import { Contacts } from "@/app/_layout/Profile/Contacts";
+import { Description } from "@/app/_layout/Profile/Description";
 import { Location } from "@/app/_layout/Profile/Location";
 
 const tvStyle = tv({
@@ -45,6 +46,7 @@ export function ProfileDetail() {
 
             <PopoverPanel transition className={style.panel()}>
                 <div className={style.inner()}>
+                    <Description />
                     <Company />
                     <Location />
                     <hr className={style.divider()} />

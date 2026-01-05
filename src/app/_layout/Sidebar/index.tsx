@@ -1,6 +1,7 @@
 import { tv } from "tailwind-variants";
 import { Company } from "@/app/_layout/Profile/Company";
 import { Contacts } from "@/app/_layout/Profile/Contacts";
+import { Description } from "@/app/_layout/Profile/Description";
 import { Location } from "@/app/_layout/Profile/Location";
 import { Avatar } from "@/app/_layout/Sidebar/Avatar";
 import { ProfileGuard } from "@/app/_layout/Sidebar/ProfileGuard";
@@ -25,6 +26,7 @@ export function Sidebar() {
                 <Avatar />
                 <div className={style.name()} />
             </ProfileGuard>
+            <Description />
             <Company />
             <Location />
             <hr className={style.divider()} />
