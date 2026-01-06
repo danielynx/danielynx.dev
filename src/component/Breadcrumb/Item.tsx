@@ -28,19 +28,12 @@ const tvStyle = tv({
     variants: {
         active: {
             true: {
-                container: [
-                    "shadow-sm",
-                    "bg-light-bg-ct dark:bg-dark-bg-ct",
-                    "text-light-text-ct dark:text-dark-text-ct",
-                    "outline-hidden ring-0",
-                ],
+                container: ["bg-secondary", "text-secondary-content"],
             },
             false: {
                 container: [
-                    "text-light-text/70 dark:text-dark-text/70 hover:text-light-text dark:hover:text-dark-text",
-                    "hover:ring-2 ring-offset-1",
-                    "ring-light-bg-ct/50 dark:ring-dark-bg-ct/50",
-                    "ring-offset-light-bg-hg/80 dark:ring-offset-dark-bg-hg/80",
+                    "bg-primary",
+                    "text-primary-content/80 hover:text-primary-content",
                 ],
             },
         },

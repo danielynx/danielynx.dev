@@ -14,32 +14,22 @@ export function Repositories() {
                     link="https://github.com/danielynx/rocketseat-gobarber-api"
                     target="_blank"
                 >
-                    <Card.Header>
-                        <Card.Header.Icon Icon={AiOutlineDatabase} />
-                        <Card.Header.Text>Headless</Card.Header.Text>
-                    </Card.Header>
-                    <Card.Footer />
+                    <Card.Icon Icon={AiOutlineDatabase} />
+                    <Card.Text>Headless</Card.Text>
                 </Card>
                 <Card
-                    lightBgColor="bg-light-bg-ct"
                     link="https://github.com/danielynx/rocketseat-gobarber-web"
                     target="_blank"
                 >
-                    <Card.Header>
-                        <Card.Header.Icon Icon={PiDesktopTowerLight} />
-                        <Card.Header.Text>Web</Card.Header.Text>
-                    </Card.Header>
-                    <Card.Footer />
+                    <Card.Icon Icon={PiDesktopTowerLight} />
+                    <Card.Text>Web</Card.Text>
                 </Card>
                 <Card
                     link="https://github.com/danielynx/rocketseat-gobarber-mobile"
                     target="_blank"
                 >
-                    <Card.Header>
-                        <Card.Header.Icon Icon={CiMobile3} />
-                        <Card.Header.Text>Mobile</Card.Header.Text>
-                    </Card.Header>
-                    <Card.Footer />
+                    <Card.Icon Icon={CiMobile3} />
+                    <Card.Text>Mobile</Card.Text>
                 </Card>
             </div>
         </>

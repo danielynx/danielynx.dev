@@ -25,18 +25,14 @@ const tvStyle = tv({
             "relative inline-flex items-center",
             "h-5 lg:h-6",
             "w-10 lg:w-12",
-            "bg-light-bg-ct dark:bg-dark-bg-ct",
-            "hover:ring-3 ring-offset-2",
-            "ring-light-bg-ct/50 dark:ring-dark-bg-ct/50",
-            "ring-offset-light-bg-hg dark:ring-offset-dark-bg-hg",
+            "bg-primary",
             "rounded-full transition-colors",
         ],
         darkIcon: [
             "translate-x-6 lg:translate-x-7",
-            "bg-dark-bg-ct",
-            "text-dark-text-ct",
+            "bg-primary-content text-primary",
         ],
-        lightIcon: ["translate-x-1", "bg-light-bg-ct", "text-light-text-ct"],
+        lightIcon: ["translate-x-1", "bg-primary text-primary-content"],
     },
 });
 
