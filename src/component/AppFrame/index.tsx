@@ -2,10 +2,7 @@ import type { PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
 
 const tvStyle = tv({
-    base: [
-        "border-4 border-light-border-600 dark:border-dark-border",
-        "rounded-sm",
-    ],
+    base: ["border-4 border-outline", "rounded-sm"],
 });
 
 export function AppFrame({ children }: PropsWithChildren) {

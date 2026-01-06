@@ -4,11 +4,7 @@ import { NavigationBar } from "@/component/BrowserFrame/NavigationBar";
 import { TitleBar } from "@/component/BrowserFrame/TitleBar";
 
 const tvStyle = tv({
-    base: [
-        "flex flex-col",
-        "border-4 border-light-border dark:border-dark-border",
-        "rounded-sm",
-    ],
+    base: ["flex flex-col", "border-4 border-outline", "rounded-sm"],
 });
 
 function BrowserFrame({ children }: PropsWithChildren) {

@@ -1,8 +1,6 @@
 /* biome-ignore-start lint/suspicious/noUnknownAtRules: tailwind require */
 @import "tailwindcss";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme {
     --border-width-*: initial;
     --border-width-0: 0;
@@ -12,7 +10,9 @@
     --border-width-4: 0.25rem;
     --border-width-8: 0.5rem;
     --border-width: 0.0625rem;
+}
 
+@theme {
     --ring-width-*: initial;
     --ring-width-0: 0;
     --ring-width-1: 0.0625rem;
@@ -29,70 +29,61 @@
     --ring-offset-width-4: 0.25rem;
     --ring-offset-width-8: 0.5rem;
     --ring-offset-width: 0.0625rem;
+}
 
+@theme {
     --breakpoint-xs: 360px;
     --breakpoint-2xs: 500px;
+}
 
+@theme {
     --font-sans: var(--font-sans);
     --font-serif: var(--font-serif);
     --font-mono: var(--font-mono);
+}
 
-    --color-brand-protonmail: #6d4aff;
-    --color-brand-github: #181717;
-    --color-brand-stackoverflow: #f58025;
+@theme {
+    --color-primary: #20ab6c;
+    --color-primary-content: #d3f7e7;
+    --color-primary-dark: #188051;
+    --color-primary-light: #28d687;
 
-    --color-brand-linkedin-400: #008cc9;
-    --color-brand-linkedin: #0077b5;
+    --color-secondary: #2076ab;
+    --color-secondary-content: #d3e9f7;
+    --color-secondary-dark: #185880;
+    --color-secondary-light: #2894d6;
 
-    --color-light-bg: #f3f4f6;
+    --color-background: #f0f0f0;
+    --color-surface: #fbfbfb;
+    --color-surface-elevated: #ffffff;
+    --color-outline: #dfdfdf;
 
-    --color-light-bg-hg: #f3f4f6;
+    --color-copy: #262626;
+    --color-muted: #666666;
+    --color-subtle: #8c8c8c;
 
-    --color-light-bg-ct: #f97316;
+    --color-success: #20ab20;
+    --color-warning: #abab20;
+    --color-error: #ab2020;
 
-    --color-light-bg-brand-rocketseat: #6c4fbb;
-    --color-light-bg-brand-mongodb: #47a248;
-    --color-light-bg-brand-freecodecamp: #0a0a23;
-    --color-light-bg-brand-symfony: #1ab4fc;
+    --color-success-content: #d3f7d3;
+    --color-warning-content: #000000;
+    --color-error-content: #f7d3d3;
+}
 
-    --color-light-bg-project-myportfolio: #3b82f6;
-    --color-light-bg-project-gobarber: #ff9000;
+@custom-variant dark (&:where(.dark, .dark *));
 
-    --color-light-text: #1f2937;
+@layer theme {
+    :where(.dark, .dark *) {
+        --color-background: #1a1a1a;
+        --color-surface: #262626;
+        --color-surface-elevated: #2c2b2e;
+        --color-outline: #404040;
 
-    --color-light-text-ct: #f3f4f6;
-
-    --color-light-text-brand-protonmail: #8a90c7;
-    --color-light-text-brand-github: #181717;
-    --color-light-text-brand-stackoverflow: #f58025;
-    --color-light-text-brand-linkedin: #0077b5;
-
-    --color-light-border-600: #94a3b8;
-    --color-light-border: #cbd5e1;
-
-    --color-dark-bg: #155e75;
-
-    --color-dark-bg-hg: #164e63;
-
-    --color-dark-bg-ct: #f3f4f6;
-
-    --color-dark-text: #e5e7eb;
-
-    --color-dark-text-ct: #1f2937;
-
-    --color-dark-text-brand-protonmail: #8a90c7;
-    --color-dark-text-brand-github: #181717;
-    --color-dark-text-brand-stackoverflow: #f58025;
-    --color-dark-text-brand-linkedin: #008cc9;
-    --color-dark-text-brand-rocketseat: #6c4fbb;
-    --color-dark-text-brand-mongodb: #47a248;
-    --color-dark-text-brand-freecodecamp: #0a0a23;
-    --color-dark-text-brand-symfony: #1ab4fc;
-
-    --color-dark-text-project-myportfolio: #3b82f6;
-    --color-dark-text-project-gobarber: #ff9000;
-
-    --color-dark-border: #fff;
+        --color-copy: #fbfbfb;
+        --color-muted: #d9d9d9;
+        --color-subtle: #a6a6a6;
+    }
 }
 
 /*

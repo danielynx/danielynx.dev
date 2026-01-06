@@ -11,10 +11,7 @@ const tvStyle = tv({
             "text-sm lg:text-base",
             "leading-relaxed lg:leading-loose",
         ],
-        name: [
-            "text-purple-700 dark:text-orange-300 font-extrabold",
-            "text-2xl lg:text-3xl",
-        ],
+        name: ["text-secondary-light font-extrabold", "text-2xl lg:text-3xl"],
         author: ["font-normal not-italic", "text-xs lg:text-sm"],
         citations: ["flex flex-col", "items-center", "gap-5 lg:gap-6"],
         citation: [

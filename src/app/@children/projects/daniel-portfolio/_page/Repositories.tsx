@@ -21,15 +21,11 @@ export function Repositories() {
             <SessionHeader Icon={SiGithub} title="GitHub Repository" />
             <div className={style.container()}>
                 <Card
-                    lightBgColor="bg-light-bg-ct"
                     link="https://github.com/danielynx/danielynx.dev"
                     target="_blank"
                 >
-                    <Card.Header>
-                        <Card.Header.Icon Icon={PiDesktopTowerLight} />
-                        <Card.Header.Text>Web</Card.Header.Text>
-                    </Card.Header>
-                    <Card.Footer />
+                    <Card.Icon Icon={PiDesktopTowerLight} />
+                    <Card.Text>Web</Card.Text>
                 </Card>
             </div>
         </>
