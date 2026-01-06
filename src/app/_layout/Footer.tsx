@@ -10,7 +10,7 @@ const tvStyle = tv({
             "text-xs sm:text-sm",
         ],
         username:
-            "font-bold underline decoration-indigo-500 decoration-2 underline-offset-2",
+            "font-bold underline decoration-secondary-light decoration-2 underline-offset-2",
         technology: "font-bold",
     },
 });

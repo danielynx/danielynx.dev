@@ -16,11 +16,7 @@ const tvStyle = tv({
             "py-1 sm:py-1.5",
         ],
         icon: ["h-4 sm:h-5", "w-4 sm:w-5"],
-        title: [
-            "text-light-text dark:text-dark-text",
-            "text-sm sm:text-base",
-            "ml-1 sm:ml-2",
-        ],
+        title: ["text-sm sm:text-base", "ml-1 sm:ml-2"],
     },
 });
 

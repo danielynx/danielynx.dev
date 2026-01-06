@@ -13,7 +13,6 @@ const tvStyle = tv({
         panel: [
             "absolute left-2 lg:left-4 -translate-x-10",
             "flex w-screen max-w-max",
-            "bg-transparent",
             "transition",
             "z-10 mt-3 px-4",
             "data-closed:translate-y-1 data-closed:opacity-0",
@@ -24,14 +23,11 @@ const tvStyle = tv({
             "flex-auto overflow-hidden",
             "w-screen max-w-md",
             "p-4",
-            "bg-light-bg-hg dark:bg-dark-bg-hg",
-            "border dark:border-0 border-light-border",
-            "rounded-xl shadow-xl",
+            "bg-surface-elevated",
+            "border border-outline",
+            "rounded-xl shadow-lg",
         ],
-        divider: [
-            "mt-3 mb-3",
-            "border-t border-light-border dark:border-dark-border",
-        ],
+        divider: ["mt-3 mb-3", "border-t border-outline"],
     },
 });
 

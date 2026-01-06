@@ -6,7 +6,7 @@ const tvStyle = tv({
         container: [
             "flex flex-col",
             "items-center justify-center",
-            "text-dark-text-ct dark:text-light-text-ct",
+            "grow h-full",
         ],
         icon: [
             "mt-2 sm:mt-8 lg:mt-20",
@@ -30,12 +30,10 @@ export default function NotFound() {
     const style = tvStyle();
 
     return (
-        <div>
-            <div className={style.container()}>
-                <TbHandStop className={style.icon()} />
-                <p className={style.ask()}>Where did you want to go? 🤔</p>
-                <p className={style.message()}>There {`isn't`} this page.</p>
-            </div>
+        <div className={style.container()}>
+            <TbHandStop className={style.icon()} />
+            <p className={style.ask()}>Where did you want to go? 🤔</p>
+            <p className={style.message()}>There {`isn't`} this page.</p>
         </div>
     );
 }

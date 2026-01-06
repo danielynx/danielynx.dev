@@ -15,21 +15,16 @@ export function MongoDb() {
 
     return (
         <Card
-            lightBgColor="bg-light-bg-brand-mongodb"
-            darkTextColor="dark:text-dark-text-brand-mongodb"
             link="https://university.mongodb.com/course_completion/2afe5b18-37c2-4a62-8a32-e1e27256a5bf?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
             target="_blank"
         >
-            <Card.Header>
-                <Card.Header.Icon Icon={SiMongodb} />
-                <Card.Header.Text>
-                    <div className={style.container()}>
-                        <span className={style.title()}>MongoDB</span>
-                        <span className={style.subtitle()}>University</span>
-                    </div>
-                </Card.Header.Text>
-            </Card.Header>
-            <Card.Footer />
+            <Card.Icon Icon={SiMongodb} />
+            <Card.Text>
+                <div className={style.container()}>
+                    <span className={style.title()}>MongoDB</span>
+                    <span className={style.subtitle()}>University</span>
+                </div>
+            </Card.Text>
         </Card>
     );
 }

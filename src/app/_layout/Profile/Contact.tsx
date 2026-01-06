@@ -4,7 +4,6 @@ import { tv } from "tailwind-variants";
 
 export interface ContactProps {
     Icon: IconType;
-    iconColor: string;
     url: string;
     text: string;
 }
@@ -16,12 +15,12 @@ const tvStyle = tv({
     },
 });
 
-export function Contact({ Icon, iconColor, url, text }: ContactProps) {
+export function Contact({ Icon, url, text }: ContactProps) {
     const style = tvStyle();
 
     return (
         <div className={style.container()}>
-            <Icon className={style.icon({ className: iconColor })} />
+            <Icon className={style.icon()} />
             <Link href={url} target={"_blank"}>
                 {text}
             </Link>

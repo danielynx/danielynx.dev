@@ -1,8 +1,8 @@
 import Link from "next/link";
 import type { PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
-import { Footer } from "@/component/Card/Footer";
-import { Header } from "@/component/Card/Header";
+import { Icon } from "@/component/Card/Icon";
+import { Text } from "@/component/Card/Text";
 
 export interface CardProps {
     link: string;
@@ -12,40 +12,43 @@ export interface CardProps {
 }
 
 const tvStyle = tv({
-    base: [
-        "flex flex-col justify-center",
-        "rounded-md overflow-hidden h-40",
-        "dark:bg-dark-bg-ct",
-        "hover:ring-4 ring-offset-4",
-        "ring-light-bg-ct/50 dark:ring-dark-bg-ct/50",
-        "ring-offset-light-bg-hg dark:ring-offset-dark-bg-hg",
-    ],
+    slots: {
+        outer: [
+            "h-38",
+            "overflow-hidden",
+            "rounded-3xl",
+            "border-2 border-outline",
+            "bg-primary",
+        ],
+        inner: [
+            "flex flex-row",
+            "justify-start items-center",
+            "w-full h-full",
+            "ml-3",
+            "p-3",
+            "rounded-3xl",
+            "bg-surface",
+        ],
+    },
 });
 
 function Card({
     children,
     link,
     target = "_self",
-    lightBgColor = "bg-light-bg-ct",
-    darkTextColor = "dark:text-dark-text-ct",
 }: PropsWithChildren<CardProps>) {
-    const style = tvStyle({
-        className: [
-            lightBgColor,
-            "dark:bg-dark-bg-ct",
-            "text-light-text-ct",
-            darkTextColor,
-        ],
-    });
+    const style = tvStyle();
 
     return (
         <Link target={target} href={link}>
-            <div className={style}>{children}</div>
+            <div className={style.outer()}>
+                <div className={style.inner()}>{children}</div>
+            </div>
         </Link>
     );
 }
 
-Card.Header = Header;
-Card.Footer = Footer;
+Card.Icon = Icon;
+Card.Text = Text;
 
 export { Card };
