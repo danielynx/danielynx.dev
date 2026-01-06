@@ -2,36 +2,6 @@
 @import "tailwindcss";
 
 @theme {
-    --border-width-*: initial;
-    --border-width-0: 0;
-    --border-width-1: 0.0625rem;
-    --border-width-2: 0.125rem;
-    --border-width-3: 0.1875rem;
-    --border-width-4: 0.25rem;
-    --border-width-8: 0.5rem;
-    --border-width: 0.0625rem;
-}
-
-@theme {
-    --ring-width-*: initial;
-    --ring-width-0: 0;
-    --ring-width-1: 0.0625rem;
-    --ring-width-2: 0.125rem;
-    --ring-width-3: 0.1875rem;
-    --ring-width-4: 0.25rem;
-    --ring-width-8: 0.5rem;
-    --ring-width: 0.0625rem;
-
-    --ring-offset-width-*: initial;
-    --ring-offset-width-0: 0;
-    --ring-offset-width-1: 0.0625rem;
-    --ring-offset-width-2: 0.125rem;
-    --ring-offset-width-4: 0.25rem;
-    --ring-offset-width-8: 0.5rem;
-    --ring-offset-width: 0.0625rem;
-}
-
-@theme {
     --breakpoint-xs: 360px;
     --breakpoint-2xs: 500px;
 }
