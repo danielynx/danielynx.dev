@@ -5,6 +5,7 @@ import { Company } from "@/app/_layout/Profile/Company";
 import { Contacts } from "@/app/_layout/Profile/Contacts";
 import { Description } from "@/app/_layout/Profile/Description";
 import { Location } from "@/app/_layout/Profile/Location";
+import { HighlightFrame } from "@/component/HighlightFrame";
 
 const tvStyle = tv({
     slots: {
@@ -42,11 +43,13 @@ export function ProfileDetail() {
 
             <PopoverPanel transition className={style.panel()}>
                 <div className={style.inner()}>
-                    <Description />
-                    <Company />
-                    <Location />
-                    <hr className={style.divider()} />
-                    <Contacts />
+                    <HighlightFrame>
+                        <Description />
+                        <Company />
+                        <Location />
+                        <hr className={style.divider()} />
+                        <Contacts />
+                    </HighlightFrame>
                 </div>
             </PopoverPanel>
         </Popover>

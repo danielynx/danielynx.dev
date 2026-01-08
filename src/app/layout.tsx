@@ -6,6 +6,7 @@ import { Font } from "@/app/_layout/Font";
 import { Footer } from "@/app/_layout/Footer";
 import { Sidebar } from "@/app/_layout/Sidebar";
 import { StickyHeader } from "@/app/_layout/StickyHeader";
+import { HighlightFrame } from "@/component/HighlightFrame";
 import { ColorSchemeProvider } from "@/context/_layout/ColorSchemeProvider";
 import { ProfileIntersectionProvider } from "@/context/_layout/ProfileIntersectionProvider";
 
@@ -85,7 +86,7 @@ const tvStyle = tv({
             "flex flex-col",
             "justify-start items-center",
             "hidden lg:block",
-            "p-8",
+            "p-4",
             "mr-2",
             "mb-0",
             "bg-surface",
@@ -133,7 +134,9 @@ export default function RootLayout({
                             <div className={style.middle()}>
                                 <div className={style.middleContainer()}>
                                     <aside className={style.sidebar()}>
-                                        <Sidebar />
+                                        <HighlightFrame>
+                                            <Sidebar />
+                                        </HighlightFrame>
                                     </aside>
                                     <main className={style.content()}>
                                         {children}
