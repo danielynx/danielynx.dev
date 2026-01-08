@@ -8,7 +8,7 @@ import { ProfileGuard } from "@/app/_layout/Sidebar/ProfileGuard";
 
 const tvStyle = tv({
     slots: {
-        container: "flex flex-col",
+        container: ["flex flex-col"],
         name: "mt-5 text-xl font-serif font-bold tracking-wide",
         divider: ["mt-3 mb-3", "border-t border-outline"],
     },

@@ -4,7 +4,7 @@ import { Card } from "@/component/Card";
 
 export function GoBarber() {
     return (
-        <Card link="projects/go-barber">
+        <Card href="projects/go-barber">
             <Card.Icon Icon={BsScissors} />
             <Card.Text>
                 <div className="font-bold">GoBarber</div>

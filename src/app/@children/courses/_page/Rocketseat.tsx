@@ -3,7 +3,7 @@ import { Card } from "@/component/Card";
 
 export function Rocketseat() {
     return (
-        <Card link="courses/rocketseat">
+        <Card href="courses/rocketseat">
             <Card.Icon Icon={MdRocketLaunch} />
             <Card.Text>
                 <div className="font-bold">Rocketseat</div>

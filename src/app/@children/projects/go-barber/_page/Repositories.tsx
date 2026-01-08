@@ -11,21 +11,21 @@ export function Repositories() {
             <SessionHeader Icon={SiGithub} title="GitHub Repositories" />
             <div className="grid grid-cols-1 gap-3 md:gap-4 2xl:gap-5 md:grid-cols-2 lg:grid-cols-3">
                 <Card
-                    link="https://github.com/danielynx/rocketseat-gobarber-api"
+                    href="https://github.com/danielynx/rocketseat-gobarber-api"
                     target="_blank"
                 >
                     <Card.Icon Icon={AiOutlineDatabase} />
                     <Card.Text>Headless</Card.Text>
                 </Card>
                 <Card
-                    link="https://github.com/danielynx/rocketseat-gobarber-web"
+                    href="https://github.com/danielynx/rocketseat-gobarber-web"
                     target="_blank"
                 >
                     <Card.Icon Icon={PiDesktopTowerLight} />
                     <Card.Text>Web</Card.Text>
                 </Card>
                 <Card
-                    link="https://github.com/danielynx/rocketseat-gobarber-mobile"
+                    href="https://github.com/danielynx/rocketseat-gobarber-mobile"
                     target="_blank"
                 >
                     <Card.Icon Icon={CiMobile3} />
