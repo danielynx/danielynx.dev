@@ -12,21 +12,15 @@ export interface CardProps {
 
 const tvStyle = tv({
     slots: {
-        outer: [
-            "h-38",
-            "overflow-hidden",
-            "rounded-3xl",
-            "border-2 border-outline",
-            "bg-primary",
-        ],
+        outer: ["h-32", "overflow-hidden", "rounded-3xl", "bg-primary"],
+        innerBackground: ["w-full h-full", "ml-3", "rounded-3xl", "bg-surface"],
         inner: [
             "flex flex-row",
             "justify-start items-center",
             "w-full h-full",
-            "ml-3",
             "p-3",
             "rounded-3xl",
-            "bg-surface",
+            "bg-primary/20",
         ],
     },
 });
@@ -51,7 +45,9 @@ function Card({
         >
             <Link target={target} href={href}>
                 <div className={style.outer()}>
-                    <div className={style.inner()}>{children}</div>
+                    <div className={style.innerBackground()}>
+                        <div className={style.inner()}>{children}</div>
+                    </div>
                 </div>
             </Link>
         </motion.button>
