@@ -12,9 +12,8 @@ const tvStyle = tv({
         container: ["relative"],
         buttonIcon: ["h-4 xs:h-5 sm:h-6 md:h-7", "w-4 xs:w-5 sm:w-6 md:w-7"],
         panel: [
-            "absolute left-2 lg:left-4 -translate-x-10",
-            "flex w-screen max-w-max",
-            "transition",
+            "absolute -translate-x-10",
+            "w-80 lg:w-95",
             "z-10 mt-3 px-4",
             "data-closed:translate-y-1 data-closed:opacity-0",
             "data-enter:duration-200 data-enter:ease-out",
@@ -22,7 +21,6 @@ const tvStyle = tv({
         ],
         inner: [
             "flex-auto overflow-hidden",
-            "w-screen max-w-md",
             "p-4",
             "bg-surface-elevated",
             "border border-outline",
