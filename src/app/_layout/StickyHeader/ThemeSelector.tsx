@@ -13,6 +13,7 @@ import { ThemeEnum } from "@/type/ThemeEnum";
 const tvStyle = tv({
     slots: {
         container: ["relative"],
+        openButton: ["focus:outline-none focus:ring-0"],
         openButtonIcon: [
             "h-4 xs:h-5 sm:h-6 md:h-7",
             "w-4 xs:w-5 sm:w-6 md:w-7",
@@ -59,7 +60,10 @@ export function ThemeSelector() {
 
     return (
         <Popover className={style.container()}>
-            <PopoverButton title="Select the theme">
+            <PopoverButton
+                title="Select the theme"
+                className={style.openButton()}
+            >
                 {theme === ThemeEnum.LIGHT ? (
                     <MdLightMode className={style.openButtonIcon()} />
                 ) : theme === ThemeEnum.DARK ? (
