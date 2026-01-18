@@ -1,5 +1,6 @@
 import "@/app/globals.css";
 
+import { ThemeProvider } from "next-themes";
 import type { ReactNode } from "react";
 import { tv } from "tailwind-variants";
 import { Font } from "@/app/_layout/Font";
@@ -7,7 +8,6 @@ import { Footer } from "@/app/_layout/Footer";
 import { Sidebar } from "@/app/_layout/Sidebar";
 import { StickyHeader } from "@/app/_layout/StickyHeader";
 import { HighlightFrame } from "@/component/HighlightFrame";
-import { ColorSchemeProvider } from "@/context/_layout/ColorSchemeProvider";
 import { ProfileIntersectionProvider } from "@/context/_layout/ProfileIntersectionProvider";
 
 export const metadata = {
@@ -116,9 +116,9 @@ export default function RootLayout({
     const style = tvStyle();
 
     return (
-        <html lang="en" className={Font.variable}>
+        <html lang="en" className={Font.variable} suppressHydrationWarning>
             <body className={style.body()}>
-                <ColorSchemeProvider>
+                <ThemeProvider attribute="class">
                     <ProfileIntersectionProvider>
                         <div className={style.viewport()}>
                             <header className={style.header()}>
@@ -148,7 +148,7 @@ export default function RootLayout({
                             </footer>
                         </div>
                     </ProfileIntersectionProvider>
-                </ColorSchemeProvider>
+                </ThemeProvider>
             </body>
         </html>
     );
