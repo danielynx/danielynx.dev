@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { tv } from "tailwind-variants";
-import { AppColorSchema } from "@/app/_layout/StickyHeader/ColorSchema";
 import { ProfileDetail } from "@/app/_layout/StickyHeader/ProfileDetail";
 import { ProfileGuard } from "@/app/_layout/StickyHeader/ProfileGuard";
+import { ThemeSelector } from "@/app/_layout/StickyHeader/ThemeSelector";
 
 const tvStyle = tv({
     slots: {
@@ -33,7 +33,7 @@ export function StickyHeader() {
                 </div>
             </ProfileGuard>
 
-            <AppColorSchema />
+            <ThemeSelector />
         </div>
     );
 }

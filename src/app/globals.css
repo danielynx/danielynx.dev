@@ -44,7 +44,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer theme {
-    :where(.dark, .dark *) {
+    @variant dark {
         --color-background: #1a1a1a;
         --color-surface: #262626;
         --color-surface-elevated: #2c2b2e;
