@@ -21,7 +21,7 @@ export function Repositories() {
             <SessionHeader Icon={SiGithub} title="GitHub Repository" />
             <div className={style.container()}>
                 <Card
-                    link="https://github.com/danielynx/danielynx.dev"
+                    href="https://github.com/danielynx/danielynx.dev"
                     target="_blank"
                 >
                     <Card.Icon Icon={PiDesktopTowerLight} />

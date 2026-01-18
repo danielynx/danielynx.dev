@@ -1,5 +1,6 @@
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import * as motion from "motion/react-client";
+import { usePathname, useRouter } from "next/navigation";
+import type { MouseEvent } from "react";
 import type { IconType } from "react-icons";
 import { tv } from "tailwind-variants";
 
@@ -31,25 +32,46 @@ const tvStyle = tv({
                 container: ["bg-secondary", "text-secondary-content"],
             },
             false: {
-                container: [
-                    "bg-primary",
-                    "text-primary-content/80 hover:text-primary-content",
-                ],
+                container: ["bg-primary", "text-primary-content"],
             },
         },
     },
 });
 
 export function Item({ text, Icon, href = "#", target = "_self" }: ItemProps) {
+    const router = useRouter();
     const pathname = usePathname();
     const active = pathname === href;
 
     const style = tvStyle({ active });
 
-    return (
-        <Link className={style.container()} href={href} target={target}>
+    const handleClick = (e: MouseEvent) => {
+        e.preventDefault();
+        router.push(href);
+    };
+
+    return active ? (
+        <div className={style.container()}>
             <Icon className={style.icon()} />
             <span className={style.text()}>{text}</span>
-        </Link>
+        </div>
+    ) : (
+        <motion.a
+            className={style.container()}
+            href={href}
+            target={target}
+            onClick={handleClick}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 15,
+                mass: 0.5,
+            }}
+        >
+            <Icon className={style.icon()} />
+            <span className={style.text()}>{text}</span>
+        </motion.a>
     );
 }

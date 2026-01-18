@@ -1,3 +1,4 @@
+import * as motion from "motion/react-client";
 import Link from "next/link";
 import type { PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
@@ -5,10 +6,8 @@ import { Icon } from "@/component/Card/Icon";
 import { Text } from "@/component/Card/Text";
 
 export interface CardProps {
-    link: string;
+    href: string;
     target?: "_blank" | "_self";
-    lightBgColor?: string;
-    darkTextColor?: string;
 }
 
 const tvStyle = tv({
@@ -34,17 +33,28 @@ const tvStyle = tv({
 
 function Card({
     children,
-    link,
+    href,
     target = "_self",
 }: PropsWithChildren<CardProps>) {
     const style = tvStyle();
 
     return (
-        <Link target={target} href={link}>
-            <div className={style.outer()}>
-                <div className={style.inner()}>{children}</div>
-            </div>
-        </Link>
+        <motion.button
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 15,
+                mass: 0.5,
+            }}
+        >
+            <Link target={target} href={href}>
+                <div className={style.outer()}>
+                    <div className={style.inner()}>{children}</div>
+                </div>
+            </Link>
+        </motion.button>
     );
 }
 

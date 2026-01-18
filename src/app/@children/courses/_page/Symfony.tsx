@@ -3,7 +3,7 @@ import { Card } from "@/component/Card";
 
 export function Symfony() {
     return (
-        <Card link="https://symfonycasts.com/u/danielynx" target="_blank">
+        <Card href="https://symfonycasts.com/u/danielynx" target="_blank">
             <Card.Icon Icon={SiSymfony} />
             <Card.Text>
                 <div>

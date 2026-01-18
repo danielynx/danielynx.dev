@@ -14,7 +14,7 @@ export function DanielPortfolio() {
     const style = tvStyle();
 
     return (
-        <Card link="projects/daniel-portfolio">
+        <Card href="projects/daniel-portfolio">
             <Card.Icon Icon={ImProfile} />
             <Card.Text>
                 <div className={style.text()}>
