@@ -16,10 +16,11 @@ const tvStyle = tv({
         container: [
             "flex flew-row items-center justify-center",
             "py-1",
+            "h-4 xs:h-5 sm:h-6 md:h-7",
             "px-2 rounded-lg",
             "first:ml-0 ml-1 last:mr-0 mr-1",
         ],
-        icon: ["h-4 xs:h-5 sm:h-6 md:h-7", "w-4 xs:w-5 sm:w-6 md:w-7"],
+        icon: ["h-3 xs:h-4 sm:h-5 md:h-6", "w-3 xs:w-4 sm:w-5 md:w-6"],
         text: [
             "font-semibold font-mono",
             "pl-1 sm:pl-1.5 md:pl-2",
@@ -61,8 +62,8 @@ export function Item({ text, Icon, href = "#", target = "_self" }: ItemProps) {
             href={href}
             target={target}
             onClick={handleClick}
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 1 }}
             transition={{
                 type: "spring",
                 stiffness: 300,

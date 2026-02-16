@@ -16,7 +16,7 @@ export interface ItemProps {
 const tvStyle = tv({
     slots: {
         container: [
-            "flex flew-row",
+            "flex flex-row",
             "items-center justify-center",
             "py-1",
             "px-2 rounded-lg",
@@ -64,8 +64,8 @@ export function Item({ text, Icon, href = "#", target = "_self" }: ItemProps) {
             href={href}
             target={target}
             onClick={handleClick}
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 1 }}
             transition={{
                 type: "spring",
                 stiffness: 300,

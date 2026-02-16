@@ -9,7 +9,7 @@ const tvStyle = tv({
         "justify-center items-center",
         "px-2 sm:px-3 md:px-6",
         "p-1 sm:p-2",
-        "h-12 sm:h-14",
+        "h-8 sm:h-10",
     ],
 });
 

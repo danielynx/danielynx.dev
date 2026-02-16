@@ -18,7 +18,7 @@ const tvStyle = tv({
             "h-4 xs:h-5 sm:h-6 md:h-7",
             "w-4 xs:w-5 sm:w-6 md:w-7",
         ],
-        themeButton: ["flex flex-row"],
+        themeButton: ["flex flex-row", "w-full"],
         themeButtonIcon: [
             "h-4 xs:h-5 sm:h-6 md:h-7",
             "w-4 xs:w-5 sm:w-6 md:w-7",
@@ -79,8 +79,8 @@ export function ThemeSelector() {
                         <motion.button
                             className={style.themeButton()}
                             onClick={() => setTheme(ThemeEnum.LIGHT)}
-                            whileHover={{ scale: 1.06 }}
-                            whileTap={{ scale: 0.98 }}
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 1 }}
                             transition={{
                                 type: "spring",
                                 stiffness: 300,
@@ -95,8 +95,8 @@ export function ThemeSelector() {
                         <motion.button
                             className={style.themeButton()}
                             onClick={() => setTheme(ThemeEnum.DARK)}
-                            whileHover={{ scale: 1.06 }}
-                            whileTap={{ scale: 0.98 }}
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 1 }}
                             transition={{
                                 type: "spring",
                                 stiffness: 300,
@@ -111,8 +111,8 @@ export function ThemeSelector() {
                         <motion.button
                             className={style.themeButton()}
                             onClick={() => setTheme(ThemeEnum.SYSTEM)}
-                            whileHover={{ scale: 1.06 }}
-                            whileTap={{ scale: 0.98 }}
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 1 }}
                             transition={{
                                 type: "spring",
                                 stiffness: 300,

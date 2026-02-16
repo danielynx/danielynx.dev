@@ -12,14 +12,14 @@ export interface CardProps {
 
 const tvStyle = tv({
     slots: {
-        outer: ["h-32", "overflow-hidden", "rounded-3xl", "bg-primary"],
-        innerBackground: ["w-full h-full", "ml-3", "rounded-3xl", "bg-surface"],
+        outer: ["h-32", "overflow-hidden", "rounded-xl", "bg-primary"],
+        innerBackground: ["w-full h-full", "ml-3", "rounded-xl", "bg-surface"],
         inner: [
             "flex flex-row",
             "justify-start items-center",
             "w-full h-full",
             "p-3",
-            "rounded-3xl",
+            "rounded-xl",
             "bg-primary/20",
         ],
     },
@@ -34,8 +34,8 @@ function Card({
 
     return (
         <motion.button
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={{ scale: 1.01 }}
+            whileTap={{ scale: 1 }}
             transition={{
                 type: "spring",
                 stiffness: 300,
