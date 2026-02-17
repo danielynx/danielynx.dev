@@ -9,8 +9,7 @@ export default function Page() {
             <div className="space-y-4 leading-relaxed text-base lg:text-lg">
                 <p>
                     GoBarber is a barbershop scheduling platform composed of an
-                    API-first backend, a web application, and a mobile
-                    application.
+                    backend API, a web application, and a mobile application.
                 </p>
                 <p>
                     It was developed during the {<RocketseatLink />}

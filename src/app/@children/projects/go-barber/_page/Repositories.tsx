@@ -28,7 +28,7 @@ export function Repositories() {
                     target="_blank"
                 >
                     <Card.Icon Icon={AiOutlineDatabase} />
-                    <Card.Text>Headless</Card.Text>
+                    <Card.Text>Backend API</Card.Text>
                 </Card>
                 <Card
                     href="https://github.com/danielynx/rocketseat-gobarber-web"
