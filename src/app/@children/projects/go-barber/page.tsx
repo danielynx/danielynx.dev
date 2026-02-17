@@ -8,15 +8,14 @@ export default function Page() {
         <div>
             <div className="space-y-4 leading-relaxed text-base lg:text-lg">
                 <p>
-                    The GoBarber project is a barbershop schedule manager,
-                    compound by a headless application, a web application and a
-                    mobile application.
+                    GoBarber is a barbershop scheduling platform composed of an
+                    API-first backend, a web application, and a mobile
+                    application.
                 </p>
                 <p>
-                    It was built during the {<RocketseatLink />}
-                    {`'s`} GoStack course, which addressed the stack that is
-                    compounded by the NodeJS, ReactJS and React Native
-                    technologies.
+                    It was developed during the {<RocketseatLink />}
+                    {`'s`} GoStack course, which focuses on building full-stack
+                    applications using Node.js, React.js and React Native.
                 </p>
             </div>
             <Technologies />

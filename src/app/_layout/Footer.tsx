@@ -20,17 +20,10 @@ export function Footer() {
 
     return (
         <div className={style.footer()}>
-            <div>
-                <span className={style.username()}>@danielynx</span>
-                &nbsp; building software since 2010,
-            </div>
-            <div>
-                using &nbsp;
-                <span className={style.technology()}>PHP</span>
-                &nbsp; and &nbsp;
-                <span className={style.technology()}>JavaScript</span>
-                &nbsp; 🕵️‍♂️
-            </div>
+            <span className={style.username()}>@danielynx</span> building
+            software since 2010 with
+            <span className={style.technology()}>PHP</span>
+            and <span className={style.technology()}>JavaScript</span>🐆
         </div>
     );
 }
