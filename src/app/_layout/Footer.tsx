@@ -20,10 +20,14 @@ export function Footer() {
 
     return (
         <div className={style.footer()}>
-            <span className={style.username()}>@danielynx</span> building
-            software since 2010 with
-            <span className={style.technology()}>PHP</span>
-            and <span className={style.technology()}>JavaScript</span>🐆
+            <div>
+                <span className={style.username()}>@danielynx</span> building
+                software since 2010 with{" "}
+            </div>
+            <div>
+                <span className={style.technology()}>PHP</span> and{" "}
+                <span className={style.technology()}>JavaScript</span> 🐆
+            </div>
         </div>
     );
 }

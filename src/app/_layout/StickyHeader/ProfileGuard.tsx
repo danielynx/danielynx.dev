@@ -1,11 +1,13 @@
 "use client";
 
 import type { PropsWithChildren } from "react";
-import { useProfileIntersection } from "@/hook/_layout/useProfileIntersection";
-import { useSmallDevice } from "@/hook/_layout/useSmallDevice";
+import { useSmallDevice } from "@/hook/useSmallDevice";
+import { useProfileIntersectionStore } from "@/store/useProfileIntersectionStore";
 
 export function ProfileGuard({ children }: PropsWithChildren) {
-    const { isProfileHidden } = useProfileIntersection();
+    const isProfileHidden = useProfileIntersectionStore((state) =>
+        state.isProfileHidden(),
+    );
     const isSmallDevice = useSmallDevice();
 
     return <>{(isProfileHidden || isSmallDevice) && children}</>;
