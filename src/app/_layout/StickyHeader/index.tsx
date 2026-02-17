@@ -23,7 +23,7 @@ export function StickyHeader() {
                     <ProfileDetail />
                     <Image
                         id="image"
-                        src="/avatar.png"
+                        src="/avatar.webp"
                         alt="Avatar"
                         width="50"
                         height="50"
