@@ -12,7 +12,12 @@ export interface CardProps {
 
 const tvStyle = tv({
     slots: {
-        outer: ["h-32", "overflow-hidden", "rounded-xl", "bg-primary"],
+        outer: [
+            "h-20 2xs:h-24 sm:h-26 md:h-28 lg:h-30",
+            "overflow-hidden",
+            "rounded-xl",
+            "bg-primary",
+        ],
         innerBackground: ["w-full h-full", "ml-3", "rounded-xl", "bg-surface"],
         inner: [
             "flex flex-row",

@@ -6,7 +6,7 @@ const tvStyle = tv({
         "flex flex-row",
         "justify-start",
         "grow",
-        "text-base xs:text-lg sm:text-xl md:text-2xl",
+        "text-base sm:text-lg xl:text-xl 2xl:text-2xl",
         "font-serif",
     ],
 });

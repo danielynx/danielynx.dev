@@ -82,7 +82,7 @@ export default function Page() {
             <Timeline>
                 <Timeline.Time date="Today" />
                 <Timeline.Content
-                    title="Software Developer / Software Architect / Tech Lead"
+                    title="Software Engineer & Tech Lead"
                     subtitle="Mato Grosso State Parliament"
                 >
                     <p className={style.paragraph()}>

@@ -7,7 +7,8 @@ import { SessionHeader } from "@/component/SessionHeader";
 const tvStyle = tv({
     slots: {
         container: [
-            "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3",
+            "grid",
+            "grid-cols-1 md:grid-cols-2 2xl:grid-cols-3",
             "gap-3 md:gap-4 2xl:gap-5",
         ],
     },
