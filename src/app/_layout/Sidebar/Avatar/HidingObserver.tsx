@@ -2,17 +2,19 @@
 
 import { type PropsWithChildren, useLayoutEffect, useRef } from "react";
 
-import { useProfileIntersection } from "@/hook/useProfileIntersection";
+import { useProfileIntersectionStore } from "@/store/useProfileIntersectionStore";
 
 export function HidingObserver({ children }: PropsWithChildren) {
     const imageRef = useRef<HTMLDivElement>(null);
-    const { setProfileIntersection } = useProfileIntersection();
+    const setIntersectionRatio = useProfileIntersectionStore(
+        (state) => state.setIntersectionRatio,
+    );
 
     useLayoutEffect(() => {
         const createScrollObserver = () => {
             const observer = new IntersectionObserver(
                 ([{ intersectionRatio }]) =>
-                    setProfileIntersection(intersectionRatio),
+                    setIntersectionRatio(intersectionRatio),
                 {
                     rootMargin: "-10px 0px 0px 0px",
                     threshold: [
@@ -35,7 +37,7 @@ export function HidingObserver({ children }: PropsWithChildren) {
             return () =>
                 window.removeEventListener("load", createScrollObserver);
         }
-    }, [setProfileIntersection]);
+    }, [setIntersectionRatio]);
 
     return <div ref={imageRef}>{children}</div>;
 }

@@ -25,11 +25,11 @@
             "@/public/*": ["public/*"],
             "@/component/*": ["src/component/*"],
             "@/constant/*": ["src/constant/*"],
-            "@/context/*": ["src/context/*"],
             "@/data/*": ["src/data/*"],
             "@/hook/*": ["src/hook/*"],
             "@/lib/*": ["src/lib/*"],
             "@/service/*": ["src/service/*"],
+            "@/store/*": ["src/store/*"],
             "@/type/*": ["src/type/*"],
             "@/util/*": ["src/util/*"]
         }

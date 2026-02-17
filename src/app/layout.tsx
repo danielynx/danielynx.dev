@@ -8,7 +8,6 @@ import { Footer } from "@/app/_layout/Footer";
 import { Sidebar } from "@/app/_layout/Sidebar";
 import { StickyHeader } from "@/app/_layout/StickyHeader";
 import { HighlightFrame } from "@/component/HighlightFrame";
-import { ProfileIntersectionProvider } from "@/context/ProfileIntersectionProvider";
 
 export const metadata = {
     title: "Daniel's Portfolio",
@@ -119,35 +118,33 @@ export default function RootLayout({
         <html lang="en" className={Font.variable} suppressHydrationWarning>
             <body className={style.body()}>
                 <ThemeProvider attribute="class">
-                    <ProfileIntersectionProvider>
-                        <div className={style.viewport()}>
-                            <header className={style.header()}>
-                                <div className={style.headerContainer()}>
-                                    <div className={style.stickyHeader()}>
-                                        <StickyHeader />
-                                    </div>
-                                    <div className={style.navigation()}>
-                                        {navigation}
-                                    </div>
+                    <div className={style.viewport()}>
+                        <header className={style.header()}>
+                            <div className={style.headerContainer()}>
+                                <div className={style.stickyHeader()}>
+                                    <StickyHeader />
                                 </div>
-                            </header>
-                            <div className={style.middle()}>
-                                <div className={style.middleContainer()}>
-                                    <aside className={style.sidebar()}>
-                                        <HighlightFrame>
-                                            <Sidebar />
-                                        </HighlightFrame>
-                                    </aside>
-                                    <main className={style.content()}>
-                                        {children}
-                                    </main>
+                                <div className={style.navigation()}>
+                                    {navigation}
                                 </div>
                             </div>
-                            <footer className={style.footer()}>
-                                <Footer />
-                            </footer>
+                        </header>
+                        <div className={style.middle()}>
+                            <div className={style.middleContainer()}>
+                                <aside className={style.sidebar()}>
+                                    <HighlightFrame>
+                                        <Sidebar />
+                                    </HighlightFrame>
+                                </aside>
+                                <main className={style.content()}>
+                                    {children}
+                                </main>
+                            </div>
                         </div>
-                    </ProfileIntersectionProvider>
+                        <footer className={style.footer()}>
+                            <Footer />
+                        </footer>
+                    </div>
                 </ThemeProvider>
             </body>
         </html>
