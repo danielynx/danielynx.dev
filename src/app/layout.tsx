@@ -1,5 +1,6 @@
 import "@/app/globals.css";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "next-themes";
 import type { ReactNode } from "react";
 import { tv } from "tailwind-variants";
@@ -146,6 +147,7 @@ export default function RootLayout({
                         </footer>
                     </div>
                 </ThemeProvider>
+                <SpeedInsights />
             </body>
         </html>
     );
