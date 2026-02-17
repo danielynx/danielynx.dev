@@ -36,7 +36,7 @@ export function Avatar() {
                 <div className={style.innerBox()}>
                     <Image
                         id="image"
-                        src="/avatar.png"
+                        src="/avatar.webp"
                         alt="Avatar"
                         width="400"
                         height="400"

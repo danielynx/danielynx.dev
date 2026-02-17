@@ -1,4 +1,4 @@
-import { GiCircuitry } from "react-icons/gi";
+import { GiCircuitry, GiPolarBear } from "react-icons/gi";
 import {
     SiFramer,
     SiNextdotjs as SiNextJs,
@@ -34,6 +34,7 @@ export function Technologies() {
                 <Badge Icon={SiNpm} title="Npm" />
                 <Badge Icon={SiZod} title="Zod" />
                 <Badge Icon={SiFramer} title="Motion" />
+                <Badge Icon={GiPolarBear} title="Zustand" />
             </div>
         </>
     );
