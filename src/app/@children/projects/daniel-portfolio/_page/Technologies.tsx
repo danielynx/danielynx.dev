@@ -1,5 +1,6 @@
 import { GiCircuitry } from "react-icons/gi";
 import {
+    SiFramer,
     SiNextdotjs as SiNextJs,
     SiNodedotjs as SiNodeJs,
     SiNpm,
@@ -32,6 +33,7 @@ export function Technologies() {
                 <Badge Icon={SiTailwind} title="Tailwind and Variants" />
                 <Badge Icon={SiNpm} title="Npm" />
                 <Badge Icon={SiZod} title="Zod" />
+                <Badge Icon={SiFramer} title="Motion" />
             </div>
         </>
     );

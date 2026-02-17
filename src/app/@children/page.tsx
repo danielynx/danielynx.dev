@@ -30,18 +30,21 @@ export default function Page() {
         <div>
             <div className={style.greetings()}>
                 <p>
-                    Hi there, I{`'`}m{" "}
-                    <span className={style.name()}>Daniel,</span> a Computing
-                    Scientist and a Full Stack Developer.
+                    Hi, I{`'`}m <span className={style.name()}>Daniel,</span> a
+                    Computing Scientist and a Full-Stack Developer.
                 </p>
                 <p>
-                    I have been working with PHP (Symfony) and Javascript for
-                    many years.
+                    I{`'`}ve been working with PHP (Symfony) and Javascript for
+                    many years, building real-world applications and systems.
                 </p>
-                <p>Currently I{`'`}m studying NodeJS, React and NextJS.</p>
+                <p>
+                    Currently, I{`'`}m expanding my stack with Node.js, React,
+                    and Next.js, and exploring Generative AI while building a
+                    RAG-based assistant.
+                </p>
             </div>
 
-            <SessionHeader Icon={TfiThought} title="Thoughts that I agree" />
+            <SessionHeader Icon={TfiThought} title="Thoughts I agree with" />
 
             <div className={style.citations()}>
                 <div className={style.citation()}>
@@ -79,41 +82,55 @@ export default function Page() {
             <Timeline>
                 <Timeline.Time date="Today" />
                 <Timeline.Content
-                    title="PHP Developer"
-                    subtitle="Mato Grosso Parliament"
+                    title="Software Developer / Software Architect / Tech Lead"
+                    subtitle="Mato Grosso State Parliament"
                 >
                     <p className={style.paragraph()}>
                         I{"'"}m a public servant working as a Software
-                        Developer. Since 2014 I have improved a lot in my skills
-                        and nowadays I work as a Software Architect and Tech
-                        Lead.
+                        Developer. Over the years, I{"'"}ve evolved into a
+                        Software Architect and Tech Lead.
                     </p>
                     <p className={style.paragraph()}>
-                        My team is responsible for maintaining the house website
-                        and also many systems that support all sectors of the
-                        house, mainly the parliament{"'"}s activities.
+                        My team is responsible for maintaining the parliament
+                        {"'"}s website and several internal systems that support
+                        all departments, especially legislative activities.
                     </p>
                     <p className={style.paragraph()}>
-                        The majority of the system that we maintain are web
-                        applications, but we also have an API and a Storage
-                        application. All of them are built in PHP language with
-                        Symfony framework and MariaDB database. In those
-                        applications that have a Web layer, we also use the
-                        JavaScript language.
+                        Most of our systems are web applications, but we also
+                        maintain APIs and a storage service. They are primarily
+                        built with PHP (Symfony) and MariaDB, with JavaScript
+                        used across both frontend and backend services.
                     </p>
                     <p className={style.paragraph()}>
-                        Over the past few years, we started to use Docker to
-                        standardize our development environment, but also to
-                        allow the PHP upgrade of our newest applications.
+                        We adopted Docker to standardize development
+                        environments and enable smoother PHP upgrades across
+                        newer applications.
                     </p>
                     <p className={style.paragraph()}>
-                        We use GitLab as code repository and also to run
-                        pipelines that deploy our applications in a Docker Swarm
-                        cluster for each environment.
+                        We use GitLab as both our code repository and CI/CD
+                        platform, deploying services to environment-specific
+                        Docker Swarm clusters, and more recently to k3s with
+                        Helm. Our pipelines also run lint checks and TDD against
+                        a temporary database created from migrations and data
+                        fixtures to ensure schema consistency and application
+                        correctness.
                     </p>
                     <p className={style.paragraph()}>
-                        The team uses Scrum framework to structure and manage
-                        its work process.
+                        We also implemented asynchronous workflows using message
+                        queues and background workers, and built pipelines to
+                        materialize data from relational databases into MongoDB
+                        for downstream processing and search.
+                    </p>
+                    <p className={style.paragraph()}>
+                        More recently, we began integrating Generative AI into
+                        our systems using Mastra, implementing RAG pipelines
+                        with Qdrant for vector search, and configuring vLLM for
+                        local model serving inside our Kubernetes cluster.
+                    </p>
+                    <p className={style.paragraph()}>
+                        The team follows Scrum to manage development, and we
+                        introduced code reviews to improve quality and
+                        consistency.
                     </p>
                 </Timeline.Content>
             </Timeline>
@@ -122,16 +139,16 @@ export default function Page() {
                 <Timeline.Time date="2014" />
                 <Timeline.Content
                     title="PHP Developer"
-                    subtitle="Mato Grosso Government"
+                    subtitle="Mato Grosso State Government"
                 >
                     <p className={style.paragraph()}>
-                        As a Government Employee I worked in the Mato Grosso
-                        State{"'"}s Civil House. There I was in charge of build
-                        a system to support their internal activities.
+                        As a government employee, I worked at the Civil House,
+                        where I was responsible for building an internal system
+                        to support daily operations.
                     </p>
                     <p className={style.paragraph()}>
-                        It was a web application built using PHP language and
-                        MySQL database.
+                        The project was a web application developed with PHP and
+                        MySQL.
                     </p>
                 </Timeline.Content>
             </Timeline>
@@ -140,21 +157,20 @@ export default function Page() {
                 <Timeline.Time date="2013" />
                 <Timeline.Content
                     title="Java Developer"
-                    subtitle="Ábaco Company"
+                    subtitle="Ábaco Software House"
                 >
                     <p className={style.paragraph()}>
-                        Ábaco is a Software House company where I worked
-                        building a queuing management system, ordered by the
-                        Mato Grosso State{"'"}s Department of Motor Vehicles. It
-                        was a web application built using Java language and
-                        Oracle database.
+                        Ábaco is a software house where I worked on a queue
+                        management system commissioned by the Mato Grosso State
+                        {"'"}s Department of Motor Vehicles. The project was a
+                        web application built with Java and Oracle Database.
                     </p>
                     <p className={style.paragraph()}>
-                        Then I was allocated in the Mato Grosso State{"'"}s
-                        Court of Auditors in an outsourcing contract. There I
-                        worked as a kind of DevOps, being responsible for
-                        managing the publication of nine application in the
-                        quality assurance and stage environments.
+                        Later, I was allocated to the Mato Grosso State{"'"}s
+                        Court of Auditors under an outsourcing contract. There,
+                        I worked in a DevOps-like role, responsible for managing
+                        deployments of nine applications across quality
+                        assurance and staging environments.
                     </p>
                 </Timeline.Content>
             </Timeline>
@@ -166,18 +182,18 @@ export default function Page() {
                     subtitle="Tractors Parts Company"
                 >
                     <p className={style.paragraph()}>
-                        It was my first job as Software Developer, working in a
-                        team in charge of maintain and improve an Enterprise
-                        Resource Planning system that support sales companies
-                        {"'"} activities.
+                        This was my first role as a Software Developer. I worked
+                        on a team responsible for maintaining and improving an
+                        Enterprise Resource Planning (ERP) system that supported
+                        sales operations.
                     </p>
                     <p className={style.paragraph()}>
-                        It was a desktop application built using Java language
-                        and Oracle database.
+                        The system was a desktop application built with Java and
+                        Oracle Database.
                     </p>
                     <p className={style.paragraph()}>
-                        My team had been using Scrum framework to structure and
-                        manage its work process.
+                        We followed the Scrum framework to organize and manage
+                        our development process.
                     </p>
                 </Timeline.Content>
             </Timeline>
@@ -189,13 +205,14 @@ export default function Page() {
                     subtitle="Mato Grosso State University"
                 >
                     <p className={style.paragraph()}>
-                        My get go in IT area was in 2005 when I started my
-                        Computing Scientist graduation.
+                        My journey in IT began in 2005, when I started my
+                        Computing Science degree.
                     </p>
                     <p className={style.paragraph()}>
-                        This in person course taught me the basis and after a
-                        while I noticed that I made the right choice, because it
-                        allow me exercise my logics and transform my ideas into
+                        This on-campus program gave me a strong foundation in
+                        logic and problem-solving. Over time, I realized I had
+                        made the right choice — it allowed me to exercise
+                        structured thinking and transform ideas into real
                         digital products.
                     </p>
                 </Timeline.Content>
