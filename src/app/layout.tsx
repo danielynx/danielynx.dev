@@ -8,7 +8,7 @@ import { Footer } from "@/app/_layout/Footer";
 import { Sidebar } from "@/app/_layout/Sidebar";
 import { StickyHeader } from "@/app/_layout/StickyHeader";
 import { HighlightFrame } from "@/component/HighlightFrame";
-import { ProfileIntersectionProvider } from "@/context/_layout/ProfileIntersectionProvider";
+import { ProfileIntersectionProvider } from "@/context/ProfileIntersectionProvider";
 
 export const metadata = {
     title: "Daniel's Portfolio",

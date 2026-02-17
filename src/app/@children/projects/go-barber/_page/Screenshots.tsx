@@ -31,7 +31,7 @@ export function Screenshots() {
                     url="https://gobarber.dev/login"
                 >
                     <Image
-                        src="/project/go-barber/web/login.png"
+                        src="/projects/go-barber/web/login.png"
                         width={800}
                         height={400}
                         alt="GoBarber's web login page"
@@ -43,7 +43,7 @@ export function Screenshots() {
                     url="https://gobarber.dev/signup"
                 >
                     <Image
-                        src="/project/go-barber/web/signup.png"
+                        src="/projects/go-barber/web/signup.png"
                         width={800}
                         height={400}
                         alt="GoBarber's web signup page"
@@ -55,7 +55,7 @@ export function Screenshots() {
                     url="https://gobarber.dev/admin/appointments"
                 >
                     <Image
-                        src="/project/go-barber/web/appointments.png"
+                        src="/projects/go-barber/web/appointments.png"
                         width={800}
                         height={400}
                         alt="GoBarber's web appointments page"
@@ -65,7 +65,7 @@ export function Screenshots() {
             <div className={style.app()}>
                 <AppFrame>
                     <Image
-                        src="/project/go-barber/app/login.png"
+                        src="/projects/go-barber/app/login.png"
                         width={200}
                         height={403}
                         alt="GoBarber's app login screen"
@@ -73,7 +73,7 @@ export function Screenshots() {
                 </AppFrame>
                 <AppFrame>
                     <Image
-                        src="/project/go-barber/app/hairdressers.png"
+                        src="/projects/go-barber/app/hairdressers.png"
                         width={200}
                         height={403}
                         alt="GoBarber's app hairdressers screen"
@@ -81,7 +81,7 @@ export function Screenshots() {
                 </AppFrame>
                 <AppFrame>
                     <Image
-                        src="/project/go-barber/app/appointments.png"
+                        src="/projects/go-barber/app/appointments.png"
                         width={200}
                         height={403}
                         alt="GoBarber's app appointments screen"

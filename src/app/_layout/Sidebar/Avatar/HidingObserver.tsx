@@ -2,7 +2,7 @@
 
 import { type PropsWithChildren, useLayoutEffect, useRef } from "react";
 
-import { useProfileIntersection } from "@/hook/_layout/useProfileIntersection";
+import { useProfileIntersection } from "@/hook/useProfileIntersection";
 
 export function HidingObserver({ children }: PropsWithChildren) {
     const imageRef = useRef<HTMLDivElement>(null);
