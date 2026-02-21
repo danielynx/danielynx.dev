@@ -14,10 +14,7 @@ export function MongoDb() {
     const style = tvStyle();
 
     return (
-        <Card
-            href="https://university.mongodb.com/course_completion/2afe5b18-37c2-4a62-8a32-e1e27256a5bf?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
-            target="_blank"
-        >
+        <Card href="courses/mongodb">
             <Card.Icon Icon={SiMongodb} />
             <Card.Text>
                 <div className={style.container()}>
