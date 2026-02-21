@@ -1,9 +1,7 @@
+import { MdRocketLaunch } from "react-icons/md";
+import { SiFreecodecamp, SiMongodb, SiSymfony } from "react-icons/si";
 import { tv } from "tailwind-variants";
-
-import { FreeCodeCamp } from "@/app/@children/courses/_page/FreeCodeCamp";
-import { MongoDb } from "@/app/@children/courses/_page/MongoDb";
-import { Rocketseat } from "@/app/@children/courses/_page/Rocketseat";
-import { Symfony } from "@/app/@children/courses/_page/Symfony";
+import { Card } from "@/component/Card";
 
 const tvStyle = tv({
     base: [
@@ -19,10 +17,36 @@ export default function Page() {
 
     return (
         <div className={style}>
-            <Symfony />
-            <Rocketseat />
-            <MongoDb />
-            <FreeCodeCamp />
+            <Card href="https://symfonycasts.com/u/danielynx" target="_blank">
+                <Card.Icon Icon={SiSymfony} />
+                <Card.Text>
+                    <div>
+                        <span className="font-bold">Symfony</span>
+                        <span className="font-normal">Casts</span>
+                    </div>
+                </Card.Text>
+            </Card>
+            <Card href="courses/rocketseat">
+                <Card.Icon Icon={MdRocketLaunch} />
+                <Card.Text>
+                    <div className="font-bold">Rocketseat</div>
+                </Card.Text>
+            </Card>
+            <Card href="courses/mongodb">
+                <Card.Icon Icon={SiMongodb} />
+                <Card.Text>
+                    <div className="flex flex-col items-start">
+                        <span className="font-bold">MongoDB</span>
+                        <span className="font-normal">University</span>
+                    </div>
+                </Card.Text>
+            </Card>
+            <Card href="https://www.freecodecamp.org/danielynx" target="_blank">
+                <Card.Icon Icon={SiFreecodecamp} />
+                <Card.Text>
+                    <div className="font-bold">freeCodeCamp</div>
+                </Card.Text>
+            </Card>
         </div>
     );
 }

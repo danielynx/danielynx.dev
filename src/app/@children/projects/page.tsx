@@ -1,6 +1,7 @@
+import { BsScissors } from "react-icons/bs";
+import { ImProfile } from "react-icons/im";
 import { tv } from "tailwind-variants";
-import { GoBarber } from "@/app/@children/projects/_page/GoBarber";
-import { Portfolio } from "@/app/@children/projects/_page/Portfolio";
+import { Card } from "@/component/Card";
 
 const tvStyle = tv({
     base: [
@@ -16,8 +17,21 @@ export default function Page() {
 
     return (
         <div className={style}>
-            <Portfolio />
-            <GoBarber />
+            <Card href="projects/portfolio">
+                <Card.Icon Icon={ImProfile} />
+                <Card.Text>
+                    <div className="flex flex-col items-start">
+                        <span className="font-bold">Portfolio</span>
+                        <span className="font-normal text-base">(This website)</span>
+                    </div>
+                </Card.Text>
+            </Card>
+            <Card href="projects/go-barber">
+                <Card.Icon Icon={BsScissors} />
+                <Card.Text>
+                    <div className="font-bold">GoBarber</div>
+                </Card.Text>
+            </Card>
         </div>
     );
 }
