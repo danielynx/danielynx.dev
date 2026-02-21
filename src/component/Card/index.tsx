@@ -12,12 +12,7 @@ export interface CardProps {
 
 const tvStyle = tv({
     slots: {
-        outer: [
-            "h-20 2xs:h-24 sm:h-26 md:h-28 lg:h-30",
-            "overflow-hidden",
-            "rounded-xl",
-            "bg-primary",
-        ],
+        outer: ["h-20 2xs:h-24 lg:h-28", "overflow-hidden", "rounded-xl", "bg-primary"],
         innerBackground: ["w-full h-full", "ml-3", "rounded-xl", "bg-surface"],
         inner: [
             "flex flex-row",
@@ -30,11 +25,7 @@ const tvStyle = tv({
     },
 });
 
-function Card({
-    children,
-    href,
-    target = "_self",
-}: PropsWithChildren<CardProps>) {
+function Card({ children, href, target = "_self" }: PropsWithChildren<CardProps>) {
     const style = tvStyle();
 
     return (

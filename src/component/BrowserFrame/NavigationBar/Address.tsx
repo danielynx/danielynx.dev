@@ -17,7 +17,7 @@ const tvStyle = tv({
             "rounded-sm",
         ],
         icon: ["w-2 xs:w-3 sm:w-4", "h-2 xs:h-3 sm:h-4"],
-        url: ["w-full", "mx-1 sm:mx-2 md:mx-3", "text-xs xs:text-sm"],
+        url: ["w-full", "mx-1 sm:mx-2 md:mx-3", "text-xs sm:text-sm"],
     },
 });
 

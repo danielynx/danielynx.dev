@@ -8,7 +8,8 @@ export interface IconProps {
 const tvStyle = tv({
     slots: {
         container: ["px-1.5 xs:px-2 md:px-3"],
-        icon: ["h-8 2xs:h-10 sm:h-12 md:h-14", "w-8 2xs:w-10 sm:w-12 md:w-14"],
+        // "text-sm 2xs:base lg:text-xl"
+        icon: ["h-8 2xs:h-10 lg:h-12", "w-8 2xs:w-10 lg:w-12"],
     },
 });
 

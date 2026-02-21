@@ -1,9 +1,14 @@
 import { tv } from "tailwind-variants";
-import { DanielPortfolio } from "@/app/@children/projects/_page/DanielPortfolio";
 import { GoBarber } from "@/app/@children/projects/_page/GoBarber";
+import { Portfolio } from "@/app/@children/projects/_page/Portfolio";
 
 const tvStyle = tv({
-    base: ["grow", "grid grid-cols-1 sm:grid-cols-2", "gap-4 xl:gap-5", "m-2"],
+    base: [
+        "grow",
+        "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2",
+        "gap-4 xl:gap-5",
+        "m-2",
+    ],
 });
 
 export default function Page() {
@@ -11,7 +16,7 @@ export default function Page() {
 
     return (
         <div className={style}>
-            <DanielPortfolio />
+            <Portfolio />
             <GoBarber />
         </div>
     );

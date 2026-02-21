@@ -40,18 +40,13 @@ const tvStyle = tv({
     ],
     slots: {
         body: "font-sans",
-        viewport: [
-            "flex flex-col",
-            "items-center",
-            "min-h-screen",
-            "text-copy",
-            "bg-background",
-        ],
+        viewport: ["flex flex-col", "items-center", "min-h-screen", "text-copy", "bg-background"],
         header: [
             "flex flex-row",
             "justify-center",
             "sticky top-0 z-1",
-            "w-full h-30 lg:h-18",
+            "w-full",
+            "h-30 lg:h-18",
             "border-b border-outline",
             "bg-surface",
         ],
@@ -63,20 +58,9 @@ const tvStyle = tv({
             "border-t border-outline",
             "bg-surface",
         ],
-        headerContainer: [
-            "flex flex-col lg:flex-row",
-            "items-center lg:items-end",
-            "h-full",
-        ],
-        middleContainer: [
-            "flex flex-col lg:flex-row",
-            "items-center lg:items-start",
-        ],
-        stickyHeader: [
-            "flex flex-row justify-center",
-            "items-center lg:justify-end",
-            "h-full",
-        ],
+        headerContainer: ["flex flex-col lg:flex-row", "items-center lg:items-end"],
+        middleContainer: ["flex flex-col lg:flex-row", "items-center lg:items-start"],
+        stickyHeader: ["flex flex-row justify-center", "items-center lg:justify-end", "h-full"],
         navigation: [
             "flex flex-row",
             "justify-center items-end lg:justify-start",
@@ -126,9 +110,7 @@ export default function RootLayout({
                                 <div className={style.stickyHeader()}>
                                     <StickyHeader />
                                 </div>
-                                <div className={style.navigation()}>
-                                    {navigation}
-                                </div>
+                                <div className={style.navigation()}>{navigation}</div>
                             </div>
                         </header>
                         <div className={style.middle()}>
@@ -138,9 +120,7 @@ export default function RootLayout({
                                         <Sidebar />
                                     </HighlightFrame>
                                 </aside>
-                                <main className={style.content()}>
-                                    {children}
-                                </main>
+                                <main className={style.content()}>{children}</main>
                             </div>
                         </div>
                         <footer className={style.footer()}>

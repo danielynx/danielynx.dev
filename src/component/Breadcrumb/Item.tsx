@@ -14,18 +14,13 @@ export interface ItemProps {
 const tvStyle = tv({
     slots: {
         container: [
-            "flex flew-row items-center justify-center",
+            "flex flex-row items-center justify-center",
             "py-1",
-            "h-4 xs:h-5 sm:h-6 md:h-7",
-            "px-2 rounded-lg",
+            "px-2 rounded-sm",
             "first:ml-0 ml-1 last:mr-0 mr-1",
         ],
-        icon: ["h-3 xs:h-4 sm:h-5 md:h-6", "w-3 xs:w-4 sm:w-5 md:w-6"],
-        text: [
-            "font-semibold font-mono",
-            "pl-1 sm:pl-1.5 md:pl-2",
-            "text-xs xs:text-sm 2xs:text-base sm:text-lg",
-        ],
+        icon: ["h-3 2xs:h-4 lg:h-5", "w-3 2xs:w-4 lg:w-5"],
+        text: ["font-semibold font-mono", "pl-1", "text-xs 2xs:text-sm lg:text-base"],
     },
     variants: {
         active: {

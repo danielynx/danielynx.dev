@@ -7,11 +7,7 @@ export default function Page() {
     return (
         <TabNav>
             <TabNav.Item text="Overview" Icon={MdPieChart} href="/" />
-            <TabNav.Item
-                Icon={MdDeveloperBoard}
-                text="Projects"
-                href="/projects"
-            />
+            <TabNav.Item Icon={MdDeveloperBoard} text="Projects" href="/projects" />
             <TabNav.Item text="Courses" Icon={MdSchool} href="/courses" />
         </TabNav>
     );

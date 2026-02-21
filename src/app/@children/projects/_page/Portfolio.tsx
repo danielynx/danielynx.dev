@@ -10,17 +10,15 @@ const tvStyle = tv({
     },
 });
 
-export function DanielPortfolio() {
+export function Portfolio() {
     const style = tvStyle();
 
     return (
-        <Card href="projects/daniel-portfolio">
+        <Card href="projects/portfolio">
             <Card.Icon Icon={ImProfile} />
             <Card.Text>
                 <div className={style.text()}>
-                    <span className={style.largerSpan()}>
-                        Daniel{`'`}s Portfolio
-                    </span>
+                    <span className={style.largerSpan()}>Portfolio</span>
                     <span className={style.smalerSpan()}>(This website)</span>
                 </div>
             </Card.Text>

@@ -6,23 +6,24 @@
         "useIgnoreFile": true,
         "defaultBranch": "master"
     },
-    "css": {
-        "parser": {
-            "tailwindDirectives": true
-        }
-    },
     "files": {
         "ignoreUnknown": false
     },
     "formatter": {
         "enabled": true,
         "indentStyle": "space",
-        "indentWidth": 4
+        "indentWidth": 4,
+        "lineWidth": 100
     },
     "linter": {
         "enabled": true,
         "rules": {
             "recommended": true
+        }
+    },
+    "css": {
+        "parser": {
+            "tailwindDirectives": true
         }
     },
     "javascript": {

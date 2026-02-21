@@ -17,22 +17,17 @@ export default function Page() {
 
     return (
         <div>
-            <div className="space-y-4 leading-relaxed text-base lg:text-lg">
-                <p>
-                    {<Link />} is a Brazilian coding school focused on
-                    JavaScript technologies.
-                </p>
+            <div className={style.container()}>
+                <p>{<Link />} is a Brazilian coding school focused on JavaScript technologies.</p>
             </div>
             <SessionHeader Icon={RiSpaceShipLine} title="GoStack" />
             <div className={style.container()}>
                 <p>
-                    GoStack is a full-stack bootcamp covering Node.js, React.js,
-                    and React Native.
+                    GoStack is a full-stack bootcamp covering Node.js, React.js, and React Native.
                 </p>
                 <p>
-                    During the course, I built several small projects to learn
-                    specific concepts. As a final project, I developed a larger
-                    application called&nbsp;
+                    During the course, I built several small projects to learn specific concepts. As
+                    a final project, I developed a larger application called&nbsp;
                     <GoBarberLink />.
                 </p>
                 <p>Through this project, I learned how to build:</p>
@@ -42,8 +37,7 @@ export default function Page() {
                         <ul className={style.listTwo()}>
                             <li>Desing and expose REST APIs</li>
                             <li>
-                                Persist data using <b>PostgreSQL</b> with{" "}
-                                <b>TypeORM</b>
+                                Persist data using <b>PostgreSQL</b> with <b>TypeORM</b>
                             </li>
                             <li>
                                 Cache data with <b>Redis</b>
@@ -61,8 +55,8 @@ export default function Page() {
                                 Write automated tests with <b>Jest</b>
                             </li>
                             <li>
-                                Set up CI/CD pipelines to <b>DigitalOcean</b>{" "}
-                                via <b>GitHub Actions</b>
+                                Set up CI/CD pipelines to <b>DigitalOcean</b> via{" "}
+                                <b>GitHub Actions</b>
                             </li>
                             <li>
                                 Configure HTTPS with <b>Certbot</b>
@@ -80,9 +74,8 @@ export default function Page() {
                                 Write automated tests with <b>Jest</b>
                             </li>
                             <li>
-                                Set up CI/CD pipelines to <b>DigitalOcean</b>{" "}
-                                and <b>Google Cloud</b> via{" "}
-                                <b>GitHub Actions</b>
+                                Set up CI/CD pipelines to <b>DigitalOcean</b> and{" "}
+                                <b>Google Cloud</b> via <b>GitHub Actions</b>
                             </li>
                             <li>
                                 Configure HTTPS with <b>Certbot</b>
@@ -100,8 +93,7 @@ export default function Page() {
                                 Write automated tests with <b>Jest</b>
                             </li>
                             <li>
-                                Plublish to the <b>Google Play Store</b> using{" "}
-                                <b>App Center</b>
+                                Plublish to the <b>Google Play Store</b> using <b>App Center</b>
                             </li>
                         </ul>
                     </li>

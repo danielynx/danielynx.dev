@@ -6,7 +6,12 @@ import { Rocketseat } from "@/app/@children/courses/_page/Rocketseat";
 import { Symfony } from "@/app/@children/courses/_page/Symfony";
 
 const tvStyle = tv({
-    base: ["grow", "grid grid-cols-1 sm:grid-cols-2", "gap-4 xl:gap-5", "m-2"],
+    base: [
+        "grow",
+        "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2",
+        "gap-4 xl:gap-5",
+        "m-2",
+    ],
 });
 
 export default function Page() {

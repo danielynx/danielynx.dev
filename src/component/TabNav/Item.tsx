@@ -19,15 +19,11 @@ const tvStyle = tv({
             "flex flex-row",
             "items-center justify-center",
             "py-1",
-            "px-2 rounded-lg",
+            "px-2 rounded-sm",
             "first:ml-0 ml-1 last:mr-0 mr-1",
         ],
-        icon: ["h-4 xs:h-5 sm:h-6 md:h-7", "w-4 xs:w-5 sm:w-6 md:w-7"],
-        text: [
-            "font-semibold font-mono",
-            "pl-1 sm:pl-1.5 md:pl-2",
-            "text-xs xs:text-sm 2xs:text-base sm:text-lg",
-        ],
+        icon: ["h-3 2xs:h-4 lg:h-5", "w-3 2xs:w-4 lg:w-5"],
+        text: ["font-semibold font-mono", "pl-1", "text-xs 2xs:text-sm lg:text-base"],
     },
     variants: {
         active: {

@@ -9,9 +9,9 @@ export default function Page() {
         <ProjectsBreadcrumb>
             <BreadcrumbComponent.Separator />
             <BreadcrumbComponent.Item
-                text="Daniel Portfolio"
+                text="Portfolio"
                 Icon={ImProfile}
-                href="/projects/daniel-portfolio"
+                href="/projects/portfolio"
             />
         </ProjectsBreadcrumb>
     );
